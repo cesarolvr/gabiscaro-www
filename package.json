@@ -15,6 +15,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "firebase": "^8.9.1",
+    "firebase-tools": "^9.16.5",
     "gatsby": "^3.11.1",
     "gatsby-plugin-google-analytics": "^3.11.0",
     "gatsby-plugin-image": "^1.11.0",
