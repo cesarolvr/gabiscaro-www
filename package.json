@@ -11,6 +11,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
+    "deploy": "yarn build && firebase deploy",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
