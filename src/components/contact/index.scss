@@ -1,0 +1,44 @@
+.contact {
+  background: #400039;
+  width: 100%;
+  padding: 180px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    max-width: 50%;
+    color: white;
+
+    a {
+      color: #ff4522;
+      text-decoration: none;
+    }
+
+    small {
+      font-size: 1rem;
+    }
+
+    .linkedin {
+      color: #9ceaef;
+    }
+
+    .instagram {
+      color: #3ddc97;
+    }
+
+    .dribbble {
+      color: #f992d3;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.gabiscaro.com",
     title: "gabiscaro",
   },
   plugins: [
@@ -16,6 +16,7 @@ module.exports = {
         alias: {
           "@src": "src",
           "@components": "src/components",
+          "@styles": "src/styles",
         },
         extensions: []
       }
@@ -34,5 +35,14 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `rubik\:400,500,600,800`,
+        ],
+        display: 'swap'
+      }
+    }
   ],
 };

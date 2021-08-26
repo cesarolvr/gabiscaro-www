@@ -1,0 +1,27 @@
+.header {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 3px solid #ff4522;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #99018a;
+  font-size: 1rem;
+  position: relative;
+
+  .link {
+    text-decoration: none;
+  }
+
+  .logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 30%;
+    width: 117px;
+    height: 117px;
+  }
+}
