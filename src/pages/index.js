@@ -5,10 +5,19 @@ import Contact from "@components/contact";
 
 const Home = () => {
     return (
-        <main>
+        <>
             <Header />
-            <Contact />
-        </main>
+            <br />
+            <br />
+            <br />
+            home
+            <br />
+            <br />
+            <br />
+            <main>
+                <Contact />
+            </main>
+        </>
     );
 };
 

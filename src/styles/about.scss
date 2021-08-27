@@ -1,0 +1,33 @@
+.about {
+  .description,
+  .skills,
+  .experience {
+    padding: 80px 0;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .description .text {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3.3rem;
+    color: #070551;
+    span {
+      color: #fd4d40;
+    }
+  }
+
+  .skills {
+    border-top: 1px solid #99018a;
+  }
+
+  .experience {
+    border-top: 1px solid #fd4d40;
+  }
+}
