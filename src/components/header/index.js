@@ -1,17 +1,17 @@
 import * as React from "react";
+import { Link } from "gatsby"
 
 import "./index.scss";
 
 import Logo from '@components/Logo'
 
+
 const Header = () => {
     return (
         <header className="header">
-            <h1 className="title">illustration</h1>
+            <Link className="title" to="/">illustrations</Link>
             <Logo />
-            <a className="link" href="">
-                about/say hi
-            </a>
+            <Link className="link" to="/about">about/say hi</Link>
         </header>
     );
 };
