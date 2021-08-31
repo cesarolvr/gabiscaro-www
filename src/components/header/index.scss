@@ -48,8 +48,9 @@
 
   &.-opened {
     .logo {
-      width: 421px;
-      height: 421px;
+      width: 30vw;
+      height: auto;
+      max-width: 421px;
       top: calc(50vh + 50px);
       transform: translateY(-50%);
     }

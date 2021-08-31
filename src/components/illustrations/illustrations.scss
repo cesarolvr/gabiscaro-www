@@ -2,4 +2,32 @@
   &.-city {
     transform: scale(1.3)
   }
+
+  .fill {
+    display: none;
+  }
+
+  .object {
+    fill: none;
+  }
+}
+
+.case {
+  &:hover {
+    .fill {
+      display: block;
+    }
+
+    .-city .object {
+      fill: #3DDC97;
+    }
+
+    .-iq .object {
+      fill: #9CEAEF;
+    }
+
+    .-valeapena .object {
+      fill: #99018A;
+    }
+  }
 }
