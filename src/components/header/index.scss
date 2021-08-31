@@ -40,13 +40,26 @@
     }
 
     .letters {
-      transform-origin: center;
-      animation: rotate 20s linear infinite;
-      transition: transform .3s ease;
+      display: none;
+    }
+
+    .symbol {
+      transform: scale(1.2);
     }
   }
 
   &.-opened {
+    .letters {
+      display: block;
+      transform-origin: center;
+      animation: rotate 20s linear infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .symbol {
+      transform: none;
+    }
+
     .logo {
       width: 30vw;
       height: auto;

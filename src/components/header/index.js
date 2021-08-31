@@ -5,9 +5,9 @@ import "./index.scss";
 
 import Logo from "@components/Logo";
 
-const Header = () => {
+const Header = ({className = ''}) => {
     return (
-        <header className="header -opened">
+        <header className={`header ${className}`}>
             <Link className="title" to="/illustrations">
                 illustrations
             </Link>

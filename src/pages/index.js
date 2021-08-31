@@ -15,7 +15,7 @@ import "@styles/home.scss";
 const Home = () => {
     return (
         <>
-            <Header />
+            <Header className="-opened" />
             <main className="home">
                 <div className="container">
                     <div className="holder">
