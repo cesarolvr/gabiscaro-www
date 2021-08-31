@@ -50,7 +50,8 @@
     .logo {
       width: 421px;
       height: 421px;
-      top: 300px;
+      top: calc(50vh + 50px);
+      transform: translateY(-50%);
     }
   }
 }
