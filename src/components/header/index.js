@@ -7,7 +7,7 @@ import Logo from "@components/Logo";
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className="header -opened">
             <Link className="title" to="/illustrations">
                 illustrations
             </Link>

@@ -11,6 +11,10 @@
   font-size: 1rem;
   position: relative;
 
+  @media (max-width: 868px) {
+    font-size: 0.8rem;
+  }
+
   .link {
     text-decoration: none;
   }
@@ -28,5 +32,34 @@
     top: 30%;
     width: 117px;
     height: 117px;
+
+    @media (max-width: 868px) {
+      width: 80px;
+      height: 80px;
+      top: 70%;
+    }
+
+    .letters {
+      transform-origin: center;
+      animation: rotate 20s linear infinite;
+      transition: transform .3s ease;
+    }
+  }
+
+  &.-opened {
+    .logo {
+      width: 421px;
+      height: 421px;
+      top: 300px;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
