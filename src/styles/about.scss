@@ -13,21 +13,151 @@
     padding: 0 20px;
   }
 
+  .description {
+    padding-top: 120px;
+  }
+
   .description .text {
     font-size: 3rem;
     font-weight: 400;
-    line-height: 3.3rem;
+    line-height: 3.8rem;
     color: #070551;
     span {
       color: #fd4d40;
     }
+
+    @media (max-width: 868px) {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  .description .profile-image {
+    margin-bottom: 30px;
+    margin-left: 20%;
   }
 
   .skills {
     border-top: 1px solid #99018a;
   }
 
+  .skills .container {
+    display: flex;
+    @media (max-width: 868px) {
+      flex-direction: column;
+    }
+  }
+
+  .skills .title {
+    width: 30%;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.1rem;
+    color: #99018a;
+
+    @media (max-width: 868px) {
+      font-size: 1.5rem;
+      width: 40%;
+      margin-bottom: 60px;
+    }
+  }
+
+  .skills .list {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 868px) {
+      flex-direction: column;
+      width: 60%;
+    }
+  }
+
+  .skills .list .item {
+    width: 50%;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #070551;
+
+    @media (max-width: 868px) {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
   .experience {
     border-top: 1px solid #fd4d40;
+  }
+
+  .experience .container {
+    display: flex;
+
+    @media (max-width: 868px) {
+      flex-direction: column;
+    }
+  }
+
+  .experience .title {
+    width: 30%;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.1rem;
+    color: #fd4d40;
+
+    @media (max-width: 868px) {
+      font-size: 1.5rem;
+      width: 40%;
+      margin-bottom: 60px;
+    }
+  }
+
+  .experience .list {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 868px) {
+      width: 100%;
+    }
+  }
+
+  .experience .list .item {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #070551;
+    display: flex;
+
+    @media (max-width: 868px) {
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .experience .list .item .company {
+    min-width: 220px;
+    
+    @media (max-width: 868px) {
+      min-width: unset;
+      font-size: 1.2rem;
+      width: 80px;
+      flex-shrink: 0;
+    }
+  }
+
+  .experience .list .item .duration {
+    @media (max-width: 868px) {
+      font-size: 1rem;
+    }
+  }
+
+  .experience .list .item .icon {
+    margin: 0 30px;
+
+    @media (max-width: 868px) {
+      margin: 0 20px;
+      width: 40px;
+    }
   }
 }
