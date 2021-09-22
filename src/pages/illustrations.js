@@ -11,41 +11,41 @@ const Illustrations = () => {
     <>
       <Header />
       <div className="grid">
-        <div className="case">
-          <StaticImage src="../images/1.png" />
+        <div className="case cell-1 -beforevector">
+          <StaticImage className="image-wrapper" className="image-wrapper" src="../images/1.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/greenstar.svg" />
-          <StaticImage src="../images/halfcircle.svg" />
+        <div className="case cell-2 -vector">
+          <StaticImage className="image-wrapper" src="../images/greenstar.svg" />
+          <StaticImage className="image-wrapper" src="../images/halfcircle.svg" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/2.png" />
+        <div className="case cell-3 -aftervector">
+          <StaticImage className="image-wrapper" src="../images/2.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/3.png" />
+        <div className="case cell-4">
+          <StaticImage className="image-wrapper" src="../images/3.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/4.png" />
+        <div className="case cell-5">
+          <StaticImage className="image-wrapper" src="../images/4.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/5.png" />
+        <div className="case cell-6">
+          <StaticImage className="image-wrapper" src="../images/5.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/flatcloud.svg" />
+        <div className="case cell-7">
+          <StaticImage className="image-wrapper" src="../images/6.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/6.png" />
+        <div className="case cell-8">
+          <StaticImage className="image-wrapper" src="../images/flatcloud.svg" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/7.png" />
+        <div className="case cell-9">
+          <StaticImage className="image-wrapper" src="../images/7.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/8.png" />
+        <div className="case cell-10 -beforevector">
+          <StaticImage className="image-wrapper" src="../images/8.png" />
         </div>
-        <div className="case">
-          <StaticImage src="../images/yellowsquare.svg" />
-          <StaticImage src="../images/greenpil.svg" />
-          <StaticImage src="../images/pinkcircle.svg" />
+        <div className="case cell-11 -vector">
+          <StaticImage className="image-wrapper" src="../images/yellowsquare.svg" />
+          <StaticImage className="image-wrapper" src="../images/greenpil.svg" />
+          <StaticImage className="image-wrapper" src="../images/pinkcircle.svg" />
         </div>
       </div>
       <main>

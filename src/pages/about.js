@@ -28,19 +28,21 @@ const About = () => {
             </p>
             <br />
             <br />
+            <br />
             <h2 className="title">SOME THINGS I LOVE:</h2>
+            <br />
             <br />
             <br />
             <p className="text">
               The color blue, but also red; Cook different types of vegan food;
               Try new and different vegan foods; Watch cooking competition
               shows; K-POP music videos; Bus commute; Watch & read My Brilliant
-              Friend; My dog (Batatinha, or Little Potato); Hear I Love You;
+              Friend; <span>My dog</span> (Batatinha, or Little Potato); Hear I Love You;
               Find news things to love {`<3`}
             </p>
           </div>
         </section>
-        <section className="skills -desktop">
+        <section className="skills">
           <div className="container">
             <h2 className="title">skills</h2>
             <ul className="list">
@@ -57,7 +59,7 @@ const About = () => {
             </ul>
           </div>
         </section>
-        <section className="experience -desktop">
+        <section className="experience">
           <div className="container">
             <h2 className="title">experience</h2>
             <ul className="list">
