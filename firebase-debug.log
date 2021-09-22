@@ -82,3 +82,45 @@
     at async /Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/command.js:182:17
 [error] 
 [error] Error: Failed to get Firebase project gabiscaro-121a2. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-09-22T01:25:24.652Z] ----------------------------------------------------------------------
+[debug] [2021-09-22T01:25:24.654Z] Command:       /usr/local/Cellar/node/16.9.1/bin/node /Users/cfaber/Sites/gabiscaro/node_modules/.bin/firebase deploy
+[debug] [2021-09-22T01:25:24.654Z] CLI Version:   9.16.5
+[debug] [2021-09-22T01:25:24.654Z] Platform:      darwin
+[debug] [2021-09-22T01:25:24.654Z] Node Version:  v16.9.1
+[debug] [2021-09-22T01:25:24.656Z] Time:          Tue Sep 21 2021 22:25:24 GMT-0300 (Brasilia Standard Time)
+[debug] [2021-09-22T01:25:24.656Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-22T01:25:24.712Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-22T01:25:24.713Z] > authorizing via signed-in user (cesar2012oliveira@gmail.com)
+[debug] [2021-09-22T01:25:24.713Z] [iam] checking project gabiscaro-121a2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-09-22T01:25:24.715Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-22T01:25:24.715Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-22T01:25:24.986Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Wed, 22 Sep 2021 01:25:27 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-22T01:25:25.017Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/gabiscaro-121a2:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-09-22T01:25:26.056Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 22 Sep 2021 01:25:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=818","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-22T01:25:26.057Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project gabiscaro-121a2:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2021-09-22T01:25:26.058Z] > refreshing access token with scopes: []
+[debug] [2021-09-22T01:25:26.058Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-22T01:25:26.304Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 22 Sep 2021 01:25:28 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-22T01:25:26.336Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gabiscaro-121a2 [none]
+[debug] [2021-09-22T01:25:27.732Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gabiscaro-121a2 403
+[debug] [2021-09-22T01:25:27.733Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gabiscaro-121a2 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-09-22T01:25:27.733Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-09-22T01:25:27.958Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Client.doRequest (/Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/apiv2.js:238:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.request (/Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/apiv2.js:96:20)
+    at async Object.getFirebaseProject (/Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/management/projects.js:290:21)
+    at async Object.getDefaultHostingSite (/Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (/Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/requireHostingSite.js:9:18)
+    at async Object.fn (/Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/commands/deploy.js:65:9)
+    at async /Users/cfaber/Sites/gabiscaro/node_modules/firebase-tools/lib/command.js:182:17
+[error] 
+[error] Error: Failed to get Firebase project gabiscaro-121a2. Please make sure the project exists and your account has permission to access it.
