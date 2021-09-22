@@ -1,8 +1,18 @@
+.home {
+  @media (max-width: 868px) {
+    padding-top: 250px
+  }
+}
+
 .home .container {
   display: flex;
   justify-content: space-between;
   padding: 50px 20px;
   max-width: 1350px;
+
+  @media (max-width: 868px) {
+    flex-direction: column;
+  }
 }
 
 .home .container .holder {
@@ -10,6 +20,10 @@
   flex-direction: column;
   justify-content: space-between;
   width: 30%;
+
+  @media (max-width: 868px) {
+    width: 100%
+  }
 }
 
 .home .container .holder .case {

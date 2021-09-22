@@ -66,6 +66,12 @@
       max-width: 421px;
       top: calc(50vh + 50px);
       transform: translateY(-50%);
+
+      @media (max-width: 868px) {
+        top: 250px;
+        width: 100vw;
+        max-width: 221px;
+      }
     }
   }
 }
