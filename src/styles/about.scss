@@ -31,6 +31,13 @@
     margin-left: 20%;
   }
 
+  .description .title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.1rem;
+    color: #99018a;
+  }
+
   .skills {
     border-top: 1px solid #99018a;
   }
@@ -131,7 +138,7 @@
 
   .experience .list .item .company {
     min-width: 220px;
-    
+
     @media (max-width: 868px) {
       min-width: unset;
       font-size: 1.2rem;

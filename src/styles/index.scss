@@ -5,3 +5,9 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.-desktop {
+  @media (max-width: 868px) {
+    display: none;
+  }
+}
