@@ -10,11 +10,33 @@
 
   .case {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding: 10px;
 
     .image-wrapper {
       width: 100%;
+      max-width: 100%;
+
+      &.-greenstar {
+        width: 288px;
+      }
+
+      &.-halfcircle {
+        width: 351px;
+      }
+
+      &.-yellowsquare {
+        width: 248px;
+      }
+
+      &.-greenpil {
+        width: 85px;
+      }
+
+      &.-pinkcircle {
+        width: 170px;
+      }
     }
 
     @media (max-width: 868px) {

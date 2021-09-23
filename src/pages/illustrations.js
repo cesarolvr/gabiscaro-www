@@ -6,6 +6,13 @@ import Contact from "@components/contact";
 
 import "@styles/illustrations.scss";
 
+import greenstar from '../images/greenstar.svg';
+import halfcircle from '../images/halfcircle.svg';
+import yellowsquare from '../images/yellowsquare.svg';
+import greenpil from '../images/greenpil.svg';
+import pinkcircle from '../images/pinkcircle.svg';
+import flatcloud from '../images/flatcloud.svg';
+
 const Illustrations = () => {
   return (
     <>
@@ -15,8 +22,8 @@ const Illustrations = () => {
           <StaticImage className="image-wrapper" className="image-wrapper" src="../images/1.png" />
         </div>
         <div className="case cell-2 -vector">
-          <StaticImage className="image-wrapper" src="../images/greenstar.svg" />
-          <StaticImage className="image-wrapper" src="../images/halfcircle.svg" />
+          <img className="image-wrapper  -greenstar" src={greenstar} />
+          <img className="image-wrapper -halfcircle" src={halfcircle} />
         </div>
         <div className="case cell-3 -aftervector">
           <StaticImage className="image-wrapper" src="../images/2.png" />
@@ -34,7 +41,7 @@ const Illustrations = () => {
           <StaticImage className="image-wrapper" src="../images/6.png" />
         </div>
         <div className="case cell-8">
-          <StaticImage className="image-wrapper" src="../images/flatcloud.svg" />
+          <img className="image-wrapper" src={flatcloud}/>
         </div>
         <div className="case cell-9">
           <StaticImage className="image-wrapper" src="../images/7.png" />
@@ -43,9 +50,9 @@ const Illustrations = () => {
           <StaticImage className="image-wrapper" src="../images/8.png" />
         </div>
         <div className="case cell-11 -vector">
-          <StaticImage className="image-wrapper" src="../images/yellowsquare.svg" />
-          <StaticImage className="image-wrapper" src="../images/greenpil.svg" />
-          <StaticImage className="image-wrapper" src="../images/pinkcircle.svg" />
+          <img className="image-wrapper -yellowsquare" src={yellowsquare}/>
+          <img className="image-wrapper -greenpil" src={greenpil}/>
+          <img className="image-wrapper -pinkcircle" src={pinkcircle}/>
         </div>
       </div>
       <main>
