@@ -6,12 +6,9 @@ import Contact from "@components/contact";
 
 import "@styles/illustrations.scss";
 
-import greenstar from '../images/greenstar.svg';
-import halfcircle from '../images/halfcircle.svg';
-import yellowsquare from '../images/yellowsquare.svg';
-import greenpil from '../images/greenpil.svg';
-import pinkcircle from '../images/pinkcircle.svg';
-import flatcloud from '../images/flatcloud.svg';
+import greenstar from "../images/greenstar.svg";
+import halfcircle from "../images/halfcircle.svg";
+import flatcloud from "../images/flatcloud.svg";
 
 const Illustrations = () => {
   return (
@@ -19,7 +16,11 @@ const Illustrations = () => {
       <Header />
       <div className="grid">
         <div className="case cell-1 -beforevector">
-          <StaticImage className="image-wrapper" className="image-wrapper" src="../images/1.png" />
+          <StaticImage
+            className="image-wrapper"
+            className="image-wrapper"
+            src="../images/1.png"
+          />
         </div>
         <div className="case cell-2 -vector">
           <img className="image-wrapper  -greenstar" src={greenstar} />
@@ -41,7 +42,7 @@ const Illustrations = () => {
           <StaticImage className="image-wrapper" src="../images/6.png" />
         </div>
         <div className="case cell-8">
-          <img className="image-wrapper" src={flatcloud}/>
+          <img className="image-wrapper" src={flatcloud} />
         </div>
         <div className="case cell-9">
           <StaticImage className="image-wrapper" src="../images/7.png" />
@@ -50,9 +51,26 @@ const Illustrations = () => {
           <StaticImage className="image-wrapper" src="../images/8.png" />
         </div>
         <div className="case cell-11 -vector">
-          <img className="image-wrapper -yellowsquare" src={yellowsquare}/>
-          <img className="image-wrapper -greenpil" src={greenpil}/>
-          <img className="image-wrapper -pinkcircle" src={pinkcircle}/>
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 468 351"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M175.517 -0.058882L0.00561523 175.453L175.517 350.964L351.029 175.453L175.517 -0.058882Z"
+              fill="#FFDE60"
+            />
+            <path
+              d="M383 351C429.944 351 468 312.944 468 266C468 219.056 429.944 181 383 181C336.056 181 298 219.056 298 266C298 312.944 336.056 351 383 351Z"
+              fill="#FF499E"
+            />
+            <path
+              d="M382.5 182C359.226 182 340 162.625 340 139.172V43.8282C340 20.3746 359.226 1 382.5 1C405.774 1 425 20.3746 425 43.8282V139.172C424.494 162.625 405.774 182 382.5 182Z"
+              fill="#3DDC97"
+            />
+          </svg>
         </div>
       </div>
       <main>
