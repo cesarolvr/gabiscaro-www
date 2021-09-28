@@ -3,9 +3,13 @@ import { Formik } from "formik";
 
 const Lock = ({ children }) => {
   const [isRightPassword, setIsRightPassword] = useState(false);
-  const a = 'cesar'
-  const savePermission = () => window.sessionStorage && sessionStorage.setItem('a', true);
-  const getPermission = () => window.sessionStorage && sessionStorage.getItem('a');
+  const a = "cesar";
+  const isClientAndSessionSuport =
+    typeof window !== "undefined" && window.sessionStorage;
+  const savePermission = () =>
+    isClientAndSessionSuport && sessionStorage.setItem("a", true);
+  const getPermission = () =>
+    isClientAndSessionSuport && sessionStorage.getItem("a");
 
   return getPermission() || isRightPassword ? (
     children
@@ -23,7 +27,7 @@ const Lock = ({ children }) => {
         onSubmit={(values, { setErrors }) => {
           if (values.password === a) {
             setIsRightPassword(true);
-            savePermission()
+            savePermission();
           } else {
             setErrors({
               password: "Senha inválida",
