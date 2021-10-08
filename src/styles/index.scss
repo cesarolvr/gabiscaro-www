@@ -11,3 +11,19 @@
     display: none;
   }
 }
+
+
+.projectinfo {
+  .category {
+    background: #f992d3;
+    padding: 5px 10px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}

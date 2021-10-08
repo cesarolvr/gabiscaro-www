@@ -2,9 +2,9 @@ import * as React from "react";
 
 import "./illustrations.scss";
 
-export const RamemGo = () => {
+export const RamemGo = ({filled}) => {
     return (
-        <div className="icon -ramem">
+        <div className={`icon -ramem ${filled && '-filled'}`}>
             <svg
                 width="100%"
                 height="100%"

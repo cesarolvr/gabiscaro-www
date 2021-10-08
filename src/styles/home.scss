@@ -1,6 +1,6 @@
 .home {
   @media (max-width: 868px) {
-    padding-top: 250px
+    padding-top: 250px;
   }
 }
 
@@ -22,7 +22,7 @@
   width: 30%;
 
   @media (max-width: 868px) {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -59,17 +59,5 @@
     img {
       object-fit: contain !important;
     }
-  }
-
-  .category {
-    background: #f992d3;
-    padding: 5px 10px;
-    border-radius: 16px;
-    margin-bottom: 15px;
-  }
-
-  .name {
-    font-size: 1.5rem;
-    font-weight: 600;
   }
 }

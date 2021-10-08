@@ -1,6 +1,6 @@
-.icon{
+.icon {
   &.-city {
-    transform: scale(1.3)
+    transform: scale(1.3);
   }
 
   .fill {
@@ -12,22 +12,40 @@
   }
 }
 
-.case {
+.icon {
   &:hover {
     .fill {
       display: block;
     }
 
     .-city .object {
-      fill: #3DDC97;
+      fill: #3ddc97;
     }
 
     .-iq .object {
-      fill: #9CEAEF;
+      fill: #9ceaef;
     }
 
     .-valeapena .object {
-      fill: #99018A;
+      fill: #99018a;
+    }
+  }
+
+  &.-filled {
+    .fill {
+      display: block;
+    }
+
+    .-city .object {
+      fill: #3ddc97;
+    }
+
+    .-iq .object {
+      fill: #9ceaef;
+    }
+
+    .-valeapena .object {
+      fill: #99018a;
     }
   }
 }

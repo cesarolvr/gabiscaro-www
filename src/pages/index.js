@@ -13,6 +13,12 @@ import {
 
 import "@styles/home.scss";
 
+// Images
+import ramengoThumb from '../images/ramengo.png'
+import cleancityThumb from '../images/cleancity.png'
+import iqThumb from '../images/iqcartoes.png'
+import valeuapenaThumb from '../images/valeuapena.png'
+
 const Home = () => {
   return (
     <>
@@ -23,10 +29,10 @@ const Home = () => {
             <Link to="/projects/ramengo">
               <div className="case">
                 <RamemGo />
-                <div className="content">
-                  <StaticImage
+                <div className="content projectinfo">
+                  <img
                     className="image"
-                    src="../images/ramengo.png"
+                    src={ramengoThumb}
                     alt=""
                   />
                   <p className="category">Visual Design</p>
@@ -37,10 +43,10 @@ const Home = () => {
             <Link to="/projects/ramengo">
               <div className="case">
                 <IqCartoes />
-                <div className="content">
-                  <StaticImage
+                <div className="content projectinfo">
+                  <img
                     className="image"
-                    src="../images/iqcartoes.png"
+                    src={iqThumb}
                     alt=""
                   />
                   <p className="category">Product Design</p>
@@ -53,10 +59,10 @@ const Home = () => {
             <Link to="/projects/ramengo">
               <div className="case">
                 <CleanCity />
-                <div className="content">
-                  <StaticImage
+                <div className="content projectinfo">
+                  <img
                     className="image"
-                    src="../images/cleancity.png"
+                    src={cleancityThumb}
                     alt=""
                   />
                   <p className="category">Product Design</p>
@@ -67,10 +73,10 @@ const Home = () => {
             <Link to="/projects/ramengo">
               <div className="case">
                 <ValeAPena />
-                <div className="content">
-                  <StaticImage
+                <div className="content projectinfo">
+                  <img
                     className="image"
-                    src="../images/valeuapena.png"
+                    src={valeuapenaThumb}
                     alt=""
                   />
                   <p className="category">Visual Design</p>

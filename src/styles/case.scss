@@ -1,0 +1,109 @@
+.hero {
+  position: relative;
+  padding: 100px 0;
+
+  @media (max-width: 868px) {
+    padding: 60px 0 100px 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 100px 20px 100px;
+
+    @media (max-width: 868px) {
+      padding: 0 30px;
+      bottom: -45px;
+    }
+  }
+
+  .category {
+    @media (max-width: 868px) {
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+    }
+  }
+
+  .icon {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  .thumb {
+    position: relative;
+    width: 100%;
+  }
+
+  .image {
+    width: 60%;
+    max-width: 90%;
+    position: absolute;
+    margin: auto;
+    inset: 0;
+  }
+
+  .name {
+    font-size: 4rem;
+
+    @media (max-width: 868px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.synopsis {
+  padding: 0 100px 60px 100px;
+  display: flex;
+
+  @media (max-width: 868px) {
+    flex-direction: column;
+    padding: 0 30px 40px 30px;
+  }
+
+  .item {
+    width: 25%;
+    &.-thechallenge {
+      width: 50%;
+    }
+
+    @media (max-width: 868px) {
+      margin-bottom: 40px;
+      width: 100% !important;
+    }
+  }
+  .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    @media (max-width: 868px) {
+      font-size: 1rem;
+    }
+  }
+
+  .list li {
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .text {
+    line-height: 1.5rem;
+  }
+}
+
+.divider {
+  border-color: #400039;
+}
+
+.-divider {
+    padding: 0 100px;
+    margin: 0 auto;
+
+    @media (max-width: 868px) {
+        padding: 0 40px
+    }
+}
