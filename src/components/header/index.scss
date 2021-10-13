@@ -9,6 +9,7 @@
   text-transform: uppercase;
   color: #99018a;
   font-size: 1rem;
+  z-index: 30;
   position: relative;
 
   @media (max-width: 868px) {
@@ -22,6 +23,7 @@
   .link,
   .title {
     color: #99018a;
+    display: inline-block;
   }
 
   .logo {
@@ -32,7 +34,6 @@
     top: 30%;
     width: 117px;
     height: 117px;
-
     @media (max-width: 868px) {
       width: 80px;
       height: 80px;
@@ -45,6 +46,7 @@
 
     .symbol {
       transform: scale(1.2);
+      transform-origin: center center;
     }
   }
 

@@ -18,10 +18,10 @@ const Header = ({ className = "" }) => {
         <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
         
       </Helmet>
-      <Link className="title" to="/illustrations">
+      <Link className="link" to="/illustrations">
         illustrations
       </Link>
-      <Link className="title" to="/">
+      <Link className="link -logo" to="/">
         <Logo />
       </Link>
       <Link className="link" to="/about">

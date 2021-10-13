@@ -10,10 +10,8 @@
   .object {
     fill: none;
   }
-}
 
-.icon {
-  &:hover {
+  &.-filled {
     .fill {
       display: block;
     }
@@ -30,8 +28,10 @@
       fill: #99018a;
     }
   }
+}
 
-  &.-filled {
+.case {
+  &:hover {
     .fill {
       display: block;
     }

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const DividerWithIllustration = ({title = ''}) => {
+const DividerWithIllustration = () => {
   return (
     <svg
       width="300"
@@ -40,8 +40,6 @@ const DividerWithIllustration = ({title = ''}) => {
         stroke="#3DDC97"
         stroke-width="3"
       />
-      <rect x="416" y="77.9995" width="92" height="26" rx="13" fill="#FD4D40" />
-      <text x="424" y="96.999" class="title">{title}</text>
     </svg>
   );
 };
