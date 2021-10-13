@@ -6,10 +6,6 @@
     padding: 60px 0 100px 0;
   }
 
-  .container {
-    position: relative;
-  }
-
   .content {
     position: absolute;
     bottom: 0;
@@ -97,13 +93,151 @@
 
 .divider {
   border-color: #400039;
+  position: relative;
+
+  &.-light {
+    border: 1px solid #e5e5e5;
+  }
 }
 
-.-divider {
+.casesection {
+  padding: 30px 0px;
+
+  &.-primary {
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+
+      @media (max-width: 868px) {
+        flex-direction: column;
+      }
+    }
+
+    .caseimage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      @media (max-width: 868px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .text {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+  }
+
+  &.-secondary {
+    .container {
+      padding: 0 100px;
+
+      @media (max-width: 868px) {
+        padding: 0 40px;
+      }
+    }
+
+    .processes {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+
+      @media (max-width: 868px) {
+        flex-direction: column;
+      }
+    }
+
+    .processes > .item {
+      width: 32%;
+      padding: 35px 30px;
+      border: 2px solid #fd4d40;
+      border-radius: 16px;
+
+      @media (max-width: 868px) {
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      &:nth-of-type(2) {
+        border-color: #99018a;
+
+        .title {
+          color: #99018a;
+        }
+      }
+
+      &:last-of-type {
+        border-color: #f992d3;
+        .title {
+          color: #f992d3;
+        }
+      }
+    }
+
+    .processes > .item .title {
+      color: #fd4d40;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .processes > .item .list {
+      list-style: disc;
+      padding-left: 20px;
+      line-height: 1.4rem;
+    }
+
+    .processes > .item .list .item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.container {
+  position: relative;
+
+  &.-divider {
     padding: 0 100px;
     margin: 0 auto;
 
     @media (max-width: 868px) {
-        padding: 0 40px
+      padding: 0 40px;
     }
+  }
+
+  &.-secondary {
+    padding: 70px 100px;
+
+    @media (max-width: 868px) {
+      padding: 70px 40px;
+    }
+
+    .illustration {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      display: block;
+
+      .title {
+        fill: white;
+        letter-spacing: 0.2px;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
+.sectiontitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
 }
