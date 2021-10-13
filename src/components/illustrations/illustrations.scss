@@ -1,31 +1,33 @@
 .icon {
-  &.-city {
-    transform: scale(1.3);
-  }
+  @media (min-width: 868px) {
+    &.-city {
+      transform: scale(1.3);
+    }
 
-  .fill {
-    display: none;
-  }
-
-  .object {
-    fill: none;
-  }
-
-  &.-filled {
     .fill {
-      display: block;
+      display: none;
     }
 
-    .-city .object {
-      fill: #3ddc97;
+    .object {
+      fill: none;
     }
 
-    .-iq .object {
-      fill: #9ceaef;
-    }
+    &.-filled {
+      .fill {
+        display: block;
+      }
 
-    .-valeapena .object {
-      fill: #99018a;
+      .-city .object {
+        fill: #3ddc97;
+      }
+
+      .-iq .object {
+        fill: #9ceaef;
+      }
+
+      .-valeapena .object {
+        fill: #99018a;
+      }
     }
   }
 }
