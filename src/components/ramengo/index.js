@@ -421,7 +421,7 @@ const RamenGo = () => {
       </section>
       <br />
       <br />
-      <section className="casesection">
+      <section className="casesection -full">
         <img src={iqFinalversion} alt="" />
         
       </section>

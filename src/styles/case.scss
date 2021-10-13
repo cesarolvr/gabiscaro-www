@@ -1,3 +1,74 @@
+.-case {
+  .container {
+    position: relative;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    @media (max-width: 868px) {
+      flex-direction: column;
+      padding: 0 40px;
+    }
+
+    &.-divider {
+      padding: 0 100px;
+      margin: 0 auto;
+
+      @media (max-width: 868px) {
+        padding: 0 40px;
+      }
+    }
+
+    &.-secondary {
+      padding: 70px 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 868px) {
+        padding: 70px 40px;
+      }
+
+      .illustration {
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+      }
+      .title {
+        background: #fd4d40;
+        letter-spacing: 0.2px;
+        font-weight: lighter;
+        display: block;
+        position: absolute;
+        z-index: 11;
+        padding: 5px 10px;
+        border-radius: 16px;
+        color: white;
+        margin: auto;
+      }
+      .divider {
+        width: 100%;
+      }
+    }
+  }
+
+  .divider {
+    border-color: #400039;
+    position: relative;
+    width: 100%;
+
+    &.-light {
+      border: 1px solid #e5e5e5;
+    }
+  }
+}
+
 .casesection {
   padding: 30px 0px;
 }
@@ -212,74 +283,9 @@
   }
 }
 
-.-case {
-  .container {
-    position: relative;
-    padding: 0 100px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-
-    @media (max-width: 868px) {
-      flex-direction: column;
-      padding: 0 40px;
-    }
-
-    &.-divider {
-      padding: 0 100px;
-      margin: 0 auto;
-
-      @media (max-width: 868px) {
-        padding: 0 40px;
-      }
-    }
-
-    &.-secondary {
-      padding: 70px 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      @media (max-width: 868px) {
-        padding: 70px 40px;
-      }
-
-      .illustration {
-        z-index: 10;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        display: block;
-      }
-      .title {
-        background: #fd4d40;
-        letter-spacing: 0.2px;
-        font-weight: lighter;
-        display: block;
-        position: absolute;
-        z-index: 11;
-        padding: 5px 10px;
-        border-radius: 16px;
-        color: white;
-        margin: auto;
-      }
-      .divider {
-        width: 100%;
-      }
-    }
-  }
-
-  .divider {
-    border-color: #400039;
-    position: relative;
+.-full {
+  img {
     width: 100%;
-
-    &.-light {
-      border: 1px solid #e5e5e5;
-    }
   }
 }
 
