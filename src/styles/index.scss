@@ -66,6 +66,16 @@
   }
 }
 
+.featuredtext {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  @media (max-width: 868px) {
+    font-size: 3rem;
+  }
+}
+
 .box {
   padding: 40px;
   border: 1px solid #f992d3;
@@ -75,9 +85,19 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: 868px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .icon {
     font-size: 3rem;
     margin-right: 30px;
+
+    @media (max-width: 868px) {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
   }
 
   &.-big {
@@ -86,6 +106,11 @@
       font-size: 1.25rem;
       font-weight: bold;
       line-height: 1.75rem;
+
+      @media (max-width: 868px) {
+        font-size: 1rem;
+        line-height: 1.55rem;
+      }
     }
   }
 }

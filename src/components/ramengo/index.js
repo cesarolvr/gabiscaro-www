@@ -423,8 +423,76 @@ const RamenGo = () => {
       <br />
       <section className="casesection -full">
         <img src={iqFinalversion} alt="" />
-        
       </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <section className="casesection container">
+        <div className="holder">
+          <p className="sectiontitle">Impact</p>
+          <p className="sectionparagraph">
+            We achieved our goal 🎉
+            <br />
+            <br />
+            <br />
+          </p>
+        </div>
+      </section>
+      <section className="casesection container">
+        <div className="holder">
+          <p className="featuredtext">
+            +22% <br />
+            completion
+          </p>
+
+          <p className="sectionparagraph">coming from paid media</p>
+          <br />
+          <br />
+          <br />
+        </div>
+        <div className="holder">
+          <p className="featuredtext">
+            +28% <br />
+            completion
+          </p>
+          <p className="sectionparagraph">coming from emails</p>
+          <br />
+          <br />
+          <br />
+        </div>
+      </section>
+      <br />
+      <section className="container -divider">
+        <hr className="divider -light" />
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <section className="casesection container">
+        <div className="holder">
+          <p className="sectiontitle">Next steps</p>
+          <p className="sectionparagraph">Develop different A/B Tests too:</p>
+          <ul className="sectionlist">
+            <li>
+              Cards instead of the accordion with information of the credit
+              card;
+            </li>
+            <li>Break the form application into steps;</li>
+            <li>Test some minor elements, like position of the credit card.</li>
+            <br />
+          </ul>
+          <p className="sectionparagraph">
+            Conduct a usability test with users to keep improving the experience
+            of asking for a credit card.
+          </p>
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
