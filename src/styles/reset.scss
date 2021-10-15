@@ -112,7 +112,9 @@ section {
 body {
 	font-size: 16px;
 	line-height: 1;
-	font-family: "Rubik", sans-serif;	
+	font-family: "Rubik", sans-serif;
+	width: 100vw;
+	overflow-x: hidden;
 }
 ol,
 ul {
