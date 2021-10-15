@@ -1,5 +1,7 @@
-import * as React from "react";
+import React, {useEffect} from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import smoothScroll from "@src/utils/smoothScroll";
+
 
 import Header from "@components/header";
 import Contact from "@components/contact";
@@ -11,6 +13,9 @@ import halfcircle from "../images/halfcircle.svg";
 import flatcloud from "../images/flatcloud.svg";
 
 const Illustrations = () => {
+  useEffect(() => {
+    smoothScroll();
+  }, []);
   return (
     <>
       <Header />

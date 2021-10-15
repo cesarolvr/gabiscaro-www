@@ -1,6 +1,6 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import smoothScroll from "@src/utils/smoothScroll";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
@@ -14,12 +14,15 @@ import {
 import "@styles/home.scss";
 
 // Images
-import ramengoThumb from '../images/ramengo.png'
-import cleancityThumb from '../images/cleancity.png'
-import iqThumb from '../images/iqcartoes.png'
-import valeuapenaThumb from '../images/valeuapena.png'
+import ramengoThumb from "../images/ramengo.png";
+import cleancityThumb from "../images/cleancity.png";
+import iqThumb from "../images/iqcartoes.png";
+import valeuapenaThumb from "../images/valeuapena.png";
 
 const Home = () => {
+  useEffect(() => {
+    smoothScroll();
+  }, []);
   return (
     <>
       <Header className="-opened" />
@@ -30,11 +33,7 @@ const Home = () => {
               <div className="case">
                 <RamemGo />
                 <div className="content projectinfo">
-                  <img
-                    className="image"
-                    src={ramengoThumb}
-                    alt=""
-                  />
+                  <img className="image" src={ramengoThumb} alt="" />
                   <p className="categorylabel">Visual Design</p>
                   <p className="name">RamenGo</p>
                 </div>
@@ -44,11 +43,7 @@ const Home = () => {
               <div className="case">
                 <IqCartoes />
                 <div className="content projectinfo">
-                  <img
-                    className="image"
-                    src={iqThumb}
-                    alt=""
-                  />
+                  <img className="image" src={iqThumb} alt="" />
                   <p className="categorylabel">Product Design</p>
                   <p className="name">iq Cartões</p>
                 </div>
@@ -60,11 +55,7 @@ const Home = () => {
               <div className="case">
                 <CleanCity />
                 <div className="content projectinfo">
-                  <img
-                    className="image"
-                    src={cleancityThumb}
-                    alt=""
-                  />
+                  <img className="image" src={cleancityThumb} alt="" />
                   <p className="categorylabel">Product Design</p>
                   <p className="name">Clean City</p>
                 </div>
@@ -74,11 +65,7 @@ const Home = () => {
               <div className="case">
                 <ValeAPena />
                 <div className="content projectinfo">
-                  <img
-                    className="image"
-                    src={valeuapenaThumb}
-                    alt=""
-                  />
+                  <img className="image" src={valeuapenaThumb} alt="" />
                   <p className="categorylabel">Visual Design</p>
                   <p className="name">Vale a Pena</p>
                 </div>
