@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { RamemGo } from "@components/illustrations";
 import Carousel from "@components/carousel";
@@ -12,10 +12,15 @@ import iqTable from "@images/iqtable.svg";
 import iqHyphotesis from "@images/iq-hyphotesis.svg";
 import iqFinalversion from "@images/iqfinalversion.svg";
 
+import smoothScroll from "@src/utils/smoothScroll";
+
 import "@styles/case.scss";
 import DividerWithIllustration from "../dividerWithIllustration";
 
 const RamenGo = () => {
+  useEffect(() => {
+    smoothScroll();
+  }, []);
   return (
     <div className="page -case -ramengo">
       <section className="casesection -hero">
@@ -490,11 +495,9 @@ const RamenGo = () => {
         </div>
       </section>
       <br />
-      <div className="container">
-        <section className="casesection -carousel">
-          <Carousel />
-        </section>
-      </div>
+      <section className="casesection -carousel">
+        <Carousel />
+      </section>
       <br />
       <br />
       <br />
