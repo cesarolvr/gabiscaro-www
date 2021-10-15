@@ -1,4 +1,6 @@
 .-case {
+  width: 100vw;
+  overflow-x: hidden;
   .container {
     position: relative;
     padding: 0 100px;
@@ -71,8 +73,6 @@
 
 .casesection {
   padding: 30px 0px;
-  width: 100vw;
-	overflow-x: hidden;
 
   .holder {
     width: 100%;
