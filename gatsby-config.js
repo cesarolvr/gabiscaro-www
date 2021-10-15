@@ -25,6 +25,7 @@ module.exports = {
           "@src": "src",
           "@components": "src/components",
           "@styles": "src/styles",
+          "@images": "src/images",
         },
         extensions: []
       }

@@ -1,4 +1,6 @@
 @import "./reset.scss";
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 
 .container {
   max-width: 1130px;
@@ -12,14 +14,15 @@
   }
 }
 
+.categorylabel {
+  background: #f992d3;
+  padding: 5px 10px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
 .projectinfo {
-  .category {
-    background: #f992d3;
-    padding: 5px 10px;
-    border-radius: 16px;
-    margin-bottom: 15px;
-    display: inline-block;
-  }
 
   .name {
     font-size: 1.5rem;

@@ -35,7 +35,7 @@ const Home = () => {
                     src={ramengoThumb}
                     alt=""
                   />
-                  <p className="category">Visual Design</p>
+                  <p className="categorylabel">Visual Design</p>
                   <p className="name">RamenGo</p>
                 </div>
               </div>
@@ -49,7 +49,7 @@ const Home = () => {
                     src={iqThumb}
                     alt=""
                   />
-                  <p className="category">Product Design</p>
+                  <p className="categorylabel">Product Design</p>
                   <p className="name">iq Cartões</p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const Home = () => {
                     src={cleancityThumb}
                     alt=""
                   />
-                  <p className="category">Product Design</p>
+                  <p className="categorylabel">Product Design</p>
                   <p className="name">Clean City</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ const Home = () => {
                     src={valeuapenaThumb}
                     alt=""
                   />
-                  <p className="category">Visual Design</p>
+                  <p className="categorylabel">Visual Design</p>
                   <p className="name">Vale a Pena</p>
                 </div>
               </div>

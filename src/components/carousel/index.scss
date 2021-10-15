@@ -1,0 +1,81 @@
+.carouseldefault {
+  padding: 50px 0px;
+
+  .slick-slide {
+    padding: 20px;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-arrow {
+    z-index: 20;
+    background: transparent;
+    right: 0;
+    height: 680px;
+    width: 30vw;
+
+    &:before {
+      display: none;
+    }
+
+    &.slick-prev {
+      right: 100%;
+      left: auto;
+    }
+
+    &.slick-next {
+      left: 100%;
+      right: auto;
+    }
+  }
+
+  .item {
+    background: #fd4d40;
+    padding: 40px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    @media (min-width: 868px) {
+      padding: 40px 130px;
+    }
+  }
+  .item .holder {
+    width: 50%;
+    &:last-of-type {
+      display: flex;
+      width: 20%;
+      justify-content: flex-start;
+
+      @media (min-width: 868px) {
+        width: 50%;
+      }
+    }
+  }
+
+  .item .image {
+    margin: auto;
+    width: auto;
+    max-width: none;
+    height: 400px;
+
+    @media (min-width: 868px) {
+      height: 600px;
+    }
+  }
+
+  .item .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: white;
+
+    @media (min-width: 868px) {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+}

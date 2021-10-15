@@ -1,16 +1,16 @@
 import React from "react";
-// import Lock from "@components/lock";
 
 import { RamemGo } from "@components/illustrations";
+import Carousel from "@components/carousel";
 
-import ramengo from "../../images/ramengo-lg.png";
-import iqbefore from "../../images/iqcartoes-before.png";
-import iqafter from "../../images/iqcartoes-after.png";
-import resultssurvey1 from "../../images/iqresults-survey-1.svg";
-import resultssurvey2 from "../../images/iqresults-survey-2.svg";
-import iqTable from "../../images/iqtable.svg";
-import iqHyphotesis from "../../images/iq-hyphotesis.svg";
-import iqFinalversion from "../../images/iqfinalversion.svg";
+import ramengo from "@images/ramengo-lg.png";
+import iqbefore from "@images/iqcartoes-before.png";
+import iqafter from "@images/iqcartoes-after.png";
+import resultssurvey1 from "@images/iqresults-survey-1.svg";
+import resultssurvey2 from "@images/iqresults-survey-2.svg";
+import iqTable from "@images/iqtable.svg";
+import iqHyphotesis from "@images/iq-hyphotesis.svg";
+import iqFinalversion from "@images/iqfinalversion.svg";
 
 import "@styles/case.scss";
 import DividerWithIllustration from "../dividerWithIllustration";
@@ -25,7 +25,7 @@ const RamenGo = () => {
             <img className="image" src={ramengo} alt="" />
           </div>
           <div className="content projectinfo">
-            <p className="category">Visual Design</p>
+            <p className="categorylabel">Visual Design</p>
             <p className="name">RamenGo</p>
           </div>
         </div>
@@ -490,6 +490,11 @@ const RamenGo = () => {
         </div>
       </section>
       <br />
+      <div className="container">
+        <section className="casesection -carousel">
+          <Carousel />
+        </section>
+      </div>
       <br />
       <br />
       <br />
