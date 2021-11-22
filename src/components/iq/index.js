@@ -99,7 +99,7 @@ const IQ = () => {
         <div className="container">
           <div className="processes">
             <div className="item">
-              <p className="title">Discovery</p>
+              <p className="title">Discover</p>
               <ol className="list">
                 <li className="item">Quantitative research with users</li>
                 <li className="item">Benchmark</li>
@@ -129,7 +129,7 @@ const IQ = () => {
       <br />
       <br />
       <section className="container -divider -secondary">
-        <div className="title">Discovery</div>
+        <div className="title">Discover</div>
         <DividerWithIllustration />
         <hr className="divider -light" />
       </section>
@@ -239,8 +239,8 @@ const IQ = () => {
       <br />
       <br />
       <section className="container -divider -secondary">
-        <div className="title">Define & Develop</div>
-        <DividerWithIllustration />
+        <div className="title -black">Define & Develop</div>
+        <DividerWithIllustration flagBg="black" />
         <hr className="divider -light" />
       </section>
       <br />
@@ -405,7 +405,7 @@ const IQ = () => {
       <br />
       <br />
       <section className="container -divider -secondary">
-        <div className="title">Deliver</div>
+        <div className="title -pink">Deliver</div>
         <DividerWithIllustration />
         <hr className="divider -light" />
       </section>
@@ -452,7 +452,7 @@ const IQ = () => {
         <div className="holder">
           <p className="featuredtext">
             +22% <br />
-            completion
+            referral
           </p>
 
           <p className="sectionparagraph">coming from paid media</p>
@@ -463,7 +463,7 @@ const IQ = () => {
         <div className="holder">
           <p className="featuredtext">
             +28% <br />
-            completion
+            referral
           </p>
           <p className="sectionparagraph">coming from emails</p>
           <br />

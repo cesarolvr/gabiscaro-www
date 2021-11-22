@@ -8,7 +8,7 @@ import {
   RamemGo,
   CleanCity,
   IqCartoes,
-  ValeAPena,
+  BlueberryIllustration,
 } from "@components/illustrations";
 
 import "@styles/home.scss";
@@ -17,7 +17,7 @@ import "@styles/home.scss";
 import ramengoThumb from "../images/ramengo.png";
 import cleancityThumb from "../images/cleancity.png";
 import iqThumb from "../images/iqcartoes.png";
-import valeuapenaThumb from "../images/valeuapena.png";
+import blueberryThumb from "../images/blueberry-thumb.png";
 
 const Home = () => {
   useEffect(() => {
@@ -61,13 +61,13 @@ const Home = () => {
                 </div>
               </div>
             </Link>
-            <Link to="/projects/ramengo">
+            <Link to="/projects/blueberry">
               <div className="case">
-                <ValeAPena />
+                <BlueberryIllustration />
                 <div className="content projectinfo">
-                  <img className="image" src={valeuapenaThumb} alt="" />
-                  <p className="categorylabel">Visual Design</p>
-                  <p className="name">Vale a Pena</p>
+                  <img className="image" src={blueberryThumb} alt="" />
+                  <p className="categorylabel">Design System</p>
+                  <p className="name">Blueberry Design System</p>
                 </div>
               </div>
             </Link>

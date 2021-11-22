@@ -80,9 +80,9 @@ export const IqCartoes = ({ filled }) => {
   );
 };
 
-export const ValeAPena = ({ filled }) => {
+export const BlueberryIllustration = ({ filled }) => {
   return (
-    <div className={`icon -valeapena ${filled && "-filled"}`}>
+    <div className={`icon -blueberry ${filled && "-filled"}`}>
       <svg
         width="100%"
         height="100%"

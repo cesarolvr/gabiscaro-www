@@ -53,6 +53,14 @@
         border-radius: 16px;
         color: white;
         margin: auto;
+
+        &.-black {
+          background: #400039;
+        }
+
+        &.-pink {
+          background: #f992d3;
+        }
       }
       .divider {
         width: 100%;

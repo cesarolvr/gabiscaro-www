@@ -1,5 +1,5 @@
 @import "./reset.scss";
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 .container {
@@ -23,7 +23,6 @@
 }
 
 .projectinfo {
-
   .name {
     font-size: 1.5rem;
     font-weight: 600;
@@ -47,6 +46,8 @@
   line-height: 1.8rem;
   font-weight: 600;
   margin-bottom: 40px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .sectionlist {
