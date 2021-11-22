@@ -13,19 +13,19 @@
     }
 
     &.-filled {
-      .fill {
+      .fill, .object {
         display: block;
       }
 
-      .-city .object {
+      &.-city .object {
         fill: #3ddc97;
       }
 
-      .-iq .object {
+      &.-iq .object {
         fill: #9ceaef;
       }
 
-      .-valeapena .object {
+      &.-valeapena .object {
         fill: #99018a;
       }
     }

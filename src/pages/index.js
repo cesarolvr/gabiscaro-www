@@ -39,7 +39,7 @@ const Home = () => {
                 </div>
               </div>
             </Link>
-            <Link to="/projects/ramengo">
+            <Link to="/projects/iq">
               <div className="case">
                 <IqCartoes />
                 <div className="content projectinfo">
