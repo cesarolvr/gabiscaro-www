@@ -5,9 +5,9 @@ import smoothScroll from "@src/utils/smoothScroll";
 import Header from "@components/header";
 import Contact from "@components/contact";
 import {
-  RamemGo,
-  CleanCity,
-  IqCartoes,
+  RamemGoIllustration,
+  CleanCityIllustration,
+  IqCartoesIllustration,
   BlueberryIllustration,
 } from "@components/illustrations";
 
@@ -17,7 +17,7 @@ import "@styles/home.scss";
 import ramengoThumb from "../images/ramengo.png";
 import cleancityThumb from "../images/cleancity.png";
 import iqThumb from "../images/iqcartoes.png";
-import blueberryThumb from "../images/blueberry-thumb.png";
+import blueberryThumb from "../images/blueberry-lg.png";
 
 const Home = () => {
   useEffect(() => {
@@ -31,7 +31,7 @@ const Home = () => {
           <div className="holder">
             <Link to="/projects/ramengo">
               <div className="case">
-                <RamemGo />
+                <RamemGoIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={ramengoThumb} alt="" />
                   <p className="categorylabel">Visual Design</p>
@@ -41,7 +41,7 @@ const Home = () => {
             </Link>
             <Link to="/projects/iq">
               <div className="case">
-                <IqCartoes />
+                <IqCartoesIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={iqThumb} alt="" />
                   <p className="categorylabel">Product Design</p>
@@ -51,9 +51,9 @@ const Home = () => {
             </Link>
           </div>
           <div className="holder">
-            <Link to="/projects/ramengo">
+            <Link to="/projects/cleancity">
               <div className="case">
-                <CleanCity />
+                <CleanCityIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={cleancityThumb} alt="" />
                   <p className="categorylabel">Product Design</p>

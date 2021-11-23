@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { RamemGo } from "@components/illustrations";
+import { RamemGoIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 
 import ramengo from "@images/ramengo-lg.png";
@@ -26,7 +26,7 @@ const RamenGo = () => {
       <section className="casesection -hero">
         <div className="container">
           <div className="thumb">
-            <RamemGo filled />
+            <RamemGoIllustration filled />
             <img className="image" src={ramengo} alt="" />
           </div>
           <div className="content projectinfo">
@@ -54,10 +54,11 @@ const RamenGo = () => {
           <p className="sectionparagraph">
             Some months ago I was invited by the front end team of Red Ventures
             to create a new practical test for candidates who'd apply for a job
-            opening. I gave wings to the imagination and I created a delivery
-            platform in which the users could choose the ingredients for their
-            ramen and receive it at the comfort of their homes. I developed all
-            the visuals: styleguide, interaction and illustrations/iconography.
+            opening. <br />I gave wings to the imagination and I created a
+            delivery platform in which the users could choose the ingredients
+            for their ramen and receive it at the comfort of their homes. I
+            developed all the visuals: styleguide, interaction and
+            illustrations/iconography.
           </p>
         </div>
       </section>
@@ -69,7 +70,7 @@ const RamenGo = () => {
       </section>
       <br />
       <br />
-      
+
       <br />
       <section className="casesection -carousel">
         <Carousel />

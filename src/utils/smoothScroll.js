@@ -66,5 +66,5 @@ const SmoothScroll = (target, speed, smooth) => {
 export default () => {
   if (!isClient) return;
   // debugger;
-  new SmoothScroll(document, 120, 12);
+  new SmoothScroll(document, 40, 12);
 };

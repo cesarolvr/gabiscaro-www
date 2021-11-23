@@ -2,7 +2,7 @@ import * as React from "react";
 
 import "./illustrations.scss";
 
-export const RamemGo = ({ filled }) => {
+export const RamemGoIllustration = ({ filled }) => {
   return (
     <div className={`icon -ramem ${filled && "-filled"}`}>
       <svg
@@ -36,7 +36,7 @@ export const RamemGo = ({ filled }) => {
   );
 };
 
-export const CleanCity = ({ filled }) => {
+export const CleanCityIllustration = ({ filled }) => {
   return (
     <div className={`icon -city ${filled && "-filled"}`}>
       <svg
@@ -58,7 +58,7 @@ export const CleanCity = ({ filled }) => {
   );
 };
 
-export const IqCartoes = ({ filled }) => {
+export const IqCartoesIllustration = ({ filled }) => {
   return (
     <div className={`icon -iq ${filled && "-filled"}`}>
       <svg

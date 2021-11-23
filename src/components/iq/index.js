@@ -1,16 +1,22 @@
 import React, { useEffect } from "react";
 
-import { IqCartoes } from "@components/illustrations";
+import { IqCartoesIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 
+// Images
 import ramengo from "@images/iqcartoes-lg.png";
-import iqbefore from "@images/iqcartoes-before.png";
-import iqafter from "@images/iqcartoes-after.png";
 import resultssurvey1 from "@images/iqresults-survey-1.svg";
 import resultssurvey2 from "@images/iqresults-survey-2.svg";
 import iqTable from "@images/iqtable.svg";
 import iqHyphotesis from "@images/iq-hyphotesis.svg";
 import iqFinalversion from "@images/iqfinalversion.svg";
+
+// Videos
+import iqbefore from "@videos/iq-1-Before.mp4";
+import iqafter from "@videos/iq-2-After.mp4";
+import iqaccordion from "@videos/iq-3-Accordion.mp4";
+import iqcards from "@videos/iq-4-Cards.mp4";
+import iqfinal from "@videos/iq-5-Final.mp4";
 
 import smoothScroll from "@src/utils/smoothScroll";
 
@@ -26,7 +32,7 @@ const IQ = () => {
       <section className="casesection -hero">
         <div className="container">
           <div className="thumb">
-            <IqCartoes filled />
+            <IqCartoesIllustration filled />
             <img className="image" src={ramengo} alt="" />
           </div>
           <div className="content projectinfo">
@@ -77,11 +83,29 @@ const IQ = () => {
         <div className="container">
           <div className="caseimage">
             <p className="text">Before</p>
-            <img src={iqbefore} alt="" />
+            <video
+              className="videoprint"
+              autoPlay={true}
+              muted
+              loop={true}
+              width="100%"
+              height="100%"
+            >
+              <source src={iqbefore} type="video/mp4" />
+            </video>
           </div>
           <div className="caseimage">
             <p className="text">After</p>
-            <img src={iqafter} alt="" />
+            <video
+              className="videoprint"
+              autoPlay={true}
+              loop={true}
+              muted
+              width="100%"
+              height="100%"
+            >
+              <source src={iqafter} type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
@@ -327,13 +351,31 @@ const IQ = () => {
       <section className="casesection">
         <div className="container">
           <div className="screenprint">
-            <img src={iqbefore} alt="" />
+            <video
+              className="videoprint"
+              autoPlay={true}
+              muted
+              loop={true}
+              width="100%"
+              height="100%"
+            >
+              <source src={iqaccordion} type="video/mp4" />
+            </video>
             <p className="caption">
               <b>Version A:</b> The content was divided into accordion
             </p>
           </div>
           <div className="screenprint">
-            <img src={iqafter} alt="" />
+            <video
+              className="videoprint"
+              autoPlay={true}
+              muted
+              loop={true}
+              width="100%"
+              height="100%"
+            >
+              <source src={iqcards} type="video/mp4" />
+            </video>
             <p className="caption">
               <strong>Version B:</strong> The content was divided into cards
             </p>
@@ -430,8 +472,38 @@ const IQ = () => {
       </section>
       <br />
       <br />
-      <section className="casesection -full">
-        <img src={iqFinalversion} alt="" />
+      <section className="casesection -result">
+        <video
+          className="videoprint"
+          autoPlay={true}
+          muted
+          loop={true}
+          width="100%"
+          height="100%"
+        >
+          <source src={iqfinal} type="video/mp4" />
+        </video>
+        <svg
+          width="396"
+          height="396"
+          viewBox="0 0 396 396"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="circles"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M396 198C396 88.6476 307.352 0 198 0C88.6476 0 0 88.6476 0 198H396Z"
+            fill="#9CEAEF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M396 396C396 286.648 307.352 198 198 198C88.6476 198 0 286.648 0 396H396Z"
+            fill="#9CEAEF"
+          />
+        </svg>
       </section>
       <br />
       <br />

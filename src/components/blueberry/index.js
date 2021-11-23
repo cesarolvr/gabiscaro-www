@@ -34,25 +34,26 @@ const Blueberry = () => {
         <div className="item -whatidid">
           <p className="title">What I did</p>
           <ul className="list">
-            <li>UI Design</li>
-            <li>Content Strategy</li>
-            <li>Iconography</li>
-            <li>Illustration</li>
+            <li>Research</li>
+            <li>Interface components</li>
           </ul>
         </div>
         <div className="item -whenidid">
           <p className="title">When I did</p>
-          <p className="text">2019</p>
+          <p className="text">
+            May 2020/ <br />
+            Ongoing product
+          </p>
         </div>
         <div className="item -thechallenge">
           <p className="title">The Challenge</p>
           <p className="sectionparagraph">
-            Some months ago I was invited by the front end team of Red Ventures
-            to create a new practical test for candidates who'd apply for a job
-            opening. I gave wings to the imagination and I created a delivery
-            platform in which the users could choose the ingredients for their
-            ramen and receive it at the comfort of their homes. I developed all
-            the visuals: styleguide, interaction and illustrations/iconography.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus
+            hendrerit velit at dignissim. Phasellus cursus dapibus ipsum, in
+            maximus elit aliquam a. Sed mattis mattis massa quis vehicula. Duis
+            sit amet sapien vel ipsum interdum rutrum ultrices eu eros. Aenean
+            ultricies mattis leo, sed condimentum nunc congue ut. Vivamus
+            dapibus placerat nisi,
           </p>
         </div>
       </section>
