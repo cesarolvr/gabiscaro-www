@@ -97,13 +97,28 @@
   }
 
   &.-grid {
+    padding: 0;
+
+    @media (min-width: 868px) {
+      padding: 30px 0;
+    }
     .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      flex-direction: column;
+
+      @media (min-width: 868px) {
+        flex-direction: row;
+      }
 
       .image {
-        max-width: 220px;
+        width: 50%;
+        margin: 20px auto;
+
+        @media (min-width: 868px) {
+          max-width: 220px;
+        }
       }
     }
   }
