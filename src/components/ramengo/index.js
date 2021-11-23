@@ -4,18 +4,22 @@ import { RamemGoIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 
 import ramengo from "@images/ramengo-lg.png";
-import iqbefore from "@images/iqcartoes-before.png";
-import iqafter from "@images/iqcartoes-after.png";
-import resultssurvey1 from "@images/iqresults-survey-1.svg";
-import resultssurvey2 from "@images/iqresults-survey-2.svg";
-import iqTable from "@images/iqtable.svg";
-import iqHyphotesis from "@images/iq-hyphotesis.svg";
-import iqFinalversion from "@images/iqfinalversion.svg";
+import image1 from "@images/ramengo/01.png";
+import image2 from "@images/ramengo/02.png";
+import image3 from "@images/ramengo/03.png";
+import image4 from "@images/ramengo/04.png";
+import image5 from "@images/ramengo/05.png";
+import image6 from "@images/ramengo/06.png";
+import image7 from "@images/ramengo/07.png";
+import image8 from "@images/ramengo/08.png";
+import image9 from "@images/ramengo/09.png";
+import image10 from "@images/ramengo/10.png";
+import image11 from "@images/ramengo/11.png";
+import video1 from "@videos/ramengo-1.mp4";
 
 import smoothScroll from "@src/utils/smoothScroll";
 
 import "@styles/case.scss";
-import DividerWithIllustration from "../dividerWithIllustration";
 
 const RamenGo = () => {
   useEffect(() => {
@@ -71,9 +75,92 @@ const RamenGo = () => {
       <br />
       <br />
 
+      <section className="casesection">
+        <div className="container">
+          <p className="caption">Home</p>
+        </div>
+        <div className="container">
+          <img className="image" src={image1} alt="" />
+        </div>
+      </section>
+
+      <section className="casesection">
+        <div className="container">
+          <p className="caption">Styleguide</p>
+        </div>
+        <div className="container">
+          <img className="image" src={image2} alt="" />
+        </div>
+      </section>
+
+      <section className="casesection">
+        <div className="container">
+          <p className="caption">Colors</p>
+        </div>
+        <div className="container">
+          <img className="image" src={image3} alt="" />
+        </div>
+      </section>
+
       <br />
+      <br />
+      <br />
+
+      <section className="casesection -grid">
+        <div className="container">
+          <img className="image" src={image4} alt="" />
+          <img className="image" src={image5} alt="" />
+          <img className="image" src={image6} alt="" />
+        </div>
+      </section>
+
+      <section className="casesection -grid">
+        <div className="container">
+          <img className="image" src={image7} alt="" />
+          <img className="image" src={image8} alt="" />
+          <img className="image" src={image9} alt="" />
+        </div>
+      </section>
+
+      <br />
+      <br />
+
+      <section className="casesection">
+        <div className="container">
+          <img className="image" src={image10} alt="" />
+        </div>
+      </section>
+
+      <section className="casesection">
+        <div className="container">
+          <img className="image" src={image11} alt="" />
+        </div>
+      </section>
+
+      <section className="casesection">
+        <div className="container">
+          <video
+            className="video"
+            autoPlay={true}
+            muted
+            loop={true}
+            width="100%"
+            height="100%"
+          >
+            <source src={video1} type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
       <section className="casesection -carousel">
-        <Carousel />
+        <Carousel inverted />
       </section>
       <br />
       <br />
