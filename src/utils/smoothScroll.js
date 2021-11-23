@@ -50,7 +50,6 @@ const SmoothScroll = (target, speed, smooth) => {
   }
 
   var requestFrame = (function () {
-    // requestAnimationFrame cross browser
     return (
       window.requestAnimationFrame ||
       window.webkitRequestAnimationFrame ||
