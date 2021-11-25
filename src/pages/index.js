@@ -24,7 +24,7 @@ const Home = () => {
     smoothScroll();
   }, []);
   return (
-    <>
+    <div>
       <Header className="-opened" />
       <main className="home">
         <div className="container">
@@ -75,7 +75,7 @@ const Home = () => {
         </div>
         <Contact />
       </main>
-    </>
+    </div>
   );
 };
 

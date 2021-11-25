@@ -13,7 +13,7 @@ const About = () => {
     smoothScroll();
   }, []);
   return (
-    <>
+    <div>
       <Header />
       <main className="about">
         <section className="description">
@@ -101,7 +101,7 @@ const About = () => {
         </section>
         <Contact title="Let's work together!" />
       </main>
-    </>
+    </div>
   );
 };
 

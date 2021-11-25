@@ -16,7 +16,7 @@ const Illustrations = () => {
     smoothScroll();
   }, []);
   return (
-    <>
+    <div>
       <Header />
       <div className="grid">
         <div className="case cell-1 -beforevector">
@@ -127,7 +127,7 @@ const Illustrations = () => {
       <main>
         <Contact />
       </main>
-    </>
+    </div>
   );
 };
 
