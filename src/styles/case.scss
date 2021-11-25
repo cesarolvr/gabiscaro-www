@@ -77,6 +77,17 @@
       border: 1px solid #e5e5e5;
     }
   }
+
+  &.-cleancity {
+    .thumb {
+      position: relative;
+      width: 100%;
+
+      @media (min-width: 868px) {
+        margin-bottom: 100px;
+      }
+    }
+  }
 }
 
 .casesection {

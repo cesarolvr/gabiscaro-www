@@ -14,7 +14,7 @@ const CleanCity = () => {
     smoothScroll();
   }, []);
   return (
-    <div className="page -case -ramengo">
+    <div className="page -case -cleancity">
       <section className="casesection -hero">
         <div className="container">
           <div className="thumb">
