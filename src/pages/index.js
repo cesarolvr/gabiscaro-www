@@ -14,10 +14,10 @@ import {
 import "@styles/home.scss";
 
 // Images
-import ramengoThumb from "../images/ramengo.png";
-import cleancityThumb from "../images/cleancity.png";
-import iqThumb from "../images/iqcartoes.png";
-import blueberryThumb from "../images/blueberry-lg.png";
+import ramengoThumb from "../images/thumbs/ramengo.png";
+import cleancityThumb from "../images/thumbs/cleancity.png";
+import iqThumb from "../images/thumbs/iqcartoes.png";
+import blueberryThumb from "../images/thumbs/blueberry.png";
 
 const Home = () => {
   useEffect(() => {

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { RamemGoIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 
-import ramengo from "@images/ramengo-lg.png";
+import ramengo from "@images/ramengo/ramengo-hero.png";
 import image1 from "@images/ramengo/01.png";
 import image2 from "@images/ramengo/02.png";
 import image3 from "@images/ramengo/03.png";
