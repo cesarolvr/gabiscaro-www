@@ -88,6 +88,17 @@
       }
     }
   }
+
+  &.-blueberry {
+    .thumb {
+      position: relative;
+      width: 100%;
+
+      @media (min-width: 868px) {
+        margin-bottom: 100px;
+      }
+    }
+  }
 }
 
 .casesection {
@@ -265,10 +276,10 @@
     }
 
     &:nth-of-type(2) {
-      border-color: #99018a;
+      border-color: #d604c1;
 
       .title {
-        color: #99018a;
+        color: #d604c1;
       }
     }
 

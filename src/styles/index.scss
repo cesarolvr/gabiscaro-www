@@ -30,6 +30,11 @@
   }
 }
 
+.link {
+  color: #d604c1;
+  text-decoration: underline;
+}
+
 .sectionparagraph {
   line-height: 1.7rem;
   color: #666666;
@@ -49,6 +54,14 @@
   margin-bottom: 40px;
   margin-left: 0;
   margin-right: auto;
+
+  &.-red {
+    color: #ff4522;
+  }
+
+  &.-close {
+    margin-bottom: 20px;
+  }
 }
 
 .sectionlist {
@@ -58,6 +71,7 @@
   margin: 10px 0px;
 
   &.-number {
+    list-style: none;
     counter-reset: my-awesome-counter;
     > li:before {
       content: counter(my-awesome-counter) ". ";
@@ -68,6 +82,16 @@
     margin-bottom: 5px;
     line-height: 1.7rem;
     counter-increment: my-awesome-counter;
+  }
+
+  &.-big {
+    font-size: 1.25rem;
+    color: #400039;
+    font-weight: 700;
+    li {
+      line-height: 2rem;
+      margin-bottom: 20px;
+    }
   }
 }
 

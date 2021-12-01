@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import { IqCartoesIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
+import DividerWithIllustration from "../dividerWithIllustration";
 
 // Images
 import ramengo from "@images/iqcartoes-lg.png";
@@ -9,7 +10,6 @@ import resultssurvey1 from "@images/iqresults-survey-1.svg";
 import resultssurvey2 from "@images/iqresults-survey-2.svg";
 import iqTable from "@images/iqtable.svg";
 import iqHyphotesis from "@images/iq-hyphotesis.svg";
-import iqFinalversion from "@images/iqfinalversion.svg";
 
 // Videos
 import iqbefore from "@videos/iq-1-Before.mp4";
@@ -21,7 +21,6 @@ import iqfinal from "@videos/iq-5-Final.mp4";
 import smoothScroll from "@src/utils/smoothScroll";
 
 import "@styles/case.scss";
-import DividerWithIllustration from "../dividerWithIllustration";
 
 const IQ = () => {
   useEffect(() => {
