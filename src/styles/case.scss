@@ -108,9 +108,33 @@
     width: 100%;
   }
 
+  .holder.-padding {
+    padding-right: 20px;
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
   > img {
     margin: 0 auto;
     display: block;
+  }
+
+  > .holder > .icon {
+    width: 120px;
+    height: 74px;
+    margin-bottom: 20px;
+  }
+
+  .holder.-cellwrapper {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .holder.-cellwrapper > .cell {
+    width: 50%;
+    margin-bottom: 20px;
+    padding-right: 30px;
   }
 
   .caption {
@@ -284,6 +308,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    width: 100%;
 
     @media (max-width: 868px) {
       flex-direction: column;
