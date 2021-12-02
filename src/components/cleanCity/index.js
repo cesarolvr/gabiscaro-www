@@ -12,6 +12,11 @@ import usermapImage from "@images/cleancity/usermap.png";
 import print1 from "@images/cleancity/print-1.png";
 import print2 from "@images/cleancity/print-2.png";
 import print3 from "@images/cleancity/print-3.png";
+import printOnboarding from "@images/cleancity/print-onboarding.png";
+import printQuiz from "@images/cleancity/print-quiz.png";
+import printWaste from "@images/cleancity/print-waste.png";
+import printRedeem1 from "@images/cleancity/print-redeem-1.png";
+import printRedeem2 from "@images/cleancity/print-redeem-2.png";
 
 import smoothScroll from "@src/utils/smoothScroll";
 
@@ -785,10 +790,243 @@ const CleanCity = () => {
       <br />
       <br />
       <br />
-      <section className="container -divider -secondary">
+      <section className="container -divider -secondary -stuck">
         <div className="title -pink">Deliver</div>
         <DividerWithIllustration />
         <hr className="divider -light" />
+      </section>
+      <section className="casesection -onboarding">
+        <div className="container">
+          <div className="holder">
+            <img src={printOnboarding} alt="" />
+          </div>
+          <div className="holder">
+            <h3 className="sectiontitle -huge">Onboarding</h3>
+            <p className="sectionparagraph">
+              Short and clear description of the app, what is for and how to use
+              it.
+            </p>
+            <div className="illustrationwrapper">
+              <svg
+                width="233"
+                height="121"
+                viewBox="0 0 233 121"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M110.269 106.509C110.269 100.637 107.476 95.5915 103.491 93.4195C103.298 93.2865 103.087 93.1802 102.866 93.1035C101.691 92.5619 100.414 92.2778 99.1213 92.2703C96.6428 92.0193 94.1454 92.0193 91.6669 92.2703C91.8428 93.2038 92.1257 94.114 92.5098 94.9825C89.7116 97.5682 87.9225 101.769 87.9225 106.509C87.9225 112.014 90.3767 116.789 93.972 119.15C91.621 119.909 89.8549 120.547 89.8549 120.547C89.8549 120.547 100.75 122.517 105.452 118.248C108.353 115.662 110.269 111.37 110.269 106.509Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M91.6784 120.747C97.8539 120.747 102.86 114.372 102.86 106.508C102.86 98.6444 97.8539 92.2695 91.6784 92.2695C85.5029 92.2695 80.4967 98.6444 80.4967 106.508C80.4967 114.372 85.5029 120.747 91.6784 120.747Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M220.492 106.509C220.492 100.636 217.699 95.5913 213.714 93.4193C213.52 93.2874 213.31 93.1812 213.089 93.1033C211.914 92.5616 210.637 92.2775 209.344 92.2701C206.866 92.0194 204.368 92.0194 201.89 92.2701C202.069 93.2035 202.354 94.1134 202.738 94.9822C199.94 97.568 198.117 101.768 198.117 106.509C198.117 112.013 200.577 116.788 204.172 119.15C201.815 119.908 200.049 120.546 200.049 120.546C200.049 120.546 210.978 122.517 215.652 118.248C218.576 115.662 220.492 111.37 220.492 106.509Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M201.901 120.747C208.077 120.747 213.083 114.372 213.083 106.508C213.083 98.6444 208.077 92.2695 201.901 92.2695C195.726 92.2695 190.719 98.6444 190.719 106.508C190.719 114.372 195.726 120.747 201.901 120.747Z"
+                  fill="#1D4831"
+                />
+                <path d="M122.156 0H29.6802V101.09H122.156V0Z" fill="#00CD4B" />
+                <path d="M178.202 0H122.156V101.09H178.202V0Z" fill="#1D4831" />
+                <path
+                  d="M72.5318 106.509C72.5318 100.637 69.7393 95.5915 65.754 93.4195C65.5609 93.2865 65.3506 93.1802 65.129 93.1035C63.9543 92.5619 62.6777 92.2778 61.3846 92.2703C58.9061 92.0193 56.4086 92.0193 53.9301 92.2703C54.1061 93.2038 54.3889 94.114 54.773 94.9825C51.9748 97.5682 50.157 101.769 50.157 106.509C50.157 112.014 52.6112 116.789 56.2066 119.15C53.8556 119.909 52.0894 120.547 52.0894 120.547C52.0894 120.547 62.9844 122.517 67.6865 118.248C70.6166 115.662 72.5318 111.37 72.5318 106.509Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M53.9417 120.747C60.1172 120.747 65.1234 114.372 65.1234 106.508C65.1234 98.6444 60.1172 92.2695 53.9417 92.2695C47.7662 92.2695 42.76 98.6444 42.76 106.508C42.76 114.372 47.7662 120.747 53.9417 120.747Z"
+                  fill="#86FF85"
+                />
+                <path
+                  d="M217.556 71.4003L208.57 49.732C207.874 48.0541 206.698 46.6204 205.189 45.6121C203.681 44.6037 201.908 44.0658 200.095 44.0664H147.747L156.349 104.457H232.006V85.1677C232.006 84.8296 231.931 84.4957 231.787 84.1898C231.644 83.8839 231.434 83.6135 231.174 83.398L218.869 73.17C218.295 72.6946 217.845 72.0875 217.556 71.4003Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M173.402 65.5225H206.087C206.464 65.5225 206.835 65.4296 207.167 65.2519C207.499 65.0742 207.783 64.8173 207.992 64.5038C208.202 64.1903 208.332 63.8299 208.369 63.4544C208.407 63.0789 208.352 62.6998 208.209 62.3507L203.621 51.1574C203.449 50.7359 203.155 50.3753 202.777 50.1216C202.399 49.8678 201.955 49.7324 201.5 49.7324H168.884C168.508 49.7322 168.138 49.8245 167.806 50.0011C167.474 50.1778 167.191 50.4334 166.981 50.7455C166.771 51.0576 166.641 51.4166 166.601 51.791C166.562 52.1654 166.615 52.5438 166.756 52.8927L171.263 64.0802C171.435 64.5077 171.73 64.8738 172.111 65.131C172.493 65.3881 172.943 65.5246 173.402 65.5225Z"
+                  fill="#EAF3F0"
+                />
+                <path
+                  d="M42.2209 14.5605L8.22284 34.7808V68.4756L0 74.0895V101.05H42.2209V14.5605Z"
+                  fill="#00CD4B"
+                />
+                <path
+                  d="M168.815 71.4003L159.829 49.732C159.134 48.0541 157.957 46.6204 156.449 45.6121C154.94 44.6037 153.168 44.0658 151.354 44.0664H129.455V104.457H183.259V85.1677C183.259 84.8296 183.185 84.4957 183.041 84.1898C182.897 83.8839 182.688 83.6135 182.428 83.398L170.122 73.17C169.55 72.6949 169.101 72.0876 168.815 71.4003Z"
+                  fill="#00CD4B"
+                />
+                <path
+                  d="M168.184 106.509C168.184 100.636 165.391 95.5913 161.406 93.4193C161.211 93.2863 160.999 93.1801 160.775 93.1033C159.603 92.5616 158.328 92.2775 157.037 92.2701C154.558 92.0194 152.061 92.0194 149.582 92.2701C149.761 93.2035 150.046 94.1134 150.431 94.9822C147.633 97.568 145.809 101.768 145.809 106.509C145.809 112.013 148.269 116.788 151.864 119.15C149.508 119.908 147.742 120.546 147.742 120.546C147.742 120.546 158.671 122.517 163.339 118.248C166.269 115.662 168.184 111.37 168.184 106.509Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M149.594 120.747C155.769 120.747 160.775 114.372 160.775 106.508C160.775 98.6444 155.769 92.2695 149.594 92.2695C143.418 92.2695 138.412 98.6444 138.412 106.508C138.412 114.372 143.418 120.747 149.594 120.747Z"
+                  fill="#86FF85"
+                />
+                <path
+                  d="M134.857 52.2668V63.7991C134.857 64.2563 135.038 64.6948 135.361 65.018C135.683 65.3413 136.121 65.5229 136.577 65.5229H156.383C156.667 65.5238 156.946 65.4544 157.196 65.321C157.446 65.1877 157.66 64.9945 157.818 64.7585C157.975 64.5225 158.072 64.2511 158.1 63.9684C158.128 63.6858 158.086 63.4006 157.977 63.1383L153.229 51.6117C153.1 51.296 152.88 51.0259 152.597 50.8357C152.314 50.6454 151.982 50.5435 151.641 50.543H136.577C136.121 50.543 135.683 50.7246 135.361 51.0479C135.038 51.3712 134.857 51.8096 134.857 52.2668Z"
+                  fill="#EAF3F0"
+                />
+                <path
+                  d="M198.919 90.2305H191.66C190.111 90.2305 188.856 91.4885 188.856 93.0403V93.046C188.856 94.5978 190.111 95.8558 191.66 95.8558H198.919C200.468 95.8558 201.724 94.5978 201.724 93.046V93.0403C201.724 91.4885 200.468 90.2305 198.919 90.2305Z"
+                  fill="#EAF3F0"
+                />
+                <path
+                  d="M223.943 89.4609H216.684C215.135 89.4609 213.88 90.7189 213.88 92.2707V92.2765C213.88 93.8283 215.135 95.0863 216.684 95.0863H223.943C225.492 95.0863 226.747 93.8283 226.747 92.2765V92.2707C226.747 90.7189 225.492 89.4609 223.943 89.4609Z"
+                  fill="#EAF3F0"
+                />
+                <path
+                  d="M53.9415 111.352C56.0444 111.352 57.749 109.183 57.749 106.508C57.749 103.833 56.0444 101.664 53.9415 101.664C51.8387 101.664 50.134 103.833 50.134 106.508C50.134 109.183 51.8387 111.352 53.9415 111.352Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M148.321 111.352C150.424 111.352 152.128 109.183 152.128 106.508C152.128 103.833 150.424 101.664 148.321 101.664C146.218 101.664 144.513 103.833 144.513 106.508C144.513 109.183 146.218 111.352 148.321 111.352Z"
+                  fill="#1D4831"
+                />
+                <path
+                  d="M8.21704 53.7425L29.6802 40.9863"
+                  stroke="#1D4831"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8.21704 68.2287L29.6802 55.4668"
+                  stroke="#1D4831"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M29.6802 22.0195V101.091"
+                  stroke="#1D4831"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="casesection -quiz">
+        <div className="container">
+          <div className="holder">
+            <div className="starwrapper">
+              <svg
+                width="262"
+                height="262"
+                viewBox="0 0 262 262"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M140.652 65.0163L196.201 17.7214L182.986 89.4573L182.685 91.0915L184.341 91.2242L257.082 97.0552L196.996 138.451L195.627 139.394L196.705 140.659L244.024 196.201L172.264 182.993L170.629 182.692L170.497 184.348L164.69 257.082L123.27 197.002L122.327 195.634L121.062 196.712L65.5448 244.024L78.7288 172.27L79.029 170.636L77.3731 170.504L4.66364 164.691L64.7192 123.277L66.0865 122.334L65.0096 121.069L17.7214 65.5449L89.4511 78.7354L91.0847 79.0358L91.2176 77.3801L97.0552 4.6637L138.444 64.7254L139.387 66.0933L140.652 65.0163Z"
+                  fill="#3DDC97"
+                  stroke="#3DDC97"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <h3 className="sectiontitle -huge">Daily Quiz</h3>
+            <p className="sectionparagraph">
+              <strong>With questions about recycling</strong> <br /> To start
+              accumulating points, the user must answer a daily quiz, with 3
+              question on the topic. Each question is worth 20 points, thus
+              reaching a total of 60 points per day.
+            </p>
+            <div className="illustrationwrapper">
+              <svg
+                width="1202"
+                height="465"
+                viewBox="0 0 1202 465"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.8649 378.888L208.79 378.085C208.79 378.085 195.631 354.107 211.588 334.95L26.1482 331.057L20.8649 378.888Z"
+                  fill="#122B1D"
+                />
+                <path
+                  d="M206.519 346.988L24.363 347.22L22.1645 367.118L205.095 368.088C205.095 368.088 203.711 356.471 206.519 346.988Z"
+                  fill="#3DDC97"
+                />
+                <path
+                  d="M7.37303 353.177C5.91078 366.384 11.8587 377.88 20.658 378.855C29.4574 379.829 37.7761 369.912 39.2383 356.705C40.7006 343.498 34.7527 332.001 25.9533 331.027C17.154 330.053 8.83528 339.97 7.37303 353.177Z"
+                  fill="#9CEAEF"
+                />
+                <path
+                  d="M17.9981 354.354C17.5113 358.751 19.4929 362.579 22.4242 362.903C25.3555 363.228 28.1264 359.927 28.6132 355.53C29.1 351.133 27.1184 347.305 24.1871 346.981C21.2558 346.656 18.4849 349.958 17.9981 354.354Z"
+                  fill="#122B1D"
+                />
+                <path
+                  d="M211.192 334.838L240.241 357.518L208.79 378.085C208.79 378.085 195.526 359.301 211.192 334.838Z"
+                  fill="#9CEAEF"
+                />
+                <path
+                  d="M240.241 357.518L231.584 350.765C231.584 350.765 226.823 355.635 231.178 363.445L240.241 357.518Z"
+                  fill="#122B1D"
+                />
+                <path
+                  d="M249.006 358.721C262.747 356.247 269.571 351.954 280.117 343.165C298.929 327.489 318.416 312.254 338.117 297.721C362.314 279.871 388.295 261.285 416.562 250.721C432.588 244.731 451.916 236.05 468.895 243.832C483.068 250.328 487.134 267.082 486.673 281.387C485.457 319.094 470.211 355.866 465.006 393.165C462.78 409.121 458.436 434.781 477.451 442.387C491.166 447.873 508.473 439.722 520.117 432.943C550.907 415.018 577.641 386.865 603.006 362.276C663.943 303.205 721.781 241.187 780.117 179.609C832.184 124.65 883.948 73.0978 946.673 30.2761C974.359 11.3754 1044.88 -23.7098 1048.56 37.6095C1050.38 67.8599 1031.93 102.638 1021.78 129.943C1006.18 171.958 986.405 215.012 981.562 260.054C978.771 286.008 975.24 337.045 1007.01 347.054C1025.76 352.964 1046.87 346.384 1063.45 337.387C1095.1 320.22 1122.45 295.561 1148.56 271.165C1217.42 206.839 1287.89 145.77 1362.78 88.4984C1381.42 74.245 1400.39 60.8376 1419.9 47.8317C1423.44 45.4658 1441.01 35.9235 1441.01 32.7206"
+                  stroke="#122B1D"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="holder">
+            <img src={printQuiz} alt="" />
+          </div>
+        </div>
+      </section>
+      <section className="casesection -waste">
+        <div className="container">
+          <div className="holder">
+            <img src={printWaste} alt="" />
+          </div>
+          <div className="holder">
+            <h3 className="sectiontitle -huge">Waste Collection</h3>
+            <p className="sectionparagraph">
+              Collection is the item that will offer the least reward, as we
+              don't want to encourage the idea that producing more garbage would
+              benefit the user. When the collection takes place at the user's
+              residence, the cooperative must confirm the withdrawal and thus
+              they will earn 10 points per week.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="casesection -redeem">
+        <div className="container">
+          <div className="holder">
+            <div className="starwrapper"></div>
+            <h3 className="sectiontitle -huge">Redeem Coupon</h3>
+            <p className="sectionparagraph">
+              As a reward for all the effort to educate themselves on the
+              subject, the user will be able to exchange their points for
+              discount coupons at partner supermarkets and pharmacies.
+            </p>
+          </div>
+          <div className="holder">
+            <img src={printRedeem1} alt="" />
+            <img src={printRedeem2} alt="" />
+          </div>
+        </div>
+      </section>
+      <section className="casesection -center">
+        <div className="container">
+          <h3 className="sectiontitle -huge">FAQ</h3>
+          <p className="sectionparagraph">
+            In this section, the user has the possibility to consult the most
+            frequently asked questions about recycling and about each material:
+            plastic, paper, metal, glass and organic food. This is going help
+            them to acquire knowledge about this theme and be prepared to the
+            daily quiz.
+          </p>
+        </div>
       </section>
       <section className="casesection -gridbig -faq">
         <div className="container">
@@ -800,7 +1038,7 @@ const CleanCity = () => {
         <br />
         <br />
       </section>
-      <section className="casesection">
+      <section className="casesection -nopadding">
         <img src={allprintsImage} alt="" />
       </section>
       <br />

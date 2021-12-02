@@ -1,15 +1,7 @@
 #gatsby-focus-wrapper > div {
   opacity: 0;
-
-}
-
-.animation {
   transition: opacity 0.3s ease;
 }
-
-// .a-exit-done, .a-exit-active, .a-exit, .a-enter-active, .a-enter {
-//   opacity: 0 !important;
-// }
 
 .a-enter-done {
   opacity: 1 !important;

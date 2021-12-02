@@ -74,6 +74,14 @@
   &.-close {
     margin-bottom: 20px;
   }
+
+  &.-huge {
+    margin-bottom: 40px;
+    font-size: 4rem;
+    color: #400039;
+    font-weight: 800;
+    line-height: 4.7rem;
+  }
 }
 
 .sectionlist {
@@ -164,4 +172,8 @@
       }
     }
   }
+}
+
+.-nopadding {
+  padding: 0 !important;
 }
