@@ -1,16 +1,16 @@
-.animation-wrapper {
-  position: relative;
-  > div {
-    position: absolute;
-    transition: opacity 0.6s ease;
-    opacity: 0;
-  }
+#gatsby-focus-wrapper > div {
+  opacity: 0;
 
-//   > .exit, > .enter-active,  > .enter, > .enter-active {
-//     opacity: 0;
-//   }
+}
 
-  > .enter-done {
-    opacity: 1;
-  }
+.animation {
+  transition: opacity 0.3s ease;
+}
+
+// .a-exit-done, .a-exit-active, .a-exit, .a-enter-active, .a-enter {
+//   opacity: 0 !important;
+// }
+
+.a-enter-done {
+  opacity: 1 !important;
 }

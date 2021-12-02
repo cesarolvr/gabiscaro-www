@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 const TransitionWrapper = ({ children, path }) => {
   const [currentPath, setCurrentPath] = useState(null);
@@ -11,11 +11,11 @@ const TransitionWrapper = ({ children, path }) => {
     setCurrentPath(window.location);
   }, []);
   return (
-    <TransitionGroup className="animation-wrapper">
-      <CSSTransition key={currentPath} timeout={1000} unmountOnExit>
+    <SwitchTransition>
+      <CSSTransition key={currentPath} timeout={300} classNames="animation a">
         {children}
       </CSSTransition>
-    </TransitionGroup>
+    </SwitchTransition>
   );
 };
 export default TransitionWrapper;
