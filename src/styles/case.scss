@@ -108,6 +108,11 @@
     width: 100%;
   }
 
+  > img {
+    margin: 0 auto;
+    display: block;
+  }
+
   .caption {
     text-align: left;
     margin-bottom: 30px;
@@ -142,6 +147,27 @@
           max-width: 220px;
         }
       }
+    }
+  }
+
+  &.-overflowed {
+    .holder {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:first-of-type {
+        width: 50%;
+      }
+      &:last-of-type {
+        width: 50%;
+      }
+    }
+
+    .holder > img,
+    .holder > svg {
+      position: absolute;
+      right: 80px;
     }
   }
 }

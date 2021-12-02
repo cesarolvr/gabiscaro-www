@@ -93,6 +93,16 @@
       margin-bottom: 20px;
     }
   }
+
+  &.-highlighted {
+    font-size: 1rem;
+    color: #400039;
+    font-weight: 700;
+    li {
+      line-height: 1.3rem;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .featuredtext {

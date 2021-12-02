@@ -9,6 +9,10 @@ import buttonsImage from "@images/blueberry/buttons.png";
 import iconsImage from "@images/blueberry/icons.png";
 import colorsImage from "@images/blueberry/colors.png";
 import consistentImage from "@images/blueberry/consistent.png";
+import colorsfullImage from "@images/blueberry/colors-full.png";
+import print1 from "@images/blueberry/print-1.png";
+import print2 from "@images/blueberry/print-2.png";
+import print3 from "@images/blueberry/print-3.png";
 
 import smoothScroll from "@src/utils/smoothScroll";
 
@@ -414,15 +418,18 @@ const Blueberry = () => {
           <p className="sectiontitle -red -close">Consistent</p>
           <p className="sectionparagraph">
             Each piece from the system and its actions should be easily and
-            quickly comprehensible. Good design works <br />for everyone, everyday.
+            quickly comprehensible. Good design works <br />
+            for everyone, everyday.
           </p>
         </div>
         <div className="holder">
           <p className="sectiontitle -red -close">Reliable</p>
           <p className="sectionparagraph">
-            iq makes roads safe and useful. We <br /> make sure that the interface is
-            uncluttered and easy to read. Our products should be clear and
-            <br />accessible.
+            iq makes roads safe and useful. We <br /> make sure that the
+            interface is uncluttered and easy to read. Our products should be
+            clear and
+            <br />
+            accessible.
           </p>
         </div>
         <div className="holder">
@@ -432,6 +439,137 @@ const Blueberry = () => {
             mind that the iq must be recognizable even if this product is
             originated from a partner.
           </p>
+        </div>
+      </section>
+      <br />
+      <br />
+      <section className="container -divider -secondary">
+        <hr className="divider -light" />
+      </section>
+      <br />
+      <section className="casesection container">
+        <div className="holder">
+          <p className="sectiontitle">Design Tokens</p>
+          <p className="sectionparagraph">
+            As Adobe says: <br />
+            <i>
+              "Design tokens are all the values needed to construct and maintain
+              a design system — spacing, color, typography, object styles,
+              animation, etc. — represented as data. These can represent
+              anything defined by design: a color as a RGB value, an opacity as
+              a number, an animation ease as Bezier coordinates."
+            </i>
+          </p>
+          <br />
+          <br />
+          <p className="sectionparagraph">
+            The first thing we did was to "fix” our issues with our current
+            Design Tokens: a legacy of different shades of colors, non-standard
+            typography, a ton of different and non-standard icons and a lack of
+            grid and spacing determination. Here are some of our Design Tokens:
+          </p>
+        </div>
+      </section>
+      <section className="casesection">
+        <img src={colorsfullImage} alt="" />
+      </section>
+      <section className="container -divider -secondary">
+        <div className="title -pink">Deliver</div>
+        <DividerWithIllustration />
+        <hr className="divider -light" />
+      </section>
+      <section className="casesection container">
+        <div className="holder">
+          <p className="sectiontitle">Design Components</p>
+          <p className="sectionparagraph">
+            After designing the Design Tokens, we finally started to create
+            Components session: a series of standalone UI elements designed to
+            be reusable, like a button. And we specified its functional
+            behaviour by building instructions that would allow developers to
+            use these componentes in a logical and consistent way.
+          </p>
+          <br />
+          <br />
+          <p className="sectionparagraph">
+            The components helped us to create the new section of our iq app,
+            called New Architecture:
+          </p>
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <section className="casesection -grid">
+        <div className="container">
+          <img className="image" src={print1} alt="" />
+          <img className="image" src={print2} alt="" />
+          <img className="image" src={print3} alt="" />
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <section className="casesection container">
+        <div className="holder">
+          <p className="sectiontitle">Learnings and how is going</p>
+        </div>
+      </section>
+      <section className="casesection container -overflowed">
+        <div className="holder">
+          <svg
+            width="712"
+            height="289"
+            viewBox="0 0 712 289"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 182C32.3704 182 62.7407 182 93.1111 182C118.335 182 148.842 186.123 173.333 180C210.481 170.713 230.571 132.124 225.778 93.7778C222.922 70.9343 200.021 46.3361 184.222 72.6667C158.269 115.923 164.966 151.732 197.111 190C225.572 223.882 271.692 245.061 292.222 190.445C307.469 149.881 301.36 73.9639 338.889 43.7778C380.019 10.6953 399.861 98.864 401.111 122C402.999 156.931 391.529 313.461 322.444 254.889C278.729 217.826 283.382 138.729 320.222 100C339.89 79.3232 390.744 13.308 420.222 56.0001C453.437 104.104 470.779 195.562 440 248C407.138 303.986 348.91 209.02 334.889 182.889C311.702 139.677 361.43 132.867 393.556 143.778C430.993 156.492 476.578 208.548 519.333 183.333C562.179 158.065 548.042 70.7581 525.111 38.0001C485.351 -18.7995 413.947 -1.02165 367.111 35.7778C322.482 70.8439 357.146 108.454 395.556 127.333C443.549 150.923 517.206 148.144 553.111 190.889C601.175 248.108 511.303 282.727 465.778 286.667C424.552 290.234 386.735 278.79 358.889 247.333C336.128 221.623 314.544 174.563 327.778 139.778C344.621 95.505 418.079 110.305 450.889 122C487.04 134.886 530.218 159.407 569.111 162C596.748 163.842 590.873 132.322 612.222 126.222C630.183 121.091 643.173 146.406 664 141.778C674.111 139.531 703.008 124.016 710 138"
+              stroke="#D604C1"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div className="holder">
+          <p className="sectionparagraph">
+            Building a Design System is a non-linear process. Sometimes it was
+            difficult to know if we were building the right thing, but it was
+            satisfatory to see it being applied and the things starting to
+            connect and make sense. Both the Front-End team and the Design team
+            saw:
+          </p>
+          <br />
+          <br />
+          <ul className="sectionlist -highlighted">
+            <li>Time saved with Components and Design Tokens ready to use;</li>
+            <li>More time to focus in the experience in general;</li>
+            <li>Less time fixing bugs and the code.</li>
+            <li>Greater proximity between the Design and Front-end teams;</li>
+            <li>Knowledge acquired during the process;</li>
+          </ul>
+        </div>
+      </section>
+      <section className="container -divider -secondary">
+        <hr className="divider -light" />
+      </section>
+      <section className="casesection container">
+        <div className="holder">
+          <p className="sectiontitle">Next steps</p>
+          <ul className="sectionlist">
+            <li>
+              Keep building and improving our Design Tokens and Components;
+            </li>
+            <li>
+              Measure impact quantitatively to inform our stakeholders of the
+              gain with it;
+            </li>
+            <li>
+              Build the library in the ZeroHeight plataform, so the rules would
+              be easily spread.
+            </li>
+          </ul>
         </div>
       </section>
       <section className="casesection -carousel">
