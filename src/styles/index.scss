@@ -55,6 +55,10 @@
   margin-left: 0;
   margin-right: auto;
 
+  &.-nomargin {
+    margin: 0;
+  }
+
   &.-red {
     color: #ff4522;
   }
