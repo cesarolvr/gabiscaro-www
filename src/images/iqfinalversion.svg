@@ -1,7 +1,7 @@
 <svg width="1439" height="768" viewBox="0 226 1439 768" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect x="-1" y="204" width="1440" height="768" fill="#F992D3" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M1186 774C1186 664.648 1097.35 576 988 576C878.648 576 790 664.648 790 774H1186Z" fill="#9CEAEF" />
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M1186 972C1186 862.648 1097.35 774 988 774C878.648 774 790 862.648 790 972H1186Z" fill="#9CEAEF" />
+    <path fillRule="evenodd" clipRule="evenodd" d="M1186 774C1186 664.648 1097.35 576 988 576C878.648 576 790 664.648 790 774H1186Z" fill="#9CEAEF" />
+    <path fillRule="evenodd" clipRule="evenodd" d="M1186 972C1186 862.648 1097.35 774 988 774C878.648 774 790 862.648 790 972H1186Z" fill="#9CEAEF" />
     <rect x="354" y="183" width="647" height="811" fill="url(#pattern0)" />
     <defs>
         <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
