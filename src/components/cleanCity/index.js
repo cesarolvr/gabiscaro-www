@@ -1057,8 +1057,8 @@ const CleanCity = () => {
         <br />
         <br />
       </section>
-      <section className="casesection -nopadding">
-        <img src={allprintsImage} alt="" />
+      <section className="casesection -nopadding -bggreen">
+        <img src={allprintsImage} className="allprints" alt="" />
       </section>
       <br />
       <br />
