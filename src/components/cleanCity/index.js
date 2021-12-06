@@ -12,8 +12,9 @@ import usermapImage from "@images/cleancity/usermap.png";
 import print1 from "@images/cleancity/print-1.png";
 import print2 from "@images/cleancity/print-2.png";
 import print3 from "@images/cleancity/print-3.png";
+import videoOnboarding from "@images/cleancity/print-onboarding.mp4";
+import videoQuiz from "@images/cleancity/print-quiz.mp4";
 import printOnboarding from "@images/cleancity/print-onboarding.png";
-import printQuiz from "@images/cleancity/print-quiz.png";
 import printWaste from "@images/cleancity/print-waste.png";
 import printRedeem1 from "@images/cleancity/print-redeem-1.png";
 import printRedeem2 from "@images/cleancity/print-redeem-2.png";
@@ -798,7 +799,16 @@ const CleanCity = () => {
       <section className="casesection -onboarding">
         <div className="container">
           <div className="holder">
-            <img src={printOnboarding} alt="" />
+            <video
+              className="videoprint"
+              autoPlay={true}
+              muted
+              loop={true}
+              width="100%"
+              height="100%"
+            >
+              <source src={videoOnboarding} type="video/mp4" />
+            </video>
           </div>
           <div className="holder">
             <h3 className="sectiontitle -huge">Onboarding</h3>
@@ -978,7 +988,16 @@ const CleanCity = () => {
             </div>
           </div>
           <div className="holder">
-            <img src={printQuiz} alt="" />
+            <video
+              className="videoprint"
+              autoPlay={true}
+              muted
+              loop={true}
+              width="100%"
+              height="100%"
+            >
+              <source src={videoQuiz} type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>

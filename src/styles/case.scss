@@ -291,6 +291,11 @@
       align-items: center;
     }
 
+    video {
+      width: 332px;
+      max-width: 90%;
+    }
+
     .holder {
       display: flex;
       flex-direction: column;
@@ -344,6 +349,11 @@
     .container {
       display: flex;
       align-items: center;
+    }
+
+    video {
+      width: 332px;
+      max-width: 90%;
     }
 
     .holder {
