@@ -29,45 +29,58 @@ const Home = () => {
       <main className="home">
         <div className="container">
           <div className="holder">
-            <Link to="/projects/ramengo">
-              <div className="case">
-                <RamemGoIllustration />
-                <div className="content projectinfo">
-                  <img className="image" src={ramengoThumb} alt="" />
-                  <p className="categorylabel">Visual Design</p>
-                  <p className="name">RamenGo</p>
-                </div>
-              </div>
-            </Link>
-            <Link to="/projects/iq">
-              <div className="case">
-                <IqCartoesIllustration />
-                <div className="content projectinfo">
-                  <img className="image" src={iqThumb} alt="" />
-                  <p className="categorylabel">Product Design</p>
-                  <p className="name">iq Cartões</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="holder">
             <Link to="/projects/cleancity">
               <div className="case">
                 <CleanCityIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={cleancityThumb} alt="" />
                   <p className="categorylabel">Product Design</p>
-                  <p className="name">Clean City</p>
+                  <p className="name">
+                    Creating an awareness project about the importance of
+                    recycling
+                  </p>
                 </div>
               </div>
             </Link>
+
             <Link to="/projects/blueberry">
               <div className="case">
                 <BlueberryIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={blueberryThumb} alt="" />
-                  <p className="categorylabel">Design System</p>
-                  <p className="name">Blueberry Design System</p>
+                  <p className="categorylabel">Blueberry Design System</p>
+                  <p className="name">
+                    Improving the designer's work and the front-end's
+                    development
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="holder">
+            <Link to="/projects/iq">
+              <div className="case">
+                <IqCartoesIllustration />
+                <div className="content projectinfo">
+                  <img className="image" src={iqThumb} alt="" />
+                  <p className="categorylabel">iq Credit Cards</p>
+                  <p className="name">
+                    Redesigning a digital experience for a credit card
+                    marketplace
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/projects/ramengo">
+              <div className="case">
+                <RamemGoIllustration />
+                <div className="content projectinfo">
+                  <img className="image" src={ramengoThumb} alt="" />
+                  <p className="categorylabel">Ramengo</p>
+                  <p className="name">
+                    Creating a fun and creative delivery plataform
+                  </p>
                 </div>
               </div>
             </Link>
