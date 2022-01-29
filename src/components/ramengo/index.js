@@ -40,28 +40,27 @@ const RamenGo = () => {
         </div>
       </section>
       <section className="casesection container -synopsis">
-        <div className="item -whatidid">
-          <p className="title">What I did</p>
-          <ul className="list">
-            <li>UI Design</li>
-            <li>Content Strategy</li>
-            <li>Iconography</li>
-            <li>Illustration</li>
-          </ul>
-        </div>
-        <div className="item -whenidid">
-          <p className="title">When I did</p>
-          <p className="text">2019</p>
+        <div className="item">
+          <p className="title">Skill Set</p>
+          <p className="sectionparagraph">
+            Interaction & Visual Design, Content Strategy, Iconography,
+            Illustration
+          </p>
+          <br />
+          <br />
+          <p className="title">Timeline</p>
+          <p className="sectionparagraph">September 2019 - December 2019</p>
         </div>
         <div className="item -thechallenge">
           <p className="title">The Challenge</p>
           <p className="sectionparagraph">
             Some months ago I was invited by the front end team of Red Ventures
             to create a new practical test for candidates who'd apply for a job
-            opening. <br />I gave wings to the imagination and I created a
-            delivery platform in which the users could choose the ingredients
-            for their ramen and receive it at the comfort of their homes. I
-            developed all the visuals: styleguide, interaction and
+            opening.
+            <br />I gave wings to the imagination and I created a delivery
+            platform in which the users could choose the ingredients for their
+            ramen and receive it at the comfort of their homes.
+            <br />I developed all the visuals: styleguide, interaction and
             illustrations/iconography.
           </p>
         </div>

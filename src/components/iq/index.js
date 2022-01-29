@@ -41,31 +41,27 @@ const IQ = () => {
         </div>
       </section>
       <section className="casesection container -synopsis">
-        <div className="item -whatidid">
-          <p className="title">What I did</p>
-          <ul className="list">
-            <li>UI Exprience</li>
-            <li>User Interface</li>
-            <li>Content Strategy</li>
-          </ul>
-        </div>
-        <div className="item -whenidid">
-          <p className="title">When I did</p>
-          <p className="text">
-            December 2020 / <br /> June 2021
+        <div className="item">
+          <p className="title">Skill Set</p>
+          <p className="sectionparagraph">
+            Interaction & visual design, Research, Product thinking.
           </p>
+          <br />
+          <br />
+          <p className="title">Timeline</p>
+          <p className="sectionparagraph">December 2020 - June 2021</p>
         </div>
         <div className="item -thechallenge">
           <p className="title">The Challenge</p>
           <p className="sectionparagraph">
-            iq is a lot of things, an automatic credit card payment service for
-            utility bills (energy, gas, telephone, internet, etc), but also a
-            Credit Card Marketplace. After a lot of tests in this latter, the
-            page stopped to convert how the Directors and Product Managers
-            expected.{" "}
+            iq is a lot of things, it is an automatic credit card payment
+            service for utility bills (energy, gas, telephone, internet, etc),
+            but also a Credit Card Marketplace. After a bunch of tests, the
+            Marketplace page stopped converting as the Directors, the page
+            stopped to convert how the Directors and Product Managers expected.
             <strong>
               So, the challenge for me was to increase in 10% the referral rate
-              of credit card application form.
+              of the credit card application form.
             </strong>
           </p>
         </div>

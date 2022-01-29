@@ -505,6 +505,10 @@
 
   .name {
     font-size: 4rem;
+    line-height: normal;
+    font-weight: 800;
+    max-width: none;
+    text-align: left;
 
     @media (max-width: 868px) {
       font-size: 2rem;
@@ -512,8 +516,9 @@
   }
 }
 
-.-synopsis {
+.-case .-synopsis {
   display: flex;
+  justify-content: flex-start;
 
   @media (max-width: 868px) {
     flex-direction: column;
@@ -521,9 +526,12 @@
   }
 
   .item {
-    width: 25%;
+    width: 30%;
+    padding-right: 50px;
+
     &.-thechallenge {
-      width: 50%;
+      width: 70%;
+      padding-right: 0;
     }
 
     @media (max-width: 868px) {
@@ -532,9 +540,10 @@
     }
   }
   .title {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #400039;
     @media (max-width: 868px) {
       font-size: 1rem;
     }

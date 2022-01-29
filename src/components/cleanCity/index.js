@@ -37,30 +37,27 @@ const CleanCity = () => {
           </div>
           <div className="content projectinfo">
             <p className="categorylabel">Product Design</p>
-            <p className="name">
-              [Case Study] <br /> Clean City App
-            </p>
+            <p className="name">Clean City App</p>
           </div>
         </div>
       </section>
       <section className="casesection container -synopsis">
-        <div className="item -whatidid">
-          <p className="title">What I did</p>
-          <ul className="list">
-            <li>Research</li>
-            <li>User Interface</li>
-          </ul>
-        </div>
-        <div className="item -whenidid">
-          <p className="title">When I did</p>
-          <p className="text">2019</p>
+        <div className="item">
+          <p className="title">Skill Set</p>
+          <p className="sectionparagraph">
+            Research, Product Design, Interaction Design
+          </p>
+          <br />
+          <br />
+          <p className="title">Timeline</p>
+          <p className="sectionparagraph">October 2019 [Timeframe of 7 days]</p>
         </div>
         <div className="item -thechallenge">
           <p className="title">The Challenge</p>
           <p className="sectionparagraph">
-            The cooperative "Cidade Mais Limpa” has been trying to create an
-            awareness project about the importance of recycling, helping people
-            to understand how to recycle and the impact of it.{" "}
+            The fictional cooperative "Cidade Mais Limpa” has been trying to
+            create an awareness project about the importance of recycling,
+            helping people to understand how to recycle and the impact of it.
             <strong>
               The main objective was to develop, in a time frame of 7 days, a
               proposal for a product or service that helps the cooperative on

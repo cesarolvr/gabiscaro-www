@@ -40,34 +40,29 @@ const Blueberry = () => {
         </div>
       </section>
       <section className="casesection container -synopsis">
-        <div className="item -whatidid">
-          <p className="title">What I did</p>
-          <ul className="list">
-            <li>Research</li>
-            <li>Interface components</li>
-          </ul>
+        <div className="item">
+          <p className="title">Skill Set</p>
+          <p className="sectionparagraph">Research, Interface components</p>
+          <br />
+          <br />
+          <p className="title">Timeline</p>
+          <p className="sectionparagraph">May 2020 - Ongoing product</p>
         </div>
-        <div className="item -whenidid">
-          <p className="title">When I did</p>
-          <p className="text">
-            May 2020/ <br />
-            Ongoing product
-          </p>
-        </div>
+
         <div className="item -thechallenge">
           <p className="title">The Challenge</p>
           <p className="sectionparagraph">
             iq is a lot of things, an automatic credit card payment service for
             utility bills (energy, gas, telephone, internet, etc), but also a
             Credit Card Marketplace. iq is growing so fast and we needed ways to
-            expand healthily.{" "}
+            expand healthily.
             <strong>
               To add to this, the Front-End team felt that their code needed to
               be more organized. On the other hand, the Design Team faced a
               problem to create a new component everytime and some screens had
               different components from each other.
             </strong>{" "}
-            So, I saw an opportunity to develop a Design System together.
+            So, I saw an opportunity to develop a Design System.
           </p>
         </div>
       </section>
