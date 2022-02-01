@@ -43,7 +43,7 @@ const CleanCity = () => {
       </section>
       <section className="casesection container -synopsis">
         <div className="item">
-          <p className="title">Skill Set</p>
+          <p className="title">What I did</p>
           <p className="sectionparagraph">
             Research, Product Design, Interaction Design
           </p>
@@ -326,7 +326,7 @@ const CleanCity = () => {
               In order to gather quantitative data, I carried out a Desk
               Research on the topic of recycling and found interesting data from
               a survey carried out in 2018 by Ibope, commissioned by Ambev, with
-              1,1816 people in all the states of Brazil. This research
+              1.181.600 people in all the states of Brazil. This research
               reinforces some presented pains:
             </p>
           </div>
@@ -338,7 +338,7 @@ const CleanCity = () => {
             <div className="cell">
               <p className="sectiontitle -bignumber">98%</p>
               <p className="sectionparagraph">
-                think recycling is important to future's planet.
+                think recycling is important to planet's future.
               </p>
             </div>
             <div className="cell">
@@ -350,14 +350,14 @@ const CleanCity = () => {
             <div className="cell">
               <p className="sectiontitle -bignumber">81%</p>
               <p className="sectionparagraph">
-                claim to know little or nothing about cooperatives of recycling.
+                claim to know little or nothing about recycling cooperatives.
               </p>
             </div>
             <div className="cell">
               <p className="sectiontitle -bignumber">71%</p>
               <p className="sectionparagraph">
-                disagree that the garbage it is no longer your responsibility
-                when thrown away.
+                disagree that the garbage is no longer their responsibility when
+                thrown away.
               </p>
             </div>
           </div>
@@ -377,7 +377,7 @@ const CleanCity = () => {
               <li>Tell me about what you think about recycling.</li>
               <li>
                 Tell me what goes through (went through) your mind when you
-                separate (separate) the garbage for recycling.
+                separate the garbage for recycling.
               </li>
               <li>
                 Do you know how to identify the correct disposal for each type
@@ -416,17 +416,17 @@ const CleanCity = () => {
         <div className="holder -padding">
           <p className="sectiontitle -bignumber">71%</p>
           <p className="sectionparagraph">
-            of the interviewees only sort the <br /> waste for collection,
-            because there is this service convenience in ther building or
-            street.
+            of the respondents only sort the <br />
+            waste for collection, because there is this service convenience in
+            ther building or street.
           </p>
         </div>
         <div className="holder -padding">
           <p className="sectiontitle -bignumber">85%</p>
           <p className="sectionparagraph">
             say they would not have the <br /> availability to take the waste to
-            a collection point. And that they <br />
-            wouldn't recylce if that were the case.
+            a collection point. And that they wouldn't recycle if that was the
+            case.
           </p>
         </div>
         <div className="holder -padding">
@@ -705,8 +705,8 @@ const CleanCity = () => {
               generalizations, I created a qualitative persona: Juliana
               Medeiros, to represent this group of people who wants to recycle
               and make right choices. With this persona, I developed a User
-              Journey Map, in which I could see the pain points e opportunities
-              in each step.
+              Journey Map, in which I could see the pain points and
+              opportunities in each step.
             </p>
           </div>
         </div>
@@ -748,12 +748,12 @@ const CleanCity = () => {
             <br />
             <br />
             <p className="sectionparagraph">
-              I would not like to create a solution whre the user would be
-              rewarded for the amount of waste they would recycle. Therefore,
-              the purpose of this app is nothing more than to reward them for
-              how much knowledge on the subject they acquire and how many people
+              I would not like to create a solution where the user would be
+              rewarded for the amount of waste they recycle. Therefore, the
+              purpose of this app is nothing more than to reward them for how
+              much knowledge on the subject they acquire and how many people
               they encourage to join the cycle. The idea is for the app to be
-              more of an educational proposal in order to cerate awareness for
+              more of an educational proposal in order to create awareness for
               the user and their contact network.
             </p>
           </div>
@@ -776,7 +776,7 @@ const CleanCity = () => {
             <p className="sectionparagraph">
               After having a better vision of the app with the Wireframes
               design, I started to develop the layout and prototype it. At this
-              time I found some problems with the drafts and had to make a lot
+              point I found some problems with the drafts and had to make a lot
               of iterations while designing and testing.
             </p>
           </div>
@@ -938,10 +938,10 @@ const CleanCity = () => {
             </div>
             <h3 className="sectiontitle -huge">Daily Quiz</h3>
             <p className="sectionparagraph">
-              <strong>With questions about recycling</strong> <br /> To start
-              accumulating points, the user must answer a daily quiz, with 3
-              question on the topic. Each question is worth 20 points, thus
-              reaching a total of 60 points per day.
+              <strong>With questions about recycling</strong> <br />
+              To start accumulating points, the user must answer a daily quiz,
+              with 3 questions on the topic. Each question is worth 20 points,
+              thus reaching a total of 60 points per day.
             </p>
             <div className="illustrationwrapper">
               <svg
@@ -1022,7 +1022,7 @@ const CleanCity = () => {
             <h3 className="sectiontitle -huge">Redeem Coupon</h3>
             <p className="sectionparagraph">
               As a reward for all the effort to educate themselves on the
-              subject, the user will be able to exchange their points for
+              subject, the users will be able to exchange their points for
               discount coupons at partner supermarkets and pharmacies.
             </p>
           </div>
@@ -1038,8 +1038,8 @@ const CleanCity = () => {
           <p className="sectionparagraph">
             In this section, the user has the possibility to consult the most
             frequently asked questions about recycling and about each material:
-            plastic, paper, metal, glass and organic food. This is going help
-            them to acquire knowledge about this theme and be prepared to the
+            plastic, paper, metal, glass and organic food. This is going to help
+            them acquire knowledge about this subject and be prepared for the
             daily quiz.
           </p>
         </div>
