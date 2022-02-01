@@ -41,8 +41,8 @@ const Blueberry = () => {
       </section>
       <section className="casesection container -synopsis">
         <div className="item">
-          <p className="title">Skill Set</p>
-          <p className="sectionparagraph">Research, Interface components</p>
+          <p className="title">What I did</p>
+          <p className="sectionparagraph">Research, Interface components </p>
           <br />
           <br />
           <p className="title">Timeline</p>
@@ -110,9 +110,9 @@ const Blueberry = () => {
             A Design System is never done by a single person from a single team.
             Although our team is pretty small compared to other organizations,
             we did a good job joining forces to build a cohesive product for our
-            brand iq.As a team we defined two responsibles for this: Ïtalo
-            Fontes (Front-End Developer) and me (Product Designer). The rest of
-            the team, 5 Front End Developers and 2 Designers would help to build
+            brand iq.As a team we defined two leads for this: Ítalo Fontes
+            (Front-End Developer) and I (Product Designer). The rest of the
+            team, 5 Front End Developers and 2 Designers, would help to build
             the Components in the future, after we built the Design Tokens.
           </p>
           <br />
@@ -130,24 +130,24 @@ const Blueberry = () => {
         <div className="holder">
           <p className="sectiontitle">My Role</p>
           <p className="sectionparagraph">
-            Being the responsible for kick starting our Design System I was
-            responsible for some things
+            Being the lead for kick starting our Design System I was responsible
+            for some things:
           </p>
           <ul className="sectionlist">
             <li>
               Facilitate ideations to define our Design Principles and our
-              Design Sytem name
+              Design Sytem name;
             </li>
             <li>
               Build an Interface Inventory, in order to scan for inconsistencies
-              in our web app and websites
+              in our web app and websites;
             </li>
             <li>
               Build the Design Tokens: define and organize the colors,
               typography, grids and spacings;
             </li>
             <li>
-              Start the main Components, pre-definied by our team, to apply in
+              Start the main Components, predefinied by our team, to apply in
               our first project.
             </li>
           </ul>
@@ -215,21 +215,21 @@ const Blueberry = () => {
           </p>
           <ul className="sectionlist -number">
             <li>
-              Understand how a Design System is built and its best practices,
+              To understand how a Design System is built and its best practices,
               what is the definion of it, what is the impact in a company.
             </li>
             <li>
-              Use this information to present the concept to the team and sell
-              if for the stakeholders.
+              To use this information to present the concept to the team and
+              sell it for the stakeholders.
             </li>
             <li>
-              Understand if this product was a good fit for our necessites...
+              To understand if this product was a good fit for our needs...
             </li>
           </ul>
           <p className="sectionparagraph">
-            After this research I made a presentation to the team and Ítalo, my
-            Front-End partner, did a research from his side. To understando what
-            technologies we could use.
+            After this research I made a presentation to the team. And Ítalo, my
+            Front-End partner, gathered some information on his side, to
+            understand what technologies we could use.
           </p>
           <br />
         </div>
@@ -248,8 +248,8 @@ const Blueberry = () => {
             Interviews with Users, Builders and Stakeholders
           </p>
           <p className="sectionparagraph">
-            I interviewd three groups of people, following the script that Brad
-            Frost mada available in his blog:
+            I interviewed three groups of people, following the script that Brad
+            Frost made available on his blog:
           </p>
           <ul className="sectionlist">
             <li>
@@ -257,8 +257,8 @@ const Blueberry = () => {
               example, Designers and Front-Ends from other squads.
             </li>
             <li>
-              Builders being the people who is going to build the Design System,
-              for example, Designers and Front-Ends responsibles for the
+              Builders being the people who are going to build the Design
+              System, for example, Designers and Front-Ends responsible for the
               project.
             </li>
             <li>
@@ -275,7 +275,7 @@ const Blueberry = () => {
           <br />
           <ul className="sectionlist -big">
             <li>
-              iq had several designers so they created some patterns and
+              iq had several designers, so they created some patterns and
               legacies;
             </li>
             <li>
@@ -284,12 +284,12 @@ const Blueberry = () => {
               of pattern;
             </li>
             <li>
-              A lot of new elements were built in the code because there is no
-              design system. So, often the Developers looked in the Sketch file
-              to see if it has something similar.
+              A lot of new elements were built in the code because there was no
+              design system. So, often the Developers looked up in the Sketch
+              file to see if it had something similar.
             </li>
             <li>
-              More time to code a component and less time do think in the
+              More time to code a component and less time to think about the
               experience.
             </li>
             <li>iq doesn't has a defined process.</li>
@@ -313,16 +313,16 @@ const Blueberry = () => {
         <div className="holder">
           <p className="sectiontitle">Interface Inventory</p>
           <p className="sectionparagraph">
-            I put three examples bellow to show some discrepancies in some of
-            our components and tokens, like in Buttons, Icons and Colors.
-            Different styles, different icons being applied in components and a
-            lot of color variants with no standard.
+            I put three examples below to show some discrepancies in some of our
+            components and tokens, like in Buttons, Icons and Colors. You can
+            see different styles, different icons being applied in components
+            and a lot of color variants with no standard.
           </p>
           <br />
           <p className="sectionparagraph">
-            If you want to see the Interface Inventory complete,{" "}
+            If you want to see the complete Interface Inventory,{" "}
             <a
-              href="https://www.linkedin.com/in/gabriela-bisc%C3%A1ro-4b90a78a/"
+              href="https://docs.google.com/presentation/d/1XMhP1pDP85Kve7WKsJnx9lxWtIcqcS4jCXdNsOwaqlQ/edit?usp=sharing"
               target="_blank"
               className="link"
             >
@@ -351,12 +351,12 @@ const Blueberry = () => {
           <p className="sectionparagraph">
             I facilitated an ideation session with all members of the Design and
             Development teams in order to think and build ours Design
-            Principles. This will be the core of our Desing System and how we
+            Principles. This will be the core of our Design System and how we
             build our products for our users.
             <br />
             <br />I brought some examples of Design Principles from renowed
-            companies, like Airbnb to inspire them. In addition to this, I also
-            explained the meaning of this and how it is used in daily basis.
+            companies, like Airbnb, to inspire them. In addition to this, I also
+            explained the meaning of this and how it is used in a daily basis.
           </p>
         </div>
       </section>
@@ -370,7 +370,7 @@ const Blueberry = () => {
           <p className="sectionparagraph">
             Like I said before, I brought some examples of Design Principles and
             I extracted some words from the interviews and created a word cloud
-            to guide our participants in the ideation. They thought in some
+            to guide our participants in the ideation. They thought about some
             words that would best represent iq and our Design System. The words
             were:
           </p>
@@ -430,9 +430,9 @@ const Blueberry = () => {
         <div className="holder">
           <p className="sectiontitle -red -close">Customizable</p>
           <p className="sectionparagraph">
-            Design with an eye toward the future of our products, but keep in
-            mind that the iq must be recognizable even if this product is
-            originated from a partner.
+            Design with an eye towards the future of our products, but keep in
+            mind that iq must be recognizable even if this product is originated
+            from a partner.
           </p>
         </div>
       </section>
@@ -478,10 +478,10 @@ const Blueberry = () => {
           <p className="sectiontitle">Design Components</p>
           <p className="sectionparagraph">
             After designing the Design Tokens, we finally started to create
-            Components session: a series of standalone UI elements designed to
+            Components section: a series of standalone UI elements designed to
             be reusable, like a button. And we specified its functional
             behaviour by building instructions that would allow developers to
-            use these componentes in a logical and consistent way.
+            use these components in a logical and consistent way.
           </p>
           <br />
           <br />
@@ -507,7 +507,7 @@ const Blueberry = () => {
       <br />
       <section className="casesection container">
         <div className="holder">
-          <p className="sectiontitle">Learnings and how is going</p>
+          <p className="sectiontitle">Learnings and how it is going</p>
         </div>
       </section>
       <section className="casesection container -overflowed">
@@ -531,16 +531,15 @@ const Blueberry = () => {
           <p className="sectionparagraph">
             Building a Design System is a non-linear process. Sometimes it was
             difficult to know if we were building the right thing, but it was
-            satisfatory to see it being applied and the things starting to
-            connect and make sense. Both the Front-End team and the Design team
-            saw:
+            satisfactory to see it being applied and things starting to connect
+            and make sense. Both the Front-End team and the Design team noticed:
           </p>
           <br />
           <br />
           <ul className="sectionlist -highlighted">
             <li>Time saved with Components and Design Tokens ready to use;</li>
-            <li>More time to focus in the experience in general;</li>
-            <li>Less time fixing bugs and the code.</li>
+            <li>More time to focus on the experience in general;</li>
+            <li>Less time fixing bugs and coding.</li>
             <li>Greater proximity between the Design and Front-end teams;</li>
             <li>Knowledge acquired during the process;</li>
           </ul>
@@ -558,11 +557,11 @@ const Blueberry = () => {
             </li>
             <li>
               Measure impact quantitatively to inform our stakeholders of the
-              gain with it;
+              gains of the Design System;
             </li>
             <li>
-              Build the library in the ZeroHeight plataform, so the rules would
-              be easily spread.
+              Build the library in the ZeroHeight platform, so the rules can be
+              easily disseminated.
             </li>
           </ul>
         </div>

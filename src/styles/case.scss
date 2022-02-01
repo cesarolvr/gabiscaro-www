@@ -526,12 +526,12 @@
   }
 
   .item {
-    width: 30%;
+    width: 35%;
     padding-right: 50px;
 
     &.-thechallenge {
-      width: 70%;
-      padding-right: 0;
+      width: 65%;
+      padding-right: 20px;
     }
 
     @media (max-width: 868px) {
