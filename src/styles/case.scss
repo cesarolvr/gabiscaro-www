@@ -763,3 +763,22 @@
 .-bggreen {
   background: #132c1e;
 }
+
+.-targetaudience {
+  .holder {
+    position: relative;
+  }
+  .icon {
+    position: absolute;
+
+    &.-left {
+      right: 105%;
+      width: 127px;
+      top: 50%;
+    }
+
+    &.-right {
+      left: 101%;
+    }
+  }
+}

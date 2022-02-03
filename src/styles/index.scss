@@ -101,10 +101,20 @@
     }
   }
 
+  &.-nodots {
+    list-style: none;
+  }
+
   li {
     margin-bottom: 5px;
     line-height: 1.7rem;
     counter-increment: my-awesome-counter;
+
+    &.-highlighted {
+      font-size: 1rem;
+      color: #400039;
+      font-weight: 700;
+    }
   }
 
   &.-big {

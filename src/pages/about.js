@@ -7,6 +7,7 @@ import Contact from "@components/contact";
 
 import "@styles/about.scss";
 
+
 const About = () => {
   useEffect(() => {
     smoothScroll();
@@ -118,9 +119,9 @@ const About = () => {
               </li>
               <hr className="line" />
               <a
-                href=""
-                target="_blank"
+                href="resume-gabriela-biscaro.pdf"
                 className="myprofile"
+                download={true}
               >
                 <svg
                   width="52"
@@ -139,7 +140,7 @@ const About = () => {
                     fill="#D604C1"
                   />
                 </svg>
-                View my profile
+                View my resume
               </a>
               <br />  
               <br />  
