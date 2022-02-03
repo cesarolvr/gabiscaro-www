@@ -24,7 +24,7 @@ import "@styles/case.scss";
 
 const IQ = () => {
   useEffect(() => {
-    smoothScroll();
+    // smoothScroll();
   }, []);
   return (
     <div className="page -case -ramengo">

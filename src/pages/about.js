@@ -10,7 +10,7 @@ import "@styles/about.scss";
 
 const About = () => {
   useEffect(() => {
-    smoothScroll();
+    // smoothScroll();
   }, []);
   return (
     <div>

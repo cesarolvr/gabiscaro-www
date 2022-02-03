@@ -23,7 +23,7 @@ import "@styles/case.scss";
 
 const RamenGo = () => {
   useEffect(() => {
-    smoothScroll();
+    // smoothScroll();
   }, []);
   return (
     <div className="page -case -ramengo">

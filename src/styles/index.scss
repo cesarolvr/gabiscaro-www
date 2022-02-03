@@ -3,6 +3,11 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1130px;
   margin: 0 auto;

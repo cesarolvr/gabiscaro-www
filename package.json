@@ -36,6 +36,7 @@
     "react-slick": "^0.28.1",
     "react-transition-group": "^4.4.2",
     "sass": "^1.38.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "smooth-scrollbar": "^8.7.4"
   }
 }

@@ -13,7 +13,7 @@ import flatcloud from "../images/flatcloud.svg";
 
 const Illustrations = () => {
   useEffect(() => {
-    smoothScroll();
+    // smoothScroll();
   }, []);
   return (
     <div>
