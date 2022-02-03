@@ -29,15 +29,15 @@ const Home = () => {
       <main className="home">
         <div className="container">
           <div className="holder">
-            <Link to="/projects/cleancity">
+            <Link to="/projects/iq">
               <div className="case">
-                <CleanCityIllustration />
+                <IqCartoesIllustration />
                 <div className="content projectinfo">
-                  <img className="image" src={cleancityThumb} alt="" />
-                  <p className="categorylabel">Product Design</p>
+                  <img className="image" src={iqThumb} alt="" />
+                  <p className="categorylabel">iq Credit Cards</p>
                   <p className="name">
-                    Creating an awareness project about the importance of
-                    recycling
+                    Redesigning a digital experience for a credit card
+                    marketplace
                   </p>
                 </div>
               </div>
@@ -58,15 +58,15 @@ const Home = () => {
             </Link>
           </div>
           <div className="holder">
-            <Link to="/projects/iq">
+            <Link to="/projects/cleancity">
               <div className="case">
-                <IqCartoesIllustration />
+                <CleanCityIllustration />
                 <div className="content projectinfo">
-                  <img className="image" src={iqThumb} alt="" />
-                  <p className="categorylabel">iq Credit Cards</p>
+                  <img className="image" src={cleancityThumb} alt="" />
+                  <p className="categorylabel">Clean City App</p>
                   <p className="name">
-                    Redesigning a digital experience for a credit card
-                    marketplace
+                    Creating an awareness project about the importance of
+                    recycling
                   </p>
                 </div>
               </div>
