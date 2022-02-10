@@ -27,9 +27,10 @@ module.exports = {
           "@styles": "src/styles",
           "@images": "src/images",
           "@videos": "src/videos",
+          "@hooks": "src/hooks",
         },
-        extensions: []
-      }
+        extensions: [],
+      },
     },
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -48,11 +49,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `rubik\:400,500,600,800`,
-        ],
-        display: 'swap'
-      }
-    }
+        fonts: [`rubik\:400,500,600,800`],
+        display: "swap",
+      },
+    },
   ],
 };

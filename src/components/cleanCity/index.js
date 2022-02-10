@@ -18,7 +18,7 @@ import printWaste from "@images/cleancity/print-waste.png";
 import printRedeem1 from "@images/cleancity/print-redeem-1.png";
 import printRedeem2 from "@images/cleancity/print-redeem-2.png";
 
-import smoothScroll from "@src/utils/smoothScroll";
+// import smoothScroll from "@src/utils/smoothScroll";
 
 import prev1 from "@images/cleancity/prev-1.png";
 import prev2 from "@images/cleancity/prev-2.png";
