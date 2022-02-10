@@ -78,7 +78,7 @@ const Home = () => {
                   <img className="image" src={ramengoThumb} alt="" />
                   <p className="categorylabel">Ramengo</p>
                   <p className="name">
-                    Creating a fun and creative delivery plataform
+                    Creating a fun and creative delivery platform
                   </p>
                 </div>
               </div>
