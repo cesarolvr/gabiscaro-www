@@ -1,10 +1,10 @@
 import React from "react";
-import Transition from "./src/components/transition";
+import Layout from "./src/components/Layout";
 
 // Styles
 import "@src/styles/index.scss";
 
 export const wrapPageElement = ({ element, props }) => {
-    const { path } = props;
-  return <Transition path={path}>{element}</Transition>;
+  const { path } = props;
+  return <Layout>{element}</Layout>;
 };

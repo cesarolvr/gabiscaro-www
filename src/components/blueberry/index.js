@@ -20,7 +20,7 @@ import "@styles/case.scss";
 
 const Blueberry = () => {
   useEffect(() => {
-    smoothScroll();
+    // smoothScroll();
   }, []);
   return (
     <div className="page -case -blueberry">

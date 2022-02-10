@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "gatsby";
-import smoothScroll from "@src/utils/smoothScroll";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
@@ -13,6 +12,8 @@ import {
 
 import "@styles/home.scss";
 
+import useScroll from "@hooks/useScroll";
+
 // Images
 import ramengoThumb from "../images/thumbs/ramengo.png";
 import cleancityThumb from "../images/thumbs/cleancity.png";
@@ -20,11 +21,9 @@ import iqThumb from "../images/thumbs/iqcartoes.png";
 import blueberryThumb from "../images/thumbs/blueberry.png";
 
 const Home = () => {
-  useEffect(() => {
-    smoothScroll();
-  }, []);
+  useScroll();
   return (
-    <div>
+    <div className="scroll-content">
       <Header className="-opened" />
       <main className="home">
         <div className="container">

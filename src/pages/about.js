@@ -6,14 +6,13 @@ import Header from "@components/header";
 import Contact from "@components/contact";
 
 import "@styles/about.scss";
+import useScroll from "../hooks/useScroll";
 
 
 const About = () => {
-  useEffect(() => {
-    smoothScroll();
-  }, []);
+  useScroll();
   return (
-    <div>
+<div className="scroll-content">
       <Header />
       <main className="about">
         <section className="description">
