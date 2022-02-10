@@ -88,9 +88,9 @@ const useScroll = () => {
       }
     };
 
-    onLoad();
-    // setTimeout(() => {
-    // }, 3000);
+    setTimeout(() => {
+      onLoad();
+    }, 3000);
     return () => {
       scene.destroy();
     };
