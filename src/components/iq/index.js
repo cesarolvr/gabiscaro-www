@@ -18,7 +18,7 @@ import iqaccordion from "@videos/iq-3-Accordion.mp4";
 import iqcards from "@videos/iq-4-Cards.mp4";
 import iqfinal from "@videos/iq-5-Final.mp4";
 
-import smoothScroll from "@src/utils/smoothScroll";
+import Header from "@components/Header";
 
 import "@styles/case.scss";
 
@@ -27,7 +27,8 @@ const IQ = () => {
     // smoothScroll();
   }, []);
   return (
-    <div className="page -case -ramengo">
+    <div className="page -case -iq">
+      <Header />
       <section className="casesection -hero">
         <div className="container">
           <div className="thumb">

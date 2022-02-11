@@ -14,14 +14,9 @@ import print1 from "@images/blueberry/print-1.png";
 import print2 from "@images/blueberry/print-2.png";
 import print3 from "@images/blueberry/print-3.png";
 
-import smoothScroll from "@src/utils/smoothScroll";
-
 import "@styles/case.scss";
 
 const Blueberry = () => {
-  useEffect(() => {
-    // smoothScroll();
-  }, []);
   return (
     <div className="page -case -blueberry">
       <section className="casesection -hero">
