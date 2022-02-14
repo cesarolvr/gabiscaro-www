@@ -44,12 +44,13 @@
 
   .skills .container {
     display: flex;
+    align-items: flex-start;
     @media (max-width: 868px) {
       flex-direction: column;
     }
   }
 
-  .skills .title {
+  .skills .wrappertitle {
     width: 30%;
     text-transform: uppercase;
     font-weight: 800;
@@ -192,5 +193,32 @@
   color: #d604c1;
   .iconlink {
     margin-right: 15px;
+  }
+}
+
+.skills .wrappertitle {
+  overflow: hidden;
+}
+
+.skills .wrappertitle span {
+  width: max-content;
+  white-space: nowrap;
+  margin: 0;
+  line-height: 117%;
+}
+
+.skills .wrappertitle .title {
+  &.is-inview {
+    animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation-delay: 0.1s;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

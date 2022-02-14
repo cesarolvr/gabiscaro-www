@@ -7,6 +7,7 @@ const useScroll = (carouselMounted = false) => {
     scroll = new LocomotiveScroll({
       el: document.querySelector(".scroll-content"),
       smooth: true,
+      repeat: true,
     });
     return () => {
       scroll && scroll.destroy();

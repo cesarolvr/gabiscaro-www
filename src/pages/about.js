@@ -51,7 +51,11 @@ const About = () => {
         </section>
         <section className="skills">
           <div className="container">
-            <h2 className="title">skills</h2>
+            <div className="wrappertitle">
+              <h2 className="title" data-scroll>
+                <span>skills</span>
+              </h2>
+            </div>
             <ul className="list">
               <li className="item">Art direction</li>
               <li className="item">UX Design</li>
