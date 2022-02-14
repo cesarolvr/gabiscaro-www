@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
 import Header from "@components/header";
@@ -20,10 +20,12 @@ import cleancityThumb from "../images/thumbs/cleancity.png";
 import iqThumb from "../images/thumbs/iqcartoes.png";
 import blueberryThumb from "../images/thumbs/blueberry.png";
 
-// import AniLink from "gatsby-plugin-transition-link/AniLink";
-
 const Home = () => {
-  useScroll();
+  const [carouselMounted, setCarouselMounted] = useState(false);
+  useEffect(() => {
+    setCarouselMounted(true);
+  }, []);
+  useScroll(carouselMounted);
   return (
     <div className="scroll-content">
       <Header className="-opened" />
@@ -31,7 +33,7 @@ const Home = () => {
         <div className="container">
           <div className="holder">
             <Link to="/projects/iq">
-            {/* <AniLink paintDrip to="/projects/iq"> */}
+              {/* <AniLink paintDrip to="/projects/iq"> */}
               <div className="case">
                 <IqCartoesIllustration />
                 <div className="content projectinfo">
@@ -43,8 +45,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            {/* </AniLink> */}
-
+              {/* </AniLink> */}
             </Link>
 
             <Link to="/projects/blueberry">

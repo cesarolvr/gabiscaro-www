@@ -26,7 +26,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     const interval = setInterval(() => {
       const target = document.querySelector(".-carousel");
       const height = target?.getBoundingClientRect()?.height;
-      if (height > 500) {
+      if (height > 400) {
         onMount();
         clearInterval(interval);
       }

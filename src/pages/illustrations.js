@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import useScroll from "@hooks/useScroll";
 
@@ -12,7 +12,11 @@ import halfcircle from "../images/halfcircle.svg";
 import flatcloud from "../images/flatcloud.svg";
 
 const Illustrations = () => {
-  useScroll();
+  const [carouselMounted, setCarouselMounted] = useState(false);
+  useEffect(() => {
+    setCarouselMounted(true);
+  }, []);
+  useScroll(carouselMounted);
   return (
     <div className="scroll-content">
       <Header />

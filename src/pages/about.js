@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import smoothScroll from "@src/utils/smoothScroll";
 
@@ -8,11 +8,14 @@ import Contact from "@components/contact";
 import "@styles/about.scss";
 import useScroll from "../hooks/useScroll";
 
-
 const About = () => {
-  useScroll();
+  const [carouselMounted, setCarouselMounted] = useState(false);
+  useEffect(() => {
+    setCarouselMounted(true);
+  }, []);
+  useScroll(carouselMounted);
   return (
-<div className="scroll-content">
+    <div className="scroll-content">
       <Header />
       <main className="about">
         <section className="description">
@@ -141,9 +144,9 @@ const About = () => {
                 </svg>
                 View my resume
               </a>
-              <br />  
-              <br />  
-              <br />  
+              <br />
+              <br />
+              <br />
             </ul>
           </div>
         </section>
