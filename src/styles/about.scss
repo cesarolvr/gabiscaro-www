@@ -210,13 +210,12 @@
 .skills .wrappertitle .title {
   &.is-inview {
     animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
-    animation-delay: 0.1s;
   }
 }
 
 @keyframes slide-up {
   0% {
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
   100% {
     transform: translateY(0);

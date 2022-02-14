@@ -9,6 +9,8 @@ import blueberry from "@images/carousel/blueberry.png";
 
 import "./index.scss";
 
+const isClient = () => typeof window !== "undefined";
+
 const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   const settings = {
     dots: false,
@@ -23,6 +25,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   };
 
   useEffect(() => {
+    if (!isClient) return;
     const interval = setInterval(() => {
       const target = document.querySelector(".-carousel");
       const height = target?.getBoundingClientRect()?.height;

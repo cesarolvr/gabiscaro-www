@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import smoothScroll from "@src/utils/smoothScroll";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
