@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 
 import { RamemGoIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
@@ -17,14 +17,13 @@ import image10 from "@images/ramengo/10.png";
 import image11 from "@images/ramengo/11.png";
 import video1 from "@videos/ramengo-1.mp4";
 
-import smoothScroll from "@src/utils/smoothScroll";
+import useScroll from "@hooks/useScroll";
 
 import "@styles/case.scss";
 
 const RamenGo = () => {
-  useEffect(() => {
-    // smoothScroll();
-  }, []);
+  const [carouselMounted, setCarouselMounted] = useState(false);
+  useScroll(carouselMounted);
   return (
     <div className="page -case -ramengo">
       <section className="casesection -hero">
@@ -159,7 +158,7 @@ const RamenGo = () => {
       <br />
 
       <section className="casesection -carousel">
-        <Carousel inverted />
+        <Carousel inverted onMount={() => setCarouselMounted(true)} />
       </section>
       <br />
       <br />

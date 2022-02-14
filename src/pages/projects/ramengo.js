@@ -4,10 +4,7 @@ import { Router } from "@reach/router";
 import RamenGo from "@components/ramengo";
 import Header from "@components/Header";
 
-import useScroll from "@hooks/useScroll";
-
 const Projects = () => {
-  useScroll();
   return (
     <div className="scroll-content">
       <Header />

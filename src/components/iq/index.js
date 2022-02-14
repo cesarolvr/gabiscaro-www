@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 
 import { IqCartoesIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
@@ -18,14 +18,15 @@ import iqaccordion from "@videos/iq-3-Accordion.mp4";
 import iqcards from "@videos/iq-4-Cards.mp4";
 import iqfinal from "@videos/iq-5-Final.mp4";
 
+import useScroll from "@hooks/useScroll";
+
 import Header from "@components/Header";
 
 import "@styles/case.scss";
 
 const IQ = () => {
-  useEffect(() => {
-    // smoothScroll();
-  }, []);
+  const [carouselMounted, setCarouselMounted] = useState(false);
+  useScroll(carouselMounted);
   return (
     <div className="page -case -iq">
       <Header />
@@ -572,7 +573,7 @@ const IQ = () => {
       </section>
       <br />
       <section className="casesection -carousel">
-        <Carousel />
+        <Carousel onMount={() => setCarouselMounted(true)} />
       </section>
       <br />
       <br />

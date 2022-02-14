@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { CleanCityIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
@@ -18,18 +18,18 @@ import printWaste from "@images/cleancity/print-waste.png";
 import printRedeem1 from "@images/cleancity/print-redeem-1.png";
 import printRedeem2 from "@images/cleancity/print-redeem-2.png";
 
-// import smoothScroll from "@src/utils/smoothScroll";
-
 import prev1 from "@images/cleancity/prev-1.png";
 import prev2 from "@images/cleancity/prev-2.png";
 import prev3 from "@images/cleancity/prev-3.png";
 
+// Hooks
+import useScroll from "@hooks/useScroll";
+
 import "@styles/case.scss";
 
 const CleanCity = () => {
-  useEffect(() => {
-    // smoothScroll();
-  }, []);
+  const [carouselMounted, setCarouselMounted] = useState(false);
+  useScroll(carouselMounted);
   return (
     <div className="page -case -cleancity">
       <section className="casesection -hero">
@@ -174,14 +174,14 @@ const CleanCity = () => {
                 />
                 <mask id="path-5-inside-1_401_67" fill="white">
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M111.155 190.249C102.728 186.098 92.5307 189.565 88.3798 197.992C84.2288 206.42 87.6956 216.617 96.1232 220.768L106.225 225.743L101.249 235.845C97.0983 244.272 100.565 254.469 108.993 258.62C117.42 262.771 127.617 259.304 131.768 250.877L136.744 240.775L146.845 245.75C155.272 249.901 165.469 246.434 169.62 238.007C173.771 229.579 170.304 219.382 161.877 215.231L151.776 210.256L156.751 200.155C160.902 191.728 157.435 181.531 149.007 177.38C140.58 173.229 130.383 176.696 126.232 185.123L121.257 195.224L111.155 190.249Z"
                   />
                 </mask>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M111.155 190.249C102.728 186.098 92.5307 189.565 88.3798 197.992C84.2288 206.42 87.6956 216.617 96.1232 220.768L106.225 225.743L101.249 235.845C97.0983 244.272 100.565 254.469 108.993 258.62C117.42 262.771 127.617 259.304 131.768 250.877L136.744 240.775L146.845 245.75C155.272 249.901 165.469 246.434 169.62 238.007C173.771 229.579 170.304 219.382 161.877 215.231L151.776 210.256L156.751 200.155C160.902 191.728 157.435 181.531 149.007 177.38C140.58 173.229 130.383 176.696 126.232 185.123L121.257 195.224L111.155 190.249Z"
                   fill="#FF4522"
                 />
@@ -936,22 +936,22 @@ const CleanCity = () => {
                   d="M8.21704 53.7425L29.6802 40.9863"
                   stroke="#1D4831"
                   strokeWidth="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M8.21704 68.2287L29.6802 55.4668"
                   stroke="#1D4831"
                   strokeWidth="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M29.6802 22.0195V101.091"
                   stroke="#1D4831"
                   strokeWidth="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
               </svg>
             </div>
@@ -1020,7 +1020,7 @@ const CleanCity = () => {
                   d="M249.006 358.721C262.747 356.247 269.571 351.954 280.117 343.165C298.929 327.489 318.416 312.254 338.117 297.721C362.314 279.871 388.295 261.285 416.562 250.721C432.588 244.731 451.916 236.05 468.895 243.832C483.068 250.328 487.134 267.082 486.673 281.387C485.457 319.094 470.211 355.866 465.006 393.165C462.78 409.121 458.436 434.781 477.451 442.387C491.166 447.873 508.473 439.722 520.117 432.943C550.907 415.018 577.641 386.865 603.006 362.276C663.943 303.205 721.781 241.187 780.117 179.609C832.184 124.65 883.948 73.0978 946.673 30.2761C974.359 11.3754 1044.88 -23.7098 1048.56 37.6095C1050.38 67.8599 1031.93 102.638 1021.78 129.943C1006.18 171.958 986.405 215.012 981.562 260.054C978.771 286.008 975.24 337.045 1007.01 347.054C1025.76 352.964 1046.87 346.384 1063.45 337.387C1095.1 320.22 1122.45 295.561 1148.56 271.165C1217.42 206.839 1287.89 145.77 1362.78 88.4984C1381.42 74.245 1400.39 60.8376 1419.9 47.8317C1423.44 45.4658 1441.01 35.9235 1441.01 32.7206"
                   stroke="#122B1D"
                   strokeWidth="5"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                 />
               </svg>
             </div>
@@ -1103,7 +1103,7 @@ const CleanCity = () => {
       <br />
       <br />
       <section className="casesection -carousel">
-        <Carousel />
+        <Carousel onMount={() => setCarouselMounted(true)} />
       </section>
       <br />
       <br />

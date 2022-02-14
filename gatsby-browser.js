@@ -8,3 +8,7 @@ export const wrapPageElement = ({ element, props }) => {
   const { path } = props;
   return <Layout>{element}</Layout>;
 };
+
+export const onRouteUpdate = (loc) => {
+  console.log('Mudou a rota')
+};

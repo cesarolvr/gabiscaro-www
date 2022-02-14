@@ -1,5 +1,5 @@
 import { navigate } from "gatsby-link";
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 
 import ramengo from "@images/carousel/ramengo.png";
@@ -9,7 +9,7 @@ import blueberry from "@images/carousel/blueberry.png";
 
 import "./index.scss";
 
-const Carousel = ({ inverted = false }) => {
+const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -21,6 +21,21 @@ const Carousel = ({ inverted = false }) => {
   const goTo = (path) => {
     navigate(path);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const target = document.querySelector(".-carousel");
+      const height = target?.getBoundingClientRect()?.height;
+      if (height > 500) {
+        onMount();
+        clearInterval(interval);
+      }
+    }, 500);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   const ramengoItem = (
     <div className="item -ramengo" onClick={() => goTo("/projects/ramengo")}>

@@ -1,19 +1,17 @@
 import { useEffect } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 
-const useScroll = () => {
+const useScroll = (carouselMounted = false) => {
   useEffect(() => {
     let scroll = null;
-    setTimeout(() => {
-      scroll = new LocomotiveScroll({
-        el: document.querySelector(".scroll-content"),
-        smooth: true,
-      });
-    }, 1000);
+    scroll = new LocomotiveScroll({
+      el: document.querySelector(".scroll-content"),
+      smooth: true,
+    });
     return () => {
-      scroll.destroy();
+      scroll && scroll.destroy();
     };
-  }, []);
+  }, [carouselMounted]);
 };
 
 export default useScroll;

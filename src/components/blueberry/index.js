@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 
 import { BlueberryIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
@@ -14,9 +14,13 @@ import print1 from "@images/blueberry/print-1.png";
 import print2 from "@images/blueberry/print-2.png";
 import print3 from "@images/blueberry/print-3.png";
 
+import useScroll from "@hooks/useScroll";
+
 import "@styles/case.scss";
 
 const Blueberry = () => {
+  const [carouselMounted, setCarouselMounted] = useState(false);
+  useScroll(carouselMounted);
   return (
     <div className="page -case -blueberry">
       <section className="casesection -hero">
@@ -562,7 +566,7 @@ const Blueberry = () => {
         </div>
       </section>
       <section className="casesection -carousel">
-        <Carousel />
+        <Carousel onMount={() => setCarouselMounted(true)} />
       </section>
       <br />
       <br />

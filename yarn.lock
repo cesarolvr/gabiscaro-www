@@ -868,7 +868,7 @@
     "@babel/helper-plugin-utils" "^7.16.7"
     babel-plugin-polyfill-corejs2 "^0.3.0"
     babel-plugin-polyfill-corejs3 "^0.5.0"
-    babel-plugin-polyfill-regenerator "^0.3.0"
+    babel-plugin-polyfillRegenerator "^0.3.0"
     semver "^6.3.0"
 
 "@babel/plugin-transform-shorthand-properties@^7.16.7":
@@ -1007,7 +1007,7 @@
     "@babel/types" "^7.16.8"
     babel-plugin-polyfill-corejs2 "^0.3.0"
     babel-plugin-polyfill-corejs3 "^0.5.0"
-    babel-plugin-polyfill-regenerator "^0.3.0"
+    babel-plugin-polyfillRegenerator "^0.3.0"
     core-js-compat "^3.20.2"
     semver "^6.3.0"
 
@@ -3342,9 +3342,9 @@ babel-plugin-polyfill-corejs3@^0.5.0:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
     core-js-compat "^3.21.0"
 
-babel-plugin-polyfill-regenerator@^0.3.0:
+babel-plugin-polyfillRegenerator@^0.3.0:
   version "0.3.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-polyfill-regenerator/-/babel-plugin-polyfill-regenerator-0.3.1.tgz#2c0678ea47c75c8cc2fbb1852278d8fb68233990"
+  resolved "https://registry.yarnpkg.com/babel-plugin-polyfillRegenerator/-/babel-plugin-polyfillRegenerator-0.3.1.tgz#2c0678ea47c75c8cc2fbb1852278d8fb68233990"
   integrity sha512-Y2B06tvgHYt1x0yz17jGkGeeMr5FeKUu+ASJ+N6nB5lQ8Dapfg42i0OVrf8PNGJ3zKL4A23snMi1IRwrqqND7A==
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
@@ -3618,7 +3618,7 @@ braces@^2.3.1:
     arr-flatten "^1.1.0"
     array-unique "^0.3.2"
     extend-shallow "^2.0.1"
-    fill-range "^4.0.0"
+    fillRange "^4.0.0"
     isobject "^3.0.1"
     repeat-element "^1.1.2"
     snapdragon "^0.8.1"
@@ -3631,7 +3631,7 @@ braces@^3.0.1, braces@~3.0.2:
   resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
   integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
   dependencies:
-    fill-range "^7.0.1"
+    fillRange "^7.0.1"
 
 browserslist@4.14.2:
   version "4.14.2"
@@ -6147,9 +6147,9 @@ filesize@^6.1.0:
   resolved "https://registry.yarnpkg.com/filesize/-/filesize-6.4.0.tgz#914f50471dd66fdca3cefe628bd0cde4ef769bcd"
   integrity sha512-mjFIpOHC4jbfcTfoh4rkWpI31mF7viw9ikj/JyLoKzqlwG/YsefKfvYlYhdYdg/9mtK2z1AzgN/0LvVQ3zdlSQ==
 
-fill-range@^4.0.0:
+fillRange@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
+  resolved "https://registry.yarnpkg.com/fillRange/-/fillRange-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
   integrity sha1-1USBHUKPmOsGpj3EAtJAPDKMOPc=
   dependencies:
     extend-shallow "^2.0.1"
@@ -6157,9 +6157,9 @@ fill-range@^4.0.0:
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
 
-fill-range@^7.0.1:
+fillRange@^7.0.1:
   version "7.0.1"
-  resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
+  resolved "https://registry.yarnpkg.com/fillRange/-/fillRange-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
   integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
   dependencies:
     to-regex-range "^5.0.1"
