@@ -4,6 +4,7 @@ import useScroll from "@hooks/useScroll";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
+import Loader from "@components/loader";
 
 import "@styles/illustrations.scss";
 
@@ -13,12 +14,18 @@ import flatcloud from "../images/flatcloud.svg";
 
 const Illustrations = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
+  const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
     setCarouselMounted(true);
+
+    setTimeout(() => {
+      setIsOpened(false);
+    }, 2000);
   }, []);
   useScroll(carouselMounted);
   return (
     <div className="scroll-content">
+      <Loader isOpened={isOpened} />
       <Header />
       <div className="grid">
         <div className="case cell-1 -beforevector">

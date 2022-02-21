@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
+import Loader from "@components/loader";
 import {
   RamemGoIllustration,
   CleanCityIllustration,
@@ -22,12 +23,18 @@ import blueberryThumb from "../images/thumbs/blueberry.png";
 
 const Home = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
+  const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
     setCarouselMounted(true);
+
+    setTimeout(() => {
+      setIsOpened(false);
+    }, 2000);
   }, []);
   useScroll(carouselMounted);
   return (
     <div className="scroll-content">
+      <Loader isOpened={isOpened} />
       <Header className="-opened" />
       <main className="home">
         <div className="container">
