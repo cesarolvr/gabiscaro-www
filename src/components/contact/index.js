@@ -32,7 +32,7 @@ const Contact = ({ title }) => {
           Dribbble
         </a>
         , or{" "}
-        <a href="mailto:email@gabiscaro.com" className="email" target="_blank">
+        <a href="mailto:gabrielasbiscaro@gmail.com" className="email" target="_blank">
           Email
         </a>
       </p>
