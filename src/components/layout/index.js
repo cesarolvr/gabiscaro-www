@@ -4,7 +4,7 @@ import Loader from "@components/loader";
 const Layout = ({ children }) => {
   return (
     <>
-      {/* <Loader /> */}
+      <Loader />
       <main className="main">{children}</main>
     </>
   );

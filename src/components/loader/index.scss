@@ -10,4 +10,10 @@
   align-items: center;
   justify-content: center;
   color: white;
+  opacity: 0;
+  pointer-events: none;
+
+  &.-opened {
+    opacity: 1;
+  }
 }
