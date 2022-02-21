@@ -25,7 +25,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   };
 
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient()) return;
     const interval = setInterval(() => {
       const target = document.querySelector(".-carousel");
       const height = target?.getBoundingClientRect()?.height;
