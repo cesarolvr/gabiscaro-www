@@ -27,7 +27,6 @@ const useScroll = (carouselMounted = false) => {
             smooth: true,
             repeat: true,
           });
-          console.log('áaaaaa', scroll);
         }, 1000);
       });
     }

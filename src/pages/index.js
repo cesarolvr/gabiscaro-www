@@ -29,7 +29,7 @@ const Home = () => {
 
     setTimeout(() => {
       setIsOpened(false);
-    }, 2000);
+    }, 2500);
   }, []);
   useScroll(carouselMounted);
   return (

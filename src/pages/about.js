@@ -3,18 +3,26 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
+import Loader from "@components/loader";
 
 import "@styles/about.scss";
 import useScroll from "../hooks/useScroll";
 
 const About = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
+
+  const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
     setCarouselMounted(true);
+
+    setTimeout(() => {
+      setIsOpened(false);
+    }, 2500);
   }, []);
   useScroll(carouselMounted);
   return (
     <div className="scroll-content">
+      <Loader isOpened={isOpened} />
       <Header />
       <main className="about">
         <section className="description">

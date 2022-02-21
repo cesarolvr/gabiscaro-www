@@ -16,6 +16,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "countup.js": "^2.0.8",
     "firebase": "^8.9.1",
     "firebase-tools": "^9.16.5",
     "formik": "^2.2.9",
