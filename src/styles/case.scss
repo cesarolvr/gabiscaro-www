@@ -201,6 +201,10 @@
         padding: 0 20px;
         position: relative;
         z-index: 10;
+
+        @media (max-width: 868px) {
+          width: 60% !important;
+        }
       }
     }
   }
@@ -229,12 +233,19 @@
       &:last-of-type {
         width: 50%;
       }
+
+      @media (max-width: 868px) {
+        width: 100% !important;
+      }
     }
 
     .holder > img,
     .holder > svg {
       position: absolute;
       right: 80px;
+      @media (max-width: 868px) {
+        right: 98%;
+      }
     }
   }
 
@@ -320,6 +331,14 @@
           max-width: 450px;
           margin-bottom: 80px;
         }
+
+        @media (max-width: 868px) {
+          padding-left: 0px;
+        }
+      }
+
+      @media (max-width: 868px) {
+        width: 100% !important;
       }
 
       .illustrationwrapper {
@@ -371,6 +390,14 @@
         display: flex;
         justify-content: center;
       }
+
+      @media (max-width: 868px) {
+        width: 100% !important;
+
+        &:last-of-type {
+          margin-top: 100px;
+        }
+      }
     }
 
     .starwrapper {
@@ -415,6 +442,17 @@
     .sectionparagraph {
       color: #400039;
     }
+
+    @media (max-width: 868px) {
+      img {
+        margin: auto;
+        display: block;
+      }
+
+      .holder:last-of-type {
+        padding-top: 60px;
+      }
+    }
   }
 
   &.-redeem {
@@ -435,6 +473,17 @@
 
       img {
         padding: 10px;
+      }
+
+      @media (max-width: 868px) {
+        width: 100% !important;
+        margin-bottom: 30px;
+        flex-direction: column;
+
+        img {
+          max-width: 60%;
+          margin: auto auto 30px auto;
+        }
       }
     }
   }
@@ -463,7 +512,11 @@
   padding: 100px 0;
 
   @media (max-width: 868px) {
-    padding: 60px 0 100px 0;
+    padding: 100px 0 100px 0;
+  }
+
+  .container {
+    position: relative;
   }
 
   .content {
@@ -474,6 +527,7 @@
 
     @media (max-width: 868px) {
       padding: 0 30px;
+      left: 0;
       bottom: -45px;
     }
   }
