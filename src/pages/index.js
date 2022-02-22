@@ -23,12 +23,16 @@ import cleancityThumb from "../images/thumbs/cleancity.png";
 import iqThumb from "../images/thumbs/iqcartoes.png";
 import blueberryThumb from "../images/thumbs/blueberry.png";
 
+const isClient = () => typeof window !== "undefined";
+
 const Home = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
   const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
     setCarouselMounted(true);
 
+
+    if(!isClient()) return null
     const width = window.innerWidth;
 
     setTimeout(() => {
