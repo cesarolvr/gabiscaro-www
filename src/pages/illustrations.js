@@ -25,7 +25,7 @@ const Illustrations = () => {
   useScroll();
   return (
     <div className="scroll-content">
-      {/* <Loader isOpened={isOpened} /> */}
+      <Loader isOpened={isOpened} />
       <Header />
       <div className="grid">
         <div className="case cell-1 -beforevector">

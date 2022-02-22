@@ -61,7 +61,7 @@ const Home = () => {
 
   return (
     <div className="scroll-content">
-      {/* <Loader isOpened={isOpened} /> */}
+      <Loader isOpened={isOpened} />
       <Header className="-opened" />
       <main className="home">
         <div className="container">

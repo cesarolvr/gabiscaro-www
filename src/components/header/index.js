@@ -22,11 +22,15 @@ const Header = ({ className = "" }) => {
         </div>
       </Link>
       <Link className="link -logo" to="/">
-        <Logo />
+        <div className="logo-wrapper data-scroll" data-scroll style={{transitionDelay: '400ms'}}>
+          <Logo />
+        </div>
       </Link>
       <Link className="link" to="/about">
         <div className="data-scroll" data-scroll>
-          <div className="target" style={{animationDelay: '80ms'}}>about/say hi</div>
+          <div className="target" style={{ animationDelay: "80ms" }}>
+            about/say hi
+          </div>
         </div>
       </Link>
       <hr className="line" data-scroll />
