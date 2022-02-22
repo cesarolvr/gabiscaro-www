@@ -89,6 +89,12 @@
     color: #400039;
     font-weight: 800;
     line-height: 4.7rem;
+
+    @media (max-width: 868px) {
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-bottom: 20px;
+    }
   }
 }
 

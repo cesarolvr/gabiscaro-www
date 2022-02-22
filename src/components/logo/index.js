@@ -1,8 +1,8 @@
 import * as React from "react";
 
-const Logo = () => {
+const Logo = ({className}) => {
   return (
-    <div className="logo">
+    <div className={`logo ${className}`}>
       <svg
         width="100%"
         height="100%"

@@ -94,7 +94,7 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          <Logo />
+          <Logo className="-opened" />
           <div className="holder">
             <Link to="/projects/cleancity">
               <div className="case">
