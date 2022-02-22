@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import ScrollMagic from "scrollmagic";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
@@ -15,41 +14,49 @@ import {
 
 import "@styles/home.scss";
 
-import useScroll from "@hooks/useScroll";
-
 // Images
 import ramengoThumb from "../images/thumbs/ramengo.png";
 import cleancityThumb from "../images/thumbs/cleancity.png";
 import iqThumb from "../images/thumbs/iqcartoes.png";
 import blueberryThumb from "../images/thumbs/blueberry.png";
 
+const importSM = async () => {
+  if (window.ScrollMagic) {
+    return Promise.resolve(window.ScrollMagic);
+  } else {
+    const module = await import("scrollmagic").then((sm) => {
+      window.ScrollMagic = sm.default;
+      return sm.default;
+    });
+    return module;
+  }
+};
+
 const isClient = () => typeof window !== "undefined";
 
 const Home = () => {
-  const [carouselMounted, setCarouselMounted] = useState(false);
   const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
-    setCarouselMounted(true);
 
-
-    if(!isClient()) return null
-    const width = window.innerWidth;
+    if (isClient()) {
+      importSM().then((ScrollMagic) => {
+        const width = window.innerWidth;
+        if (width > 768) {
+          var controller = new ScrollMagic.Controller();
+          var scene = new ScrollMagic.Scene({
+            duration: 600,
+          })
+            .setPin(".home > .container > .logo")
+            .addTo(controller);
+        }
+      });
+    }
 
     setTimeout(() => {
       setIsOpened(false);
     }, 2500);
-
-    if (width > 768) {
-      var controller = new ScrollMagic.Controller();
-      var scene = new ScrollMagic.Scene({
-        duration: 600,
-      })
-        .setPin(".home > .container > .logo")
-        .addTo(controller);
-    }
   }, []);
 
-  // // useScroll(carouselMounted);
   return (
     <div className="scroll-content">
       <Loader isOpened={isOpened} />
