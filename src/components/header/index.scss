@@ -7,7 +7,7 @@
   border-bottom: 3px solid #ff4522;
   font-weight: 800;
   text-transform: uppercase;
-  color: #99018A;
+  color: #99018a;
   font-size: 1rem;
   z-index: 60;
   position: relative;
@@ -22,7 +22,7 @@
 
   .link,
   .title {
-    color: #99018A;
+    color: #99018a;
     display: inline-block;
   }
 
@@ -63,17 +63,7 @@
     }
 
     .logo {
-      width: 30vw;
-      height: auto;
-      max-width: 421px;
-      top: calc(50vh + 50px);
-      transform: translateY(-50%);
-
-      @media (max-width: 868px) {
-        top: 250px;
-        width: 100vw;
-        max-width: 221px;
-      }
+      display: none;
     }
   }
 }

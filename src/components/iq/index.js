@@ -26,7 +26,7 @@ import "@styles/case.scss";
 
 const IQ = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
-  useScroll(carouselMounted);
+  // useScroll(carouselMounted);
   return (
     <div className="page -case -iq">
       <Header />

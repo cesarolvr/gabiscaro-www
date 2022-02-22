@@ -23,7 +23,7 @@ import "@styles/case.scss";
 
 const RamenGo = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
-  useScroll(carouselMounted);
+  // useScroll(carouselMounted);
   return (
     <div className="page -case -ramengo">
       <section className="casesection -hero">

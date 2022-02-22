@@ -19,7 +19,7 @@ const About = () => {
       setIsOpened(false);
     }, 2500);
   }, []);
-  useScroll(carouselMounted);
+  // useScroll(carouselMounted);
   return (
     <div className="scroll-content">
       <Loader isOpened={isOpened} />

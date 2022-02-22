@@ -1,7 +1,7 @@
 .home {
-  @media (max-width: 868px) {
-    padding-top: 250px;
-  }
+  // @media (max-width: 868px) {
+  //   padding-top: 250px;
+  // }
 }
 
 .home .container {
@@ -20,13 +20,44 @@
   flex-direction: column;
   justify-content: space-between;
   width: 30%;
+  order: 3;
 
   > a {
     margin: 40px 0;
   }
 
+  &:first-of-type {
+    order: 2;
+    @media (min-width: 768px) {
+      order: initial;
+    }
+  }
+
+  @media (min-width: 768px) {
+    order: initial;
+  }
+
   @media (max-width: 868px) {
     width: 100%;
+  }
+}
+
+.home .container .logo {
+  width: 350px;
+  height: 350px;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 10%;
+  order: 1;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 768px) {
+    order: initial;
+    max-width: none;
   }
 }
 

@@ -20,7 +20,7 @@ import "@styles/case.scss";
 
 const Blueberry = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
-  useScroll(carouselMounted);
+  // useScroll(carouselMounted);
   return (
     <div className="page -case -blueberry">
       <section className="casesection -hero">

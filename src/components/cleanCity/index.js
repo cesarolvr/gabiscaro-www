@@ -29,7 +29,7 @@ import "@styles/case.scss";
 
 const CleanCity = () => {
   const [carouselMounted, setCarouselMounted] = useState(false);
-  useScroll(carouselMounted);
+  // useScroll(carouselMounted);
   return (
     <div className="page -case -cleancity">
       <section className="casesection -hero">

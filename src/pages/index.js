@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
+import ScrollMagic from "scrollmagic";
 
 import Header from "@components/header";
 import Contact from "@components/contact";
 import Loader from "@components/loader";
+import Logo from "@components/Logo";
 import {
   RamemGoIllustration,
   CleanCityIllustration,
@@ -27,11 +29,23 @@ const Home = () => {
   useEffect(() => {
     setCarouselMounted(true);
 
+    const width = window.innerWidth;
+
     setTimeout(() => {
       setIsOpened(false);
     }, 2500);
+
+    if (width > 768) {
+      var controller = new ScrollMagic.Controller();
+      var scene = new ScrollMagic.Scene({
+        duration: 600,
+      })
+        .setPin(".home > .container > .logo")
+        .addTo(controller);
+    }
   }, []);
-  useScroll(carouselMounted);
+
+  // // useScroll(carouselMounted);
   return (
     <div className="scroll-content">
       <Loader isOpened={isOpened} />
@@ -69,6 +83,7 @@ const Home = () => {
               </div>
             </Link>
           </div>
+          <Logo />
           <div className="holder">
             <Link to="/projects/cleancity">
               <div className="case">

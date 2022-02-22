@@ -40,6 +40,7 @@
     "react-slick": "^0.28.1",
     "react-transition-group": "^4.4.2",
     "sass": "^1.38.0",
+    "scrollmagic": "^2.0.8",
     "slick-carousel": "^1.8.1"
   }
 }

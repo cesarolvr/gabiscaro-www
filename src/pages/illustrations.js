@@ -22,7 +22,7 @@ const Illustrations = () => {
       setIsOpened(false);
     }, 2000);
   }, []);
-  useScroll(carouselMounted);
+  // useScroll(carouselMounted);
   return (
     <div className="scroll-content">
       <Loader isOpened={isOpened} />

@@ -6,7 +6,6 @@ import "./index.scss";
 
 import favicon from '../../images/favicon.svg';
 
-
 import Logo from "@components/Logo";
 
 const Header = ({ className = "" }) => {
