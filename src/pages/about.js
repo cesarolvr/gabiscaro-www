@@ -19,7 +19,9 @@ const About = () => {
       setIsOpened(false);
     }, 2500);
   }, []);
-  // useScroll(carouselMounted);
+
+  useScroll();
+
   return (
     <div className="scroll-content">
       {/* <Loader isOpened={isOpened} /> */}
@@ -32,14 +34,35 @@ const About = () => {
               src="../images/gabiscaro.png"
               alt=""
             />
-            <p className="text">
-              Hello, I'm <span> Gabriela Biscáro</span>, a Product Designer and
-              passionate Illustrator based in Sao Paulo, Brazil. Currently I'm
-              working at Red Ventures. I work closely to PO's, PM's and other
-              designers to define the best strategy to improve the usability of
-              our products. When it comes to how I do it, I take care of the
-              smallest details in everything I do.
-            </p>
+            <br />
+            <span className="data-scroll" data-scroll>
+              <span className="text target" style={{animationDelay: '200ms'}}>
+                Hello, I'm <span> Gabriela Biscáro</span>, a Product Designer
+                and passionate Illustrator based in Sao Paulo, Brazil.
+              </span>
+            </span>
+            <span className="data-scroll" data-scroll>
+              <span className="text target" style={{animationDelay: '300ms'}}>
+                {" "}
+                Currently I'm working at Red Ventures. I work closely to PO's,
+                PM's and other designers to define the
+              </span>
+            </span>
+            <span className="data-scroll" data-scroll>
+              <span className="text target" style={{animationDelay: '400ms'}}>
+                best strategy to improve the usability of our products. When it
+                comes to how I do it, I take care of the
+              </span>
+            </span>
+
+            <span className="data-scroll" data-scroll>
+              <span className="text target" style={{animationDelay: '500ms'}}>
+                {" "}
+                smallest details in everything I do.
+              </span>
+            </span>
+
+            <br />
             <br />
             <br />
             <br />
@@ -58,11 +81,9 @@ const About = () => {
         </section>
         <section className="skills">
           <div className="container">
-            <div className="wrappertitle">
-              <h2 className="title" data-scroll>
-                <span>skills</span>
-              </h2>
-            </div>
+            <h2 className="title">
+              <span>skills</span>
+            </h2>
             <ul className="list">
               <li className="item">Art direction</li>
               <li className="item">UX Design</li>

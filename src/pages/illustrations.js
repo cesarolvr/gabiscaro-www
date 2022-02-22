@@ -22,15 +22,14 @@ const Illustrations = () => {
       setIsOpened(false);
     }, 2000);
   }, []);
-  // useScroll(carouselMounted);
+  useScroll();
   return (
     <div className="scroll-content">
-      <Loader isOpened={isOpened} />
+      {/* <Loader isOpened={isOpened} /> */}
       <Header />
       <div className="grid">
         <div className="case cell-1 -beforevector">
           <StaticImage
-            className="image-wrapper"
             className="image-wrapper"
             src="../images/1.png"
           />

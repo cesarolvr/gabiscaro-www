@@ -93,3 +93,80 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 }
+
+.line {
+  height: 3px;
+  background-color: #ff4522;
+  border: none;
+}
+
+// REVEAL
+
+[data-scroll] {
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+
+  .target {
+    opacity: 0;
+  }
+
+  &.line {
+    transform: scaleX(0);
+  }
+
+  &.case {
+    overflow: visible;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &.is-inview {
+    .target {
+      opacity: 1;
+      animation: appear 0.6s cubic-bezier(0.65, 0, 0.35, 1) both;
+
+      @media (min-width: 768px) {
+        animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+        display: inline-block;
+      }
+    }
+
+    &.line {
+      animation: line-expand 0.6s cubic-bezier(0.65, 0, 0.35, 1) both;
+    }
+
+    &.case {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(130%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-expand {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

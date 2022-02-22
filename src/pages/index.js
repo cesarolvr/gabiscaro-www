@@ -19,6 +19,7 @@ import ramengoThumb from "../images/thumbs/ramengo.png";
 import cleancityThumb from "../images/thumbs/cleancity.png";
 import iqThumb from "../images/thumbs/iqcartoes.png";
 import blueberryThumb from "../images/thumbs/blueberry.png";
+import useScroll from "../hooks/useScroll";
 
 const importSM = async () => {
   if (window.ScrollMagic) {
@@ -37,7 +38,6 @@ const isClient = () => typeof window !== "undefined";
 const Home = () => {
   const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
-
     if (isClient()) {
       importSM().then((ScrollMagic) => {
         const width = window.innerWidth;
@@ -57,19 +57,21 @@ const Home = () => {
     }, 2500);
   }, []);
 
+  useScroll();
+
   return (
     <div className="scroll-content">
-      <Loader isOpened={isOpened} />
+      {/* <Loader isOpened={isOpened} /> */}
       <Header className="-opened" />
       <main className="home">
         <div className="container">
           <div className="holder">
             <Link to="/projects/iq">
-              {/* <AniLink paintDrip to="/projects/iq"> */}
-              <div className="case">
+              <div className="case" data-scroll style={{transitionDelay: '400ms'}}>
                 <IqCartoesIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={iqThumb} alt="" />
+
                   <p className="categorylabel">iq Credit Cards</p>
                   <p className="name">
                     Redesigning a digital experience for a credit card
@@ -77,11 +79,10 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              {/* </AniLink> */}
             </Link>
 
             <Link to="/projects/blueberry">
-              <div className="case">
+              <div className="case" data-scroll style={{transitionDelay: '450ms'}}>
                 <BlueberryIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={blueberryThumb} alt="" />
@@ -97,7 +98,7 @@ const Home = () => {
           <Logo className="-opened" />
           <div className="holder">
             <Link to="/projects/cleancity">
-              <div className="case">
+              <div className="case" data-scroll style={{transitionDelay: '500ms'}}>
                 <CleanCityIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={cleancityThumb} alt="" />
@@ -111,7 +112,7 @@ const Home = () => {
             </Link>
 
             <Link to="/projects/ramengo">
-              <div className="case">
+              <div className="case" data-scroll style={{transitionDelay: '550ms'}}>
                 <RamemGoIllustration />
                 <div className="content projectinfo">
                   <img className="image" src={ramengoThumb} alt="" />

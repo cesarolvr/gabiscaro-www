@@ -16,25 +16,21 @@ const importLocomotive = async () => {
   }
 };
 
-const useScroll = (carouselMounted = false) => {
+const useScroll = () => {
   useEffect(() => {
     let scroll = null;
     if (isClient()) {
       importLocomotive().then((Locomotive) => {
-        setTimeout(() => {
-          scroll = new Locomotive({
-            el: document.querySelector(".scroll-content"),
-            smooth: true,
-            repeat: true,
-          });
-        }, 1000);
+        scroll = new Locomotive({
+          el: document.querySelector(".scroll-content"),
+        });
       });
     }
     return () => {
       window.Locomotive = null;
       scroll && scroll.destroy();
     };
-  }, [carouselMounted]);
+  }, []);
 };
 
 export default useScroll;
