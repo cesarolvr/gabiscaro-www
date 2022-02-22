@@ -11,10 +11,12 @@
     color: white;
     font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 40px;
+    line-height: 5rem;
+    margin-bottom: 30px;
 
     @media (max-width: 768px) {
       font-size: 32px;
+      line-height: 40px;
     }
   }
 
@@ -32,6 +34,10 @@
     a {
       color: #ff4522;
       text-decoration: none;
+      &:hover {
+        background-color: #ff4522;
+        color: #400039;
+      }
     }
 
     small {
@@ -40,14 +46,26 @@
 
     .linkedin {
       color: #9ceaef;
+      &:hover {
+        background-color: #9ceaef;
+        color: #400039;
+      }
     }
 
     .instagram {
       color: #3ddc97;
+      &:hover {
+        background-color: #3ddc97;
+        color: #400039;
+      }
     }
 
     .dribbble {
       color: #f992d3;
+      &:hover {
+        background-color: #f992d3;
+        color: #400039;
+      }
     }
   }
 }

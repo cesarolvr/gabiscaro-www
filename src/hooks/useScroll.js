@@ -20,11 +20,14 @@ const useScroll = () => {
   useEffect(() => {
     let scroll = null;
     if (isClient()) {
-      importLocomotive().then((Locomotive) => {
-        scroll = new Locomotive({
-          el: document.querySelector(".scroll-content"),
+      setTimeout(() => {
+        importLocomotive().then((Locomotive) => {
+          scroll = new Locomotive({
+            el: document.querySelector(".scroll-content"),
+            repeat: true,
+          });
         });
-      });
+      }, 3000);
     }
     return () => {
       window.Locomotive = null;
