@@ -22,7 +22,7 @@ const About = () => {
   // useScroll(carouselMounted);
   return (
     <div className="scroll-content">
-      <Loader isOpened={isOpened} />
+      {/* <Loader isOpened={isOpened} /> */}
       <Header />
       <main className="about">
         <section className="description">
