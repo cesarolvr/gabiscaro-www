@@ -201,3 +201,28 @@
 .-nopadding {
   padding: 0 !important;
 }
+
+// When loading
+
+.header,
+.home .container .holder,
+.logo-master .letters,
+.logo-master .symbol {
+  transition: opacity 0.3s ease;
+}
+
+.-loading {
+  .header,
+  .home .container .holder,
+  .logo-master .letters,
+  .logo-master .symbol {
+    opacity: 0;
+  }
+
+  .logo-master svg {
+    overflow: visible;
+  }
+  .logo-master circle {
+    transform: scale(7);
+  }
+}

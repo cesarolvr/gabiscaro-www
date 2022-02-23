@@ -54,6 +54,7 @@ const Home = () => {
   const [isOpened, setIsOpened] = useState(true);
 
   useEffect(() => {
+    
     if (isClient()) {
       importSM().then((ScrollMagic) => {
         const width = window.innerWidth;
@@ -66,13 +67,11 @@ const Home = () => {
             .addTo(controller);
         }
       });
-
-      // importKute();
     }
 
     setTimeout(() => {
       setIsOpened(false);
-    }, 2500);
+    }, 3000);
   }, []);
 
   useScroll();
@@ -95,8 +94,10 @@ const Home = () => {
                     setIsLoading(true);
                     setTimeout(() => {
                       navigate("/projects/iq");
+                    }, 600);
+                    setTimeout(() => {
                       setIsLoading(false);
-                    }, 2000);
+                    }, 1000);
                     // window.KUTE.to('#green-star', { path: '#star' }, { easing: 'easeOutQuart' }).start();
                   }}
                 >

@@ -17,7 +17,7 @@ const About = () => {
 
     setTimeout(() => {
       setIsOpened(false);
-    }, 2500);
+    }, 3000);
   }, []);
 
   useScroll();

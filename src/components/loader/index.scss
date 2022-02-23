@@ -5,7 +5,7 @@
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 90;
+  z-index: 900;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +22,9 @@
     align-items: center;
     justify-content: center;
     max-width: 70%;
+    opacity: 0;
+    animation: reveal 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation-delay: 0.1s;
 
     @media (min-width: 768px) {
       max-width: none;
@@ -54,5 +57,27 @@
     position: absolute;
     z-index: 91;
     background-color: white;
+  }
+
+  .letters {
+    animation: spin 20s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

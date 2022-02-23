@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsOpened(false);
-    }, 2500);
+    }, 3000);
   }, []);
   return (
     <div className="scroll-content">

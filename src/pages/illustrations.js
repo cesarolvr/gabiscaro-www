@@ -20,7 +20,7 @@ const Illustrations = () => {
 
     setTimeout(() => {
       setIsOpened(false);
-    }, 2000);
+    }, 3000);
   }, []);
   useScroll();
   return (
