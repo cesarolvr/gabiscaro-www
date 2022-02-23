@@ -52,7 +52,7 @@
   .letters {
     display: block;
     transform-origin: center;
-    animation: rotate 30s linear infinite;
+    animation: spin 30s linear infinite;
     transition: transform 0.3s ease;
   }
 

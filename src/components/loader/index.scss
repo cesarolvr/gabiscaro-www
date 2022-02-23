@@ -26,6 +26,7 @@
     animation: reveal 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
     animation-delay: 0.1s;
     overflow: visible;
+    max-width: 75%;
 
     @media (min-width: 768px) {
       max-width: none;
@@ -43,6 +44,10 @@
     @media (min-width: 768px) {
       font-size: 96px;
     }
+  }
+
+  .svg-wrapper, .svg-wrapper svg {
+    max-width: 100%;
   }
 
   &.-opened {
@@ -67,15 +72,6 @@
 
   .illustration {
     fill: #400039;
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 

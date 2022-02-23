@@ -36,8 +36,16 @@
       animation: rotating 15s ease infinite alternate-reverse;
     }
 
+    .-bluecloud {
+      animation: spin 15s ease infinite alternate-reverse;
+    }
+
     .-greenpil {
-      animation: rotating 10s ease infinite reverse;
+      animation: rotating 10s ease infinite alternate-reverse;
+    }
+
+    .-waves {
+      animation: waves 15s ease infinite alternate-reverse;
     }
 
     .-circlepink {
@@ -204,12 +212,20 @@
   }
 }
 
-
 @keyframes toup {
   0% {
     transform: translatey(0px);
   }
   100% {
     transform: translatey(-25px);
+  }
+}
+
+@keyframes waves {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(10deg);
   }
 }

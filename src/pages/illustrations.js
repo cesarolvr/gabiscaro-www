@@ -51,7 +51,7 @@ const Illustrations = () => {
           <StaticImage className="image-wrapper" src="../images/6.PNG" />
         </div>
         <div className="case cell-8">
-          <img className="image-wrapper" src={flatcloud} />
+          <img className="image-wrapper -bluecloud" src={flatcloud} />
         </div>
         <div className="case cell-9">
           <StaticImage className="image-wrapper" src="../images/7.PNG" />
@@ -115,6 +115,7 @@ const Illustrations = () => {
           <svg
             width="100%"
             height="100%"
+            className="-waves"
             viewBox="0 0 449 375"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

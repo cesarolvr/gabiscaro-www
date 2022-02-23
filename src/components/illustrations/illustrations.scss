@@ -1,9 +1,8 @@
 .icon {
-  
   svg {
     overflow: visible;
   }
-  
+
   @media (min-width: 868px) {
     &.-city {
       transform: scale(1.3);
@@ -18,7 +17,8 @@
     }
 
     &.-filled {
-      .fill, .object {
+      .fill,
+      .object {
         display: block;
       }
 
@@ -31,7 +31,7 @@
       }
 
       &.-blueberry .object {
-        fill: #99018A;
+        fill: #99018a;
       }
     }
   }
@@ -39,20 +39,46 @@
 
 .case {
   &:hover {
+    // .icon svg {
+    //   animation: spin 50s linear infinite reverse;
+    // }
     .fill {
       display: block;
     }
 
-    .-city .object {
-      fill: #3ddc97;
+    .-city {
+      .object {
+        fill: #3ddc97;
+      }
+
+      svg {
+        animation: spin 50s linear infinite reverse;
+      }
     }
 
-    .-iq .object {
-      fill: #9ceaef;
+    .-iq {
+      .object {
+        fill: #9ceaef;
+      }
+
+      svg {
+        animation: spin 50s linear infinite;
+      }
     }
 
-    .-blueberry .object {
-      fill: #99018A;
+    .-blueberry {
+      .object {
+        fill: #99018a;
+      }
+      svg {
+        animation: spin 50s linear infinite;
+      }
+    }
+
+    .-ramem {
+      svg {
+        animation: spin 50s linear infinite reverse;
+      }
     }
   }
 }
