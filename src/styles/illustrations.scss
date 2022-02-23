@@ -16,6 +16,15 @@
     width: 100%;
     padding: 10px;
 
+    &:hover {
+      img {
+        transform: scale(1.5);
+        cursor: url("data:image/svg+xml;utf8, <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0 10V0H10V4H4V10H0ZM40 10V0H30V4H36V10H40ZM40 30H36V36H30V40H40V30ZM10 40V36H4V30H0V40H10Z' fill='%23FF4522'/></svg>")
+            32 32,
+          pointer;
+      }
+    }
+
     .image-wrapper {
       width: 100%;
       max-width: 100%;

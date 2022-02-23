@@ -28,6 +28,7 @@ module.exports = {
           "@images": "src/images",
           "@videos": "src/videos",
           "@hooks": "src/hooks",
+          "@utils": "src/utils",
         },
         extensions: [],
       },

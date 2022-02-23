@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const isClient = () => typeof window !== "undefined";
+import isClient from '@utils/isClient'
 
 const importLocomotive = async () => {
   if (window.Locomotive) {

@@ -23,17 +23,8 @@ import iqThumb from "../images/thumbs/iqcartoes.png";
 import blueberryThumb from "../images/thumbs/blueberry.png";
 import useScroll from "../hooks/useScroll";
 
-const importSM = async () => {
-  if (window.ScrollMagic) {
-    return Promise.resolve(window.ScrollMagic);
-  } else {
-    const module = await import("scrollmagic").then((sm) => {
-      window.ScrollMagic = sm.default;
-      return sm.default;
-    });
-    return module;
-  }
-};
+import importSM from "@utils/importSM";
+import isClient from '@utils/isClient'
 
 // const importKute = async () => {
 //   if (window.KUTE) {
@@ -46,8 +37,6 @@ const importSM = async () => {
 //     return module;
 //   }
 // };
-
-const isClient = () => typeof window !== "undefined";
 
 const Home = () => {
   const [isOpened, setIsOpened] = useState(true);

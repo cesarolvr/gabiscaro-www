@@ -9,7 +9,7 @@ import blueberry from "@images/carousel/blueberry.png";
 
 import "./index.scss";
 
-const isClient = () => typeof window !== "undefined";
+import isClient from '@utils/isClient'
 
 const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   const settings = {
