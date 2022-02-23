@@ -220,6 +220,12 @@
   transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
+.logo-master svg,
+.header .logo svg,
+.header .logo-wrapper {
+  overflow: visible;
+}
+
 .-loading {
   .header .link {
     opacity: 0;
@@ -232,12 +238,6 @@
   .logo-master .symbol,
   .header .logo g {
     opacity: 0;
-  }
-
-  .logo-master svg,
-  .header .logo svg,
-  .header .logo-wrapper {
-    overflow: visible;
   }
   .logo-master circle {
     transform: scale(7);
