@@ -32,41 +32,65 @@ const IQ = () => {
       <Header />
       <section className="casesection -hero">
         <div className="container">
-          <div className="thumb">
-            <IqCartoesIllustration filled />
-            <img className="image" src={ramengo} alt="" />
+          <div className="thumb" data-scroll>
+            <div className="opacity" style={{ transitionDelay: "200ms" }}>
+              <IqCartoesIllustration filled />
+            </div>
+            <img
+              className="image opacity"
+              style={{ transitionDelay: "400ms" }}
+              src={ramengo}
+              alt=""
+            />
           </div>
           <div className="content projectinfo">
-            <p className="categorylabel">Product Design</p>
-            <p className="name">iq Cartões</p>
+            <div data-scroll>
+              <div className="opacity categorylabel">Product Design</div>
+            </div>
+            <div data-scroll className="name">
+              <div className="target">iq Cartões</div>
+            </div>
           </div>
         </div>
       </section>
       <section className="casesection container -synopsis">
         <div className="item">
-          <p className="title">Skill Set</p>
-          <p className="sectionparagraph">
-            Interaction & visual design, Research, Product thinking.
-          </p>
+          <div data-scroll className="title">
+            <div className="target">Skill Set</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">
+              Interaction & visual design, Research, Product thinking.
+            </div>
+          </div>
           <br />
           <br />
-          <p className="title">Timeline</p>
-          <p className="sectionparagraph">December 2020 - June 2021</p>
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">December 2020 - June 2021</div>
+          </div>
         </div>
         <div className="item -thechallenge">
-          <p className="title">The Challenge</p>
-          <p className="sectionparagraph">
-            iq is a lot of things, it is an automatic credit card payment
-            service for utility bills (energy, gas, telephone, internet, etc),
-            but also a Credit Card Marketplace. After a bunch of tests, the
-            Marketplace page stopped converting as the Directors, the page
-            stopped to convert how the Directors and Product Managers expected.
-            <strong>
-              {" "}
-              So, the challenge for me was to increase in 10% the referral rate
-              of the credit card application form.
-            </strong>
-          </p>
+          <div data-scroll className="title">
+            <div className="target">The Challenge</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="opacity" style={{ transitionDelay: "400ms" }}>
+              iq is a lot of things, it is an automatic credit card payment
+              service for utility bills (energy, gas, telephone, internet, etc),
+              but also a Credit Card Marketplace. After a bunch of tests, the
+              Marketplace page stopped converting as the Directors, the page
+              stopped to convert how the Directors and Product Managers
+              expected.
+              <strong>
+                {" "}
+                So, the challenge for me was to increase in 10% the referral
+                rate of the credit card application form.
+              </strong>
+            </div>
+          </div>
         </div>
       </section>
       <br />

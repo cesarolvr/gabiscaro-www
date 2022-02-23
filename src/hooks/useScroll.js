@@ -24,6 +24,7 @@ const useScroll = () => {
         importLocomotive().then((Locomotive) => {
           scroll = new Locomotive({
             el: document.querySelector(".scroll-content"),
+            repeat: true
           });
         });
       }, 3700);
