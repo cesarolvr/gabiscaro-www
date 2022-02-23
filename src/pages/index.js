@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
 import { navigate } from "gatsby-link";
 
 import Header from "@components/header";
@@ -36,17 +35,17 @@ const importSM = async () => {
   }
 };
 
-const importKute = async () => {
-  if (window.KUTE) {
-    return Promise.resolve(window.KUTE);
-  } else {
-    const module = await import("kute.js").then((kute) => {
-      window.KUTE = kute.default;
-      return kute.default;
-    });
-    return module;
-  }
-};
+// const importKute = async () => {
+//   if (window.KUTE) {
+//     return Promise.resolve(window.KUTE);
+//   } else {
+//     const module = await import("kute.js").then((kute) => {
+//       window.KUTE = kute.default;
+//       return kute.default;
+//     });
+//     return module;
+//   }
+// };
 
 const isClient = () => typeof window !== "undefined";
 
@@ -54,7 +53,6 @@ const Home = () => {
   const [isOpened, setIsOpened] = useState(true);
 
   useEffect(() => {
-    
     if (isClient()) {
       importSM().then((ScrollMagic) => {
         const width = window.innerWidth;
@@ -85,7 +83,6 @@ const Home = () => {
           <main className="home">
             <div className="container">
               <div className="holder">
-                {/* <Link to="/projects/iq"> */}
                 <div
                   className="case"
                   data-scroll
@@ -112,25 +109,31 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                {/* </Link> */}
 
-                <Link to="/projects/blueberry">
-                  <div
-                    className="case"
-                    data-scroll
-                    style={{ transitionDelay: "450ms" }}
-                  >
-                    <BlueberryIllustration />
-                    <div className="content projectinfo">
-                      <img className="image" src={blueberryThumb} alt="" />
-                      <p className="categorylabel">Blueberry Design System</p>
-                      <p className="name">
-                        Improving the designer's work and the front-end's
-                        development
-                      </p>
-                    </div>
+                <div
+                  className="case"
+                  data-scroll
+                  style={{ transitionDelay: "450ms" }}
+                  onClick={() => {
+                    setIsLoading(true);
+                    setTimeout(() => {
+                      navigate("/projects/blueberry");
+                    }, 600);
+                    setTimeout(() => {
+                      setIsLoading(false);
+                    }, 1000);
+                  }}
+                >
+                  <BlueberryIllustration />
+                  <div className="content projectinfo">
+                    <img className="image" src={blueberryThumb} alt="" />
+                    <p className="categorylabel">Blueberry Design System</p>
+                    <p className="name">
+                      Improving the designer's work and the front-end's
+                      development
+                    </p>
                   </div>
-                </Link>
+                </div>
               </div>
               <div className="data-scroll" data-scroll>
                 <div className="opacity">
@@ -138,40 +141,54 @@ const Home = () => {
                 </div>
               </div>
               <div className="holder">
-                <Link to="/projects/cleancity">
-                  <div
-                    className="case"
-                    data-scroll
-                    style={{ transitionDelay: "500ms" }}
-                  >
-                    <CleanCityIllustration />
-                    <div className="content projectinfo">
-                      <img className="image" src={cleancityThumb} alt="" />
-                      <p className="categorylabel">Clean City App</p>
-                      <p className="name">
-                        Creating an awareness project about the importance of
-                        recycling
-                      </p>
-                    </div>
+                <div
+                  className="case"
+                  data-scroll
+                  style={{ transitionDelay: "500ms" }}
+                  onClick={() => {
+                    setIsLoading(true);
+                    setTimeout(() => {
+                      navigate("/projects/cleancity");
+                    }, 600);
+                    setTimeout(() => {
+                      setIsLoading(false);
+                    }, 1000);
+                  }}
+                >
+                  <CleanCityIllustration />
+                  <div className="content projectinfo">
+                    <img className="image" src={cleancityThumb} alt="" />
+                    <p className="categorylabel">Clean City App</p>
+                    <p className="name">
+                      Creating an awareness project about the importance of
+                      recycling
+                    </p>
                   </div>
-                </Link>
+                </div>
 
-                <Link to="/projects/ramengo">
-                  <div
-                    className="case"
-                    data-scroll
-                    style={{ transitionDelay: "550ms" }}
-                  >
-                    <RamemGoIllustration />
-                    <div className="content projectinfo">
-                      <img className="image" src={ramengoThumb} alt="" />
-                      <p className="categorylabel">Ramengo</p>
-                      <p className="name">
-                        Creating a fun and creative delivery platform
-                      </p>
-                    </div>
+                <div
+                  className="case"
+                  data-scroll
+                  style={{ transitionDelay: "550ms" }}
+                  onClick={() => {
+                    setIsLoading(true);
+                    setTimeout(() => {
+                      navigate("/projects/ramengo");
+                    }, 600);
+                    setTimeout(() => {
+                      setIsLoading(false);
+                    }, 1000);
+                  }}
+                >
+                  <RamemGoIllustration />
+                  <div className="content projectinfo">
+                    <img className="image" src={ramengoThumb} alt="" />
+                    <p className="categorylabel">Ramengo</p>
+                    <p className="name">
+                      Creating a fun and creative delivery platform
+                    </p>
                   </div>
-                </Link>
+                </div>
               </div>
             </div>
             <Contact />
