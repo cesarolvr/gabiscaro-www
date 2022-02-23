@@ -20,11 +20,22 @@ const Header = ({ className = "" }) => {
             <title>Gabiscaro | Designer and illustrator</title>
             <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
           </Helmet>
-          <Link className="link" to="/illustrations">
+          <div
+            className="link"
+            onClick={() => {
+              setIsLoading(true);
+              setTimeout(() => {
+                navigate("/illustrations");
+              }, 600);
+              setTimeout(() => {
+                setIsLoading(false);
+              }, 1000);
+            }}
+          >
             <div className="data-scroll" data-scroll>
               <div className="target">illustrations</div>
             </div>
-          </Link>
+          </div>
           <div
             className="logo"
             onClick={() => {
@@ -43,13 +54,24 @@ const Header = ({ className = "" }) => {
               </div>
             </div>
           </div>
-          <Link className="link" to="/about">
+          <div
+            className="link"
+            onClick={() => {
+              setIsLoading(true);
+              setTimeout(() => {
+                navigate("/about");
+              }, 600);
+              setTimeout(() => {
+                setIsLoading(false);
+              }, 1000);
+            }}
+          >
             <div className="data-scroll" data-scroll>
               <div className="target" style={{ animationDelay: "80ms" }}>
                 about/say hi
               </div>
             </div>
-          </Link>
+          </div>
           <hr className="line" data-scroll />
         </header>
       )}

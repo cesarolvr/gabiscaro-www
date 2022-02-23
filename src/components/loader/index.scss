@@ -25,6 +25,7 @@
     opacity: 0;
     animation: reveal 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
     animation-delay: 0.1s;
+    overflow: visible;
 
     @media (min-width: 768px) {
       max-width: none;
@@ -51,16 +52,21 @@
 
   .layer {
     transform-origin: left center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     inset: 0;
-    position: absolute;
+    position: fixed;
     z-index: 91;
     background-color: #400039;
+    mix-blend-mode: exclusion;
   }
 
   .letters {
     animation: spin 20s linear infinite;
+  }
+
+  .illustration {
+    fill: #400039;
   }
 }
 
