@@ -1,7 +1,23 @@
-.home {
-  // @media (max-width: 868px) {
-  //   padding-top: 250px;
-  // }
+.-loading {
+  .header,
+  .home .container .holder,
+  .logo-master .letters,
+  .logo-master .symbol {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .logo-master svg {
+    overflow: visible;
+  }
+  .logo-master circle {
+    transform: scale(7);
+  }
+}
+
+.logo-master svg circle {
+  transition: transform 0.3s ease;
+  transition-delay: 0.2s;
 }
 
 .home .container {
@@ -42,12 +58,12 @@
   }
 }
 
-.home .container .logo {
+.logo-master {
   width: 420px;
   height: 420px;
   max-width: 80%;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 15%;
   order: 1;
 
   svg {

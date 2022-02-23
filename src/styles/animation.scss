@@ -15,7 +15,7 @@ html {
   border: none;
 }
 
-.image {
+[data-scroll].image {
   position: relative;
   width: 260px;
   height: 260px;
@@ -63,7 +63,7 @@ html {
     transition: opacity 0.3s ease;
   }
 
-  &.logo-wrapper {
+  .opacity {
     position: relative;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -97,7 +97,7 @@ html {
       opacity: 1;
     }
 
-    &.logo-wrapper {
+    .opacity {
       opacity: 1;
     }
   }

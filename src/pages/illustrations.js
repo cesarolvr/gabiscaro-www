@@ -29,10 +29,7 @@ const Illustrations = () => {
       <Header />
       <div className="grid">
         <div className="case cell-1 -beforevector">
-          <StaticImage
-            className="image-wrapper"
-            src="../images/1.png"
-          />
+          <StaticImage className="image-wrapper" src="../images/1.png" />
         </div>
         <div className="case cell-2 -vector">
           <img className="image-wrapper  -greenstar" src={greenstar} />
@@ -73,14 +70,17 @@ const Illustrations = () => {
             <path
               d="M175.517 -0.058882L0.00561523 175.453L175.517 350.964L351.029 175.453L175.517 -0.058882Z"
               fill="#FFDE60"
+              className="-yellowsquare"
             />
             <path
               d="M383 351C429.944 351 468 312.944 468 266C468 219.056 429.944 181 383 181C336.056 181 298 219.056 298 266C298 312.944 336.056 351 383 351Z"
               fill="#FF499E"
+              className="-circlepink"
             />
             <path
               d="M382.5 182C359.226 182 340 162.625 340 139.172V43.8282C340 20.3746 359.226 1 382.5 1C405.774 1 425 20.3746 425 43.8282V139.172C424.494 162.625 405.774 182 382.5 182Z"
               fill="#3DDC97"
+              className="-greenpil"
             />
           </svg>
         </div>

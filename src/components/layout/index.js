@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import classnames from "classnames";
 
+export const LoaderContext = React.createContext(false);
 
 const Layout = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(false);
   return (
-    <>
-      <main className="main">{children}</main>
-    </>
+    <LoaderContext.Provider
+      value={{
+        isLoading,
+        setIsLoading,
+      }}
+    >
+      <LoaderContext.Consumer>
+        {({ isLoading }) => (
+          <div
+            className={classnames("main", {
+              "-loading": isLoading,
+            })}
+          >
+            {children}
+          </div>
+        )}
+      </LoaderContext.Consumer>
+    </LoaderContext.Provider>
   );
 };
 

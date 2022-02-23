@@ -22,8 +22,10 @@ const Header = ({ className = "" }) => {
         </div>
       </Link>
       <Link className="link -logo" to="/">
-        <div className="logo-wrapper data-scroll" data-scroll style={{transitionDelay: '400ms'}}>
-          <Logo />
+        <div className="logo-wrapper data-scroll" data-scroll>
+          <div className="opacity" style={{ transitionDelay: "400ms" }}>
+            <Logo />
+          </div>
         </div>
       </Link>
       <Link className="link" to="/about">

@@ -74,7 +74,13 @@ export const IqCartoesIllustration = ({ filled }) => {
           stroke="#9CEAEF"
           strokeWidth="3"
           className="object"
+          id="green-star"
         />
+        {/* <path
+          id="star"
+          style={{ visibility: "hidden" }}
+          d="M301.113,12.011l99.25,179.996l201.864,38.778L461.706,380.808 l25.508,203.958l-186.101-87.287L115.01,584.766l25.507-203.958L0,230.785l201.86-38.778L301.113,12.011"
+        /> */}
       </svg>
     </div>
   );

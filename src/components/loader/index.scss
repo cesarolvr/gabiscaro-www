@@ -13,7 +13,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  background-color: white;
+  background-color: #ff4522;
 
   .figure {
     position: relative;
@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     max-width: 70%;
-    
+
     @media (min-width: 768px) {
       max-width: none;
     }
@@ -53,6 +53,6 @@
     inset: 0;
     position: absolute;
     z-index: 91;
-    background-color: #ff4522;
+    background-color: white;
   }
 }

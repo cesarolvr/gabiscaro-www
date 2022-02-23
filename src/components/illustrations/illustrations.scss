@@ -1,4 +1,9 @@
 .icon {
+  
+  svg {
+    overflow: visible;
+  }
+  
   @media (min-width: 868px) {
     &.-city {
       transform: scale(1.3);

@@ -14,7 +14,9 @@ const Loader = ({ isOpened = false }) => {
         return `${v}%`;
       },
     });
-    countUp.start();
+    setTimeout(() => {
+      countUp.start();
+    }, 200);
   }, []);
   return (
     <div

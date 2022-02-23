@@ -4783,6 +4783,11 @@ csv-streamify@^3.0.4:
   dependencies:
     through2 "2.0.1"
 
+cubic-bezier-easing@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/cubic-bezier-easing/-/cubic-bezier-easing-1.0.18.tgz#13a266c334ae65c017e4483bdbf42a8919454b37"
+  integrity sha512-wSvXBjo1Hq5IpMRHXAhhhMeQzuUJrkcPUDhykRbvwbyXnIKGY/ZeG58OP6QNITxXxCed8kgychK0Pn3F7aZa4A==
+
 d@1, d@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.1.tgz#8698095372d58dbee346ffd0c7093f99f8f9eb5a"
@@ -5178,6 +5183,11 @@ domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.0:
   integrity sha512-fC0aXNQXqKSFTr2wDNZDhsEYjCiYsDWl3D01kwt25hm1YIPyDGHvvi3rw+PLqHAl/m71MaiF7d5zvBr0p5UB2g==
   dependencies:
     domelementtype "^2.2.0"
+
+dommatrix@^0.0.24:
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/dommatrix/-/dommatrix-0.0.24.tgz#0b793da372992878b74c31f64ac85e7a13cb382a"
+  integrity sha512-PatEhAW5pIHr28MvFQGV5iiHNloqvecQZlxs7/8s/eulLqZI3uVqPkrO7YDuqsebovr/9mmcWDSWzVG4amEZgQ==
 
 domutils@^1.7.0:
   version "1.7.0"
@@ -8845,6 +8855,16 @@ kuler@^2.0.0:
   resolved "https://registry.yarnpkg.com/kuler/-/kuler-2.0.0.tgz#e2c570a3800388fb44407e851531c1d670b061b3"
   integrity sha512-Xq9nH7KlWZmXAtodXDDRE7vs6DU1gTU8zYDHDiWLSip45Egwq3plLHzPn27NgvzL2r1LMPC1vdqh98sQxtqj4A==
 
+kute.js@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/kute.js/-/kute.js-2.2.2.tgz#f99d9638e6ea788814132dd079aa7fc2ecd59b44"
+  integrity sha512-MkTkUR1xXFstIXRSa3K/oqT1IDBSTBWYputTmbucLj9Glx6AHysce+wXz9ubaubNKOGJ5YPdxFma+d6KSsC8Bg==
+  dependencies:
+    cubic-bezier-easing "^1.0.18"
+    minifill "^0.0.16"
+    shorter-js "^0.2.6"
+    svg-path-commander "0.1.23"
+
 language-subtag-registry@~0.3.2:
   version "0.3.21"
   resolved "https://registry.yarnpkg.com/language-subtag-registry/-/language-subtag-registry-0.3.21.tgz#04ac218bea46f04cb039084602c6da9e788dd45a"
@@ -9932,6 +9952,11 @@ mini-svg-data-uri@^1.3.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.3.tgz#43177b2e93766ba338931a3e2a84a3dfd3a222b8"
   integrity sha512-gSfqpMRC8IxghvMcxzzmMnWpXAChSA+vy4cia33RgerMS8Fex95akUyQZPbxJJmeBGiGmK7n/1OpUX8ksRjIdA==
+
+minifill@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/minifill/-/minifill-0.0.16.tgz#1999956127379e435b6653f3d3f2b70d64544789"
+  integrity sha512-ya61lgDqSRlaOVbD8neOkZMpMpmbfCbRewzJ/rfzc9nbisFthip3YcmBBL3fu+gneIKTrzcOG7mDysJh5ZDjqQ==
 
 minimatch@3.0.4:
   version "3.0.4"
@@ -12507,6 +12532,11 @@ shell-quote@1.7.2:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
 
+shorter-js@^0.2.6:
+  version "0.2.24"
+  resolved "https://registry.yarnpkg.com/shorter-js/-/shorter-js-0.2.24.tgz#3a20a873cf2c20116ec0a1024f809c37a736fa9a"
+  integrity sha512-gHfrA0/D2DBLB8ARfjX5X6q2AKiGsGpvbDKYKIpJx1B1bhhJAwgDq18bHtcpmp461eF0lsnQzptA9WGtV3c9ew==
+
 side-channel@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"
@@ -13168,6 +13198,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+svg-path-commander@0.1.23:
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/svg-path-commander/-/svg-path-commander-0.1.23.tgz#7c57a7d41e66b40413b67d915ceae7f0b776c25f"
+  integrity sha512-v1VSE4PwUrdwoMaiq7WnmGS1bcch57Rr8oaKwuKmNFhUouVgZxvfBYC+QUebweg0cLvQ3N1P57PRYMb8/ue4Lg==
+  dependencies:
+    dommatrix "^0.0.24"
 
 svgo@1.3.2:
   version "1.3.2"
