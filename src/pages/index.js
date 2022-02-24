@@ -124,7 +124,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="data-scroll" data-scroll>
+              <div className="data-scroll" data-scroll style={{overflow: "visible" }}>
                 <div className="opacity">
                   <LogoMaster />
                 </div>
