@@ -8,6 +8,17 @@
   align-items: center;
   height: 100vh;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  .container.container {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+  }
 
   .title {
     color: white;
@@ -15,6 +26,8 @@
     font-weight: 800;
     line-height: 5rem;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 20;
 
     @media (max-width: 768px) {
       font-size: 32px;
@@ -27,6 +40,8 @@
     line-height: 2.8rem;
     max-width: 700px;
     color: white;
+    position: relative;
+    z-index: 20;
 
     @media (max-width: 768px) {
       font-size: 18px;
@@ -69,5 +84,61 @@
         color: #400039;
       }
     }
+  }
+
+  .firstgroup,
+  .lastgroup {
+    position: absolute;
+    z-index: 4;
+  }
+
+  svg {
+    position: absolute;
+  }
+
+  .firstgroup {
+    width: 100%;
+    height: 50%;
+    top: 0;
+  }
+
+  .lastgroup {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+  }
+
+  .red {
+    top: 180px;
+    left: 100px;
+    animation: float 25s ease-in-out infinite alternate;
+  }
+  .purple {
+    left: -250px;
+    top: 20px;
+    animation: float 30s ease-in-out infinite alternate-reverse;
+  }
+
+  .yellow {
+    left: -20px;
+    top: 400px;
+    animation: float 15s ease-in-out infinite alternate;
+  }
+
+  .blue {
+    bottom: 0;
+    right: 0;
+    animation: float 15s ease-in-out infinite alternate-reverse;
+  }
+
+  .green {
+    bottom: 50px;
+    right: 100px;
+    animation: float 25s ease-in-out infinite alternate;
+  }
+
+  .pink {
+    right: 0;
+    animation: float 35s ease-in-out infinite alternate-reverse;
   }
 }

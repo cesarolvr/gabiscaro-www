@@ -230,6 +230,8 @@
 }
 
 .-loading {
+  cursor: progress !important;
+
   .header .link {
     opacity: 0;
   }
