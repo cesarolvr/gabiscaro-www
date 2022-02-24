@@ -25,7 +25,6 @@ import Header from "@components/Header";
 import "@styles/case.scss";
 
 const IQ = () => {
-  const [carouselMounted, setCarouselMounted] = useState(false);
   useScroll();
   return (
     <div className="page -case -iq">
@@ -597,7 +596,7 @@ const IQ = () => {
       </section>
       <br />
       <section className="casesection -carousel">
-        <Carousel onMount={() => setCarouselMounted(true)} />
+        <Carousel />
       </section>
       <br />
       <br />

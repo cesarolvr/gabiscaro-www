@@ -28,45 +28,67 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case.scss";
 
 const CleanCity = () => {
-  const [carouselMounted, setCarouselMounted] = useState(false);
-  // useScroll(carouselMounted);
+  useScroll();
   return (
     <div className="page -case -cleancity">
       <section className="casesection -hero">
         <div className="container">
-          <div className="thumb">
-            <CleanCityIllustration filled />
-            <img className="image" src={cleancityImage} alt="" />
+          <div className="thumb" data-scroll>
+            <div className="opacity" style={{ transitionDelay: "200ms" }}>
+              <CleanCityIllustration filled />
+            </div>
+            <img
+              className="image opacity"
+              style={{ transitionDelay: "400ms" }}
+              src={cleancityImage}
+              alt=""
+            />
           </div>
           <div className="content projectinfo">
-            <p className="categorylabel">Product Design</p>
-            <p className="name">Clean City App</p>
+            <div data-scroll>
+              <div className="opacity categorylabel">Product Design</div>
+            </div>
+            <div data-scroll className="name">
+              <div className="target">Clean City App</div>
+            </div>
           </div>
         </div>
       </section>
       <section className="casesection container -synopsis">
         <div className="item">
-          <p className="title">What I did</p>
-          <p className="sectionparagraph">
-            Research, Product Design, Interaction Design
-          </p>
+          <div data-scroll className="title">
+            <div className="target">What I Did</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">
+              Research, Product Design, Interaction Design
+            </div>
+          </div>
           <br />
           <br />
-          <p className="title">Timeline</p>
-          <p className="sectionparagraph">October 2019 [Timeframe of 7 days]</p>
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">October 2019 [Timeframe of 7 days]</div>
+          </div>
         </div>
         <div className="item -thechallenge">
-          <p className="title">The Challenge</p>
-          <p className="sectionparagraph">
-            The fictional cooperative "Cidade Mais Limpa” has been trying to
-            create an awareness project about the importance of recycling,
-            helping people to understand how to recycle and the impact of it.
-            <strong>
-              The main objective was to develop, in a time frame of 7 days, a
-              proposal for a product or service that helps the cooperative on
-              this mission.
-            </strong>
-          </p>
+          <div data-scroll className="title">
+            <div className="target">The Challenge</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="opacity" style={{ transitionDelay: "400ms" }}>
+              The fictional cooperative "Cidade Mais Limpa” has been trying to
+              create an awareness project about the importance of recycling,
+              helping people to understand how to recycle and the impact of it.
+              <strong>
+                The main objective was to develop, in a time frame of 7 days, a
+                proposal for a product or service that helps the cooperative on
+                this mission.
+              </strong>
+            </div>
+          </div>
         </div>
       </section>
       <br />
@@ -1103,7 +1125,7 @@ const CleanCity = () => {
       <br />
       <br />
       <section className="casesection -carousel">
-        <Carousel onMount={() => setCarouselMounted(true)} />
+        <Carousel />
       </section>
       <br />
       <br />

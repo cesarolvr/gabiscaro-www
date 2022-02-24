@@ -19,50 +19,72 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case.scss";
 
 const Blueberry = () => {
-  const [carouselMounted, setCarouselMounted] = useState(false);
-  // useScroll(carouselMounted);
+  useScroll();
   return (
     <div className="page -case -blueberry">
       <section className="casesection -hero">
         <div className="container">
-          <div className="thumb">
-            <BlueberryIllustration filled />
-            <img className="image" src={blueberryThumb} alt="" />
+          <div className="thumb" data-scroll>
+            <div className="opacity" style={{ transitionDelay: "200ms" }}>
+              <BlueberryIllustration filled />
+            </div>
+            <img
+              className="image opacity"
+              style={{ transitionDelay: "400ms" }}
+              src={blueberryThumb}
+              alt=""
+            />
           </div>
           <div className="content projectinfo">
-            <p className="categorylabel">Design System</p>
-            <p className="name">
-              Blueberry <br />
-              Design System
-            </p>
+            <div data-scroll>
+              <div className="opacity categorylabel">Design System</div>
+            </div>
+            <div data-scroll className="name">
+              <div className="target">
+                Blueberry <br />
+                Design System
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section className="casesection container -synopsis">
         <div className="item">
-          <p className="title">What I did</p>
-          <p className="sectionparagraph">Research, Interface components </p>
+          <div data-scroll className="title">
+            <div className="target">What I did</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">Research, Interface components</div>
+          </div>
           <br />
           <br />
-          <p className="title">Timeline</p>
-          <p className="sectionparagraph">May 2020 - Ongoing product</p>
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">May 2020 - Ongoing product</div>
+          </div>
         </div>
 
         <div className="item -thechallenge">
-          <p className="title">The Challenge</p>
-          <p className="sectionparagraph">
-            iq is a lot of things, an automatic credit card payment service for
-            utility bills (energy, gas, telephone, internet, etc), but also a
-            Credit Card Marketplace. iq is growing so fast and we needed ways to
-            expand healthily.
-            <strong>
-              To add to this, the Front-End team felt that their code needed to
-              be more organized. On the other hand, the Design Team faced a
-              problem to create a new component everytime and some screens had
-              different components from each other.
-            </strong>{" "}
-            So, I saw an opportunity to develop a Design System.
-          </p>
+          <div data-scroll className="title">
+            <div className="target">The Challenge</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="opacity" style={{ transitionDelay: "400ms" }}>
+              iq is a lot of things, an automatic credit card payment service
+              for utility bills (energy, gas, telephone, internet, etc), but
+              also a Credit Card Marketplace. iq is growing so fast and we
+              needed ways to expand healthily.
+              <strong>
+                To add to this, the Front-End team felt that their code needed
+                to be more organized. On the other hand, the Design Team faced a
+                problem to create a new component everytime and some screens had
+                different components from each other.
+              </strong>
+              So, I saw an opportunity to develop a Design System.
+            </div>
+          </div>
         </div>
       </section>
       <br />
@@ -566,7 +588,7 @@ const Blueberry = () => {
         </div>
       </section>
       <section className="casesection -carousel">
-        <Carousel onMount={() => setCarouselMounted(true)} />
+        <Carousel />
       </section>
       <br />
       <br />

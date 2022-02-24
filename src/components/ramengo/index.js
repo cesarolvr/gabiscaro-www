@@ -22,46 +22,68 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case.scss";
 
 const RamenGo = () => {
-  const [carouselMounted, setCarouselMounted] = useState(false);
-  // useScroll(carouselMounted);
+  useScroll();
   return (
     <div className="page -case -ramengo">
       <section className="casesection -hero">
         <div className="container">
-          <div className="thumb">
-            <RamemGoIllustration filled />
-            <img className="image" src={ramengo} alt="" />
+          <div className="thumb" data-scroll>
+            <div className="opacity" style={{ transitionDelay: "200ms" }}>
+              <RamemGoIllustration filled />
+            </div>
+            <img
+              className="image opacity"
+              style={{ transitionDelay: "400ms" }}
+              src={ramengo}
+              alt=""
+            />
           </div>
           <div className="content projectinfo">
-            <p className="categorylabel">Visual Design</p>
-            <p className="name">RamenGo</p>
+            <div data-scroll>
+              <div className="opacity categorylabel">Visual Design</div>
+            </div>
+            <div data-scroll className="name">
+              <div className="target">RamenGo</div>
+            </div>
           </div>
         </div>
       </section>
       <section className="casesection container -synopsis">
         <div className="item">
-          <p className="title">Skill Set</p>
-          <p className="sectionparagraph">
-            Interaction & Visual Design, Content Strategy, Iconography,
-            Illustration
-          </p>
+          <div data-scroll className="title">
+            <div className="target">Skill Set</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">
+              Interaction & Visual Design, Content Strategy, Iconography,
+              Illustration
+            </div>
+          </div>
           <br />
           <br />
-          <p className="title">Timeline</p>
-          <p className="sectionparagraph">September 2019 - December 2019</p>
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="target">September 2019 - December 2019</div>
+          </div>
         </div>
         <div className="item -thechallenge">
-          <p className="title">The Challenge</p>
-          <p className="sectionparagraph">
-            Some months ago I was invited by the front end team of Red Ventures
-            to create a new practical test for candidates who'd apply for a job
-            opening.
-            <br />I gave wings to the imagination and I created a delivery
-            platform in which the users could choose the ingredients for their
-            ramen and receive it at the comfort of their homes.
-            <br />I developed all the visuals: styleguide, interaction and
-            illustrations/iconography.
-          </p>
+          <div data-scroll className="title">
+            <div className="target">The Challenge</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <div className="opacity" style={{ transitionDelay: "400ms" }}>
+              Some months ago I was invited by the front end team of Red
+              Ventures to create a new practical test for candidates who'd apply
+              for a job opening.
+              <br />I gave wings to the imagination and I created a delivery
+              platform in which the users could choose the ingredients for their
+              ramen and receive it at the comfort of their homes.
+              <br />I developed all the visuals: styleguide, interaction and
+              illustrations/iconography.
+            </div>
+          </div>
         </div>
       </section>
       <br />
@@ -158,7 +180,7 @@ const RamenGo = () => {
       <br />
 
       <section className="casesection -carousel">
-        <Carousel inverted onMount={() => setCarouselMounted(true)} />
+        <Carousel inverted />
       </section>
       <br />
       <br />
