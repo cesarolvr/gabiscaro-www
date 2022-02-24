@@ -98,7 +98,7 @@ const Contact = ({ title }) => {
       <div className="title data-scroll" data-scroll>
         <div className="target">{title || `Don't be shy, say hi!`}</div>
       </div>
-      <div className="text data-scroll" data-scroll>
+      <span className="text data-scroll" data-scroll>
         <span className="target">
           You can contact me through{" "}
           <a
@@ -110,8 +110,8 @@ const Contact = ({ title }) => {
           </a>
           ,{" "}
         </span>
-      </div>
-      <div className="text data-scroll" data-scroll>
+      </span>
+      <span className="text data-scroll" data-scroll>
         <span className="target">
           <a
             href="https://www.instagram.com/gabiscaroo_/"
@@ -137,7 +137,7 @@ const Contact = ({ title }) => {
             Email
           </a>
         </span>
-      </div>
+      </span>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 .contact {
   background: #400039;
   width: 100%;
-  padding: 180px 60px;
+  padding: 180px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -30,8 +30,8 @@
     z-index: 20;
 
     @media (max-width: 768px) {
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 42px;
+      line-height: 48px;
     }
   }
 
@@ -44,8 +44,8 @@
     z-index: 20;
 
     @media (max-width: 768px) {
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 24px;
+      line-height: 32px;
     }
 
     a {
@@ -100,12 +100,20 @@
     width: 100%;
     height: 50%;
     top: 0;
+
+    @media (max-width: 768px) {
+      top: -30%;
+    }
   }
 
   .lastgroup {
     width: 100%;
     height: 50%;
     bottom: 0;
+
+    @media (max-width: 768px) {
+      bottom: -20%;
+    }
   }
 
   .red {

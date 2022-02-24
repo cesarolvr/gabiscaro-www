@@ -11,6 +11,7 @@
 
   @media (max-width: 868px) {
     flex-direction: column;
+    padding-top: 0;
   }
 }
 
@@ -49,6 +50,10 @@
   margin-top: 15%;
   order: 1;
   overflow: visible;
+
+  @media (max-width: 868px) {
+    margin-top: 0;
+  }
 
   .letters {
     display: block;
