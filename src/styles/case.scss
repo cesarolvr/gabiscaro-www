@@ -41,6 +41,7 @@
         bottom: 0;
         margin: auto;
         display: block;
+        overflow: visible;
       }
       .title {
         background: #fd4d40;
@@ -61,6 +62,13 @@
         &.-pink {
           background: #f992d3;
         }
+      }
+
+      .-greenstar {
+        animation: spin 25s ease-in-out infinite alternate;
+      }
+      .-redcross {
+        animation: spin 35s ease-in-out infinite alternate-reverse;
       }
       .divider {
         width: 100%;
@@ -412,6 +420,11 @@
       left: 0;
       top: -20px;
       z-index: 0;
+
+
+      @media (max-width: 868px) {
+        top: -70px;
+      }
     }
 
     .sectionparagraph {
@@ -438,6 +451,9 @@
       width: 100vw;
       height: 60%;
       background: #3ddc97;
+      @media (max-width: 868px) {
+        height: 400px;
+      }
     }
 
     .sectionparagraph {
@@ -747,6 +763,10 @@
 
   @media (min-width: 868px) {
     max-width: 1130px;
+  }
+
+  @media (max-width: 868px) {
+    padding: 0;
   }
 }
 
