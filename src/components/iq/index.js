@@ -518,12 +518,14 @@ const IQ = () => {
             clipRule="evenodd"
             d="M396 198C396 88.6476 307.352 0 198 0C88.6476 0 0 88.6476 0 198H396Z"
             fill="#9CEAEF"
+            className="circleup"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
             d="M396 396C396 286.648 307.352 198 198 198C88.6476 198 0 286.648 0 396H396Z"
             fill="#9CEAEF"
+            className="circledown"
           />
         </svg>
       </section>

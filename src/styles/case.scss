@@ -778,6 +778,7 @@
   justify-content: center;
   padding: 70px 0;
   position: relative;
+  overflow: hidden;
 
   .videoprint {
     max-width: 348px;
@@ -789,6 +790,15 @@
     bottom: 0;
     right: 15%;
     z-index: 1;
+    overflow: visible;
+  }
+
+  .circleup {
+    animation: float 15s ease-in-out infinite alternate;
+  }
+
+  .circledown {
+    animation: float 25s ease infinite alternate-reverse;
   }
 }
 

@@ -1,6 +1,9 @@
-.logo-master svg circle {
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-  transition-delay: 0.2s;
+.logo-master svg {
+  z-index: 90;
+  circle {
+    transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+    transition-delay: 0.2s;
+  }
 }
 
 .home .container {
@@ -50,6 +53,8 @@
   margin-top: 15%;
   order: 1;
   overflow: visible;
+  z-index: 90;
+  position: relative;
 
   @media (max-width: 868px) {
     margin-top: 0;
