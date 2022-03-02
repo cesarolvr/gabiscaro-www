@@ -347,7 +347,7 @@ const Blueberry = () => {
               target="_blank"
               className="link"
             >
-              clique here
+              click here
             </a>
           </p>
         </div>
