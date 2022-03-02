@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import classnames from "classnames";
 
+import LogoMaster from "@components/logoMaster";
+
 export const LoaderContext = React.createContext(false);
 
 const Layout = ({ children }) => {
@@ -19,7 +21,10 @@ const Layout = ({ children }) => {
               "-loading": isLoading,
             })}
           >
-            {children}
+            <>
+              {children}
+              <LogoMaster className="-hack" />
+            </>
           </div>
         )}
       </LoaderContext.Consumer>

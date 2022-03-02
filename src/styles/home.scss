@@ -61,6 +61,18 @@
     width: 350px;
   }
 
+  &.-hack {
+    position: fixed;
+    bottom: 98vh;
+    z-index: 90;
+    left: 0;
+    right: 0;
+
+    .letters, .symbol {
+      display: none;
+    }
+  }
+
   .letters {
     display: block;
     transform-origin: center;
