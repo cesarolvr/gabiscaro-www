@@ -1,8 +1,15 @@
-.logo-master svg {
-  z-index: 90;
-  circle {
-    transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-    transition-delay: 0.2s;
+.logo-master {
+  &.-hack {
+    svg circle {
+      transition-delay: 0s;
+    }
+  }
+  svg {
+    z-index: 90;
+    circle {
+      transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+      transition-delay: 0.2s;
+    }
   }
 }
 
@@ -63,10 +70,15 @@
 
   &.-hack {
     position: fixed;
-    bottom: 100vh;
-    z-index: 90;
+    top: 99.5vh;
     left: 0;
     right: 0;
+    // width: 80px;
+    // height: 80px;
+
+    svg {
+      z-index: 95;
+    }
 
     .letters, .symbol {
       display: none;
