@@ -15,6 +15,8 @@ import {
 
 import { LoaderContext } from "@components/Layout";
 
+import getVariation from "@utils/getVariation";
+
 import "@styles/home.scss";
 
 // Images
@@ -25,7 +27,7 @@ import blueberryThumb from "../images/thumbs/blueberry.png";
 import useScroll from "../hooks/useScroll";
 
 import importSM from "@utils/importSM";
-import isClient from '@utils/isClient'
+import isClient from "@utils/isClient";
 
 // const importKute = async () => {
 //   if (window.KUTE) {
@@ -57,9 +59,10 @@ const Home = () => {
       });
     }
 
+    const variation = getVariation(3000, 3600, 10)
     setTimeout(() => {
       setIsOpened(false);
-    }, 3000);
+    }, variation);
   }, []);
 
   useScroll();
@@ -125,7 +128,11 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="data-scroll" data-scroll style={{overflow: "visible" }}>
+              <div
+                className="data-scroll"
+                data-scroll
+                style={{ overflow: "visible" }}
+              >
                 <div className="opacity">
                   <LogoMaster />
                 </div>
