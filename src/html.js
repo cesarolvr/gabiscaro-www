@@ -9,7 +9,7 @@ export default function HTML(props) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="description"
-          content="I'm Gabriela Biscáro, a Product Designer and passionate Illustrator based in Sao Paulo, Brazil. E esse é meu portfólio pessoal."
+          content="I'm Gabriela Biscáro, a Product Designer and passionate Illustrator based in Sao Paulo, Brazil. And this is my personal portfolio."
         />
         <meta
           name="viewport"
