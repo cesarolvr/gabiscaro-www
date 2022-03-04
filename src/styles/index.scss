@@ -5,7 +5,7 @@
 
 .main {
   width: 100vw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .container {
@@ -15,7 +15,7 @@
 }
 
 .-desktop {
-  @media (max-width: 868px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -93,7 +93,7 @@
     font-weight: 800;
     line-height: 4.7rem;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 3rem;
       line-height: 3rem;
       margin-bottom: 20px;
@@ -157,7 +157,7 @@
   font-weight: bold;
   margin-bottom: 30px;
 
-  @media (max-width: 868px) {
+  @media (max-width: 768px) {
     font-size: 3rem;
   }
 }
@@ -171,7 +171,7 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: 868px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -180,7 +180,7 @@
     font-size: 3rem;
     margin-right: 30px;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 2rem;
       margin-bottom: 30px;
     }
@@ -193,7 +193,7 @@
       font-weight: bold;
       line-height: 1.75rem;
 
-      @media (max-width: 868px) {
+      @media (max-width: 768px) {
         font-size: 1rem;
         line-height: 1.55rem;
       }

@@ -19,7 +19,7 @@
   padding: 50px 20px 100px 20px;
   max-width: 1350px;
 
-  @media (max-width: 868px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     padding-top: 0;
   }
@@ -38,16 +38,16 @@
 
   &:first-of-type {
     order: 2;
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       order: initial;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     order: initial;
   }
 
-  @media (max-width: 868px) {
+  @media (max-width: 1200px) {
     width: 100%;
   }
 }
@@ -63,7 +63,7 @@
   z-index: 90;
   position: relative;
 
-  @media (max-width: 868px) {
+  @media (max-width: 768px) {
     margin-top: 0;
     width: 350px;
   }

@@ -46,7 +46,7 @@ const Home = () => {
     if (isClient()) {
       importSM().then((ScrollMagic) => {
         const width = window.innerWidth;
-        if (width > 768) {
+        if (width > 868) {
           var controller = new ScrollMagic.Controller();
           var scene = new ScrollMagic.Scene({
             duration: 650,

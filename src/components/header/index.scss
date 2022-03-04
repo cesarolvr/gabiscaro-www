@@ -10,7 +10,7 @@
   z-index: 60;
   position: relative;
 
-  @media (max-width: 868px) {
+  @media (max-width: 768px) {
     font-size: 0.8rem;
   }
 
@@ -42,7 +42,7 @@
     z-index: 60;
     width: 117px;
     height: 117px;
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       width: 80px;
       height: 80px;
       top: 50%;

@@ -438,6 +438,8 @@ const Blueberry = () => {
             for everyone, everyday.
           </p>
         </div>
+        <br />
+        <br />
         <div className="holder">
           <p className="sectiontitle -red -close">Reliable</p>
           <p className="sectionparagraph">
@@ -448,6 +450,8 @@ const Blueberry = () => {
             accessible.
           </p>
         </div>
+        <br />
+        <br />
         <div className="holder">
           <p className="sectiontitle -red -close">Customizable</p>
           <p className="sectionparagraph">
@@ -494,6 +498,8 @@ const Blueberry = () => {
         <DividerWithIllustration />
         <hr className="divider -light" />
       </section>
+      <br />
+        <br />
       <section className="casesection container">
         <div className="holder">
           <p className="sectiontitle">Design Components</p>

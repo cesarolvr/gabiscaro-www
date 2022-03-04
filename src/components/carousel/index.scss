@@ -1,11 +1,13 @@
 .carouseldefault {
   padding: 50px 0px;
-  margin-bottom: 50px;
+  margin-left: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+  }
 
   .slick-slide {
-    padding: 20px;
-
-   
+    padding: 15px;
   }
 
   .slick-list {
@@ -48,6 +50,7 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    height: 400px;
 
     &.-ramengo {
       background: #fd4d40;
@@ -58,25 +61,29 @@
     }
 
     &.-blueberry {
-      background: #99018A;
+      background: #99018a;
     }
 
     &.-cleancity {
       background: #3ddc97;
     }
 
-    @media (min-width: 868px) {
+    @media (min-width: 768px) {
       padding: 0px 130px;
+      height: auto;
     }
   }
   .item .holder {
-    width: 50%;
+    width: 60%;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
     &:last-of-type {
       display: flex;
       width: 20%;
       justify-content: flex-start;
 
-      @media (min-width: 868px) {
+      @media (min-width: 768px) {
         width: 50%;
       }
     }
@@ -87,8 +94,9 @@
     width: auto;
     max-width: none;
     height: 400px;
+    margin-left: -30px;
 
-    @media (min-width: 868px) {
+    @media (min-width: 768px) {
       height: 600px;
     }
   }
@@ -99,7 +107,7 @@
     font-weight: bold;
     color: white;
 
-    @media (min-width: 868px) {
+    @media (min-width: 768px) {
       font-size: 4rem;
       line-height: 5rem;
     }

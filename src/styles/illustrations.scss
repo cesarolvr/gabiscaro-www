@@ -4,7 +4,7 @@
   max-width: 1920px;
   margin: 0 auto;
 
-  @media (max-width: 868px) {
+  @media (max-width: 768px) {
     padding: 100px 0;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@
       animation: toup 8s ease infinite alternate-reverse;
     }
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       padding: 8px 15px;
 
       &.-vector {
@@ -81,25 +81,25 @@
       min-height: 250px;
       position: relative;
 
-      @media (max-width: 868px) {
+      @media (max-width: 768px) {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
       }
 
-      @media (min-width: 868px) {
+      @media (min-width: 768px) {
         padding: 0;
       }
 
       img {
         position: absolute;
 
-        @media (max-width: 868px) {
+        @media (max-width: 768px) {
           position: relative;
           width: 50% !important;
         }
 
-        @media (min-width: 868px) {
+        @media (min-width: 768px) {
           &:first-of-type {
             bottom: 0;
             left: -10px;

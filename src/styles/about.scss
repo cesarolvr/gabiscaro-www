@@ -10,7 +10,7 @@
   .container {
     max-width: 1155px;
 
-    @media (min-width: 868px) {
+    @media (min-width: 768px) {
       padding: 0;
     }
   }
@@ -32,7 +32,7 @@
       }
     }
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 1.5rem;
       line-height: 2.4rem;
     }
@@ -49,7 +49,7 @@
     font-size: 2.1rem;
     color: #99018a;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 1.8rem;
     }
   }
@@ -61,7 +61,7 @@
   .skills .container {
     display: flex;
     align-items: flex-start;
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       flex-direction: column;
     }
   }
@@ -73,7 +73,7 @@
     font-size: 2.1rem;
     color: #99018a;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 1.5rem;
       width: 40%;
       margin-bottom: 60px;
@@ -85,7 +85,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       width: 60%;
     }
@@ -97,7 +97,7 @@
     margin-bottom: 35px;
     color: #070551;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       width: 100%;
       font-size: 1.4rem;
     }
@@ -111,7 +111,7 @@
     display: flex;
     align-items: flex-start;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       flex-direction: column;
     }
   }
@@ -123,7 +123,7 @@
     font-size: 2.1rem;
     color: #fd4d40;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 1.5rem;
       width: 40%;
       margin-bottom: 60px;
@@ -143,7 +143,7 @@
       margin-bottom: 30px;
     }
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       width: 100%;
     }
   }
@@ -155,7 +155,7 @@
     color: #070551;
     display: flex;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 1.3rem;
       display: flex;
       align-items: center;
@@ -169,7 +169,7 @@
     line-height: 32px;
     color: #400039;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       min-width: unset;
       font-size: 1.2rem;
       width: 40%;
@@ -180,7 +180,7 @@
   .experience .list .item .duration {
     font-size: 24px;
     line-height: 32px;
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       font-size: 1.2rem;
     }
   }
@@ -195,7 +195,7 @@
   .experience .list .item .icon {
     margin: 0 30px;
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
       margin: 0 20px;
       width: 40px;
     }

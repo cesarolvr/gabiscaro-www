@@ -9,7 +9,7 @@ import blueberry from "@images/carousel/blueberry.png";
 
 import "./index.scss";
 
-import isClient from '@utils/isClient'
+import isClient from "@utils/isClient";
 
 const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   const settings = {
@@ -19,6 +19,15 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   const goTo = (path) => {
     navigate(path);
@@ -87,7 +96,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
         onClick={() => goTo("/projects/blueberry")}
       >
         <div className="holder">
-          <p className="categorylabel">Design Design</p>
+          <p className="categorylabel">Design System</p>
           <p className="title">Bluebery Design System</p>
         </div>
         <div className="holder">
