@@ -6,19 +6,19 @@ import Contact from "@components/contact";
 import Loader from "@components/loader";
 
 import "@styles/about.scss";
+
 import useScroll from "../hooks/useScroll";
+import useParallax from "../hooks/useParallax";
 
 const About = () => {
-  const [carouselMounted, setCarouselMounted] = useState(false);
-
   const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
-    setCarouselMounted(true);
-
     setTimeout(() => {
       setIsOpened(false);
     }, 3000);
   }, []);
+
+  useParallax();
 
   useScroll();
 
@@ -29,12 +29,14 @@ const About = () => {
       <main className="about">
         <section className="description">
           <div className="container">
-            <div className="image" data-scroll>
-              <StaticImage
-                className="profile-image"
-                src="../images/gabiscaro.png"
-                alt=""
-              />
+            <div className="image-wrapper">
+              <div className="image" data-scroll>
+                <StaticImage
+                  className="profile-image"
+                  src="../images/gabiscaro.png"
+                  alt=""
+                />
+              </div>
             </div>
             <br />
             <span className="data-scroll" data-scroll>

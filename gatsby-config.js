@@ -19,9 +19,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-alias-imports`,
+      resolve: `gatsby-alias-imports`,
       options: {
-        alias: {
+        aliases: {
           "@src": "src",
           "@components": "src/components",
           "@styles": "src/styles",
@@ -29,10 +29,26 @@ module.exports = {
           "@videos": "src/videos",
           "@hooks": "src/hooks",
           "@utils": "src/utils",
+          "TweenLite": "node_modules/gsap/src/uncompressed/TweenLite.js",
+          "TweenMax": "node_modules/gsap/src/uncompressed/TweenMax.js",
+          "TimelineLite": "node_modules/gsap/src/uncompressed/TimelineLite.js",
+          "TimelineMax": "gsap/TimelineMax",
+          ScrollMagic:
+            "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
+          "animation.gsap":
+            "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
         },
-        extensions: [],
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-alias-imports`,
+    //   options: {
+    //     alias: {
+
+    //     },
+    //     extensions: [],
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

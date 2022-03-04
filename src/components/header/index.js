@@ -21,7 +21,7 @@ const Header = ({ className = "" }) => {
             <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
           </Helmet>
           <div
-            className="link"
+            className="link -left"
             onClick={() => {
               setIsLoading(true);
               setTimeout(() => {
@@ -55,7 +55,7 @@ const Header = ({ className = "" }) => {
             </div>
           </div>
           <div
-            className="link"
+            className="link -right"
             onClick={() => {
               setIsLoading(true);
               setTimeout(() => {

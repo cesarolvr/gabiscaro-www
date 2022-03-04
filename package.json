@@ -21,6 +21,7 @@
     "firebase-tools": "^9.16.5",
     "formik": "^2.2.9",
     "gatsby": "^3.11.1",
+    "gatsby-alias-imports": "^1.0.6",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-google-analytics": "^3.11.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -42,6 +43,7 @@
     "react-transition-group": "^4.4.2",
     "sass": "^1.38.0",
     "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "slick-carousel": "^1.8.1"
   }
 }
