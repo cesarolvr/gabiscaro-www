@@ -1,9 +1,4 @@
-.c-scrollbar {
-  display: none;
-  &:last-of-type {
-    display: block;
-  }
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -189,7 +184,7 @@ html {
   .header .logo g {
     opacity: 0;
   }
-  .logo-master circle {
+  .logo-master:not(.-hack) circle, .logo-master.-hack {
     transform: scale(30);
   }
 

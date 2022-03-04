@@ -7,6 +7,8 @@ import cleancity from "@images/carousel/cleancity.png";
 import iqcartoes from "@images/carousel/iqcartoes.png";
 import blueberry from "@images/carousel/blueberry.png";
 
+import { LoaderContext } from "@components/Layout";
+
 import "./index.scss";
 
 import isClient from "@utils/isClient";
@@ -29,9 +31,6 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
       },
     ],
   };
-  const goTo = (path) => {
-    navigate(path);
-  };
 
   useEffect(() => {
     if (!isClient()) return;
@@ -49,8 +48,19 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     };
   }, []);
 
-  const ramengoItem = (
-    <div className="item -ramengo" onClick={() => goTo("/projects/ramengo")}>
+  const ramengoItem = ({ setIsLoading }) => (
+    <div
+      className="item -ramengo"
+      onClick={() => {
+        setIsLoading(true);
+        setTimeout(() => {
+          navigate("/projects/ramengo");
+        }, 600);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
+      }}
+    >
       <div className="holder">
         <p className="categorylabel">Visual Design</p>
         <p className="title">RamenGo</p>
@@ -61,10 +71,18 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     </div>
   );
 
-  const cleanCityItem = (
+  const cleanCityItem = ({ setIsLoading }) => (
     <div
       className="item -cleancity"
-      onClick={() => goTo("/projects/cleancity")}
+      onClick={() => {
+        setIsLoading(true);
+        setTimeout(() => {
+          navigate("/projects/cleancity");
+        }, 600);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
+      }}
     >
       <div className="holder">
         <p className="categorylabel">Product Design</p>
@@ -79,31 +97,54 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   );
 
   return (
-    <Slider {...settings} className="carouseldefault">
-      {inverted ? cleanCityItem : ramengoItem}
-      {!inverted ? cleanCityItem : ramengoItem}
-      <div className="item -iqcartoes" onClick={() => goTo("/projects/iq")}>
-        <div className="holder">
-          <p className="categorylabel">Product Design</p>
-          <p className="title">iq Cartões</p>
-        </div>
-        <div className="holder">
-          <img className="image" src={iqcartoes} alt="" />
-        </div>
-      </div>
-      <div
-        className="item -blueberry"
-        onClick={() => goTo("/projects/blueberry")}
-      >
-        <div className="holder">
-          <p className="categorylabel">Design System</p>
-          <p className="title">Bluebery Design System</p>
-        </div>
-        <div className="holder">
-          <img className="image" src={blueberry} alt="" />
-        </div>
-      </div>
-    </Slider>
+    <LoaderContext.Consumer>
+      {({ setIsLoading }) => (
+        <Slider {...settings} className="carouseldefault">
+          {inverted ? cleanCityItem({ setIsLoading }) : ramengoItem({ setIsLoading })}
+          {!inverted ? cleanCityItem({ setIsLoading }) : ramengoItem({ setIsLoading })}
+          <div
+            className="item -iqcartoes"
+            onClick={() => {
+              setIsLoading(true);
+              setTimeout(() => {
+                navigate("/projects/iq");
+              }, 600);
+              setTimeout(() => {
+                setIsLoading(false);
+              }, 1000);
+            }}
+          >
+            <div className="holder">
+              <p className="categorylabel">Product Design</p>
+              <p className="title">iq Cartões</p>
+            </div>
+            <div className="holder">
+              <img className="image" src={iqcartoes} alt="" />
+            </div>
+          </div>
+          <div
+            className="item -blueberry"
+            onClick={() => {
+              setIsLoading(true);
+              setTimeout(() => {
+                navigate("/projects/blueberry");
+              }, 600);
+              setTimeout(() => {
+                setIsLoading(false);
+              }, 1000);
+            }}
+          >
+            <div className="holder">
+              <p className="categorylabel">Design System</p>
+              <p className="title">Bluebery Design System</p>
+            </div>
+            <div className="holder">
+              <img className="image" src={blueberry} alt="" />
+            </div>
+          </div>
+        </Slider>
+      )}
+    </LoaderContext.Consumer>
   );
 };
 
