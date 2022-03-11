@@ -48,7 +48,8 @@ const initParallax = ({ ScrollMagic, TimelineMax }) => {
 
 const useHomeParallax = () => {
   useEffect(() => {
-    if (isClient()) {
+    const width = window.innerWidth;
+    if (isClient() && width > 1200) {
       importSM().then((ScrollMagic) => {
         if (window.gsap) {
           initParallax({ ScrollMagic, TimelineMax: window.TimelineMax });
