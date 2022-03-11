@@ -9,35 +9,35 @@ const initParallax = ({ ScrollMagic, TimelineMax }) => {
   var controller = new ScrollMagic.Controller();
 
   var tl = new TimelineMax();
-  tl.to(".header .logo > svg", 1, {
-    y: -500,
-    ease: window.Linear.easeNone,
-  })
-    .to(".header > .-left", 1, {
-      y: -50,
+  tl.to(
+    ".case.-first",
+    {
+      y: -300,
       ease: window.Linear.easeNone,
-    }, 0)
-    .to(".header > .-right", 1, {
-        y: -30,
-        ease: window.Linear.easeNone,
-      }, 0)
-    .to(
-      ".description .image-wrapper",
-      1,
-      {
-        y: -100,
-        ease: window.Linear.easeNone,
-      },
-      0
-    )
-    .from(".skills .title", 1, {
-      y: 30,
+    },
+    0
+  ).to(
+    ".case.-second",
+    {
+      y: -150,
       ease: window.Linear.easeNone,
-    })
-    .from(".experience .title", 1, {
-      y: 30,
+    },
+    0
+  ).to(
+    ".case.-third",
+    {
+      y: -250,
       ease: window.Linear.easeNone,
-    });
+    },
+    0
+  ).to(
+    ".case.-forth",
+    {
+      y: -200,
+      ease: window.Linear.easeNone,
+    },
+    0
+  );
 
   const scene = new ScrollMagic.Scene({
     duration: "100%",
@@ -46,7 +46,7 @@ const initParallax = ({ ScrollMagic, TimelineMax }) => {
     .addTo(controller);
 };
 
-const useParallax = () => {
+const useHomeParallax = () => {
   useEffect(() => {
     if (isClient()) {
       importSM().then((ScrollMagic) => {
@@ -62,4 +62,4 @@ const useParallax = () => {
   }, []);
 };
 
-export default useParallax;
+export default useHomeParallax;

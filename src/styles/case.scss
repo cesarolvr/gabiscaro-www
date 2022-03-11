@@ -1,5 +1,12 @@
 .-case {
   width: 100vw;
+
+  &.-ramengo {
+    .thumb .icon {
+      max-width: 60%;
+    }
+  }
+
   .container {
     position: relative;
     padding: 0 100px;
@@ -564,6 +571,11 @@
   .thumb {
     position: relative;
     width: 100%;
+    overflow: visible !important;
+
+    .icon {
+      animation: spin 180s linear infinite reverse;
+    }
   }
 
   .image {

@@ -8,7 +8,7 @@ import Loader from "@components/loader";
 import "@styles/about.scss";
 
 import useScroll from "../hooks/useScroll";
-import useParallax from "../hooks/useParallax";
+import useAboutParallax from "../hooks/useAboutParallax";
 
 const About = () => {
   const [isOpened, setIsOpened] = useState(true);
@@ -18,7 +18,7 @@ const About = () => {
     }, 3000);
   }, []);
 
-  useParallax();
+  useAboutParallax();
 
   useScroll();
 
@@ -39,65 +39,90 @@ const About = () => {
               </div>
             </div>
             <br />
-            <span className="data-scroll" data-scroll>
-              <span className="text target" style={{ animationDelay: "200ms" }}>
-                Hello, I'm <span> Gabriela Biscáro</span>, a Product Designer
-                and passionate Illustrator based in Sao Paulo, Brazil.
+            <div className="first-paragraph">
+              <span className="data-scroll" data-scroll>
+                <span
+                  className="text target"
+                  style={{ animationDelay: "200ms" }}
+                >
+                  Hello, I'm <span> Gabriela Biscáro</span>, a Product Designer
+                  and passionate Illustrator based in Sao Paulo, Brazil.
+                </span>
               </span>
-            </span>
-            <span className="data-scroll" data-scroll>
-              <span className="text target" style={{ animationDelay: "300ms" }}>
-                {" "}
-                Currently I'm working at Red Ventures. I work closely to PO's,
-                PM's and other designers to define the
+              <span className="data-scroll" data-scroll>
+                <span
+                  className="text target"
+                  style={{ animationDelay: "300ms" }}
+                >
+                  {" "}
+                  Currently I'm working at Red Ventures. I work closely to PO's,
+                  PM's and other designers to define the
+                </span>
               </span>
-            </span>
-            <span className="data-scroll" data-scroll>
-              <span className="text target" style={{ animationDelay: "400ms" }}>
-                best strategy to improve the usability of our products. When it
-                comes to how I do it, I take care of the
+              <span className="data-scroll" data-scroll>
+                <span
+                  className="text target"
+                  style={{ animationDelay: "400ms" }}
+                >
+                  best strategy to improve the usability of our products. When
+                  it comes to how I do it, I take care of the
+                </span>
               </span>
-            </span>
 
-            <span className="data-scroll" data-scroll>
-              <span className="text target" style={{ animationDelay: "500ms" }}>
-                {" "}
-                smallest details in everything I do.
+              <span className="data-scroll" data-scroll>
+                <span
+                  className="text target"
+                  style={{ animationDelay: "500ms" }}
+                >
+                  {" "}
+                  smallest details in everything I do.
+                </span>
               </span>
-            </span>
+            </div>
 
             <br />
             <br />
             <br />
             <br />
-            <div className="data-scroll" data-scroll>
-              <h2 className="title target" style={{ animationDelay: "700ms" }}>
-                SOME THINGS I LOVE:
-              </h2>
-            </div>
-            <br />
-            <br />
-            <br />
-            <div className="data-scroll" data-scroll>
-              <span className="text target" style={{ animationDelay: "800ms" }}>
-                The color blue, but also red; Cook different types of vegan
-                food; Try new and different vegan foods;
-              </span>
-            </div>
-            <div className="data-scroll" data-scroll>
-              <span className="text target" style={{ animationDelay: "900ms" }}>
-                Watch cooking competition shows; K-POP music videos; Bus
-                commute; Watch & read My Brilliant
-              </span>
-            </div>
-            <div className="data-scroll" data-scroll>
-              <span
-                className="text target"
-                style={{ animationDelay: "1000ms" }}
-              >
-                Friend; <span>My dog</span> (Batatinha, or Little Potato); Hear
-                the words I Love You; Find news things to love {`<3`}
-              </span>
+            <div className="second-paragraph">
+              <div className="data-scroll" data-scroll>
+                <h2
+                  className="title target"
+                  style={{ animationDelay: "700ms" }}
+                >
+                  SOME THINGS I LOVE:
+                </h2>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div className="data-scroll" data-scroll>
+                <span
+                  className="text target"
+                  style={{ animationDelay: "800ms" }}
+                >
+                  The color blue, but also red; Cook different types of vegan
+                  food; Try new and different vegan foods;
+                </span>
+              </div>
+              <div className="data-scroll" data-scroll>
+                <span
+                  className="text target"
+                  style={{ animationDelay: "900ms" }}
+                >
+                  Watch cooking competition shows; K-POP music videos; Bus
+                  commute; Watch & read My Brilliant
+                </span>
+              </div>
+              <div className="data-scroll" data-scroll>
+                <span
+                  className="text target"
+                  style={{ animationDelay: "1000ms" }}
+                >
+                  Friend; <span>My dog</span> (Batatinha, or Little Potato);
+                  Hear the words I Love You; Find news things to love {`<3`}
+                </span>
+              </div>
             </div>
           </div>
         </section>

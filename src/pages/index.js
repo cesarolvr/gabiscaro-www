@@ -29,6 +29,8 @@ import useScroll from "../hooks/useScroll";
 import importSM from "@utils/importSM";
 import isClient from "@utils/isClient";
 
+import useHomeParallax from "../hooks/useHomeParallax";
+
 // const importKute = async () => {
 //   if (window.KUTE) {
 //     return Promise.resolve(window.KUTE);
@@ -59,11 +61,13 @@ const Home = () => {
       });
     }
 
-    const variation = getVariation(3000, 3600, 10)
+    const variation = getVariation(3000, 3600, 10);
     setTimeout(() => {
       setIsOpened(false);
     }, variation);
   }, []);
+
+  useHomeParallax();
 
   useScroll();
 
@@ -77,7 +81,7 @@ const Home = () => {
             <div className="container">
               <div className="holder">
                 <div
-                  className="case"
+                  className="case -first"
                   data-scroll
                   style={{ transitionDelay: "400ms" }}
                   onClick={() => {
@@ -104,7 +108,7 @@ const Home = () => {
                 </div>
 
                 <div
-                  className="case"
+                  className="case -second"
                   data-scroll
                   style={{ transitionDelay: "450ms" }}
                   onClick={() => {
@@ -139,7 +143,7 @@ const Home = () => {
               </div>
               <div className="holder">
                 <div
-                  className="case"
+                  className="case -third"
                   data-scroll
                   style={{ transitionDelay: "500ms" }}
                   onClick={() => {
@@ -164,7 +168,7 @@ const Home = () => {
                 </div>
 
                 <div
-                  className="case"
+                  className="case -forth"
                   data-scroll
                   style={{ transitionDelay: "550ms" }}
                   onClick={() => {

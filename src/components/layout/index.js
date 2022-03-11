@@ -5,16 +5,25 @@ import LogoMaster from "@components/logoMaster";
 
 export const LoaderContext = React.createContext(false);
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const gatsbyWrapper = document.querySelector("#gatsby-focus-wrapper");
-    const routerWrapper = document.querySelector(".scroll-content div[tabindex='-1']");
-    
+    const routerWrapper = document.querySelector(
+      ".scroll-content div[tabindex='-1']"
+    );
+
     gatsbyWrapper && gatsbyWrapper.removeAttribute("tabIndex");
     routerWrapper && routerWrapper.removeAttribute("tabIndex");
   }, []);
+
+  const page = {
+    "/": "-home",
+    "/about/": "-about",
+    "/illustrations/": "-illustrations",
+  };
+
   return (
     <LoaderContext.Provider
       value={{
@@ -27,6 +36,8 @@ const Layout = ({ children }) => {
           <div
             className={classnames("main", {
               "-loading": isLoading,
+              [page[path]]: page[path],
+              ["-cases"]: !page[path],
             })}
           >
             <>
