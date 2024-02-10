@@ -5,7 +5,7 @@ import "./index.scss";
 
 const CSDA = () => {
   return (
-    <a href="http://www.cssdesignawards.com/" target="_blank">
+    <a href="https://www.cssdesignawards.com/sites/gabriela-biscaro-portfolio/45107/" target="_blank">
       <div id="cssda-badge">
         <svg
           version="1.1"
