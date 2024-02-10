@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import classnames from "classnames";
 
 import LogoMaster from "@components/logoMaster";
+import CSDA from "@components/CSDA";
 
 export const LoaderContext = React.createContext(false);
 
@@ -43,6 +44,7 @@ const Layout = ({ children, path }) => {
             <>
               {children}
               <LogoMaster className="-hack" />
+              <CSDA />
             </>
           </div>
         )}
