@@ -20,7 +20,7 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
-        {/* <div
+        <div
           id="awwwards"
           style={{
             position: "fixed",
@@ -42,7 +42,7 @@ export default function HTML(props) {
               </g>
             </svg>
           </a>
-        </div> */}
+        </div>
         {props.preBodyComponents}
         <div
           key={`body`}
