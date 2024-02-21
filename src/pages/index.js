@@ -21,7 +21,7 @@ import "@styles/home.scss";
 
 // Images
 import ramengoThumb from "../images/thumbs/ramengo.png";
-import cleancityThumb from "../images/thumbs/cleancity.png";
+import boavistaThumb from "../images/thumbs/iqboavista.png";
 import iqThumb from "../images/thumbs/iqcartoes.png";
 import blueberryThumb from "../images/thumbs/blueberry.png";
 import useScroll from "../hooks/useScroll";
@@ -30,18 +30,6 @@ import importSM from "@utils/importSM";
 import isClient from "@utils/isClient";
 
 import useHomeParallax from "../hooks/useHomeParallax";
-
-// const importKute = async () => {
-//   if (window.KUTE) {
-//     return Promise.resolve(window.KUTE);
-//   } else {
-//     const module = await import("kute.js").then((kute) => {
-//       window.KUTE = kute.default;
-//       return kute.default;
-//     });
-//     return module;
-//   }
-// };
 
 const Home = () => {
   const [isOpened, setIsOpened] = useState(true);
@@ -92,18 +80,27 @@ const Home = () => {
                     setTimeout(() => {
                       setIsLoading(false);
                     }, 1000);
-                    // window.KUTE.to('#green-star', { path: '#star' }, { easing: 'easeOutQuart' }).start();
                   }}
                 >
-                  <IqCartoesIllustration />
-                  <div className="content projectinfo">
+                  <div className="illustration projectinfo">
+                    <IqCartoesIllustration />
                     <img className="image" src={iqThumb} alt="" />
-
+                  </div>
+                  <div className="content projectinfo">
                     <p className="categorylabel">iq Credit Cards</p>
                     <p className="name">
                       Redesigning a digital experience for a credit card
                       marketplace
                     </p>
+                    <div className="tags">
+                      {["ui", "ux", "product thinking"].map((item, index) => {
+                        return (
+                          <span className="tag" key={index}>
+                            {item}
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
 
@@ -121,14 +118,25 @@ const Home = () => {
                     }, 1000);
                   }}
                 >
-                  <BlueberryIllustration />
-                  <div className="content projectinfo">
+                  <div className="illustration projectinfo">
+                    <BlueberryIllustration />
                     <img className="image" src={blueberryThumb} alt="" />
+                  </div>
+                  <div className="content projectinfo">
                     <p className="categorylabel">Blueberry Design System</p>
                     <p className="name">
                       Improving the designer's work and the front-end's
                       development
                     </p>
+                    <div className="tags">
+                      {["ui", "ux", "design system"].map((item, index) => {
+                        return (
+                          <span className="tag" key={index}>
+                            {item}
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,14 +164,27 @@ const Home = () => {
                     }, 1000);
                   }}
                 >
-                  <CleanCityIllustration />
+                  <div className="illustration projectinfo">
+                    <CleanCityIllustration />
+                    <img className="image" src={boavistaThumb} alt="" />
+                  </div>
                   <div className="content projectinfo">
-                    <img className="image" src={cleancityThumb} alt="" />
                     <p className="categorylabel">Clean City App</p>
                     <p className="name">
                       Creating an awareness project about the importance of
                       recycling
                     </p>
+                    <div className="tags">
+                      {["ux", "research", "user interface"].map(
+                        (item, index) => {
+                          return (
+                            <span className="tag" key={index}>
+                              {item}
+                            </span>
+                          );
+                        }
+                      )}
+                    </div>
                   </div>
                 </div>
 
@@ -181,13 +202,26 @@ const Home = () => {
                     }, 1000);
                   }}
                 >
-                  <RamemGoIllustration />
-                  <div className="content projectinfo">
+                  <div className="illustration projectinfo">
+                    <RamemGoIllustration />
                     <img className="image" src={ramengoThumb} alt="" />
+                  </div>
+                  <div className="content projectinfo">
                     <p className="categorylabel">Ramengo</p>
                     <p className="name">
                       Creating a fun and creative delivery platform
                     </p>
+                    <div className="tags">
+                      {["ui", "illustration", "interaction design"].map(
+                        (item, index) => {
+                          return (
+                            <span className="tag" key={index}>
+                              {item}
+                            </span>
+                          );
+                        }
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

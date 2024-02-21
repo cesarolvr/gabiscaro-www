@@ -55,8 +55,8 @@ const About = () => {
                   style={{ animationDelay: "300ms" }}
                 >
                   {" "}
-                  Currently I'm working at Red Ventures. I work closely to PO's,
-                  PM's and other designers to define the
+                  Currently I'm working at Mercado Livre. one of the biggest
+                  companies in Latin America, where I have an
                 </span>
               </span>
               <span className="data-scroll" data-scroll>
@@ -64,8 +64,8 @@ const About = () => {
                   className="text target"
                   style={{ animationDelay: "400ms" }}
                 >
-                  best strategy to improve the usability of our products. When
-                  it comes to how I do it, I take care of the
+                  opportunity to explore a lot of UX processes to improve the
+                  usability for our users. I'm very efficient in
                 </span>
               </span>
 
@@ -75,7 +75,8 @@ const About = () => {
                   style={{ animationDelay: "500ms" }}
                 >
                   {" "}
-                  smallest details in everything I do.
+                  everything I do and I take care of the smallest details in
+                  each delivery.
                 </span>
               </span>
             </div>
@@ -120,7 +121,7 @@ const About = () => {
                   style={{ animationDelay: "1000ms" }}
                 >
                   Friend; <span>My dog</span> (Batatinha, or Little Potato);
-                  Hear the words I Love You; Find news things to love {`<3`}
+                  Hear the words I Love You; Find news things to love {"<3"}
                 </span>
               </div>
             </div>
@@ -139,7 +140,7 @@ const About = () => {
                 <div className="target">UX Design</div>
               </div>
               <div className="item data-scroll" data-scroll>
-                <div className="target">Logo Design</div>
+                <div className="target">Iconography Design</div>
               </div>
               <div className="item data-scroll" data-scroll>
                 <div className="target">Web Design</div>
@@ -154,7 +155,7 @@ const About = () => {
                 <div className="target">Interaction</div>
               </div>
               <div className="item data-scroll" data-scroll>
-                <div className="target">Iconography Design</div>
+                <div className="target">User Interview</div>
               </div>
               <div className="item data-scroll" data-scroll>
                 <div className="target">UI Design</div>
@@ -172,6 +173,17 @@ const About = () => {
             </div>
             <ul className="list">
               <div className="subtitle data-scroll" data-scroll>
+                <div className="target">Mercado Livre</div>
+              </div>
+              <li className="item data-scroll" data-scroll>
+                <p className="company target">Senior UX Designer</p>
+                <div className="icon target">
+                  <IconArrow color="#F992D3" />
+                </div>
+                <p className="duration target">Oct 22 - Present</p>
+              </li>
+              <hr className="line" data-scroll />
+              <div className="subtitle data-scroll" data-scroll>
                 <div className="target">Red Ventures</div>
               </div>
               <li className="item data-scroll" data-scroll>
@@ -179,7 +191,7 @@ const About = () => {
                 <div className="icon target">
                   <IconArrow />
                 </div>
-                <p className="duration target">Jul 21 - Present</p>
+                <p className="duration target">Jul 21 - Oct 22</p>
               </li>
               <li className="item data-scroll" data-scroll>
                 <p className="company target">Senior Product Designer</p>

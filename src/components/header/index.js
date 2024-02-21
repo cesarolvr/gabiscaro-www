@@ -68,7 +68,7 @@ const Header = ({ className = "" }) => {
           >
             <div className="data-scroll" data-scroll>
               <div className="target" style={{ animationDelay: "80ms" }}>
-                about/say hi
+                about
               </div>
             </div>
           </div>
