@@ -16,6 +16,14 @@
       fill: none;
     }
 
+    .object-second {
+      display: none;
+    }
+
+    .object-third {
+      display: none;
+    }
+
     &.-filled {
       .fill,
       .object {
@@ -39,9 +47,7 @@
 
 .case {
   &:hover {
-    // .icon svg {
-    //   animation: spin 50s linear infinite reverse;
-    // }
+
     .fill {
       display: block;
     }
@@ -51,7 +57,7 @@
         fill: #3ddc97;
       }
 
-      svg {
+      .object {
         animation: spin 50s linear infinite reverse;
       }
     }
@@ -60,6 +66,8 @@
       .object {
         fill: #F992D3;
       }
+
+     
 
       svg {
         animation: spin 50s linear infinite;
