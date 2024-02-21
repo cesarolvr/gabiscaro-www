@@ -123,7 +123,7 @@ const Home = () => {
                     <img className="image" src={blueberryThumb} alt="" />
                   </div>
                   <div className="content projectinfo">
-                    <p className="categorylabel">Blueberry Design System</p>
+                    <p className="categorylabel">Blueberry DS</p>
                     <p className="name">
                       Improving the designer's work and the front-end's
                       development
@@ -169,10 +169,9 @@ const Home = () => {
                     <img className="image" src={boavistaThumb} alt="" />
                   </div>
                   <div className="content projectinfo">
-                    <p className="categorylabel">Clean City App</p>
+                    <p className="categorylabel">iq + BOA VISTA</p>
                     <p className="name">
-                      Creating an awareness project about the importance of
-                      recycling
+                      Understanding how to help people with a bad credit
                     </p>
                     <div className="tags">
                       {["ux", "research", "user interface"].map(
@@ -207,7 +206,7 @@ const Home = () => {
                     <img className="image" src={ramengoThumb} alt="" />
                   </div>
                   <div className="content projectinfo">
-                    <p className="categorylabel">Ramengo</p>
+                    <p className="categorylabel">Ramen go</p>
                     <p className="name">
                       Creating a fun and creative delivery platform
                     </p>
