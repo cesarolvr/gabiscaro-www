@@ -2,16 +2,24 @@ import { navigate } from "gatsby-link";
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 
+// Images
 import ramengo from "@images/carousel/ramengo.png";
 import boavista from "@images/carousel/boavista.png";
 import iqcartoes from "@images/carousel/iqcartoes.png";
 import blueberry from "@images/carousel/blueberry.png";
+
+// Vectors
+import ramengoVector from "@images/carousel/ramengo-vector.svg";
+import boavistaVector from "@images/carousel/boavista-vector.svg";
+import iqcartoesVector from "@images/carousel/iqcartoes-vector.svg";
+import blueberryVector from "@images/carousel/blueberry-vector.svg";
 
 import { LoaderContext } from "@components/Layout";
 
 import "./index.scss";
 
 import isClient from "@utils/isClient";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   const settings = {
@@ -63,19 +71,18 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     >
       <div className="holder">
         <div className="tags">
-          {["ui", "illustration", "interaction design"].map(
-            (item, index) => {
-              return (
-                <span className="tag" key={index}>
-                  {item}
-                </span>
-              );
-            }
-          )}
+          {["ui", "illustration", "interaction design"].map((item, index) => {
+            return (
+              <span className="tag" key={index}>
+                {item}
+              </span>
+            );
+          })}
         </div>
         <p className="title">RamenGo</p>
       </div>
       <div className="holder">
+        <img className="background-vector" src={ramengoVector} alt="" />
         <img className="image" src={ramengo} alt="" />
       </div>
     </div>
@@ -107,6 +114,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
         <p className="title">iq + Boa Vista</p>
       </div>
       <div className="holder">
+        <img className="background-vector" src={boavistaVector} alt="" />
         <img className="image" src={boavista} alt="" />
       </div>
     </div>
@@ -147,6 +155,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
               <p className="title">iq Cartões</p>
             </div>
             <div className="holder">
+              <img className="background-vector" src={iqcartoesVector} alt="" />
               <img className="image" src={iqcartoes} alt="" />
             </div>
           </div>
@@ -177,6 +186,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
               <p className="title">Bluebery Design System</p>
             </div>
             <div className="holder">
+              <img className="background-vector" src={blueberryVector} alt="" />
               <img className="image" src={blueberry} alt="" />
             </div>
           </div>

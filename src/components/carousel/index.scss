@@ -53,7 +53,7 @@
     height: 400px;
 
     &.-ramengo {
-      background: #9CEAEF;
+      background: #9ceaef;
 
       .title {
         color: #400039;
@@ -68,7 +68,7 @@
     }
 
     &.-blueberry {
-      background: #D604C1;
+      background: #d604c1;
 
       .title {
         color: white;
@@ -115,10 +115,26 @@
     max-width: none;
     width: 400px;
     margin-left: 0px;
+    z-index: 15;
     padding: 180px 0px;
+  }
 
-    @media (min-width: 768px) {
-      // height: 600px;
+  .item {
+    .holder {
+      position: relative;
+      &:last-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .background-vector {
+      position: absolute;
+      margin: auto;
+      z-index: 14;
+      inset: auto;
+      width: 120%;
+      max-width: none;
     }
   }
 
