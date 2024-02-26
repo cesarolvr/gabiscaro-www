@@ -1,9 +1,9 @@
+import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import useScroll from "@hooks/useScroll";
 
 import Header from "@components/header";
-import Contact from "@components/contact";
 import Loader from "@components/loader";
 
 import "@styles/illustrations.scss";
@@ -25,7 +25,34 @@ const Illustrations = () => {
       <Loader isOpened={isOpened} />
       <Header />
       <div data-scroll>
-        <div className="grid opacity" style={{ transitionDelay: "0.5s" }}>
+        <div className="container">
+          <div className="column">
+            <h2 className="title">
+              Along with Product Design, Illustration is one of my passions.
+            </h2>
+            <p>
+              When it comes to this subject, I love to dedicate my free time to
+              drawing strong women, flowers and stars with digital or
+              traditional media. Everything in my universe is colorful. If you
+              want to work with me, you can see my illustrations on:
+            </p>
+            <br />
+            <Link
+              to="https://www.linkedin.com/in/gabriela-bisc%C3%A1ro-4b90a78a/"
+              target="_blank"
+            >
+              Instagram
+            </Link>{" "}
+            and{" "}
+            <Link to="https://www.behance.net/gabiscaro" target="_blank">
+              Behance
+            </Link>
+          </div>
+          <div className="column">
+            <StaticImage className="image-wrapper" src="../images/illustration-page-image.png" />
+          </div>
+        </div>
+        {/* <div className="grid opacity" style={{ transitionDelay: "0.5s" }}>
           <div className="case cell-1 -beforevector">
             <StaticImage className="image-wrapper" src="../images/1.png" />
           </div>
@@ -130,12 +157,12 @@ const Illustrations = () => {
           <div className="case cell-22">
             <StaticImage className="image-wrapper" src="../images/18.PNG" />
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <main>
+      {/* <main>
         <Contact />
-      </main>
+      </main> */}
     </div>
   );
 };

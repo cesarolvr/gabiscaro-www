@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Router } from "@reach/router";
 
-import CleanCity from "@components/cleanCity";
+import BoaVista from "@components/boavista";
 import Header from "@components/Header";
 import Loader from "@components/loader";
 
-import useCleanCityParallax from "@hooks/useCleanCityParallax";
+import useBoaVistaParallax from "@hooks/useBoaVistaParallax";
 
 const Projects = () => {
   const [isOpened, setIsOpened] = useState(true);
@@ -15,13 +15,13 @@ const Projects = () => {
     }, 3000);
   }, []);
 
-  useCleanCityParallax()
+  useBoaVistaParallax();
   return (
     <div className="scroll-content">
-       <Loader isOpened={isOpened} />
+      <Loader isOpened={isOpened} />
       <Header />
       <Router basepath="/projects">
-        <CleanCity path="/cleancity" />
+        <BoaVista path="/boavista" />
       </Router>
     </div>
   );

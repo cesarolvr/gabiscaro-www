@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { CleanCityIllustration } from "@components/illustrations";
+import { BoaVistaIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 import DividerWithIllustration from "../dividerWithIllustration";
 
@@ -35,7 +35,7 @@ const CleanCity = () => {
         <div className="container">
           <div className="thumb" data-scroll>
             <div className="opacity" style={{ transitionDelay: "200ms" }}>
-              <CleanCityIllustration filled />
+              <BoaVistaIllustration filled />
             </div>
             <img
               className="image opacity"
@@ -46,7 +46,16 @@ const CleanCity = () => {
           </div>
           <div className="content projectinfo">
             <div data-scroll>
-              <div className="opacity categorylabel">Product Design</div>
+              <div className="tags opacity">
+                {["ux", "research", "product thinking"].map((item, index) => {
+                  return (
+                    <span className="tag categorylabel" key={index}>
+                      {item}
+                    </span>
+                  );
+                })}
+              </div>
+              <br />
             </div>
             <div data-scroll className="name">
               <div className="target">Clean City App</div>

@@ -44,7 +44,16 @@ const IQ = () => {
           </div>
           <div className="content projectinfo">
             <div data-scroll>
-              <div className="opacity categorylabel">Product Design</div>
+              <div className="tags opacity">
+                {["ui", "ux", "product thinking"].map((item, index) => {
+                  return (
+                    <span className="tag categorylabel" key={index}>
+                      {item}
+                    </span>
+                  );
+                })}
+              </div>
+              <br />
             </div>
             <div data-scroll className="name">
               <div className="target">iq Cartões</div>

@@ -8,7 +8,7 @@ import LogoMaster from "@components/logoMaster";
 
 import {
   RamemGoIllustration,
-  CleanCityIllustration,
+  BoavistaIllustration,
   IqCartoesIllustration,
   BlueberryIllustration,
 } from "@components/illustrations";
@@ -157,7 +157,7 @@ const Home = () => {
                   onClick={() => {
                     setIsLoading(true);
                     setTimeout(() => {
-                      navigate("/projects/cleancity");
+                      navigate("/projects/boavista");
                     }, 600);
                     setTimeout(() => {
                       setIsLoading(false);
@@ -165,7 +165,7 @@ const Home = () => {
                   }}
                 >
                   <div className="illustration projectinfo">
-                    <CleanCityIllustration />
+                    <BoavistaIllustration />
                     <img className="image" src={boavistaThumb} alt="" />
                   </div>
                   <div className="content projectinfo">

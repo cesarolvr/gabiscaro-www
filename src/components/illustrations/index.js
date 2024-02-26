@@ -36,7 +36,7 @@ export const RamemGoIllustration = ({ filled }) => {
   );
 };
 
-export const CleanCityIllustration = ({ filled }) => {
+export const BoavistaIllustration = ({ filled }) => {
   return (
     <div className={`icon -city ${filled && "-filled"}`}>
       <svg

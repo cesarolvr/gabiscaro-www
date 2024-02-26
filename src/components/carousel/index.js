@@ -77,7 +77,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
       onClick={() => {
         setIsLoading(true);
         setTimeout(() => {
-          navigate("/projects/cleancity");
+          navigate("/projects/boavista");
         }, 600);
         setTimeout(() => {
           setIsLoading(false);
