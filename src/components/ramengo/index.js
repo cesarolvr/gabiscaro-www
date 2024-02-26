@@ -40,7 +40,17 @@ const RamenGo = () => {
           </div>
           <div className="content projectinfo">
             <div data-scroll>
-              <div className="opacity categorylabel">Visual Design</div>
+              <div className="tags opacity">
+                {["ui", "illustration", "interaction design"].map(
+                  (item, index) => {
+                    return (
+                      <span className="tag categorylabel" key={index}>
+                        {item}
+                      </span>
+                    );
+                  }
+                )}
+              </div>
             </div>
             <div data-scroll className="name">
               <div className="target">RamenGo</div>

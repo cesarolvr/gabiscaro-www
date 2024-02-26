@@ -37,7 +37,18 @@ const Blueberry = () => {
           </div>
           <div className="content projectinfo">
             <div data-scroll>
-              <div className="opacity categorylabel">Design System</div>
+              <div className="tags opacity">
+                {["ui", "ux", "design system", "user interview"].map(
+                  (item, index) => {
+                    return (
+                      <span className="tag categorylabel" key={index}>
+                        {item}
+                      </span>
+                    );
+                  }
+                )}
+              </div>
+              <br />
             </div>
             <div data-scroll className="name">
               <div className="target">
@@ -499,7 +510,7 @@ const Blueberry = () => {
         <hr className="divider -light" />
       </section>
       <br />
-        <br />
+      <br />
       <section className="casesection container">
         <div className="holder">
           <p className="sectiontitle">Design Components</p>

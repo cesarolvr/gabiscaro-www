@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Slider from "react-slick";
 
 import ramengo from "@images/carousel/ramengo.png";
-import cleancity from "@images/carousel/cleancity.png";
+import boavista from "@images/carousel/boavista.png";
 import iqcartoes from "@images/carousel/iqcartoes.png";
 import blueberry from "@images/carousel/blueberry.png";
 
@@ -62,7 +62,17 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
       }}
     >
       <div className="holder">
-        <p className="categorylabel">Visual Design</p>
+        <div className="tags">
+          {["ui", "illustration", "interaction design"].map(
+            (item, index) => {
+              return (
+                <span className="tag" key={index}>
+                  {item}
+                </span>
+              );
+            }
+          )}
+        </div>
         <p className="title">RamenGo</p>
       </div>
       <div className="holder">
@@ -85,13 +95,19 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
       }}
     >
       <div className="holder">
-        <p className="categorylabel">Product Design</p>
-        <p className="title">
-          [Case Study] <br /> Clean City App
-        </p>
+        <div className="tags">
+          {["ux", "research", "user interview"].map((item, index) => {
+            return (
+              <span className="tag" key={index}>
+                {item}
+              </span>
+            );
+          })}
+        </div>
+        <p className="title">iq + Boa Vista</p>
       </div>
       <div className="holder">
-        <img className="image" src={cleancity} alt="" />
+        <img className="image" src={boavista} alt="" />
       </div>
     </div>
   );
@@ -100,8 +116,12 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     <LoaderContext.Consumer>
       {({ setIsLoading }) => (
         <Slider {...settings} className="carouseldefault">
-          {inverted ? cleanCityItem({ setIsLoading }) : ramengoItem({ setIsLoading })}
-          {!inverted ? cleanCityItem({ setIsLoading }) : ramengoItem({ setIsLoading })}
+          {inverted
+            ? cleanCityItem({ setIsLoading })
+            : ramengoItem({ setIsLoading })}
+          {!inverted
+            ? cleanCityItem({ setIsLoading })
+            : ramengoItem({ setIsLoading })}
           <div
             className="item -iqcartoes"
             onClick={() => {
@@ -115,7 +135,15 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
             }}
           >
             <div className="holder">
-              <p className="categorylabel">Product Design</p>
+              <div className="tags">
+                {["ui", "ux", "product thinking"].map((item, index) => {
+                  return (
+                    <span className="tag" key={index}>
+                      {item}
+                    </span>
+                  );
+                })}
+              </div>
               <p className="title">iq Cartões</p>
             </div>
             <div className="holder">
@@ -135,7 +163,17 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
             }}
           >
             <div className="holder">
-              <p className="categorylabel">Design System</p>
+              <div className="tags">
+                {["ui", "ux", "design system", "user interview"].map(
+                  (item, index) => {
+                    return (
+                      <span className="tag" key={index}>
+                        {item}
+                      </span>
+                    );
+                  }
+                )}
+              </div>
               <p className="title">Bluebery Design System</p>
             </div>
             <div className="holder">

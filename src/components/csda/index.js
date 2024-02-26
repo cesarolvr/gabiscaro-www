@@ -52,7 +52,7 @@ const CSDA = () => {
         65.8,49.9"
           />
         </svg>
-        <div class="cssda-badge-content">
+        <div className="cssda-badge-content">
           <svg
             version="1.1"
             id="cssda-badge-title"
