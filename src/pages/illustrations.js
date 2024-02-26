@@ -8,9 +8,9 @@ import Loader from "@components/loader";
 
 import "@styles/illustrations.scss";
 
-import greenstar from "../images/greenstar.svg";
-import halfcircle from "../images/halfcircle.svg";
-import flatcloud from "../images/flatcloud.svg";
+// import greenstar from "../images/greenstar.svg";
+// import halfcircle from "../images/halfcircle.svg";
+// import flatcloud from "../images/flatcloud.svg";
 
 const Illustrations = () => {
   const [isOpened, setIsOpened] = useState(true);
@@ -21,35 +21,51 @@ const Illustrations = () => {
   }, []);
   useScroll();
   return (
-    <div className="scroll-content">
+    <div className="scroll-content illustration-page">
       <Loader isOpened={isOpened} />
       <Header />
       <div data-scroll>
         <div className="container">
           <div className="column">
             <h2 className="title">
-              Along with Product Design, Illustration is one of my passions.
+              Along with Product Design, <span>Illustration</span> is one of my
+              passions.
             </h2>
-            <p>
+            <p className="paragraph">
               When it comes to this subject, I love to dedicate my free time to
               drawing strong women, flowers and stars with digital or
               traditional media. Everything in my universe is colorful. If you
               want to work with me, you can see my illustrations on:
             </p>
             <br />
-            <Link
-              to="https://www.linkedin.com/in/gabriela-bisc%C3%A1ro-4b90a78a/"
-              target="_blank"
-            >
-              Instagram
-            </Link>{" "}
-            and{" "}
-            <Link to="https://www.behance.net/gabiscaro" target="_blank">
-              Behance
-            </Link>
+            <div className="cta">
+              <Link
+                to="https://www.linkedin.com/in/gabriela-bisc%C3%A1ro-4b90a78a/"
+                target="_blank"
+              >
+                Instagram
+              </Link>{" "}
+              and{" "}
+              <Link to="https://www.behance.net/gabiscaro" target="_blank">
+                Behance
+              </Link>
+            </div>
           </div>
           <div className="column">
-            <StaticImage className="image-wrapper" src="../images/illustration-page-image.png" />
+            <div className="image-wrapper">
+              <StaticImage
+                className="sticker"
+                src="../images/illustration-page-purple.svg"
+              />
+              <StaticImage
+                className="image"
+                src="../images/illustration-page-image.png"
+              />
+              <StaticImage
+                className="sticker"
+                src="../images/illustration-page-green.svg"
+              />
+            </div>
           </div>
         </div>
         {/* <div className="grid opacity" style={{ transitionDelay: "0.5s" }}>

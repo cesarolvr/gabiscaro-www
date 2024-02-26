@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "start": "rm -rf .cache && gatsby develop",
     "build": "gatsby build",
     "deploy": "yarn build && firebase deploy",
     "serve": "gatsby serve",

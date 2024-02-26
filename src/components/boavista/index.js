@@ -27,7 +27,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case.scss";
 
-const CleanCity = () => {
+const BoaVista = () => {
   useScroll();
   return (
     <div className="page -case -cleancity">
@@ -1142,4 +1142,4 @@ const CleanCity = () => {
     </div>
   );
 };
-export default CleanCity;
+export default BoaVista;
