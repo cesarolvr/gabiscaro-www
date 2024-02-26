@@ -1,5 +1,3 @@
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -146,6 +144,86 @@ html {
   }
 }
 
+@keyframes thumbHover {
+  0% {
+    background: url(../images/thumbs/iqcredit-1.svg) center center / contain
+      no-repeat;
+  }
+  33% {
+    background: url(../images/thumbs/iqcredit-3.svg) center center / contain
+      no-repeat;
+  }
+
+  66% {
+    background: url(../images/thumbs/iqcredit-2.svg) center center / contain
+      no-repeat;
+  }
+  100% {
+    background: url(../images/thumbs/iqcredit-1.svg) center center / contain
+      no-repeat;
+  }
+}
+
+@keyframes thumbHoverSecond {
+  0% {
+    background: url(../images/thumbs/blueberry-1.svg) center center / contain
+      no-repeat;
+  }
+  33% {
+    background: url(../images/thumbs/blueberry-3.svg) center center / contain
+      no-repeat;
+  }
+
+  66% {
+    background: url(../images/thumbs/blueberry-2.svg) center center / contain
+      no-repeat;
+  }
+  100% {
+    background: url(../images/thumbs/blueberry-1.svg) center center / contain
+      no-repeat;
+  }
+}
+
+@keyframes thumbHoverThird {
+  0% {
+    background: url(../images/thumbs/boavista-1.svg) center center / contain
+      no-repeat;
+  }
+  33% {
+    background: url(../images/thumbs/boavista-3.svg) center center / contain
+      no-repeat;
+  }
+
+  66% {
+    background: url(../images/thumbs/boavista-2.svg) center center / contain
+      no-repeat;
+  }
+  100% {
+    background: url(../images/thumbs/boavista-1.svg) center center / contain
+      no-repeat;
+  }
+}
+
+@keyframes thumbHoverForth {
+  0% {
+    background: url(../images/thumbs/ramengo-2.svg) center center / contain
+      no-repeat;
+  }
+  33% {
+    background: url(../images/thumbs/ramengo-1.svg) center center / contain
+      no-repeat;
+  }
+
+  66% {
+    background: url(../images/thumbs/ramengo-3.svg) center center / contain
+      no-repeat;
+  }
+  100% {
+    background: url(../images/thumbs/ramengo-2.svg) center center / contain
+      no-repeat;
+  }
+}
+
 // When loading
 .header,
 .header .link {
@@ -159,7 +237,8 @@ html {
   transition: opacity 0.3s ease;
 }
 
-.header .logo circle, .logo-master circle {
+.header .logo circle,
+.logo-master circle {
   transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -184,7 +263,8 @@ html {
   .header .logo g {
     opacity: 0;
   }
-  .logo-master:not(.-hack) circle, .logo-master.-hack {
+  .logo-master:not(.-hack) circle,
+  .logo-master.-hack {
     transform: scale(30);
   }
 

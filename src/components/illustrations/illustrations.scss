@@ -46,7 +46,42 @@
 }
 
 .case {
+  &.-first {
+    &:hover {
+      .illustration {
+        animation: thumbHover 2s steps(1, end) infinite;
+      }
+    }
+  }
+
+  &.-second {
+    &:hover {
+      .illustration {
+        animation: thumbHoverSecond 2s steps(1, end) infinite;
+      }
+    }
+  }
+
+  &.-third {
+    &:hover {
+      .illustration {
+        animation: thumbHoverThird 2s steps(1, end) infinite;
+      }
+    }
+  }
+
+  &.-forth {
+    &:hover {
+      .illustration {
+        animation: thumbHoverForth 2s steps(1, end) infinite;
+      }
+    }
+  }
+
   &:hover {
+    svg {
+      opacity: 0;
+    }
 
     .fill {
       display: block;
@@ -64,10 +99,8 @@
 
     .-iq {
       .object {
-        fill: #F992D3;
+        fill: #f992d3;
       }
-
-     
 
       svg {
         animation: spin 50s linear infinite;
@@ -76,7 +109,7 @@
 
     .-blueberry {
       .object {
-        fill: #D604C1;
+        fill: #d604c1;
       }
       svg {
         animation: spin 50s linear infinite;
