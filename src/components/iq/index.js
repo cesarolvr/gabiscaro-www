@@ -497,10 +497,40 @@ const IQ = () => {
           </p>
         </div>
       </section>
-      <br />
-      <br />
-      <section className="casesection -result">
-        <video
+      <section className="casesection">
+        <div className="container">
+          <div className="screenprint">
+            <p className="caption">
+              <b>Before</b>
+            </p>
+            <video
+              className="videoprint"
+              autoPlay={true}
+              muted
+              loop={true}
+              width="100%"
+              height="100%"
+            >
+              <source src={iqaccordion} type="video/mp4" />
+            </video>
+          </div>
+          <div className="screenprint">
+            <p className="caption">
+              <b>After</b>
+            </p>
+            <video
+              className="videoprint"
+              autoPlay={true}
+              muted
+              loop={true}
+              width="100%"
+              height="100%"
+            >
+              <source src={iqcards} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        {/* <video
           className="videoprint"
           autoPlay={true}
           muted
@@ -532,10 +562,8 @@ const IQ = () => {
             fill="#9CEAEF"
             className="circledown"
           />
-        </svg>
+        </svg> */}
       </section>
-      <br />
-      <br />
       <br />
       <br />
       <section className="casesection container">
@@ -545,32 +573,18 @@ const IQ = () => {
             We achieved our goal 🎉
             <br />
             <br />
-            <br />
           </p>
         </div>
       </section>
-      <section className="casesection container">
-        <div className="holder">
-          <p className="featuredtext">
-            +22% <br />
-            referral
-          </p>
-
-          <p className="sectionparagraph">coming from paid media</p>
-          <br />
-          <br />
-          <br />
-        </div>
-        <div className="holder">
-          <p className="featuredtext">
-            +28% <br />
-            referral
-          </p>
-          <p className="sectionparagraph">coming from emails</p>
-          <br />
-          <br />
-          <br />
-        </div>
+      <section className="casesection container -column">
+        <p className="featuredtext">+22% referral</p>
+        <p className="sectionparagraph">coming from paid media</p>
+        <br />
+        <br />
+        <p className="featuredtext">+28% referral</p>
+        <p className="sectionparagraph">coming from emails</p>
+        <br />
+        <br />
       </section>
       <br />
       <section className="container -divider">

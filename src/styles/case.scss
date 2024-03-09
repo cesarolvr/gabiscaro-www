@@ -616,14 +616,16 @@
   }
 
   .item {
-    width: 100%;
+    width: 100% !important;
     padding-right: 50px;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: 768px) {
       margin-bottom: 40px;
-      width: 100% !important;
     }
   }
+  
   .title {
     font-weight: 600;
     font-size: 1.5rem;
@@ -790,7 +792,7 @@
 
   .caption {
     margin-top: 30px;
-    color: #666666;
+    color: #400039;
     max-width: 200px;
     text-align: center;
     line-height: 1.5rem;

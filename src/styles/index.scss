@@ -19,6 +19,10 @@
   }
 }
 
+.-column {
+  flex-direction: column !important;
+}
+
 .categorylabel {
   padding: 5px 10px;
   border-radius: 16px;
@@ -184,7 +188,7 @@
 .featuredtext {
   font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
   @media (max-width: 768px) {
     font-size: 3rem;
