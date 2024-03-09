@@ -59,14 +59,13 @@ const RamenGo = () => {
         </div>
       </section>
       <section className="casesection container -synopsis">
-        <div className="item">
+        {/* <div className="item">
           <div data-scroll className="title">
             <div className="target">Skill Set</div>
           </div>
           <div data-scroll className="sectionparagraph">
             <div className="target">
-              Interaction & Visual Design, Content Strategy, Iconography,
-              Illustration
+              Interaction & visual design, Research, Product thinking.
             </div>
           </div>
           <br />
@@ -75,10 +74,10 @@ const RamenGo = () => {
             <div className="target">Timeline</div>
           </div>
           <div data-scroll className="sectionparagraph">
-            <div className="target">September 2019 - December 2019</div>
+            <div className="target">December 2020 - June 2021</div>
           </div>
-        </div>
-        <div className="item -thechallenge">
+        </div> */}
+        <div className="item">
           <div data-scroll className="title">
             <div className="target">The Challenge</div>
           </div>
@@ -86,13 +85,39 @@ const RamenGo = () => {
             <div className="opacity" style={{ transitionDelay: "400ms" }}>
               Some months ago I was invited by the front end team of Red
               Ventures to create a new practical test for candidates who'd apply
-              for a job opening.
-              <br />I gave wings to the imagination and I created a delivery
-              platform in which the users could choose the ingredients for their
-              ramen and receive it at the comfort of their homes.
-              <br />I developed all the visuals: styleguide, interaction and
-              illustrations/iconography.
+              for a job opening. I gave wings to the imagination and I created a
+              delivery platform in which the users could choose the ingredients
+              for their ramen and receive it at the comfort of their homes.
             </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">My Role</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <ul className="sectionlist">
+              <li>Think of one theme to create this test;</li>
+              <li>Create a prototype for Desktop and Mobile; </li>
+              <li>Develop the illustration, iconography and styleguide;</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <p>September 2019 - December 2019</p>
           </div>
         </div>
       </section>
