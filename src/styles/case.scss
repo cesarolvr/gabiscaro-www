@@ -117,6 +117,10 @@
       }
     }
   }
+
+  .-purple {
+    color: #d604c1;
+  }
 }
 
 .container.-divider.-stuck {
@@ -431,7 +435,6 @@
       top: -20px;
       z-index: 0;
 
-
       @media (max-width: 768px) {
         top: -70px;
       }
@@ -613,13 +616,8 @@
   }
 
   .item {
-    width: 35%;
+    width: 100%;
     padding-right: 50px;
-
-    &.-thechallenge {
-      width: 65%;
-      padding-right: 20px;
-    }
 
     @media (max-width: 768px) {
       margin-bottom: 40px;
@@ -721,10 +719,11 @@
 
 .-survey {
   display: flex;
-  align-items: center;
+  flex-direction: column !important;
+  // align-items: center;
 
   .holder {
-    width: 50%;
+    width: 100%;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -735,11 +734,8 @@
     }
 
     @media (min-width: 768px) {
-      &:first-of-type {
-        padding-right: 50px;
-      }
       &:last-of-type {
-        padding-left: 50px;
+        display: flex;
       }
     }
   }

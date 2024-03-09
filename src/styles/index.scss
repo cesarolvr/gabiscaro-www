@@ -76,7 +76,7 @@
 
   &.-emphasis {
     font-weight: bold;
-    color: #99018a;
+    color: #d604c1;
     font-size: 1.25rem;
   }
 }
@@ -85,7 +85,7 @@
   font-size: 1.5rem;
   line-height: 1.8rem;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-left: 0;
   margin-right: auto;
 
@@ -133,8 +133,14 @@
   &.-number {
     list-style: none;
     counter-reset: my-awesome-counter;
-    > li:before {
-      content: counter(my-awesome-counter) ". ";
+    > li {
+      &:before {
+        content: counter(my-awesome-counter) ". ";
+      }
+
+      > p {
+        padding-left: 20px;
+      }
     }
   }
 

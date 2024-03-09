@@ -62,7 +62,7 @@ const IQ = () => {
         </div>
       </section>
       <section className="casesection container -synopsis">
-        <div className="item">
+        {/* <div className="item">
           <div data-scroll className="title">
             <div className="target">Skill Set</div>
           </div>
@@ -79,19 +79,18 @@ const IQ = () => {
           <div data-scroll className="sectionparagraph">
             <div className="target">December 2020 - June 2021</div>
           </div>
-        </div>
-        <div className="item -thechallenge">
+        </div> */}
+        <div className="item">
           <div data-scroll className="title">
             <div className="target">The Challenge</div>
           </div>
           <div data-scroll className="sectionparagraph">
             <div className="opacity" style={{ transitionDelay: "400ms" }}>
-              iq is a lot of things, it is an automatic credit card payment
+              iq was a lot of things, it was an automatic credit card payment
               service for utility bills (energy, gas, telephone, internet, etc),
               but also a Credit Card Marketplace. After a bunch of tests, the
-              Marketplace page stopped converting as the Directors, the page
-              stopped to convert how the Directors and Product Managers
-              expected.
+              Marketplace page stopped converting how the Directors and Product
+              Managers expected.
               <strong>
                 {" "}
                 So, the challenge for me was to increase in 10% the referral
@@ -104,12 +103,42 @@ const IQ = () => {
       <br />
       <br />
       <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">My Role</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <ul className="sectionlist">
+              <li>
+                Analyze quantitative data; Facilitate workshops with Product
+              </li>
+              <li>Managers and Design team.</li>
+              <li>Build an interface and make prototypes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <p>December 2020 - June 2021</p>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
       <section className="container -divider">
         <hr className="divider" />
       </section>
       <br />
       <br />
-      <section className="casesection -beforeafter">
+      {/* <section className="casesection -beforeafter">
         <div className="container">
           <div className="caseimage">
             <p className="text">Before</p>
@@ -138,14 +167,14 @@ const IQ = () => {
             </video>
           </div>
         </div>
-      </section>
-      <br />
+      </section> */}
+      {/* <br />
       <br />
       <section className="container -divider">
         <hr className="divider -light" />
       </section>
       <br />
-      <br />
+      <br /> */}
       <section className="casesection -uxproccess">
         <div className="container">
           <h3 className="sectiontitle">UX Process</h3>
@@ -193,10 +222,7 @@ const IQ = () => {
       <br />
       <section className="casesection container -survey">
         <div className="holder">
-          <p className="sectiontitle">
-            Quantitative <br />
-            Research with users
-          </p>
+          <p className="sectiontitle">Quantitative Research with users</p>
           <p className="sectionparagraph">
             We attempted to do an interview with users, but they just got
             frustrated for not having their credit card approved and they tought
@@ -206,6 +232,8 @@ const IQ = () => {
             second one to know what this represents.
           </p>
         </div>
+        <br />
+        <br />
         <div className="holder">
           <div className="caseimage">
             <p className="text">Results survey 1</p>
@@ -217,32 +245,23 @@ const IQ = () => {
           </div>
         </div>
       </section>
+
       <br />
       <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <section className="casesection container -survey">
+      <section className="casesection container -benchmark">
         <div className="holder">
           <p className="sectiontitle">Benchmark</p>
+
           <p className="sectionparagraph">
             In order to understand what features are in the competitors' and
             inspirations' websites, I created this spreadsheet to see a bigger
             picture of what points iq could attack to solve users' pain points.
           </p>
-        </div>
-        <div className="holder">
-          <div className="box">
-            <p className="text">
-              We could further explore the frequently asked questions with the
-              doubts that we found in the quantitative research.
-            </p>
-          </div>
+
+          <p className="sectionparagraph -purple">
+            We could further explore the frequently asked questions with the
+            doubts that we found in the quantitative research.
+          </p>
         </div>
       </section>
       <br />
@@ -250,14 +269,6 @@ const IQ = () => {
       <section className="casesection container -survey">
         <img src={iqTable} alt="" />
       </section>
-      <br />
-      <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
-      <br />
-      <br />
       <br />
       <br />
       <section className="casesection container -fullstory">
@@ -354,14 +365,6 @@ const IQ = () => {
       <br />
       <br />
       <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
-      <br />
-      <br />
-      <br />
-      <br />
       <section className="casesection container">
         <div className="holder">
           <p className="sectiontitle">Creation of content and interfaces</p>
@@ -411,13 +414,6 @@ const IQ = () => {
           </div>
         </div>
       </section>
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
-      <br />
-      <br />
-      <br />
       <br />
       <section className="casesection container">
         <div className="holder">
