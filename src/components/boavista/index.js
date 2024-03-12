@@ -342,27 +342,71 @@ const BoaVista = () => {
 
             <br />
 
-            <p>
-              Would you mind talking a little about your current financial
-              situation? Tell me how you feel about this. Do you use any tools
-              to educate yourself financially? Tell me a about a time you got a
-              financial product (credit card, loan, financing). What was your
-              contracting experience like? Where did you get this financial
-              product? How did you get to this channel? After the contract, were
-              there any unexpected situations? Tell me a little more about this.
-              Can you explain to me in your own words what it means to have a
-              bad credit score? Have you ever been in this situation? Tell me a
-              little bit more about this. How did you find out you were in this
-              situation? Which channel do you prefer to be charged for? How
-              often would you like to be charged for? What were the things you
-              did to get out of this situation? Do you understand that 'bad
-              credit score’ can cause complications when getting a financial
-              product? Tell me more about this. Can you explain to me in your
-              own words what credit score means? Have you ever used your credit
-              score to gain credit? (credit card, loan, financing) Do you
-              currently monitor your score? Where do you do this monitoring? /
-              Why don't you follow up? How often do you check your credit score?
-            </p>
+            <ul className="sectionlist interviewquestionlist">
+              <li>
+                2. Would you mind talking a little about your current financial
+                situation?
+              </li>
+              <li className="-sub">a. Tell me how you feel about this.</li>
+              <li className="-sub">
+                b. Do you use any tools to educate yourself financially?
+              </li>
+              <li>
+                3. Tell me a about a time you got a financial product (credit
+                card, loan, financing).
+              </li>
+              <li className="-sub">
+                a. What was your contracting experience like?
+              </li>
+              <li className="-sub">
+                b. Where did you get this financial product?
+              </li>
+              <li className="-subsub">i. How did you get to this channel?</li>
+              <li className="-sub">
+                c. After the contract, were there any unexpected situations?
+              </li>
+              <li className="-subsub">i. Tell me a little more about this.</li>
+              <li>
+                4. Can you explain to me in your own words what it means to have
+                a bad credit score?
+              </li>
+              <li className="-sub">a. Have you ever been in this situation?</li>
+              <li className="-subsub">
+                i. Tell me a little bit more about this.
+              </li>
+              <li className="-subsub">
+                i. How did you find out you were in this situation?
+              </li>
+              <li className="-subsubsub">
+                1. Which channel do you prefer to be charged for
+              </li>
+              <li className="-subsubsub">
+                2. How often would you like to be charged for?
+              </li>
+              <li className="-sub">
+                b. What were the things you did to get out of this situation?
+              </li>
+              <li className="-sub">
+                c. Do you understand that 'bad credit score’ can cause
+                complications when getting a financial product?
+              </li>
+              <li className="-subsub">i. Tell me more about this.</li>
+              <li>
+                5. Can you explain to me in your own words what credit score
+                means
+              </li>
+              <li className="-sub">
+                a. Have you ever used your credit score to gain credit? (credit
+                card, loan, financing)
+              </li>
+              <li className="-sub">b. Do you currently monitor your score?</li>
+              <li className="-subsub">
+                i. Where do you do this monitoring? / Why don't you follow up?
+              </li>
+              <li className="-subsub">
+                ii. How often do you check your credit score?
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -526,16 +570,113 @@ const BoaVista = () => {
       <br />
       <section className="casesection">
         <div className="container">
-          <div className="holder">key finding 2</div>
+          <div className="holder">
+            <p className="sectiontitle -bignumber">Key finding 2</p>
+            <br />
+            <p className="sectionparagraph -emphasis -purple">
+              <b>
+                When people are overcharged, they become uncomfortable and tend
+                to ignore possible agreements.
+              </b>
+            </p>
+            <br />
+            <p className="sectionparagraph">
+              When people are overwhelmed, they become uncomfortable and tend to
+              ignore possible agreements.
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph">
+              When people have negative experiences, they are unlikely to gain
+              trust again. Many of our participants described countless times
+              that they missed a billing call or a possible settlement, due to
+              the number of times these companies called during the day. This
+              generates a lot of frustration, as it ends up creating
+              expectations in people.
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph -pink">
+              "The call is usually on silent so you don't even receive a call
+              (shakes head in denial)…" Juliana
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph -emphasis -orange">
+              <b>
+                How might we make the conditions for repaying the debt more
+                understandable?
+              </b>
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph -emphasis -orange">
+              <b>
+                How might we reduce the hassle of collection calls frequency?
+              </b>
+            </p>
+          </div>
         </div>
       </section>
       <br />
       <section className="casesection">
         <div className="container">
-          <div className="holder">key finding 3</div>
+          <div className="holder">
+            <p className="sectiontitle -bignumber">Key finding 3</p>
+            <br />
+            <p className="sectionparagraph -emphasis -purple">
+              <b>
+                Having a bad credit is emotionally negative and a barrier to
+                acquiring new financial products
+              </b>
+            </p>
+            <br />
+            <p className="sectionparagraph">
+              For most of the interviewees, having bad credit is a barrier. They
+              don't have many opportunities and access to purchase financial
+              products or services.
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph">
+              Respondents also feel uncomfortable, frustrated, desperate,
+              distressed and embarrassed due to their current financial
+              situation. Unanimously, the feelings and emotions related to
+              having a bad credit are negative. All participants reported having
+              some life difficulties due to their financial situation. Even
+              though the desire to improve the credit is not a reality for these
+              people, they feel hope that one day they will be able to settle
+              this situation, even with internal or external factors that make
+              the solution difficult.
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph -pink">
+              "...No...I think that for me, the fact of having bad credit is
+              something that bothers me a lot,...as if you have something that
+              is bothering you every day...you have to find a way to solve it,
+              but you have nowhere to resolve, you wait for something to happen
+              and then you get very frustrated…" Cláudio
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph -emphasis -orange">
+              <b>
+                How can we help people feel more comfortable settling their bad
+                credit situation?
+              </b>
+            </p>
+            <br />
+            <br />
+            <p className="sectionparagraph -emphasis -orange">
+              <b>
+                How can we communicate so that the person who has bad credit
+                feels more understood?
+              </b>
+            </p>
+          </div>
         </div>
       </section>
-      <br />
       <br />
 
       <section className="casesection">

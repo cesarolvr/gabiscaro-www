@@ -885,3 +885,33 @@
     }
   }
 }
+
+
+.interviewquestionlist {
+  list-style: none;
+  padding: 0;
+
+  > li {
+    font-weight: 700;
+    margin: 20px 0 15px 0;
+  }
+
+  .-sub {
+    padding-left: 20px;
+    font-weight: normal;
+    margin: 5px 0;
+  }
+
+  .-subsub {
+    padding-left: 40px;
+    font-weight: normal;
+    margin: 5px 0;
+  }
+
+  .-subsubsub {
+    padding-left: 60px;
+    font-weight: normal;
+    margin: 5px 0;
+
+  }
+}
