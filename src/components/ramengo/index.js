@@ -59,24 +59,6 @@ const RamenGo = () => {
         </div>
       </section>
       <section className="casesection container -synopsis">
-        {/* <div className="item">
-          <div data-scroll className="title">
-            <div className="target">Skill Set</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <div className="target">
-              Interaction & visual design, Research, Product thinking.
-            </div>
-          </div>
-          <br />
-          <br />
-          <div data-scroll className="title">
-            <div className="target">Timeline</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <div className="target">December 2020 - June 2021</div>
-          </div>
-        </div> */}
         <div className="item">
           <div data-scroll className="title">
             <div className="target">The Challenge</div>

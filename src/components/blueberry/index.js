@@ -62,23 +62,6 @@ const Blueberry = () => {
       <section className="casesection container -synopsis">
         <div className="item">
           <div data-scroll className="title">
-            <div className="target">What I did</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <div className="target">Research, Interface components</div>
-          </div>
-          <br />
-          <br />
-          <div data-scroll className="title">
-            <div className="target">Timeline</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <div className="target">May 2020 - Ongoing product</div>
-          </div>
-        </div>
-
-        <div className="item -thechallenge">
-          <div data-scroll className="title">
             <div className="target">The Challenge</div>
           </div>
           <div data-scroll className="sectionparagraph">
@@ -86,14 +69,11 @@ const Blueberry = () => {
               iq is a lot of things, an automatic credit card payment service
               for utility bills (energy, gas, telephone, internet, etc), but
               also a Credit Card Marketplace. iq is growing so fast and we
-              needed ways to expand healthily.
-              <strong>
-                To add to this, the Front-End team felt that their code needed
-                to be more organized. On the other hand, the Design Team faced a
-                problem to create a new component everytime and some screens had
-                different components from each other.
-              </strong>
-              So, I saw an opportunity to develop a Design System.
+              needed ways to expand healthily. To add to this, the Front-End
+              team felt that their code needed to be more organized. On the
+              other hand, the Design Team faced a problem to create a new
+              component everytime and some screens had different components from
+              each other. So, I saw an opportunity to develop a Design System.
             </div>
           </div>
         </div>
@@ -101,98 +81,54 @@ const Blueberry = () => {
       <br />
       <br />
       <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">My Role</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <p>
+              Being the lead for kick starting our Design System I was
+              responsible for some things:
+            </p>
+            <ul className="sectionlist">
+              <li>
+                Facilitate ideations to define our Design Principles and our
+                Design System name;
+              </li>
+              <li>
+                Build an Interface Inventory, in order to scan for
+                inconsistencies in our web app and websites;
+              </li>
+              <li>
+                Build the Design Tokens: define and organize the colors,
+                typography, grids and spacings;
+              </li>
+              <li>
+                Start the main Components, predefined by our team, to apply in
+                our first project.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <p>May 2020 - Ongoing product</p>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
       <section className="container -divider">
         <hr className="divider" />
       </section>
-      <br />
-      <br />
-      <br />
-      <section className="casesection container -fullstory">
-        <div className="holder">
-          <p className="sectiontitle">Goals</p>
-          <ul className="sectionlist">
-            <li>
-              Reveal the disparity between product platforms, website, mobile
-              website, and mobile app
-            </li>
-            <li>
-              Empower the team with resources that help drive a unified
-              experience between the website and app
-            </li>
-            <li>
-              Improve the experience across all devices by creating a consistent
-              visual language;
-            </li>
-          </ul>
-          <br />
-        </div>
-      </section>
-      <br />
-      <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
-      <br />
-      <br />
-      <section className="casesection container -fullstory">
-        <div className="holder">
-          <p className="sectiontitle">Team Structure</p>
-          <p className="sectionparagraph">
-            A Design System is never done by a single person from a single team.
-            Although our team is pretty small compared to other organizations,
-            we did a good job joining forces to build a cohesive product for our
-            brand iq.As a team we defined two leads for this: Ítalo Fontes
-            (Front-End Developer) and I (Product Designer). The rest of the
-            team, 5 Front End Developers and 2 Designers, would help to build
-            the Components in the future, after we built the Design Tokens.
-          </p>
-          <br />
-        </div>
-      </section>
-      <br />
-      <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
-      <br />
-      <br />
-      <section className="casesection container -fullstory">
-        <div className="holder">
-          <p className="sectiontitle">My Role</p>
-          <p className="sectionparagraph">
-            Being the lead for kick starting our Design System I was responsible
-            for some things:
-          </p>
-          <ul className="sectionlist">
-            <li>
-              Facilitate ideations to define our Design Principles and our
-              Design Sytem name;
-            </li>
-            <li>
-              Build an Interface Inventory, in order to scan for inconsistencies
-              in our web app and websites;
-            </li>
-            <li>
-              Build the Design Tokens: define and organize the colors,
-              typography, grids and spacings;
-            </li>
-            <li>
-              Start the main Components, predefinied by our team, to apply in
-              our first project.
-            </li>
-          </ul>
-          <br />
-        </div>
-      </section>
-      <br />
-      <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
-      <br />
       <br />
       <section className="casesection -uxproccess">
         <div className="container">
@@ -225,6 +161,46 @@ const Blueberry = () => {
               </ol>
             </div>
           </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <section className="casesection container -fullstory">
+        <div className="holder">
+          <p className="sectiontitle">Goals</p>
+          <ul className="sectionlist">
+            <li>
+              Reveal the disparity between product platforms, website, mobile
+              website, and mobile app
+            </li>
+            <li>
+              Empower the team with resources that help drive a unified
+              experience between the website and app
+            </li>
+            <li>
+              Improve the experience across all devices by creating a consistent
+              visual language;
+            </li>
+          </ul>
+          <br />
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <section className="casesection container -fullstory">
+        <div className="holder">
+          <p className="sectiontitle">Team Structure</p>
+          <p className="sectionparagraph">
+            A Design System is never done by a single person from a single team.
+            Although our team is pretty small compared to other organizations,
+            we did a good job joining forces to build a cohesive product for our
+            brand iq.As a team we defined two leads for this: Ítalo Fontes
+            (Front-End Developer) and I (Product Designer). The rest of the
+            team, 5 Front End Developers and 2 Designers, would help to build
+            the Components in the future, after we built the Design Tokens.
+          </p>
+          <br />
         </div>
       </section>
       <br />
@@ -267,11 +243,6 @@ const Blueberry = () => {
         </div>
       </section>
       <br />
-      <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider -light" />
-      </section>
       <br />
       <br />
       <section className="casesection container -fullstory">
@@ -349,17 +320,6 @@ const Blueberry = () => {
             components and tokens, like in Buttons, Icons and Colors. You can
             see different styles, different icons being applied in components
             and a lot of color variants with no standard.
-          </p>
-          <br />
-          <p className="sectionparagraph">
-            If you want to see the complete Interface Inventory,{" "}
-            <a
-              href="https://docs.google.com/presentation/d/1XMhP1pDP85Kve7WKsJnx9lxWtIcqcS4jCXdNsOwaqlQ/edit?usp=sharing"
-              target="_blank"
-              className="link"
-            >
-              click here
-            </a>
           </p>
         </div>
       </section>
@@ -474,9 +434,6 @@ const Blueberry = () => {
       </section>
       <br />
       <br />
-      <section className="container -divider -secondary">
-        <hr className="divider -light" />
-      </section>
       <br />
       <section className="casesection container">
         <div className="holder">
@@ -604,6 +561,8 @@ const Blueberry = () => {
           </ul>
         </div>
       </section>
+      <br /> <br />
+      <br /> <br />
       <section className="casesection -carousel">
         <Carousel />
       </section>
