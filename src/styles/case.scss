@@ -96,7 +96,7 @@
     }
   }
 
-  &.-cleancity {
+  &.-boavista {
     .thumb {
       position: relative;
       width: 100%;
@@ -625,7 +625,7 @@
       margin-bottom: 40px;
     }
   }
-  
+
   .title {
     font-weight: 600;
     font-size: 1.5rem;
@@ -886,7 +886,6 @@
   }
 }
 
-
 .interviewquestionlist {
   list-style: none;
   padding: 0;
@@ -912,6 +911,60 @@
     padding-left: 60px;
     font-weight: normal;
     margin: 5px 0;
+  }
+}
 
+.casetable {
+  border-collapse: collapse;
+  border: none;
+  font-family: sans-serif;
+  color: #666666;
+  line-height: 1.5em;
+  width: 100%;
+
+  &.-vertical {
+    text-align: left;
+    
+    th {
+      background-color: #F992D3;
+      border-color: #D604C1;
+      color: #400039;
+      font-weight: 600;
+      width: 20%;
+    }
+
+    td {
+      text-align: left !important;
+    }
+  }
+
+  thead {
+    background-color: #f992d3;
+    color: #400039;
+    font-weight: 700;
+
+    th {
+      border: none;
+      &:last-of-type {
+        background-color: #400039;
+        color: #F992D3;
+      }
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid #ebebeb;
+    padding: 20px 15px;
+  }
+
+  
+
+  td:last-of-type {
+    text-align: center;
+  }
+
+  tbody > tr:nth-of-type(even) {
+    background-color: #ebebeb;
   }
 }

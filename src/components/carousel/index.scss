@@ -1,9 +1,17 @@
 .carouseldefault {
   padding: 50px 0px;
   margin-left: 40px;
+  
+  .image {
+    display: none;
+  }
 
   @media (min-width: 768px) {
     margin-bottom: 50px;
+
+    .image {
+      display: block;
+    }
   }
 
   .slick-slide {
@@ -80,7 +88,7 @@
       }
     }
 
-    &.-cleancity {
+    &.-boavista {
       background: #3ddc97;
 
       .title {

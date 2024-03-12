@@ -4,23 +4,9 @@ import { BoavistaIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 import DividerWithIllustration from "../dividerWithIllustration";
 
-import cleancityImage from "@images/cleancity/cleancity-lg.png";
-import allprintsImage from "@images/cleancity/allprints.png";
-import wireframesImage from "@images/cleancity/wireframes.png";
-import userflowImage from "@images/cleancity/userflow.png";
-import usermapImage from "@images/cleancity/usermap.png";
-import print1 from "@images/cleancity/print-1.png";
-import print2 from "@images/cleancity/print-2.png";
-import print3 from "@images/cleancity/print-3.png";
-import videoOnboarding from "@images/cleancity/print-onboarding.mp4";
-import videoQuiz from "@images/cleancity/print-quiz.mp4";
-import printWaste from "@images/cleancity/print-waste.png";
-import printRedeem1 from "@images/cleancity/print-redeem-1.png";
-import printRedeem2 from "@images/cleancity/print-redeem-2.png";
-
-import prev1 from "@images/cleancity/prev-1.png";
-import prev2 from "@images/cleancity/prev-2.png";
-import prev3 from "@images/cleancity/prev-3.png";
+import boavistaImage from "@images/boavista/boavista-lg.png";
+import grafico1 from "@images/boavista/grafico1-key-themes.png";
+import grafico2 from "@images/boavista/grafico2-codes.png";
 
 // Hooks
 import useScroll from "@hooks/useScroll";
@@ -30,7 +16,7 @@ import "@styles/case.scss";
 const BoaVista = () => {
   useScroll();
   return (
-    <div className="page -case -cleancity">
+    <div className="page -case -boavista">
       <section className="casesection -hero">
         <div className="container">
           <div className="thumb" data-scroll>
@@ -40,7 +26,7 @@ const BoaVista = () => {
             <img
               className="image opacity"
               style={{ transitionDelay: "400ms" }}
-              src={cleancityImage}
+              src={boavistaImage}
               alt=""
             />
           </div>
@@ -298,8 +284,75 @@ const BoaVista = () => {
           </div>
         </div>
       </section>
+      <section className="casesection">
+        <div className="container">
+          <div className="holder">
+            <table className="casetable">
+              <thead>
+                <tr>
+                  <th scope="col">Research questions</th>
+                  <th scope="col">Related product-development questions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    What is the reason for the bad credit score? How do you feel
+                    about it?
+                  </th>
+                  <td>
+                    What constraints, motivations or emotions should we take
+                    into account when developing a solution for our product?
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    What is your biggest source of information to make better
+                    use of your salary/money?
+                  </th>
+                  <td>
+                    Can we develop a product that helps and/or influences making
+                    better decisions?
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Have you ever searched for financial products? Where? Which?
+                    Which ones do you have access to today?
+                  </th>
+                  <td>
+                    How can we help people with bad credit score in the search
+                    for financial products?
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    What are the reasons why you have difficulty paying off your
+                    debts?
+                  </th>
+                  <td>
+                    What internal and/or external factors should we take into
+                    consideration when developing a solution for our product?
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Do you intend to pay off the debt at some point?
+                  </th>
+                  <td>Where can our product offer people the most value?</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Do you know why it is important to have a good credit score?
+                  </th>
+                  <td>What value will the credit score have on our product?</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
       <br />
-      <section className="casesection">taaaable</section>
       <br />
       <section className="casesection">
         <div className="container">
@@ -432,11 +485,39 @@ const BoaVista = () => {
       </section>
 
       <section className="casesection">
-        <div className="holder">
-          <p className="sectionparagraph">other table</p>
+        <div className="container">
+          <div className="holder">
+            <table className="casetable -vertical">
+              <tr>
+                <th>Age</th>
+                <td>18-44 years old</td>
+              </tr>
+              <tr>
+                <th>Gender</th>
+                <td>Female (3); Male (4)</td>
+              </tr>
+              <tr>
+                <th>Demographics</th>
+                <td>
+                  São Paulo (1), Nipólis (2), Rio de Janeiro (1), Belo Horizonte
+                  (1), Cabo de Santo Agostinho (1), Porto Alegre (1)
+                </td>
+              </tr>
+              <tr>
+                <th>Experience</th>
+                <td>
+                  <strong>100% of participants</strong> have a bad credit score; <br />
+                  <strong>100% of participants</strong> mentioned that they wanted to improve their score; <br />
+                  <strong>Around 28% (2) of participants</strong> check their Score frequently; <br />
+                  <strong>100% of participants</strong> were in debt due to external factors.
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </section>
 
+      <br />
       <br />
       <br />
 
@@ -479,15 +560,33 @@ const BoaVista = () => {
 
       <section className="casesection">
         <div className="container">
-          <div className="holder">image</div>
+          <div className="holder">
+            <img
+              className="image opacity"
+              style={{ transitionDelay: "400ms" }}
+              src={grafico1}
+              alt=""
+            />
+          </div>
         </div>
+        <br />
+        <br />
+        <br />
         <div className="container">
           <div className="holder">
             <p className="sectionparagraph">And here are some codes:</p>
           </div>
         </div>
+        <br />
+        <br />
+        <br />
         <div className="container">
-          <div className="holder">image 2</div>
+          <img
+            className="image opacity"
+            style={{ transitionDelay: "400ms" }}
+            src={grafico2}
+            alt=""
+          />
         </div>
       </section>
 

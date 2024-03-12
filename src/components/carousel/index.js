@@ -88,9 +88,9 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     </div>
   );
 
-  const cleanCityItem = ({ setIsLoading }) => (
+  const boavistaItem = ({ setIsLoading }) => (
     <div
-      className="item -cleancity"
+      className="item -boavista"
       onClick={() => {
         setIsLoading(true);
         setTimeout(() => {
@@ -125,10 +125,10 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
       {({ setIsLoading }) => (
         <Slider {...settings} className="carouseldefault">
           {inverted
-            ? cleanCityItem({ setIsLoading })
+            ? boavistaItem({ setIsLoading })
             : ramengoItem({ setIsLoading })}
           {!inverted
-            ? cleanCityItem({ setIsLoading })
+            ? boavistaItem({ setIsLoading })
             : ramengoItem({ setIsLoading })}
           <div
             className="item -iqcartoes"
