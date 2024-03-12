@@ -58,7 +58,7 @@ const BoaVista = () => {
               <br />
             </div>
             <div data-scroll className="name">
-              <div className="target">Clean City App</div>
+              <div className="target">iq + Boa Vista</div>
             </div>
           </div>
         </div>
@@ -66,41 +66,51 @@ const BoaVista = () => {
       <section className="casesection container -synopsis">
         <div className="item">
           <div data-scroll className="title">
-            <div className="target">What I Did</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <div className="target">
-              Research, Product Design, Interaction Design
-            </div>
-          </div>
-          <br />
-          <br />
-          <div data-scroll className="title">
-            <div className="target">Timeline</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <div className="target">October 2019 [Timeframe of 7 days]</div>
-          </div>
-        </div>
-        <div className="item -thechallenge">
-          <div data-scroll className="title">
             <div className="target">The Challenge</div>
           </div>
           <div data-scroll className="sectionparagraph">
             <div className="opacity" style={{ transitionDelay: "400ms" }}>
-              The fictional cooperative "Cidade Mais Limpa” has been trying to
-              create an awareness project about the importance of recycling,
-              helping people to understand how to recycle and the impact of it.
-              <strong>
-                The main objective was to develop, in a time frame of 7 days, a
-                proposal for a product or service that helps the cooperative on
-                this mission.
-              </strong>
+              The Stakeholders from iq with the ones from Boa Vista had an idea
+              to create a new product for people who were targeted with bad
+              Credit Score. The main hypothesis was that they didn't want to pay
+              their debts to the financial companies and with that they chose to
+              remain with a bad credit score. As a designer, we always have to
+              question every hypothesis and start to dig into the problem, so my
+              colleague Andrey and I had the responsibility to go deeper and
+              learn if this was true.
             </div>
           </div>
         </div>
       </section>
       <br />
+      <br />
+      <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">My Role</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <ul className="sectionlist">
+              <li>Create a Research Plan for this challenge;</li>
+              <li>Facilitate the interviews;</li>
+              <li>Make a Thematic Analysis.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <section className="casesection container -synopsis">
+        <div className="item">
+          <div data-scroll className="title">
+            <div className="target">Timeline</div>
+          </div>
+          <div data-scroll className="sectionparagraph">
+            <p>3 months in 2022</p>
+          </div>
+        </div>
+      </section>
       <br />
       <br />
       <section className="container -divider">
@@ -110,31 +120,35 @@ const BoaVista = () => {
       <br />
       <section className="casesection -uxproccess">
         <div className="container">
-          <h3 className="sectiontitle">UX Process</h3>
+          <h3 className="sectiontitle">
+            Research Process - Before, During and After the Interviews
+          </h3>
         </div>
         <div className="container">
           <div className="processes">
             <div className="item">
-              <p className="title">Discover</p>
+              <p className="title">Before</p>
               <ol className="list">
-                <li className="item">Desk Research</li>
-                <li className="item">Semi-Structured Interview</li>
-                <li className="item">Journey Map</li>
+                <li className="item">Doing the research plan</li>
+                <li className="item -sub">Main goals</li>
+                <li className="item -sub">Research questions</li>
+                <li className="item -sub">How many participate?</li>
               </ol>
             </div>
             <div className="item">
-              <p className="title">Define & Develop</p>
+              <p className="title">During</p>
               <ol className="list">
-                <li className="item">Hypothesis</li>
-                <li className="item">Creation of content and interfaces</li>
-                <li className="item">User Flow</li>
-                <li className="item">Wireframe</li>
+                <li className="item">Interview Questions</li>
+                <li className="item">Study Interview</li>
               </ol>
             </div>
             <div className="item">
-              <p className="title">Deliver</p>
+              <p className="title">After</p>
               <ol className="list">
-                <li className="item">UI Design</li>
+                <li className="item">Analyzing qualitative data</li>
+                <li className="item">Findings</li>
+                <li className="item">How might we?</li>
+                <li className="item">User Needs</li>
               </ol>
             </div>
           </div>
@@ -143,7 +157,10 @@ const BoaVista = () => {
       <br />
       <br />
       <br />
-      <section className="container -divider">
+      <br />
+      <section className="container -divider -secondary">
+        <div className="title">Before</div>
+        <DividerWithIllustration />
         <hr className="divider -light" />
       </section>
       <br />
@@ -253,7 +270,7 @@ const BoaVista = () => {
                 />
               </svg>
             </div>
-            <h3 className="sectiontitle">Target Audience and User Pains</h3>
+            <h3 className="sectiontitle">Main Goal</h3>
             <p className="sectionparagraph">
               It was given to me a Target Audience:
             </p>

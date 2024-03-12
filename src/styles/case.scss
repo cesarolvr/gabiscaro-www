@@ -716,6 +716,10 @@
 
   .processes > .item .list .item {
     margin-bottom: 10px;
+
+    &.-sub {
+      margin-left: 15px;
+    }
   }
 }
 
