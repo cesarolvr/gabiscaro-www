@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import setupPixCube from "@images/home/setup-pix-cube.svg";
+import setupPixCube from "@images/v2/shared/card-setup-pix.png";
 import pixBefore1 from "@images/v2/setup-pix/before-1.svg";
 import pixBefore2 from "@images/v2/setup-pix/before-2.svg";
 import pixAfterHero from "@images/v2/shared/card-setup-pix.png";

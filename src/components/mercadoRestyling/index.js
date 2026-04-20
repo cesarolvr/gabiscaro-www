@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import HERO_MOCKUP from "@images/v2/shared/restyling-hero.png";
+import HERO_MOCKUP from "@images/v2/shared/card-restyling.png";
 import resBefore1 from "@images/v2/restyling/before-1.png";
 import resBefore2 from "@images/v2/restyling/before-2.png";
 import resBefore3 from "@images/v2/restyling/before-3.png";
@@ -67,7 +67,7 @@ const MercadoRestyling = () => {
   return (
     <div className="casev2">
       {/* ── Hero ── */}
-      <section className="casev2-hero" style={{ background: "#f992d3" }}>
+      <section className="casev2-hero" style={{ background: "#3ddc97" }}>
         <img
           className="casev2-hero-mockup"
           src={HERO_MOCKUP}

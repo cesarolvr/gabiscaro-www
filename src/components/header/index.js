@@ -9,11 +9,19 @@ import favicon from "../../images/favicon.svg";
 
 import Logo from "@components/Logo";
 import { LoaderContext } from "@components/Layout";
+import portfolioProjects from "../../data/portfolioProjects";
 
 const Header = ({ className = "" }) => {
   const location = useLocation();
   const isAbout = location?.pathname === "/about";
   const isWork = !isAbout;
+
+  const currentProject = portfolioProjects.find(
+    (p) => location?.pathname === p.newRoute
+  );
+  const theme = currentProject?.cardTheme ?? null;
+  const pillBorder = theme?.border ?? "#9ceaef";
+  const textColor = theme?.fg ?? "#400039";
 
   const goTo = (path, setIsLoading) => {
     setIsLoading(true);
@@ -34,11 +42,11 @@ const Header = ({ className = "" }) => {
             <title>Gabiscaro | Designer and illustrator</title>
             <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
           </Helmet>
-          <div className="pill-bg" />
+          <div className="pill-bg" style={{ borderColor: pillBorder }} />
           <div className="logo" onClick={() => goTo("/", setIsLoading)}>
             <div className="logo-wrapper data-scroll" data-scroll>
               <div className="opacity">
-                <Logo />
+                <Logo color={textColor} />
               </div>
             </div>
           </div>
@@ -46,6 +54,7 @@ const Header = ({ className = "" }) => {
             <button
               type="button"
               className={`link ${isWork ? "-active" : ""}`}
+              style={{ color: textColor }}
               onClick={() => goTo("/", setIsLoading)}
             >
               WORK
@@ -53,6 +62,7 @@ const Header = ({ className = "" }) => {
             <button
               type="button"
               className={`link ${isAbout ? "-active" : ""}`}
+              style={{ color: textColor }}
               onClick={() => goTo("/about", setIsLoading)}
             >
               ABOUT

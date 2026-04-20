@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import HERO_MOCKUP from "@images/v2/shared/blueberry-hero.png";
+import HERO_MOCKUP from "@images/v2/shared/card-blueberry.png";
 import BEFORE_IMG_1 from "@images/v2/blueberry/before-1.png";
 import BEFORE_IMG_2 from "@images/v2/blueberry/before-2.png";
 import BEFORE_IMG_3 from "@images/v2/blueberry/before-3.png";

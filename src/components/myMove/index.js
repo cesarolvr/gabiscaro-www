@@ -24,7 +24,7 @@ import illus15 from "@images/15.png";
 import illus16 from "@images/16.png";
 import illus17 from "@images/17.png";
 import illus18 from "@images/18.png";
-import HERO_MOCKUP from "@images/v2/shared/mymove-mockup.png";
+import HERO_MOCKUP from "@images/v2/shared/card-mymove.png";
 import mmProcess1 from "@images/v2/mymove/process-1.svg";
 import mmProcess2 from "@images/v2/mymove/process-2.png";
 import mmProcess3 from "@images/v2/mymove/process-3.png";

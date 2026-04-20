@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import ramengoHero from "@images/ramengo/ramengo-hero.png";
+import ramengoHero from "@images/v2/shared/card-ramengo.png";
 import image01 from "@images/ramengo/01.png";
 import image02 from "@images/ramengo/02.png";
 import image03 from "@images/ramengo/03.png";
