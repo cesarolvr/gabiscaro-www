@@ -1,217 +1,260 @@
 .about {
-  .description,
-  .skills,
-  .experience {
-    padding: 80px 0;
-    width: 95%;
-    margin: 0 auto;
-  }
+  background: #faf7ef;
+  color: #400039;
 
   .container {
-    max-width: 1155px;
-
-    @media (min-width: 768px) {
-      padding: 0;
-    }
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 24px;
   }
 
-  .description {
-    padding-top: 120px;
+  .about-hero {
+    padding: 120px 0 70px;
   }
 
-  .description .text {
+  .about-hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-hero .container {
+    position: relative;
+  }
+
+  .about-hero-deco {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .about-hero-deco.-top-left {
+    width: 344px;
+    height: 344px;
+    left: -15%;
+    top: -20%;
+    background: url("https://www.figma.com/api/mcp/asset/840c1dcb-558b-45b4-848f-5949f6b2d1e4")
+      center / contain no-repeat;
+  }
+
+  .about-hero-deco.-top-center {
+    width: 122px;
+    height: 122px;
+    left: 40%;
+    top: 240px;
+    transform: translateX(-50%);
+    background: url("https://www.figma.com/api/mcp/asset/b6a05065-4009-4098-8df3-291f59f37968")
+      center / contain no-repeat;
+  }
+
+  .about-profile {
+    width: 388px;
+    height: 388px;
+    margin-bottom: 28px;
+  }
+
+  .about-intro {
     font-size: 24px;
-    font-weight: 400;
     line-height: 48px;
-    color: #070551;
+    margin: 0;
+
     span {
       color: #fd4d40;
-      &:hover {
-        background-color: #fd4d40;
-        color: white;
-      }
-    }
-
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-      line-height: 2.4rem;
     }
   }
 
-  // .description .image-wrapper {
-  //   position: absolute;
-  // }
-
-  .description .image {
-    margin-bottom: 30px;
-    margin-left: 20%;
+  .about-love {
+    padding-bottom: 70px;
   }
 
-  .description .title {
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 2.1rem;
+  .about-love h2 {
+    margin: 0 0 16px;
     color: #99018a;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 
-    @media (max-width: 768px) {
-      font-size: 1.8rem;
+  .about-love p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 48px;
+
+    span {
+      color: #fd4d40;
     }
+  }
+
+  .skills,
+  .experience {
+    width: 100%;
+    padding: 70px 0;
   }
 
   .skills {
-    border-top: 1px solid #99018a;
-  }
-
-  .skills .container {
-    display: flex;
-    align-items: flex-start;
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-
-  .skills .title {
-    width: 30%;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 2.1rem;
-    color: #99018a;
-
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-      width: 40%;
-      margin-bottom: 60px;
-    }
-  }
-
-  .skills .list {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      width: 60%;
-    }
-  }
-
-  .skills .list .item {
-    width: 50%;
-    font-size: 24px;
-    margin-bottom: 35px;
-    color: #070551;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      font-size: 1.4rem;
-    }
+    border-top: 1px solid #400039;
   }
 
   .experience {
-    border-top: 1px solid #fd4d40;
+    border-top: 1px solid #400039;
   }
 
+  .skills .container,
   .experience .container {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
+  .skills .title,
+  .experience .title {
+    position: sticky;
+    top: 110px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .skills .title {
+    color: #99018a;
   }
 
   .experience .title {
-    width: 30%;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 2.1rem;
     color: #fd4d40;
+  }
 
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-      width: 40%;
-      margin-bottom: 60px;
-    }
+  .skills .list {
+    display: flex;
+    gap: 70px;
+  }
+
+  .skills .list .column {
+    min-width: 280px;
+  }
+
+  .skills .list .item {
+    font-size: 24px;
+    line-height: 56px;
   }
 
   .experience .list {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-
-    .subtitle {
-      font-weight: 800;
-      font-size: 24px;
-      line-height: 32px;
-      color: #070551;
-      margin-bottom: 30px;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-    }
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .experience .list .item {
-    width: 100%;
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: #070551;
-    display: flex;
-
-    @media (max-width: 768px) {
-      font-size: 1.3rem;
-      display: flex;
-      align-items: center;
-    }
+  .experience-group {
+    margin-bottom: 42px;
   }
 
-  .experience .list .item .company {
-    min-width: 308px;
-    font-weight: normal;
+  .experience .subtitle {
+    margin: 0 0 24px;
     font-size: 24px;
     line-height: 32px;
-    color: #400039;
-
-    @media (max-width: 768px) {
-      min-width: unset;
-      font-size: 1.2rem;
-      width: 40%;
-      flex-shrink: 0;
-    }
+    font-weight: 700;
   }
 
-  .experience .list .item .duration {
+  .experience .item {
+    display: grid;
+    grid-template-columns: minmax(260px, 420px) 46px auto;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .experience .company,
+  .experience .duration {
     font-size: 24px;
     line-height: 32px;
-    @media (max-width: 768px) {
-      font-size: 1.2rem;
-    }
+    margin: 0;
+  }
+
+  .experience .icon {
+    width: 46px;
   }
 
   .line {
-    background-color: #400039;
-    height: 1px;
-    width: 100%;
-    margin: 30px 0 60px 0;
+    margin: 24px 0 0;
+    border: 0;
+    border-top: 1px solid #400039;
   }
 
-  .experience .list .item .icon {
-    margin: 0 30px;
+  .myprofile {
+    display: inline-flex !important;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #d604c1;
 
-    @media (max-width: 768px) {
-      margin: 0 20px;
-      width: 40px;
+    .iconlink {
+      margin-right: 15px;
     }
   }
-}
-.myprofile {
-  display: inline-flex !important;
-  font-size: 24px;
-  line-height: 32px;
-  text-decoration-line: underline;
-  color: #d604c1;
-  .iconlink {
-    margin-right: 15px;
+
+  @media (max-width: 900px) {
+    .about-hero {
+      padding-top: 96px;
+    }
+
+    .about-profile {
+      width: 220px;
+      height: 220px;
+    }
+
+    .about-intro,
+    .about-love p {
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    .about-love h2 {
+      font-size: 26px;
+    }
+
+    .skills .container,
+    .experience .container {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+
+    .skills .title,
+    .experience .title {
+      position: static;
+      top: auto;
+      font-size: 28px;
+    }
+
+    .skills .list {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .skills .list .item {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    .experience .item {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .experience .company,
+    .experience .duration {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .experience .icon {
+      width: 40px;
+      transform: rotate(90deg);
+      transform-origin: left center;
+    }
+
+    .myprofile {
+      font-size: 20px;
+    }
   }
 }

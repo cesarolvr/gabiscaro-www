@@ -1,66 +1,103 @@
 .header {
-  width: 100vw;
+  width: min(1158px, calc(100vw - 24px));
+  height: 90px;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #99018a;
-  font-size: 1rem;
-  z-index: 60;
-  position: relative;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  z-index: 100;
 
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
-
-  .line {
+  .pill-bg {
     position: absolute;
-    bottom: 0;
+    inset: 13px 0;
+    border: 1px solid #9ceaef;
+    border-radius: 96px;
+    background: rgba(250, 247, 239, 0.5);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    z-index: 1;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 2;
+    margin-left: 10px;
     width: 100%;
-    left: 0;
-    margin: 0;
-  }
-
-  .link {
-    text-decoration: none;
-    padding: 30px;
-  }
-
-  .link,
-  .title {
-    color: #99018a;
-    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
   }
 
   .logo-wrapper {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 30%;
-    z-index: 60;
-    width: 117px;
-    height: 117px;
-    @media (max-width: 768px) {
-      width: 80px;
-      height: 80px;
-      top: 50%;
-    }
+    width: 39px;
+    height: 48px;
+  }
 
-    .letters {
-      display: none;
-    }
+  .links {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 20px;
+  }
+
+  .link {
+    border: 0;
+    background: transparent;
+    color: #400039;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+
+  .link.-active {
+    border-bottom-color: #400039;
   }
 
   &.-opened {
+    .logo {
+      display: block;
+    }
+  }
+}
 
-    .symbol {
-      transform: none;
+@media (max-width: 768px) {
+  .header {
+    height: 74px;
+    top: 6px;
+    width: calc(100vw - 16px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    .pill-bg {
+      inset: 10px 0;
+      border-radius: 48px;
     }
 
     .logo {
-      display: none;
+      margin-left: 14px;
+    }
+
+    .logo-wrapper {
+      width: 32px;
+      height: 40px;
+    }
+
+    .links {
+      margin-right: 12px;
+      gap: 4px;
+    }
+
+    .link {
+      font-size: 12px;
+      padding: 6px 8px;
     }
   }
 }

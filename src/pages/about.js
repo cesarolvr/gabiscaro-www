@@ -8,7 +8,49 @@ import Loader from "@components/loader";
 import "@styles/about.scss";
 
 import useScroll from "../hooks/useScroll";
-import useAboutParallax from "../hooks/useAboutParallax";
+
+const SKILLS_LEFT = [
+  "Art Direction",
+  "Iconography Design",
+  "Illustration",
+  "Interaction",
+  "UI Design",
+];
+
+const SKILLS_RIGHT = [
+  "UX Design",
+  "Web Design",
+  "Usability Test",
+  "User Interview",
+  "Design System",
+];
+
+const EXPERIENCES = [
+  {
+    company: "Mercado Livre",
+    rows: [{ role: "Senior UX Designer", period: "Oct 22 - Present", color: "#F992D3" }],
+  },
+  {
+    company: "Red Ventures",
+    rows: [
+      { role: "Product Designer Specialist", period: "Jul 21 - Oct 22", color: "#FD4D40" },
+      { role: "Senior Product Designer", period: "Dec 19 - Jul 21", color: "#FD4D40" },
+      { role: "Product Designer", period: "Oct 17 - Dec 19", color: "#FD4D40" },
+    ],
+  },
+  {
+    company: "Tuia",
+    rows: [{ role: "Visual Designer", period: "Feb 14 - Sep 17", color: "#9CEAEF" }],
+  },
+  {
+    company: "ID\\TBWA",
+    rows: [{ role: "Art Director", period: "May 13 - Jan 14", color: "#3DDC97" }],
+  },
+  {
+    company: "Agência Yo",
+    rows: [{ role: "Art Assistant", period: "Sep 11 - May 13", color: "#D604C1" }],
+  },
+];
 
 const About = () => {
   const [isOpened, setIsOpened] = useState(true);
@@ -18,8 +60,6 @@ const About = () => {
     }, 3000);
   }, []);
 
-  useAboutParallax();
-
   useScroll();
 
   return (
@@ -27,220 +67,88 @@ const About = () => {
       <Loader isOpened={isOpened} />
       <Header />
       <main className="about">
-        <section className="description">
+        <section className="about-hero">
           <div className="container">
-            <div className="image-wrapper">
-              <div className="image" data-scroll>
+            <div className="about-hero-deco -top-left" />
+            <div className="about-hero-deco -top-center" />
+            <div className="about-hero-content">
+              <div className="about-profile" data-scroll>
                 <StaticImage
                   className="profile-image"
                   src="../images/gabiscaro.png"
                   alt=""
                 />
               </div>
-            </div>
-            <br />
-            <div className="first-paragraph">
-              <span className="data-scroll" data-scroll>
-                <span
-                  className="text target"
-                  style={{ animationDelay: "200ms" }}
-                >
-                  Hello, I'm <span> Gabriela Biscáro</span>, a Product Designer
-                  and passionate Illustrator based in Sao Paulo, Brazil.
-                </span>
-              </span>
-              <span className="data-scroll" data-scroll>
-                <span
-                  className="text target"
-                  style={{ animationDelay: "300ms" }}
-                >
-                  {" "}
-                  Currently I'm working at Mercado Livre. one of the biggest
-                  companies in Latin America, where I have an
-                </span>
-              </span>
-              <span className="data-scroll" data-scroll>
-                <span
-                  className="text target"
-                  style={{ animationDelay: "400ms" }}
-                >
-                  opportunity to explore a lot of UX processes to improve the
-                  usability for our users. I'm very efficient in
-                </span>
-              </span>
-
-              <span className="data-scroll" data-scroll>
-                <span
-                  className="text target"
-                  style={{ animationDelay: "500ms" }}
-                >
-                  {" "}
-                  everything I do and I take care of the smallest details in
-                  each delivery.
-                </span>
-              </span>
-            </div>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className="second-paragraph">
-              <div className="data-scroll" data-scroll>
-                <h2
-                  className="title target"
-                  style={{ animationDelay: "700ms" }}
-                >
-                  SOME THINGS I LOVE:
-                </h2>
-              </div>
-              <br />
-              <br />
-              <br />
-              <div className="data-scroll" data-scroll>
-                <span
-                  className="text target"
-                  style={{ animationDelay: "800ms" }}
-                >
-                  The color blue, but also red; Cook different types of vegan
-                  food; Try new and different vegan foods;
-                </span>
-              </div>
-              <div className="data-scroll" data-scroll>
-                <span
-                  className="text target"
-                  style={{ animationDelay: "900ms" }}
-                >
-                  Watch cooking competition shows; K-POP music videos; Bus
-                  commute; Watch & read My Brilliant
-                </span>
-              </div>
-              <div className="data-scroll" data-scroll>
-                <span
-                  className="text target"
-                  style={{ animationDelay: "1000ms" }}
-                >
-                  Friend; <span>My dog</span> (Batatinha, or Little Potato);
-                  Hear the words I Love You; Find news things to love {"<3"}
-                </span>
-              </div>
+              <p className="about-intro">
+                Hello, I&apos;m <span>Gabriela Biscáro</span>, a Product Designer and
+                passionate Illustrator based in São Paulo, Brazil. Currently
+                I&apos;m working at Mercado Livre, one of the biggest companies in
+                Latin America, where I have an opportunity to explore a lot of UX
+                processes to improve the usability for our users. I&apos;m very
+                efficient in everything I do and I take care of the smallest
+                details in each delivery.
+              </p>
             </div>
           </div>
         </section>
+
+        <section className="about-love">
+          <div className="container">
+            <h2>SOME THINGS I LOVE:</h2>
+            <p>
+              The color blue, but also red; Try and cook different types of vegan
+              food; Watch cooking competition shows; K-POP music videos; Bus
+              commute; Watch &amp; read My Brilliant Friend; <span>My dog</span>{" "}
+              (Batatinha, or Little Potato); Hear the words I Love You; Find new
+              things to love {"<3"}
+            </p>
+          </div>
+        </section>
+
         <section className="skills">
           <div className="container">
-            <div className="title data-scroll" data-scroll>
-              <div className="target">skills</div>
+            <div className="title">
+              <div>SKILLS</div>
             </div>
             <div className="list">
-              <div className="item data-scroll" data-scroll>
-                <div className="target">Art direction</div>
+              <div className="column">
+                {SKILLS_LEFT.map((skill) => (
+                  <div className="item" key={skill}>
+                    {skill}
+                  </div>
+                ))}
               </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">UX Design</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">Iconography Design</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">Web Design</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">Illustration</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">Usability Test</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">Interaction</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">User Interview</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">UI Design</div>
-              </div>
-              <div className="item data-scroll" data-scroll>
-                <div className="target">Design System</div>
+              <div className="column">
+                {SKILLS_RIGHT.map((skill) => (
+                  <div className="item" key={skill}>
+                    {skill}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
         <section className="experience">
           <div className="container">
-            <div className="title data-scroll" data-scroll>
-              <div className="target">experience</div>
+            <div className="title">
+              <div>EXPERIENCE</div>
             </div>
             <ul className="list">
-              <div className="subtitle data-scroll" data-scroll>
-                <div className="target">Mercado Livre</div>
-              </div>
-              <li className="item data-scroll" data-scroll>
-                <p className="company target">Senior UX Designer</p>
-                <div className="icon target">
-                  <IconArrow color="#F992D3" />
-                </div>
-                <p className="duration target">Oct 22 - Present</p>
-              </li>
-              <hr className="line" data-scroll />
-              <div className="subtitle data-scroll" data-scroll>
-                <div className="target">Red Ventures</div>
-              </div>
-              <li className="item data-scroll" data-scroll>
-                <p className="company target">Product Designer Specialist</p>
-                <div className="icon target">
-                  <IconArrow />
-                </div>
-                <p className="duration target">Jul 21 - Oct 22</p>
-              </li>
-              <li className="item data-scroll" data-scroll>
-                <p className="company target">Senior Product Designer</p>
-                <div className="icon target">
-                  <IconArrow />
-                </div>
-                <p className="duration target">Dec 19 - Jul 21</p>
-              </li>
-              <li className="item data-scroll" data-scroll>
-                <p className="company target">Product Designer</p>
-                <div className="icon target">
-                  <IconArrow />
-                </div>
-                <p className="duration target">OCt 17 - Dec 19</p>
-              </li>
-              <hr className="line" data-scroll />
-              <div className="subtitle data-scroll" data-scroll>
-                <div className="target">TUIA</div>
-              </div>
-              <li className="item data-scroll" data-scroll>
-                <p className="company target">Visual Designer</p>
-                <div className="icon target">
-                  <IconArrow color="#9CEAEF" />
-                </div>
-                <p className="duration target">Feb 14 - Sep 17</p>
-              </li>
-              <hr className="line" data-scroll />
-              <div className="subtitle data-scroll" data-scroll>
-                <div className="target">ID/TBWA</div>
-              </div>
-              <li className="item data-scroll" data-scroll>
-                <p className="company target">Art Director</p>
-                <div className="icon target">
-                  <IconArrow color="#3DDC97" />
-                </div>
-                <p className="duration target">May 13 - Jan 14</p>
-              </li>
-              <hr className="line" data-scroll />
-              <div className="subtitle data-scroll" data-scroll>
-                <div className="target">Agência Yo</div>
-              </div>
-              <li className="item data-scroll" data-scroll>
-                <p className="company target">Art Assistant</p>
-                <div className="icon target">
-                  <IconArrow color="#99018A" />
-                </div>
-                <p className="duration target">Sep 11 - May 13</p>
-              </li>
-              <hr className="line" />
+              {EXPERIENCES.map((group) => (
+                <li className="experience-group" key={group.company}>
+                  <p className="subtitle">{group.company}</p>
+                  {group.rows.map((row) => (
+                    <div className="item" key={`${group.company}-${row.role}`}>
+                      <p className="company">{row.role}</p>
+                      <div className="icon">
+                        <IconArrow color={row.color} />
+                      </div>
+                      <p className="duration">{row.period}</p>
+                    </div>
+                  ))}
+                  <hr className="line" />
+                </li>
+              ))}
               <a
                 href="resume-gabriela-biscaro.pdf"
                 className="myprofile"
@@ -265,13 +173,10 @@ const About = () => {
                 </svg>
                 View my resume
               </a>
-              <br />
-              <br />
-              <br />
             </ul>
           </div>
         </section>
-        <Contact title="Let's work together!" />
+        <Contact />
       </main>
     </div>
   );

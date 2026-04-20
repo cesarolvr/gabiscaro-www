@@ -4,58 +4,32 @@ import { navigate } from "gatsby-link";
 import Header from "@components/header";
 import Contact from "@components/contact";
 import Loader from "@components/loader";
-import LogoMaster from "@components/logoMaster";
-
-import {
-  RamemGoIllustration,
-  BoavistaIllustration,
-  IqCartoesIllustration,
-  BlueberryIllustration,
-} from "@components/illustrations";
 
 import { LoaderContext } from "@components/Layout";
 
 import getVariation from "@utils/getVariation";
 
 import "@styles/home.scss";
-
-// Images
-import ramengoThumb from "../images/thumbs/ramengo.png";
-import boavistaThumb from "../images/thumbs/iqboavista.png";
-import iqThumb from "../images/thumbs/iqcartoes.png";
-import blueberryThumb from "../images/thumbs/blueberry.png";
 import useScroll from "../hooks/useScroll";
-
-import importSM from "@utils/importSM";
-import isClient from "@utils/isClient";
-
-import useHomeParallax from "../hooks/useHomeParallax";
+import { getHomeProjects } from "../data/portfolioProjects";
+import titleBackdrop from "../images/thumbs/ramengo-1.svg";
+import setupPixCube from "../images/home/setup-pix-cube.svg";
+import introUnion from "../images/v2/home/intro-union.svg";
+import introGroup62 from "../images/v2/home/intro-group62.svg";
+import introVector from "../images/v2/home/intro-vector.png";
+import introGroup61 from "../images/v2/home/intro-group61.svg";
+import introTopete from "../images/v2/home/intro-topete.svg";
 
 const Home = () => {
   const [isOpened, setIsOpened] = useState(true);
+  const homeProjects = getHomeProjects().slice(0, 5);
 
   useEffect(() => {
-    if (isClient()) {
-      importSM().then((ScrollMagic) => {
-        const width = window.innerWidth;
-        if (width > 868) {
-          var controller = new ScrollMagic.Controller();
-          var scene = new ScrollMagic.Scene({
-            duration: 650,
-          })
-            .setPin(".logo-master")
-            .addTo(controller);
-        }
-      });
-    }
-
     const variation = getVariation(3000, 3600, 10);
     setTimeout(() => {
       setIsOpened(false);
     }, variation);
   }, []);
-
-  useHomeParallax();
 
   useScroll();
 
@@ -66,166 +40,111 @@ const Home = () => {
           <Loader isOpened={isOpened} />
           <Header className="-opened" />
           <main className="home">
-            <div className="container">
-              <div className="holder">
-                <div
-                  className="case -first"
-                  data-scroll
-                  style={{ transitionDelay: "400ms" }}
-                  onClick={() => {
-                    setIsLoading(true);
-                    setTimeout(() => {
-                      navigate("/projects/iq");
-                    }, 600);
-                    setTimeout(() => {
-                      setIsLoading(false);
-                    }, 1000);
-                  }}
-                >
-                  <div className="illustration projectinfo">
-                    <IqCartoesIllustration />
-                    <img className="image" src={iqThumb} alt="" />
-                  </div>
-                  <div className="content projectinfo">
-                    <p className="categorylabel">iq Credit Cards</p>
-                    <p className="name">
-                      Redesigning a digital experience for a credit card
-                      marketplace
-                    </p>
-                    <div className="tags">
-                      {["ui", "ux", "product thinking"].map((item, index) => {
-                        return (
-                          <span className="tag" key={index}>
-                            {item}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
+            <section className="home-intro container">
+              <img
+                className="home-intro-deco -group-62"
+                src={introGroup62}
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                className="home-intro-deco -vector"
+                src={introVector}
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                className="home-intro-deco -group-61"
+                src={introGroup61}
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                className="home-intro-deco -topete"
+                src={introTopete}
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                className="home-intro-backdrop"
+                src={titleBackdrop}
+                alt=""
+                aria-hidden="true"
+              />
+              <p className="home-intro-eyebrow">Oh, hello everyone!</p>
+              <h1 className="home-intro-title">
+                My name is Gabriela Bisc&aacute;ro and I&apos;m a Brazilian
+                Product Designer and Illustrator
+              </h1>
+            </section>
+            <section className="home-grid container">
+              <div className="home-card -illustration">
+                <img
+                  className="home-grid-deco"
+                  src={setupPixCube}
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              {homeProjects.map((project) => {
+                const isPlanned = project.implementationStatus === "planned";
+                const cardClassName = `home-card -${project.homeLayout} -${project.cardStyle}`;
+                const style = {
+                  backgroundColor: project.cardTheme.bg,
+                  color: project.cardTheme.fg,
+                };
 
-                <div
-                  className="case -second"
-                  data-scroll
-                  style={{ transitionDelay: "450ms" }}
-                  onClick={() => {
-                    setIsLoading(true);
-                    setTimeout(() => {
-                      navigate("/projects/blueberry");
-                    }, 600);
-                    setTimeout(() => {
-                      setIsLoading(false);
-                    }, 1000);
-                  }}
-                >
-                  <div className="illustration projectinfo">
-                    <BlueberryIllustration />
-                    <img className="image" src={blueberryThumb} alt="" />
-                  </div>
-                  <div className="content projectinfo">
-                    <p className="categorylabel">Blueberry DS</p>
-                    <p className="name">
-                      Improving the designer's work and the front-end's
-                      development
-                    </p>
-                    <div className="tags">
-                      {["ui", "ux", "design system"].map((item, index) => {
-                        return (
-                          <span className="tag" key={index}>
-                            {item}
-                          </span>
-                        );
-                      })}
+                return (
+                  <article
+                    key={project.id}
+                    className={cardClassName}
+                    style={style}
+                    data-scroll
+                    onClick={() => {
+                      if (isPlanned) {
+                        return;
+                      }
+
+                      setIsLoading(true);
+                      setTimeout(() => {
+                        navigate(project.legacyRoute || project.newRoute);
+                      }, 600);
+                      setTimeout(() => {
+                        setIsLoading(false);
+                      }, 1000);
+                    }}
+                  >
+                    <div className={`home-card-media -${project.cardStyle}`}>
+                      <img src={project.source.imageUrl} alt="" />
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="data-scroll"
-                data-scroll
-                style={{ overflow: "visible" }}
-              >
-                <div className="opacity">
-                  <LogoMaster />
-                </div>
-              </div>
-              <div className="holder">
-                <div
-                  className="case -third"
-                  data-scroll
-                  style={{ transitionDelay: "500ms" }}
-                  onClick={() => {
-                    setIsLoading(true);
-                    setTimeout(() => {
-                      navigate("/projects/boavista");
-                    }, 600);
-                    setTimeout(() => {
-                      setIsLoading(false);
-                    }, 1000);
-                  }}
-                >
-                  <div className="illustration projectinfo">
-                    <BoavistaIllustration />
-                    <img className="image" src={boavistaThumb} alt="" />
-                  </div>
-                  <div className="content projectinfo">
-                    <p className="categorylabel">iq + BOA VISTA</p>
-                    <p className="name">
-                      Understanding how to help people with a bad credit
-                    </p>
-                    <div className="tags">
-                      {["ux", "research", "user interface"].map(
-                        (item, index) => {
-                          return (
-                            <span className="tag" key={index}>
-                              {item}
-                            </span>
-                          );
-                        }
+                    <div className={`home-card-content -${project.cardStyle}`}>
+                      <p className="home-card-title">{project.title}</p>
+                      <p className="home-card-subtitle">{project.subtitle}</p>
+                      <div className="home-card-tags">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={`${project.id}-${tag}`}
+                            className="home-card-tag"
+                            style={{ borderColor: project.cardTheme.border }}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      {isPlanned && (
+                        <p className="home-card-coming-soon">Coming soon</p>
                       )}
                     </div>
-                  </div>
-                </div>
-
-                <div
-                  className="case -forth"
-                  data-scroll
-                  style={{ transitionDelay: "550ms" }}
-                  onClick={() => {
-                    setIsLoading(true);
-                    setTimeout(() => {
-                      navigate("/projects/ramengo");
-                    }, 600);
-                    setTimeout(() => {
-                      setIsLoading(false);
-                    }, 1000);
-                  }}
-                >
-                  <div className="illustration projectinfo">
-                    <RamemGoIllustration />
-                    <img className="image" src={ramengoThumb} alt="" />
-                  </div>
-                  <div className="content projectinfo">
-                    <p className="categorylabel">Ramen go</p>
-                    <p className="name">
-                      Creating a fun and creative delivery platform
-                    </p>
-                    <div className="tags">
-                      {["ui", "illustration", "interaction design"].map(
-                        (item, index) => {
-                          return (
-                            <span className="tag" key={index}>
-                              {item}
-                            </span>
-                          );
-                        }
-                      )}
-                    </div>
-                  </div>
-                </div>
+                  </article>
+                );
+              })}
+            </section>
+            <div className="home-contact-wrapper">
+              <div className="home-contact-divider container">
+                <span />
               </div>
+              <Contact />
             </div>
-            <Contact />
           </main>
         </div>
       )}

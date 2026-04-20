@@ -1,208 +1,156 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { RamemGoIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
-
-import ramengo from "@images/ramengo/ramengo-hero.png";
-import image1 from "@images/ramengo/01.png";
-import image2 from "@images/ramengo/02.png";
-import image3 from "@images/ramengo/03.png";
-import image4 from "@images/ramengo/04.png";
-import image5 from "@images/ramengo/05.png";
-import image6 from "@images/ramengo/06.png";
-import image7 from "@images/ramengo/07.png";
-import image8 from "@images/ramengo/08.png";
-import image9 from "@images/ramengo/09.png";
-import image10 from "@images/ramengo/10.png";
-import image11 from "@images/ramengo/11.png";
-import video1 from "@videos/ramengo-1.mp4";
-
+import Contact from "@components/contact";
 import useScroll from "@hooks/useScroll";
 
-import "@styles/case.scss";
+import "@styles/case-v2.scss";
+
+import ramengoHero from "@images/ramengo/ramengo-hero.png";
+import image01 from "@images/ramengo/01.png";
+import image02 from "@images/ramengo/02.png";
+import image03 from "@images/ramengo/03.png";
+import image04 from "@images/ramengo/04.png";
+import image05 from "@images/ramengo/05.png";
+import image06 from "@images/ramengo/06.png";
+import image07 from "@images/ramengo/07.png";
+import image08 from "@images/ramengo/08.png";
+import image09 from "@images/ramengo/09.png";
+import image10 from "@images/ramengo/10.png";
+import image11 from "@images/ramengo/11.png";
+import ramengoVideo from "@videos/ramengo-1.mp4";
+
 
 const RamenGo = () => {
   useScroll();
+
   return (
-    <div className="page -case -ramengo">
-      <section className="casesection -hero">
-        <div className="container">
-          <div className="thumb" data-scroll>
-            <div className="opacity" style={{ transitionDelay: "200ms" }}>
-              <RamemGoIllustration filled />
-            </div>
-            <img
-              className="image opacity"
-              style={{ transitionDelay: "400ms" }}
-              src={ramengo}
-              alt=""
-            />
-          </div>
-          <div className="content projectinfo">
-            <div data-scroll>
-              <div className="tags opacity">
-                {["ui", "illustration", "interaction design"].map(
-                  (item, index) => {
-                    return (
-                      <span className="tag categorylabel" key={index}>
-                        {item}
-                      </span>
-                    );
-                  }
-                )}
-              </div>
-            </div>
-            <div data-scroll className="name">
-              <div className="target">RamenGo</div>
-            </div>
-          </div>
-        </div>
+    <div className="casev2">
+      {/* ── Hero ── */}
+      <section className="casev2-hero" style={{ background: "#ff4522" }}>
+        <img
+          className="casev2-hero-mockup"
+          src={ramengoHero}
+          alt=""
+          aria-hidden="true"
+        />
       </section>
-      <section className="casesection container -synopsis">
-        <div className="item">
-          <div data-scroll className="title">
-            <div className="target">The Challenge</div>
+
+      {/* ── Main text block ── */}
+      <div className="casev2-main-block">
+        <div className="casev2-inner">
+          <div className="casev2-tags">
+            {["ui", "illustration", "interaction design"].map((t) => (
+              <span className="casev2-tag" key={t}>
+                {t}
+              </span>
+            ))}
           </div>
-          <div data-scroll className="sectionparagraph">
-            <div className="opacity" style={{ transitionDelay: "400ms" }}>
-              Some months ago I was invited by the front end team of Red
-              Ventures to create a new practical test for candidates who'd apply
-              for a job opening. I gave wings to the imagination and I created a
-              delivery platform in which the users could choose the ingredients
-              for their ramen and receive it at the comfort of their homes.
-            </div>
-          </div>
-        </div>
-      </section>
-      <br />
-      <br />
-      <br />
-      <section className="casesection container -synopsis">
-        <div className="item">
-          <div data-scroll className="title">
-            <div className="target">My Role</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <ul className="sectionlist">
+
+          <p className="casev2-eyebrow">RamenGo</p>
+          <h1 className="casev2-heading">
+            Creating a fun and creative delivery platform
+          </h1>
+          <p className="casev2-desc">
+            I was invited by the front-end team of Red Ventures to create a new
+            practical test for candidates applying for a job opening. I gave
+            wings to the imagination and created a delivery platform where users
+            could choose the ingredients for their ramen and receive it at the
+            comfort of their homes.
+          </p>
+
+          <hr className="casev2-rule" />
+
+          <div className="casev2-gap">
+            <p className="casev2-section-label">My Role</p>
+            <ul className="casev2-list">
               <li>Think of one theme to create this test;</li>
-              <li>Create a prototype for Desktop and Mobile; </li>
-              <li>Develop the illustration, iconography and styleguide;</li>
+              <li>Create a prototype for Desktop and Mobile;</li>
+              <li>Develop the illustration, iconography and styleguide.</li>
             </ul>
           </div>
-        </div>
-      </section>
-      <br />
-      <br />
-      <section className="casesection container -synopsis">
-        <div className="item">
-          <div data-scroll className="title">
-            <div className="target">Timeline</div>
-          </div>
-          <div data-scroll className="sectionparagraph">
-            <p>September 2019 - December 2019</p>
+
+          <hr className="casev2-rule" />
+
+          <div className="casev2-gap">
+            <p className="casev2-section-label">Timeline</p>
+            <p className="casev2-text">September 2019 – December 2019</p>
           </div>
         </div>
-      </section>
-      <br />
-      <br />
-      <br />
-      <section className="container -divider">
-        <hr className="divider" />
-      </section>
-      <br />
-      <br />
+      </div>
 
-      <section className="casesection">
-        <div className="container">
-          <p className="caption">Home</p>
-        </div>
-        <div className="container">
-          <img className="image" src={image1} alt="" />
+      {/* ── Home & Styleguide ── */}
+      <section className="casev2-strip -white">
+        <div className="casev2-strip-pad">
+          <img
+            src={image01}
+            alt="RamenGo — home screen"
+            style={{ width: "100%", display: "block", borderRadius: 12, marginBottom: 24 }}
+          />
+          <div className="casev2-gallery -cols-2">
+            <img src={image02} alt="Styleguide" />
+            <img src={image03} alt="Colors" />
+          </div>
         </div>
       </section>
 
-      <section className="casesection">
-        <div className="container">
-          <p className="caption">Styleguide</p>
-        </div>
-        <div className="container">
-          <img className="image" src={image2} alt="" />
-        </div>
-      </section>
-
-      <section className="casesection">
-        <div className="container">
-          <p className="caption">Colors</p>
-        </div>
-        <div className="container">
-          <img className="image" src={image3} alt="" />
-        </div>
-      </section>
-
-      <br />
-      <br />
-      <br />
-
-      <section className="casesection -grid">
-        <div className="container">
-          <img className="image" src={image4} alt="" />
-          <img className="image" src={image5} alt="" />
-          <img className="image" src={image6} alt="" />
+      {/* ── Mobile Experience ── */}
+      <div className="casev2-strip-header">
+        <p className="casev2-section-label">Mobile Experience</p>
+      </div>
+      <section className="casev2-strip" style={{ background: "#400039" }}>
+        <div className="casev2-strip-pad">
+          <div className="casev2-gallery -cols-3" style={{ marginBottom: 24 }}>
+            <img src={image04} alt="Mobile screen 1" />
+            <img src={image05} alt="Mobile screen 2" />
+            <img src={image06} alt="Mobile screen 3" />
+          </div>
+          <div className="casev2-gallery -cols-3">
+            <img src={image07} alt="Mobile screen 4" />
+            <img src={image08} alt="Mobile screen 5" />
+            <img src={image09} alt="Mobile screen 6" />
+          </div>
         </div>
       </section>
 
-      <section className="casesection -grid">
-        <div className="container">
-          <img className="image" src={image7} alt="" />
-          <img className="image" src={image8} alt="" />
-          <img className="image" src={image9} alt="" />
-        </div>
-      </section>
-
-      <br />
-      <br />
-
-      <section className="casesection">
-        <div className="container">
-          <img className="image" src={image10} alt="" />
-        </div>
-      </section>
-
-      <section className="casesection">
-        <div className="container">
-          <img className="image" src={image11} alt="" />
-        </div>
-      </section>
-
-      <section className="casesection">
-        <div className="container">
-          <video
-            className="video"
-            autoPlay={true}
-            muted
-            loop={true}
-            width="100%"
-            height="100%"
+      {/* ── Video prototype ── */}
+      <section
+        className="casev2-strip"
+        style={{ background: "#7a3b2e" }}
+      >
+        <div className="casev2-strip-pad">
+          <div className="casev2-gallery -cols-2">
+            <img src={image10} alt="Desktop screen" />
+            <img src={image11} alt="Desktop screen detail" />
+          </div>
+          <div
+            style={{
+              marginTop: 24,
+              borderRadius: 16,
+              overflow: "hidden",
+              maxWidth: 720,
+              margin: "24px auto 0",
+            }}
           >
-            <source src={video1} type="video/mp4" />
-          </video>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ width: "100%", display: "block" }}
+            >
+              <source src={ramengoVideo} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </section>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      {/* ── Cross-navigation ── */}
+      <Carousel />
 
-      <section className="casesection -carousel">
-        <Carousel inverted />
-      </section>
-      <br />
-      <br />
-      <br />
+      <Contact />
     </div>
   );
 };
+
 export default RamenGo;

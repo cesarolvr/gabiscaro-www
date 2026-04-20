@@ -1,35 +1,47 @@
 .carouseldefault {
-  padding: 50px 0px;
-  margin-left: 40px;
-  
-  .image {
-    display: none;
-  }
+  // gives the carousel the left inset so the page background
+  // shows on the left, matching the Figma layout
+  padding: 100px;
 
   @media (min-width: 768px) {
-    margin-bottom: 50px;
+    margin-left: 60px;
+  }
 
-    .image {
-      display: block;
-    }
+  @media (min-width: 1100px) {
+    margin-left: 80px;
   }
 
   .slick-slide {
-    padding: 15px;
+    padding: 40px;
+
+    // react-slick injects an extra wrapper div — force it to stretch
+    // so that width: 100% on .item resolves against the full slide width
+    > div {
+      width: 100%;
+      height: 100%;
+    }
   }
 
+  // overflow: visible lets the next slide peek in from the right;
+  // horizontal clipping is handled by the page container
   .slick-list {
     overflow: visible;
-    z-index: 10;
     cursor: grab;
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
   }
 
   .slick-arrow {
     z-index: 20;
     background: transparent;
-    right: 0;
-    height: 680px;
-    width: 30vw;
+    height: 100%;
+    width: 20vw;
+    top: 0;
+    transform: none;
 
     &:before {
       display: none;
@@ -39,7 +51,7 @@
       right: 80%;
       left: auto;
       cursor: url("data:image/svg+xml;utf8,%3Csvg width='128' height='128' viewBox='0 0 128 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M43.4286 78.8913C42.8571 79.6304 42.0952 80 41.1429 80C40.1905 80 39.4286 79.6304 38.8571 78.8913L1.14286 42.3035C0.380951 41.7491 -3.40862e-06 41.01 -3.48939e-06 40.086C-3.57016e-06 39.1621 0.380951 38.423 1.14286 37.8686L38.8571 1.28078C39.4286 0.541626 40.1905 0.172051 41.1429 0.17205C42.0952 0.17205 42.8571 0.541626 43.4286 1.28078L49.1429 6.5472C49.9048 7.28634 50.2857 8.11789 50.2857 9.04182C50.2857 9.96575 49.9048 10.7049 49.1429 11.2593L26 32.8793L124.571 32.8793C125.524 32.8793 126.333 33.2027 127 33.8495C127.667 34.4962 128 35.2816 128 36.2055L128 43.9665C128 44.8905 127.667 45.6758 127 46.3226C126.333 46.9693 125.524 47.2927 124.571 47.2927L26 47.2927L49.1429 68.9128C49.9048 69.4672 50.2857 70.2063 50.2857 71.1302C50.2857 72.0542 49.9048 72.8857 49.1429 73.6249L43.4286 78.8913Z' fill='%23400039'/%3E%3C/svg%3E%0A")
-          32 32,
+        32 32,
         pointer;
     }
 
@@ -47,114 +59,120 @@
       left: 80%;
       right: auto;
       cursor: url("data:image/svg+xml;utf8,<svg width='128' height='128' viewBox='0 0 40 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E<path fillRule='evenodd' clipRule='evenodd' d='M26.4286 0.346475C26.6071 0.115491 26.8452 0 27.1428 0C27.4404 0 27.6785 0.115491 27.8572 0.346475L39.6428 11.7802C39.8809 11.9534 40 12.1844 40 12.4731C40 12.7618 39.8809 12.9928 39.6428 13.1661L27.8572 24.5998C27.6785 24.8308 27.4404 24.9462 27.1428 24.9462C26.8452 24.9462 26.6071 24.8308 26.4286 24.5998L24.6428 22.954C24.4047 22.723 24.2858 22.4632 24.2858 22.1744C24.2858 21.8858 24.4047 21.6546 24.6428 21.4815L31.8751 14.7252H1.07143C0.773811 14.7252 0.520832 14.6241 0.312499 14.422C0.104167 14.2199 0 13.9745 0 13.6858V11.2605C0 10.9717 0.104167 10.7263 0.312499 10.5242C0.520832 10.3221 0.773811 10.221 1.07143 10.221H31.8751L24.6428 3.46475C24.4047 3.29153 24.2858 3.06054 24.2858 2.77181C24.2858 2.48308 24.4047 2.22323 24.6428 1.99223L26.4286 0.346475Z' fill='%23400039'/%3E</svg%3E%0A")
-          32 32,
+        32 32,
         pointer;
     }
   }
 
   .item {
-    padding: 40px;
-    display: inline-flex !important;
+    display: flex !important;
+    width: 100%;
+    box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    height: 400px;
-
-    &.-ramengo {
-      background: #9ceaef;
-
-      .title {
-        color: #400039;
-      }
-    }
-
-    &.-iqcartoes {
-      background: #f992d3;
-      .title {
-        color: #400039;
-      }
-    }
-
-    &.-blueberry {
-      background: #d604c1;
-
-      .title {
-        color: white;
-      }
-
-      .tag {
-        border-color: white;
-        color: white;
-      }
-    }
-
-    &.-boavista {
-      background: #3ddc97;
-
-      .title {
-        color: #400039;
-      }
-    }
-
-    @media (min-width: 768px) {
-      padding: 0px 100px;
-      height: auto;
-    }
+    height: 80vh;
+    padding: 32px 40px;
+    cursor: pointer;
+    position: relative;
   }
+
+  // background layer — sits inside .item so react-slick's child clone
+  // never touches it; absolutely fills the item behind the content
+  .item-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  // left: tags + title
   .item .holder {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    width: 52%;
+    flex-shrink: 0;
+    position: relative;
+    padding: 80px;
+    z-index: 20;
+
     @media (min-width: 768px) {
-      width: 50%;
+      width: 48%;
     }
+
+    // right: image
     &:last-of-type {
+      position: relative;
       display: flex;
-      width: 20%;
-      justify-content: flex-start;
+      align-items: center;
+      justify-content: flex-end;
+      width: 48%;
+      height: 100%;
+      overflow: visible;
+      flex-shrink: 0;
+      z-index: 10;
 
       @media (min-width: 768px) {
-        width: 50%;
+        width: 52%;
       }
     }
   }
 
-  .item .image {
-    margin: auto;
-    width: auto;
-    max-width: none;
-    width: 400px;
-    margin-left: 0px;
-    z-index: 15;
-    padding: 180px 0px;
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
   }
 
-  .item {
-    .holder {
-      position: relative;
-      &:last-of-type {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-    .background-vector {
-      position: absolute;
-      margin: auto;
-      z-index: 14;
-      inset: auto;
-      width: 120%;
-      max-width: none;
-    }
-  }
-
-  .item .title {
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: bold;
-    color: white;
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 100px;
+    border: 1.5px solid currentColor;
+    line-height: 1;
+    white-space: nowrap;
 
     @media (min-width: 768px) {
-      font-size: 4rem;
-      line-height: 5rem;
+      font-size: 18px;
+      padding: 6px 14px;
     }
+  }
+
+  .title {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 2.6rem;
+      line-height: 3rem;
+    }
+
+    @media (min-width: 1100px) {
+      font-size: 64px;
+      line-height: 72px;
+    }
+  }
+
+  // device mockup — slightly taller than the banner so it peeks out top/bottom
+  .image {
+    display: block;
+    position: absolute;
+    right: -20%;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%) scale(1.2);
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: center center;
   }
 }

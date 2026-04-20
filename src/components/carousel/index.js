@@ -2,24 +2,12 @@ import { navigate } from "gatsby-link";
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 
-// Images
-import ramengo from "@images/carousel/ramengo.png";
-import boavista from "@images/carousel/boavista.png";
-import iqcartoes from "@images/carousel/iqcartoes.png";
-import blueberry from "@images/carousel/blueberry.png";
-
-// Vectors
-import ramengoVector from "@images/carousel/ramengo-vector.svg";
-import boavistaVector from "@images/carousel/boavista-vector.svg";
-import iqcartoesVector from "@images/carousel/iqcartoes-vector.svg";
-import blueberryVector from "@images/carousel/blueberry-vector.svg";
-
 import { LoaderContext } from "@components/Layout";
+import { getHomeProjects } from "../../data/portfolioProjects";
 
 import "./index.scss";
 
 import isClient from "@utils/isClient";
-import { StaticImage } from "gatsby-plugin-image";
 
 const Carousel = ({ inverted = false, onMount = (f) => f }) => {
   const settings = {
@@ -28,6 +16,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    
     arrows: true,
     responsive: [
       {
@@ -56,140 +45,59 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     };
   }, []);
 
-  const ramengoItem = ({ setIsLoading }) => (
-    <div
-      className="item -ramengo"
-      onClick={() => {
-        setIsLoading(true);
-        setTimeout(() => {
-          navigate("/projects/ramengo");
-        }, 600);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 1000);
-      }}
-    >
-      <div className="holder">
-        <div className="tags">
-          {["ui", "illustration", "interaction design"].map((item, index) => {
-            return (
-              <span className="tag" key={index}>
-                {item}
-              </span>
-            );
-          })}
-        </div>
-        <p className="title">RamenGo</p>
-      </div>
-      <div className="holder">
-        <img className="background-vector" src={ramengoVector} alt="" />
-        <img className="image" src={ramengo} alt="" />
-      </div>
-    </div>
-  );
+  const slides = getHomeProjects();
 
-  const boavistaItem = ({ setIsLoading }) => (
-    <div
-      className="item -boavista"
-      onClick={() => {
-        setIsLoading(true);
-        setTimeout(() => {
-          navigate("/projects/boavista");
-        }, 600);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 1000);
-      }}
-    >
-      <div className="holder">
-        <div className="tags">
-          {["ux", "research", "user interview"].map((item, index) => {
-            return (
-              <span className="tag" key={index}>
-                {item}
-              </span>
-            );
-          })}
-        </div>
-        <p className="title">iq + Boa Vista</p>
-      </div>
-      <div className="holder">
-        <img className="background-vector" src={boavistaVector} alt="" />
-        <img className="image" src={boavista} alt="" />
-      </div>
-    </div>
-  );
+  const orderedSlides = inverted
+    ? [...slides].reverse()
+    : slides;
 
   return (
     <LoaderContext.Consumer>
       {({ setIsLoading }) => (
         <Slider {...settings} className="carouseldefault">
-          {inverted
-            ? boavistaItem({ setIsLoading })
-            : ramengoItem({ setIsLoading })}
-          {!inverted
-            ? boavistaItem({ setIsLoading })
-            : ramengoItem({ setIsLoading })}
-          <div
-            className="item -iqcartoes"
-            onClick={() => {
-              setIsLoading(true);
-              setTimeout(() => {
-                navigate("/projects/iq");
-              }, 600);
-              setTimeout(() => {
-                setIsLoading(false);
-              }, 1000);
-            }}
-          >
-            <div className="holder">
-              <div className="tags">
-                {["ui", "ux", "product thinking"].map((item, index) => {
-                  return (
-                    <span className="tag" key={index}>
-                      {item}
+          {orderedSlides.map((slide) => (
+            <div
+              key={slide.id}
+              className="item"
+              onClick={() => {
+                setIsLoading(true);
+                setTimeout(() => {
+                  navigate(slide.newRoute);
+                }, 600);
+                setTimeout(() => {
+                  setIsLoading(false);
+                }, 1000);
+              }}
+            >
+              <div className="item-bg" style={{ background: slide.cardTheme.bg }} />
+              <div className="holder">
+                <div className="tags">
+                  {slide.tags.map((tag) => (
+                    <span
+                      className="tag"
+                      key={`${slide.id}-${tag}`}
+                      style={{
+                        color: slide.cardTheme.fg,
+                        borderColor: slide.cardTheme.border,
+                      }}
+                    >
+                      {tag}
                     </span>
-                  );
-                })}
+                  ))}
+                </div>
+                <p className="title" style={{ color: slide.cardTheme.fg }}>
+                  {slide.title}
+                </p>
               </div>
-              <p className="title">iq Cartões</p>
-            </div>
-            <div className="holder">
-              <img className="background-vector" src={iqcartoesVector} alt="" />
-              <img className="image" src={iqcartoes} alt="" />
-            </div>
-          </div>
-          <div
-            className="item -blueberry"
-            onClick={() => {
-              setIsLoading(true);
-              setTimeout(() => {
-                navigate("/projects/blueberry");
-              }, 600);
-              setTimeout(() => {
-                setIsLoading(false);
-              }, 1000);
-            }}
-          >
-            <div className="holder">
-              <div className="tags">
-                {["ui", "ux", "design system", "user interview"].map(
-                  (item, index) => {
-                    return (
-                      <span className="tag" key={index}>
-                        {item}
-                      </span>
-                    );
-                  }
-                )}
+              <div className="holder">
+                <img
+                  className="image"
+                  src={slide.source.imageUrl}
+                  alt={slide.title}
+                />
               </div>
-              <p className="title">Bluebery Design System</p>
             </div>
-            <div className="holder">
-              <img className="background-vector" src={blueberryVector} alt="" />
-              <img className="image" src={blueberry} alt="" />
-            </div>
-          </div>
+          ))}
         </Slider>
       )}
     </LoaderContext.Consumer>

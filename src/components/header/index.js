@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import { navigate } from "gatsby-link";
+import { useLocation } from "@reach/router";
 
 import "./index.scss";
 
@@ -11,6 +11,20 @@ import Logo from "@components/Logo";
 import { LoaderContext } from "@components/Layout";
 
 const Header = ({ className = "" }) => {
+  const location = useLocation();
+  const isAbout = location?.pathname === "/about";
+  const isWork = !isAbout;
+
+  const goTo = (path, setIsLoading) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      navigate(path);
+    }, 600);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  };
+
   return (
     <LoaderContext.Consumer>
       {({ setIsLoading }) => (
@@ -20,59 +34,30 @@ const Header = ({ className = "" }) => {
             <title>Gabiscaro | Designer and illustrator</title>
             <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
           </Helmet>
-          <div
-            className="link -left"
-            onClick={() => {
-              setIsLoading(true);
-              setTimeout(() => {
-                navigate("/illustrations");
-              }, 600);
-              setTimeout(() => {
-                setIsLoading(false);
-              }, 1000);
-            }}
-          >
-            <div className="data-scroll" data-scroll>
-              <div className="target">illustrations</div>
-            </div>
-          </div>
-          <div
-            className="logo"
-            onClick={() => {
-              setIsLoading(true);
-              setTimeout(() => {
-                navigate("/");
-              }, 600);
-              setTimeout(() => {
-                setIsLoading(false);
-              }, 1000);
-            }}
-          >
+          <div className="pill-bg" />
+          <div className="logo" onClick={() => goTo("/", setIsLoading)}>
             <div className="logo-wrapper data-scroll" data-scroll>
-              <div className="opacity" style={{ transitionDelay: "400ms" }}>
+              <div className="opacity">
                 <Logo />
               </div>
             </div>
           </div>
-          <div
-            className="link -right"
-            onClick={() => {
-              setIsLoading(true);
-              setTimeout(() => {
-                navigate("/about");
-              }, 600);
-              setTimeout(() => {
-                setIsLoading(false);
-              }, 1000);
-            }}
-          >
-            <div className="data-scroll" data-scroll>
-              <div className="target" style={{ animationDelay: "80ms" }}>
-                about
-              </div>
-            </div>
+          <div className="links">
+            <button
+              type="button"
+              className={`link ${isWork ? "-active" : ""}`}
+              onClick={() => goTo("/", setIsLoading)}
+            >
+              WORK
+            </button>
+            <button
+              type="button"
+              className={`link ${isAbout ? "-active" : ""}`}
+              onClick={() => goTo("/about", setIsLoading)}
+            >
+              ABOUT
+            </button>
           </div>
-          <hr className="line" data-scroll />
         </header>
       )}
     </LoaderContext.Consumer>

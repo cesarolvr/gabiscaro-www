@@ -43,7 +43,6 @@ const Layout = ({ children, path }) => {
           >
             <>
               {children}
-              <LogoMaster className="-hack" />
               <CSDA />
             </>
           </div>
