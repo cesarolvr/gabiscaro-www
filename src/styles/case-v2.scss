@@ -192,11 +192,16 @@
   margin: 0 auto;
   padding: 64px 20px 24px;
 
-  // Align the label with the 924px inner column used by all other sections
-  .casev2-section-label {
+  // Align label + subtitle text with the 924px inner column used by all other sections
+  .casev2-section-label,
+  .casev2-text {
     max-width: 924px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .casev2-text {
+    margin-top: 8px;
   }
 
   @media (max-width: 768px) {

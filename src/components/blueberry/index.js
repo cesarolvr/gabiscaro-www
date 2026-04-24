@@ -7,6 +7,7 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case-v2.scss";
 
 import HERO_MOCKUP from "@images/v2/shared/card-blueberry.png";
+import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import BEFORE_IMG_1 from "@images/v2/blueberry/before-1.png";
 import BEFORE_IMG_2 from "@images/v2/blueberry/before-2.png";
 import BEFORE_IMG_3 from "@images/v2/blueberry/before-3.png";
@@ -60,7 +61,12 @@ const Blueberry = () => {
             each other. So I saw an opportunity to develop a Design System.
           </p>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">My Role</p>
@@ -88,7 +94,12 @@ const Blueberry = () => {
             </ul>
           </div>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule -flip"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">Learnings</p>
@@ -115,7 +126,7 @@ const Blueberry = () => {
       {/* ── The experience before (interface inventory) ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">The experience before</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
+        <p className="casev2-text">
           Below you can see some discrepancies in our components and tokens,
           like in Buttons, Icons and Colors — different styles, different icons
           applied in components and a lot of color variants with no standard.
@@ -140,7 +151,7 @@ const Blueberry = () => {
       {/* ── After the new Design System (tokens) ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">After the new Design System</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
+        <p className="casev2-text">
           The first thing we did was to &ldquo;fix&rdquo; our issues with our
           current Design Tokens: a legacy of different shades of colors,
           non-standard typography, a ton of different and non-standard icons and
@@ -164,7 +175,7 @@ const Blueberry = () => {
       {/* ── Design components in action ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Design components</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
+        <p className="casev2-text">
           After designing the Design Tokens, we finally started to create the
           Components section: a series of standalone UI elements designed to be
           reusable, like a button. The components helped us to create the new
