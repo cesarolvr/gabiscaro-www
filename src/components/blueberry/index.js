@@ -9,13 +9,7 @@ import "@styles/case-v2.scss";
 import HERO_MOCKUP from "@images/v2/shared/card-blueberry.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import BEFORE_IMG_1 from "@images/v2/blueberry/before-1.png";
-import BEFORE_IMG_2 from "@images/v2/blueberry/before-2.png";
-import BEFORE_IMG_3 from "@images/v2/blueberry/before-3.png";
 import AFTER_IMG_1 from "@images/v2/blueberry/after-1.png";
-import AFTER_IMG_2 from "@images/v2/blueberry/after-2.png";
-import AFTER_IMG_3 from "@images/v2/blueberry/after-3.png";
-import AFTER_IMG_4 from "@images/v2/blueberry/after-4.png";
-import AFTER_IMG_5 from "@images/v2/blueberry/after-5.png";
 import APP_SCREEN_1 from "@images/v2/blueberry/app-screen-1.png";
 import APP_SCREEN_2 from "@images/v2/blueberry/app-screen-2.png";
 import APP_SCREEN_3 from "@images/v2/blueberry/app-screen-3.png";
@@ -133,19 +127,11 @@ const Blueberry = () => {
         </p>
       </div>
       <section className="casev2-strip -white">
-        <div className="casev2-strip-pad">
-          <div className="casev2-gallery -cols-2">
-            <img src={BEFORE_IMG_1} alt="Interface inventory — buttons" />
-            <img src={BEFORE_IMG_2} alt="Interface inventory — icons" />
-          </div>
-          <div style={{ marginTop: 20 }}>
-            <img
-              src={BEFORE_IMG_3}
-              alt="Interface inventory — colors"
-              style={{ width: "100%", borderRadius: 8, display: "block" }}
-            />
-          </div>
-        </div>
+        <img
+          src={BEFORE_IMG_1}
+          alt="Interface inventory — buttons, icons and colors"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       {/* ── After the new Design System (tokens) ── */}
@@ -159,17 +145,11 @@ const Blueberry = () => {
         </p>
       </div>
       <section className="casev2-strip -white">
-        <div className="casev2-strip-pad">
-          <div className="casev2-gallery -cols-3">
-            <img src={AFTER_IMG_1} alt="New design tokens — colors" />
-            <img src={AFTER_IMG_2} alt="New design tokens — typography" />
-            <img src={AFTER_IMG_3} alt="New design tokens — spacing" />
-          </div>
-          <div className="casev2-gallery -cols-2" style={{ marginTop: 20 }}>
-            <img src={AFTER_IMG_4} alt="Design system — components overview" />
-            <img src={AFTER_IMG_5} alt="Design system — grid" />
-          </div>
-        </div>
+        <img
+          src={AFTER_IMG_1}
+          alt="New design system — colors, typography and spacing"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       {/* ── Design components in action ── */}

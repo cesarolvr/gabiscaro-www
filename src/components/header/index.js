@@ -13,8 +13,9 @@ import portfolioProjects from "../../data/portfolioProjects";
 
 const Header = ({ className = "" }) => {
   const location = useLocation();
+  const isHome = location?.pathname === "/";
   const isAbout = location?.pathname === "/about";
-  const isWork = !isAbout;
+  const isWork = isHome;
 
   const currentProject = portfolioProjects.find(
     (p) => location?.pathname === p.newRoute
@@ -45,7 +46,7 @@ const Header = ({ className = "" }) => {
           <div className="pill-bg" style={{ borderColor: pillBorder }} />
           <div className="logo" onClick={() => goTo("/", setIsLoading)}>
             <div className="logo-wrapper data-scroll" data-scroll>
-              <div className="opacity">
+              <div>
                 <Logo color={textColor} />
               </div>
             </div>

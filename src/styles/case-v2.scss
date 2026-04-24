@@ -232,17 +232,19 @@
 }
 
 .casev2-strip-pad {
-  padding: 48px 20px 64px;
-  max-width: 1158px;
+  padding: 48px 10px 64px;
+  max-width: 924px;
   margin: 0 auto;
 }
 
 // ─── Screens row ─────────────────────────────────────────────────────────────
 .casev2-screens {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 16px;
+  margin: auto;
   margin-bottom: 48px;
+  max-width: 924px;
   flex-wrap: nowrap;
   overflow-x: auto;
   padding-bottom: 4px;
@@ -262,10 +264,11 @@
 }
 
 .casev2-screen-caption {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #4f4f4f;
   white-space: nowrap;
+  margin-bottom: 15px;
 }
 
 .casev2-screen {
@@ -288,7 +291,7 @@
 .casev2-bullets {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 80px;
   max-width: 924px;
   margin: 0 auto;
 
@@ -299,7 +302,7 @@
 }
 
 .casev2-bullet-title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: #400039;
   margin-bottom: 12px;
@@ -409,7 +412,7 @@
 .casev2-key-status-inner {
   display: flex;
   align-items: center;
-  max-width: 1158px;
+  max-width: 924px;
   margin: 0 auto;
   min-height: 672px;
   padding: 0 20px;
@@ -513,9 +516,15 @@
   flex-shrink: 0;
   line-height: 1;
 
-  &.-success { background: #22c55e; }
-  &.-warning { background: #f97316; }
-  &.-error   { background: #991b1b; }
+  &.-success {
+    background: #22c55e;
+  }
+  &.-warning {
+    background: #f97316;
+  }
+  &.-error {
+    background: #991b1b;
+  }
 }
 
 .casev2-key-info {

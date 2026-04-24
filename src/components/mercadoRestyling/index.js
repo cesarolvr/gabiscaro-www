@@ -53,13 +53,25 @@ const AFTER_SCREENS = [
 ];
 
 const STORE_BEFORE = [
-  storeBefore1, storeBefore2, storeBefore3, storeBefore4,
-  storeBefore5, storeBefore6, storeBefore7, storeBefore8,
+  storeBefore1,
+  storeBefore2,
+  storeBefore3,
+  storeBefore4,
+  storeBefore5,
+  storeBefore6,
+  storeBefore7,
+  storeBefore8,
 ];
 
 const STORE_AFTER = [
-  storeAfter1, storeAfter2, storeAfter3, storeAfter4,
-  storeAfter5, storeAfter6, storeAfter7, storeAfter8,
+  storeAfter1,
+  storeAfter2,
+  storeAfter3,
+  storeAfter4,
+  storeAfter5,
+  storeAfter6,
+  storeAfter7,
+  storeAfter8,
 ];
 
 const MercadoRestyling = () => {
@@ -98,13 +110,6 @@ const MercadoRestyling = () => {
             of visual rhythm, standards, and emotional connection.
           </p>
 
-          <img
-            src={LINHA_DIVISORIA}
-            className="casev2-wavy-rule"
-            alt=""
-            aria-hidden="true"
-          />
-
           <div className="casev2-gap">
             <p className="casev2-section-label">My Role</p>
             <ul className="casev2-list">
@@ -135,6 +140,13 @@ const MercadoRestyling = () => {
               Photoshop to make everything connected.
             </p>
           </div>
+
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule"
+            alt=""
+            aria-hidden="true"
+          />
         </div>
       </div>
 
@@ -185,11 +197,11 @@ const MercadoRestyling = () => {
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Journey benchmark</p>
         <p className="casev2-text">
-          We benchmarked each competitor from Mercado Pago visually, mapping
-          out each journey&apos;s touchpoints: Landing Pages, Stores, Intro
-          Screens, and the whole flow from account opening, including
-          Onboarding, and the Home screen. This was done to see the patterns
-          between them and identify possible opportunities.
+          We benchmarked each competitor from Mercado Pago visually, mapping out
+          each journey&apos;s touchpoints: Landing Pages, Stores, Intro Screens,
+          and the whole flow from account opening, including Onboarding, and the
+          Home screen. This was done to see the patterns between them and
+          identify possible opportunities.
         </p>
       </div>
       <section className="casev2-strip -dark-gray">
@@ -241,9 +253,7 @@ const MercadoRestyling = () => {
 
           <div className="casev2-bullets">
             <div>
-              <p className="casev2-bullet-title">
-                Human-centered photography
-              </p>
+              <p className="casev2-bullet-title">Human-centered photography</p>
               <p className="casev2-bullet-text">
                 Images capture more natural expressions and real-life
                 interactions, creating an emotional connection and making the
