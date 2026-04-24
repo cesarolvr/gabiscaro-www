@@ -7,6 +7,7 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case-v2.scss";
 
 import ramengoHero from "@images/v2/shared/card-ramengo.png";
+import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import image01 from "@images/ramengo/01.png";
 import image02 from "@images/ramengo/02.png";
 import image03 from "@images/ramengo/03.png";
@@ -59,7 +60,12 @@ const RamenGo = () => {
             comfort of their homes.
           </p>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">My Role</p>
@@ -70,7 +76,12 @@ const RamenGo = () => {
             </ul>
           </div>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule -flip"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">Timeline</p>
@@ -97,6 +108,10 @@ const RamenGo = () => {
       {/* ── Mobile Experience ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Mobile Experience</p>
+        <p className="casev2-text">
+          I had to create both mobile and desktop experiences. Below you can
+          check it out the mobile experience:
+        </p>
       </div>
       <section className="casev2-strip" style={{ background: "#400039" }}>
         <div className="casev2-strip-pad">
