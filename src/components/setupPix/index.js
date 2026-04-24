@@ -6,23 +6,67 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import setupPixCube from "@images/v2/shared/card-setup-pix.png";
-import pixBefore1 from "@images/v2/setup-pix/before-1.svg";
-import pixBefore2 from "@images/v2/setup-pix/before-2.svg";
-import pixAfterHero from "@images/v2/shared/card-setup-pix.png";
+// Shared assets
+import HERO_MOCKUP from "@images/v2/shared/card-setup-pix.png"; // → replace with pix-hero-mockup.png
+import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
+
+// Before screens
+import BEFORE_1 from "@images/v2/setup-pix/before-1.png"; // Setup Pix
+import BEFORE_2 from "@images/v2/setup-pix/before-2.png"; // Loading
+import BEFORE_3 from "@images/v2/setup-pix/before-3.png"; // Final Status
+import BEFORE_4 from "@images/v2/setup-pix/before-4.png"; // Feedback Screen
+
+// After screens
+import AFTER_1 from "@images/v2/setup-pix/after-1.png"; // Setup Pix
+import AFTER_2 from "@images/v2/setup-pix/after-2.png"; // Loading
+import AFTER_3 from "@images/v2/setup-pix/after-3.png"; // Final Status
+import AFTER_4 from "@images/v2/setup-pix/after-4.png"; // Feedback Screen
+
+// Key status section
+import KEY_STATUS_PHONE from "@images/v2/setup-pix/key-status-phone.png";
 
 const PIX_BEFORE_SCREENS = [
-  { caption: "Setup Pix", src: pixBefore1 },
-  { caption: "Loading", src: pixBefore2 },
-  { caption: "Final Status", src: pixBefore1 },
-  { caption: "Feedback Screen", src: pixBefore2 },
+  { caption: "Setup Pix", src: BEFORE_1 },
+  { caption: "Loading", src: BEFORE_2 },
+  { caption: "Final Status", src: BEFORE_3 },
+  { caption: "Feedback Screen", src: BEFORE_4 },
 ];
 
 const PIX_AFTER_SCREENS = [
-  { caption: "Setup Pix", src: pixAfterHero },
-  { caption: "Loading", src: pixAfterHero },
-  { caption: "Final Status", src: pixAfterHero },
-  { caption: "Feedback Screen", src: pixAfterHero },
+  { caption: "Setup Pix", src: AFTER_1 },
+  { caption: "Loading", src: AFTER_2 },
+  { caption: "Final Status", src: AFTER_3 },
+  { caption: "Feedback Screen", src: AFTER_4 },
+];
+
+const PIX_KEY_STATUSES = [
+  {
+    value: "222.234.567-98",
+    status: "Cadastrada com sucesso",
+    state: "success",
+  },
+  {
+    value: "(11) 99540-9315",
+    status: "Pendente de reivindicação",
+    state: "warning",
+    action: "Iniciar",
+  },
+  {
+    value: "222.234.567-98",
+    status: "Pendente de portabilidade",
+    state: "warning",
+    action: "Iniciar",
+  },
+  {
+    value: "test@mail.com.br",
+    status: "Erro de cadastro",
+    state: "error",
+  },
+  {
+    value: "X9sjchdks-gbskd.comsh",
+    status: "Indisponível",
+    state: "error",
+  },
 ];
 
 const SetupPix = () => {
@@ -34,7 +78,7 @@ const SetupPix = () => {
       <section className="casev2-hero" style={{ background: "#9ceaef" }}>
         <img
           className="casev2-hero-mockup"
-          src={setupPixCube}
+          src={HERO_MOCKUP}
           alt=""
           aria-hidden="true"
         />
@@ -62,8 +106,6 @@ const SetupPix = () => {
             and we needed to adapt the experience.
           </p>
 
-          <hr className="casev2-rule" />
-
           <div className="casev2-gap">
             <p className="casev2-section-label">My Role</p>
             <ul className="casev2-list">
@@ -79,7 +121,12 @@ const SetupPix = () => {
             </ul>
           </div>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule -flip"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">Impact</p>
@@ -101,6 +148,12 @@ const SetupPix = () => {
               </div>
             </div>
           </div>
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule"
+            alt=""
+            aria-hidden="true"
+          />
         </div>
       </div>
 
@@ -155,7 +208,7 @@ const SetupPix = () => {
       <div className="casev2-strip-header">
         <p className="casev2-section-label">The experience now</p>
       </div>
-      <section className="casev2-strip -white">
+      <section className="casev2-strip -light-cyan">
         <div className="casev2-strip-pad">
           <div className="casev2-screens">
             {PIX_AFTER_SCREENS.map((s) => (
@@ -167,7 +220,10 @@ const SetupPix = () => {
               </div>
             ))}
           </div>
-
+        </div>
+      </section>
+      <section className="casev2-strip">
+        <div className="casev2-strip-pad">
           <div className="casev2-bullets">
             <div>
               <p className="casev2-bullet-title">Clear visual hierarchy</p>
@@ -178,9 +234,7 @@ const SetupPix = () => {
               </p>
             </div>
             <div>
-              <p className="casev2-bullet-title">
-                Transparent system feedback
-              </p>
+              <p className="casev2-bullet-title">Transparent system feedback</p>
               <p className="casev2-bullet-text">
                 Each stage of the process clearly communicates what is
                 happening, reducing uncertainty and reinforcing user confidence.
@@ -193,6 +247,41 @@ const SetupPix = () => {
                 messaging, guiding users through decisions and next steps with
                 less friction.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Some key status ── */}
+      <section className="casev2-key-status-strip">
+        <div className="casev2-key-status-inner">
+          <div className="casev2-key-status-phone">
+            <img
+              src={KEY_STATUS_PHONE}
+              alt="Pix key registration status screen"
+            />
+          </div>
+          <div className="casev2-key-status-content">
+            <p className="casev2-section-label">Some key status</p>
+            <div className="casev2-key-list">
+              {PIX_KEY_STATUSES.map((item, i) => (
+                <div className="casev2-key-card" key={i}>
+                  <span className={`casev2-key-icon -${item.state}`}>
+                    {item.state === "success"
+                      ? "✓"
+                      : item.state === "warning"
+                      ? "!"
+                      : "−"}
+                  </span>
+                  <div className="casev2-key-info">
+                    <p className="casev2-key-value">{item.value}</p>
+                    <p className="casev2-key-desc">{item.status}</p>
+                  </div>
+                  {item.action && (
+                    <span className="casev2-key-action">{item.action}</span>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
