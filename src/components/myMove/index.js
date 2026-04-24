@@ -25,6 +25,7 @@ import illus16 from "@images/16.png";
 import illus17 from "@images/17.png";
 import illus18 from "@images/18.png";
 import HERO_MOCKUP from "@images/v2/shared/card-mymove.png";
+import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import mmProcess1 from "@images/v2/mymove/process-1.svg";
 import mmProcess2 from "@images/v2/mymove/process-2.png";
 import mmProcess3 from "@images/v2/mymove/process-3.png";
@@ -69,24 +70,29 @@ const MyMove = () => {
             Helping a team to communicate ideas through illustrations
           </h1>
           <p className="casev2-desc">
-            During my time at Red Ventures, I was asked to help one of the
-            B2B teams helping the future-home illustrators for My Move website
-            and app.
+            During my time at Red Ventures, I was approached by some people
+            from the US team asking me to do some illustrations to My Move
+            website and app.
           </p>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">My Role</p>
             <ul className="casev2-list">
+              <li>Create the concepts for medium size illustrations;</li>
               <li>
-                Create concepts for medium-size illustrations;
+                Work with a limited color palette, based on the shared
+                moodboard;
               </li>
+              <li>Make each and every illustration work together;</li>
               <li>
-                Work within a limited color palette from the moodboard;
-              </li>
-              <li>
-                Keep all illustrations consistent across applications.
+                Align with their marketing team the solutions I made.
               </li>
             </ul>
           </div>
@@ -96,10 +102,8 @@ const MyMove = () => {
       {/* ── Moodboard ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Moodboard</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
-          Before starting the illustrations, we defined the visual direction
-          through a moodboard — exploring references for style, color palette,
-          character expression, and overall feel.
+        <p className="casev2-text">
+          Below there is the moodboard shared by My Move&apos;s marketing team.
         </p>
       </div>
       <section className="casev2-strip -white">
@@ -113,9 +117,9 @@ const MyMove = () => {
       {/* ── Process ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Process</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
-          Initial concepts started on paper, then were vectorized and finalized
-          with a shared palette and consistent geometry.
+        <p className="casev2-text">
+          I started to work on paper, then I vectorized it and finally I added
+          the color palette.
         </p>
       </div>
       <section className="casev2-strip -white">
@@ -135,9 +139,10 @@ const MyMove = () => {
       {/* ── Final Illustrations ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Final Illustrations</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
-          Every illustration keeps the same dimensions, enabling flexible reuse
-          across multiple UI contexts and background colors.
+        <p className="casev2-text">
+          I guaranteed that each and every illustration had the same width and
+          height, so they could be used in any place. Also, they should work in
+          different color backgrounds.
         </p>
       </div>
       <section className="casev2-strip -white">
@@ -175,7 +180,7 @@ const MyMove = () => {
       {/* ── Application ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Application</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
+        <p className="casev2-text">
           The illustrations were applied across the My Move web and app
           surfaces, each adapting to the context while maintaining consistency.
         </p>
