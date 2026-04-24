@@ -7,6 +7,7 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case-v2.scss";
 
 import HERO_MOCKUP from "@images/v2/shared/card-restyling.png";
+import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import resBefore1 from "@images/v2/restyling/before-1.png";
 import resBefore2 from "@images/v2/restyling/before-2.png";
 import resBefore3 from "@images/v2/restyling/before-3.png";
@@ -97,7 +98,12 @@ const MercadoRestyling = () => {
             of visual rhythm, standards, and emotional connection.
           </p>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">My Role</p>
@@ -113,7 +119,12 @@ const MercadoRestyling = () => {
             </ul>
           </div>
 
-          <hr className="casev2-rule" />
+          <img
+            src={LINHA_DIVISORIA}
+            className="casev2-wavy-rule -flip"
+            alt=""
+            aria-hidden="true"
+          />
 
           <div className="casev2-gap">
             <p className="casev2-section-label">Learnings</p>
@@ -173,7 +184,7 @@ const MercadoRestyling = () => {
       {/* ── Journey benchmark ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Journey benchmark</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
+        <p className="casev2-text">
           We benchmarked each competitor from Mercado Pago visually, mapping
           out each journey&apos;s touchpoints: Landing Pages, Stores, Intro
           Screens, and the whole flow from account opening, including
@@ -264,7 +275,7 @@ const MercadoRestyling = () => {
       {/* ── Bonus: App Stores ── */}
       <div className="casev2-strip-header">
         <p className="casev2-section-label">Bonus: App Stores</p>
-        <p className="casev2-text" style={{ maxWidth: 924, marginTop: 8 }}>
+        <p className="casev2-text">
           Before rebranding, Mercado Pago&apos;s visual identity was blue, so
           changing everything to yellow was a big opportunity to bring more
           personality, and a cohesive and recognizable visual language to the
