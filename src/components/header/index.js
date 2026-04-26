@@ -9,20 +9,12 @@ import favicon from "../../images/favicon.svg";
 
 import Logo from "@components/Logo";
 import { LoaderContext } from "@components/Layout";
-import portfolioProjects from "../../data/portfolioProjects";
 
 const Header = ({ className = "" }) => {
   const location = useLocation();
   const isHome = location?.pathname === "/";
   const isAbout = location?.pathname === "/about";
-  const isWork = isHome;
-
-  const currentProject = portfolioProjects.find(
-    (p) => location?.pathname === p.newRoute
-  );
-  const theme = currentProject?.cardTheme ?? null;
-  const pillBorder = theme?.border ?? "#9ceaef";
-  const textColor = theme?.fg ?? "#400039";
+  const isWork = isHome || location?.pathname?.startsWith("/projects");
 
   const goTo = (path, setIsLoading) => {
     setIsLoading(true);
@@ -43,11 +35,11 @@ const Header = ({ className = "" }) => {
             <title>Gabiscaro | Designer and illustrator</title>
             <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
           </Helmet>
-          <div className="pill-bg" style={{ borderColor: pillBorder }} />
+          <div className="pill-bg" />
           <div className="logo" onClick={() => goTo("/", setIsLoading)}>
             <div className="logo-wrapper data-scroll" data-scroll>
               <div>
-                <Logo color={textColor} />
+                <Logo color="#400039" />
               </div>
             </div>
           </div>
@@ -55,7 +47,6 @@ const Header = ({ className = "" }) => {
             <button
               type="button"
               className={`link ${isWork ? "-active" : ""}`}
-              style={{ color: textColor }}
               onClick={() => goTo("/", setIsLoading)}
             >
               WORK
@@ -63,7 +54,6 @@ const Header = ({ className = "" }) => {
             <button
               type="button"
               className={`link ${isAbout ? "-active" : ""}`}
-              style={{ color: textColor }}
               onClick={() => goTo("/about", setIsLoading)}
             >
               ABOUT

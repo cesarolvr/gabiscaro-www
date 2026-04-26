@@ -16,7 +16,7 @@
     inset: 13px 0;
     border: 1px solid #9ceaef;
     border-radius: 96px;
-    background: rgba(250, 247, 239, 0.5);
+    background: rgba(250, 247, 239, 0.4);
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
     z-index: 1;
@@ -59,7 +59,6 @@
   }
 
   .link.-active {
-    border-bottom-color: #400039;
     border-bottom: 2px solid #400039;
   }
 

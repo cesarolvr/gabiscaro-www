@@ -165,7 +165,11 @@ const MercadoRestyling = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
+      <section className="casev2-strip">
+        <div className="casev2-strip-pad">
           <div className="casev2-bullets">
             <div>
               <p className="casev2-bullet-title">Generic photography</p>
@@ -204,10 +208,20 @@ const MercadoRestyling = () => {
           identify possible opportunities.
         </p>
       </div>
-      <section className="casev2-strip -dark-gray">
-        <div className="casev2-strip-pad">
-          <div className="casev2-full-img">
-            <img src={BENCHMARK_IMG} alt="Journey benchmark" />
+      <section
+        className="casev2-strip -dark-gray"
+        style={{ height: "670px;", overflow: "hidden", padding: "70px 0 0 0" }}
+      >
+        <div
+          className="casev2-strip-pad"
+          style={{ height: "100%", padding: 0 }}
+        >
+          <div className="casev2-full-img" style={{ position: "relative" }}>
+            <img
+              src={BENCHMARK_IMG}
+              alt="Journey benchmark"
+              style={{ height: "100%", width: "auto" }}
+            />
           </div>
         </div>
       </section>
@@ -250,7 +264,11 @@ const MercadoRestyling = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
+      <section className="casev2-strip">
+        <div className="casev2-strip-pad">
           <div className="casev2-bullets">
             <div>
               <p className="casev2-bullet-title">Human-centered photography</p>

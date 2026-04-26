@@ -18,7 +18,7 @@
 }
 
 .casev2-hero-mockup {
-  height: 115%;
+  height: 100%;
   width: auto;
   object-fit: contain;
   margin-top: 8%;
@@ -231,23 +231,23 @@
   }
 }
 
+.-gray {
+  background: #EEEEEE;
+}
+
 .casev2-strip-pad {
   padding: 48px 10px 64px;
-  max-width: 924px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 // ─── Screens row ─────────────────────────────────────────────────────────────
 .casev2-screens {
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin: auto;
-  margin-bottom: 48px;
-  max-width: 924px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0px;
 
   @media (max-width: 768px) {
     gap: 10px;

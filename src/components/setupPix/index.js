@@ -173,7 +173,11 @@ const SetupPix = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
+      <section className="casev2-strip">
+        <div className="casev2-strip-pad">
           <div className="casev2-bullets">
             <div>
               <p className="casev2-bullet-title">
