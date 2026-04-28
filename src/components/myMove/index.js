@@ -103,8 +103,8 @@ const MyMove = () => {
           style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 0 64px" }}
         >
           <img
-            src={ILLUSTRATIONS_FINAL}
-            alt="Final illustrations — full icon set"
+            src={mmProcessCombined}
+            alt="Process — sketch, vector and final illustration"
             style={{ width: "100%", display: "block" }}
           />
         </div>
@@ -124,8 +124,8 @@ const MyMove = () => {
           style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 0 64px" }}
         >
           <img
-            src={APPLICATION_IN_USE}
-            alt="Application — illustrations in use across My Move"
+            src={ILLUSTRATIONS_FINAL}
+            alt="Final illustrations — full icon set"
             style={{ width: "100%", display: "block", borderRadius: 16 }}
           />
         </div>
@@ -144,8 +144,8 @@ const MyMove = () => {
           style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 0 64px" }}
         >
           <img
-            src={mmProcessCombined}
-            alt="Process — sketch, vector and final illustration"
+            src={APPLICATION_IN_USE}
+            alt="Application — illustrations in use across My Move"
             style={{ width: "100%", display: "block", borderRadius: 16 }}
           />
         </div>
