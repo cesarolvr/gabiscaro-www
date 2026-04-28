@@ -116,6 +116,7 @@
     margin-bottom: 20px;
     margin-top: -30px;
     padding-left: 80px;
+    max-width: 500px;
   }
 
   .tag {
@@ -140,7 +141,7 @@
     font-size: 1.6rem;
     line-height: 1.8rem;
     font-weight: 800;
-    text-transform: uppercase;
+    text-transform: none;
     margin: 0;
     max-width: 500px;
     padding-left: 80px;
