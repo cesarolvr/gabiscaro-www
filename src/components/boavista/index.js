@@ -1,6 +1,5 @@
 import React from "react";
 
-import { BoavistaIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 import DividerWithIllustration from "../dividerWithIllustration";
 
@@ -20,9 +19,6 @@ const BoaVista = () => {
       <section className="casesection -hero">
         <div className="container">
           <div className="thumb" data-scroll>
-            <div className="opacity" style={{ transitionDelay: "200ms" }}>
-              <BoavistaIllustration filled />
-            </div>
             <img
               className="image opacity"
               style={{ transitionDelay: "400ms" }}
