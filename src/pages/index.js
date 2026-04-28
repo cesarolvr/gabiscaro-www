@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { navigate } from "gatsby-link";
 
 import Header from "@components/header";
@@ -23,6 +23,20 @@ import introTopete from "../images/v2/home/intro-topete.svg";
 const Home = () => {
   const [isOpened, setIsOpened] = useState(true);
   const homeProjects = getHomeProjects().slice(0, 5);
+  const backdropRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!backdropRef.current) return;
+      const scrollY = window.scrollY;
+      const vh = window.innerHeight;
+      const progress = Math.min(scrollY / vh, 1);
+      const rotation = progress * 30;
+      backdropRef.current.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const variation = getVariation(3000, 3600, 10);
@@ -66,6 +80,7 @@ const Home = () => {
                 aria-hidden="true"
               />
               <img
+                ref={backdropRef}
                 className="home-intro-backdrop"
                 src={titleBackdrop}
                 alt=""

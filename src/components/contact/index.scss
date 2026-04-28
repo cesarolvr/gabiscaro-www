@@ -1,3 +1,31 @@
+@keyframes float-a {
+  0%   { transform: translate(0px, 0px); }
+  33%  { transform: translate(4px, -6px); }
+  66%  { transform: translate(-3px, -4px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-b {
+  0%   { transform: translate(0px, 0px); }
+  33%  { transform: translate(-3px, -5px); }
+  66%  { transform: translate(2px, -3px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-c {
+  0%   { transform: translate(0px, 0px); }
+  33%  { transform: translate(-4px, -4px); }
+  66%  { transform: translate(3px, -6px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-d-contact {
+  0%   { transform: rotate(180deg) translate(0px, 0px); }
+  33%  { transform: rotate(180deg) translate(3px, -5px); }
+  66%  { transform: rotate(180deg) translate(-2px, -3px); }
+  100% { transform: rotate(180deg) translate(0px, 0px); }
+}
+
 .contact {
   background: #3f003b;
   width: 100%;
@@ -31,36 +59,42 @@
     left: 80px;
     top: 42px;
     width: 130px;
+    animation: float-a 6s ease-in-out infinite;
   }
 
   .deco.-top-center {
     left: 45%;
     top: 0px;
     width: 308px;
+    animation: float-c 7s ease-in-out infinite 0.8s;
   }
 
   .deco.-top-right {
     right: 46px;
     top: 34px;
     width: 213px;
+    animation: float-b 5.5s ease-in-out infinite 0.3s;
   }
 
   .deco.-character-main {
     right: 15%;
     top: 20%;
     width: 361px;
+    animation: float-a 8s ease-in-out infinite 1.2s;
   }
 
   .deco.-star-main {
     right: 35%;
     top: 40%;
     width: 213px;
+    animation: float-c 6.5s ease-in-out infinite 0.5s;
   }
 
   .deco.-bottom-left {
     left: 0;
     top: 50%;
     width: 308px;
+    animation: float-b 7.5s ease-in-out infinite 1s;
   }
 
   .deco.-bottom-center {
@@ -68,18 +102,21 @@
     top: 60%;
     transform: rotate(180deg);
     width: 184px;
+    animation: float-d-contact 6s ease-in-out infinite 0.2s;
   }
 
   .deco.-bottom-right {
     right: 15%;
     top: 60%;
     width: 220px;
+    animation: float-a 5s ease-in-out infinite 1.5s;
   }
 
   .deco.-character-bottom {
     left: 45%;
     bottom: 0;
     width: 292px;
+    animation: float-c 9s ease-in-out infinite 0.7s;
   }
 
   .contact-content {
