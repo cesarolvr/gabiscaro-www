@@ -63,6 +63,38 @@ a {
   z-index: 1;
 }
 
+@keyframes float-a {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(10px, -14px); }
+  50%  { transform: translate(6px, -20px); }
+  75%  { transform: translate(-8px, -10px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-b {
+  0%   { transform: translate(0px, 0px) scaleX(-1); }
+  25%  { transform: translate(-8px, -12px) scaleX(-1); }
+  50%  { transform: translate(-4px, -18px) scaleX(-1); }
+  75%  { transform: translate(6px, -8px) scaleX(-1); }
+  100% { transform: translate(0px, 0px) scaleX(-1); }
+}
+
+@keyframes float-c {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(-10px, -10px); }
+  50%  { transform: translate(-6px, -16px); }
+  75%  { transform: translate(8px, -6px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-d {
+  0%   { transform: rotate(135deg) translate(0px, 0px); }
+  25%  { transform: rotate(135deg) translate(8px, -12px); }
+  50%  { transform: rotate(135deg) translate(4px, -18px); }
+  75%  { transform: rotate(135deg) translate(-6px, -8px); }
+  100% { transform: rotate(135deg) translate(0px, 0px); }
+}
+
 .home-intro-deco {
   position: absolute;
   pointer-events: none;
@@ -78,6 +110,7 @@ a {
   top: 30%;
   width: 258px;
   z-index: 20;
+  animation: float-a 5s ease-in-out infinite;
 }
 
 .home-intro-deco.-vector {
@@ -85,6 +118,7 @@ a {
   top: 20%;
   transform: scaleX(-1);
   width: 175px;
+  animation: float-b 6.5s ease-in-out infinite;
 }
 
 .home-intro-deco.-group-61 {
@@ -92,6 +126,7 @@ a {
   bottom: 10%;
   width: 288px;
   z-index: 20;
+  animation: float-c 7s ease-in-out infinite 1s;
 }
 
 .home-intro-deco.-topete {
@@ -100,6 +135,7 @@ a {
   width: 213px;
   transform: rotate(135deg);
   z-index: 20;
+  animation: float-d 5.5s ease-in-out infinite 0.5s;
 }
 
 .home-grid {
