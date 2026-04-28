@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { IqCartoesIllustration } from "@components/illustrations";
 import Carousel from "@components/carousel";
 import DividerWithIllustration from "../dividerWithIllustration";
 
@@ -12,11 +11,8 @@ import iqTable from "@images/iqtable.svg";
 import iqHyphotesis from "@images/iq-hyphotesis.svg";
 
 // Videos
-import iqbefore from "@videos/iq-1-Before.mp4";
-import iqafter from "@videos/iq-2-After.mp4";
 import iqaccordion from "@videos/iq-3-Accordion.mp4";
 import iqcards from "@videos/iq-4-Cards.mp4";
-import iqfinal from "@videos/iq-5-Final.mp4";
 
 import useScroll from "@hooks/useScroll";
 
@@ -32,9 +28,6 @@ const IQ = () => {
       <section className="casesection -hero">
         <div className="container">
           <div className="thumb" data-scroll>
-            <div className="opacity" style={{ transitionDelay: "200ms" }}>
-              <IqCartoesIllustration filled />
-            </div>
             <img
               className="image opacity"
               style={{ transitionDelay: "400ms" }}
