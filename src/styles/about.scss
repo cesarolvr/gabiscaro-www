@@ -32,6 +32,25 @@
   background: #faf7ef;
   color: #400039;
 
+  // Global `animation.scss` uses `display: inline-block` on `[data-scroll]` at
+  // large breakpoints — restore block layout so the skills/experience grid works.
+  [data-scroll] {
+    @media (min-width: 1200px) {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  // Slight delay after Locomotive adds `is-inview` before the reveal runs
+  [data-scroll].is-inview .target {
+    animation-delay: 0.65s;
+  }
+
+  .about-hero-reveal[data-scroll] {
+    overflow: visible;
+  }
+
   .container {
     max-width: 1158px;
     margin: 0 auto;
@@ -87,10 +106,6 @@
     .profile-image {
       overflow: visible;
     }
-  }
-
-  .about-profile[data-scroll] {
-    overflow: visible;
   }
 
   .about-intro {

@@ -27,7 +27,7 @@ const useScroll = () => {
             // repeat: true
           });
         });
-      }, 3700);
+      }, 4500);
     }
     return () => {
       window.Locomotive = null;
