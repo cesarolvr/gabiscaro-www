@@ -254,7 +254,7 @@ const MercadoRestyling = () => {
       </div>
 
       {/* ── Cross-navigation ── */}
-      <Carousel />
+      <Carousel currentProjectId="mercado-pago-restyling" />
 
       <Contact />
     </div>

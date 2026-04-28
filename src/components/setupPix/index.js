@@ -253,7 +253,7 @@ const SetupPix = () => {
       </section>
 
       {/* ── Cross-navigation ── */}
-      <Carousel />
+      <Carousel currentProjectId="setup-pix" />
 
       <Contact />
     </div>

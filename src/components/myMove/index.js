@@ -152,7 +152,7 @@ const MyMove = () => {
       </section>
 
       {/* ── Cross-navigation ── */}
-      <Carousel />
+      <Carousel currentProjectId="my-move-illustrations" />
 
       <Contact />
     </div>

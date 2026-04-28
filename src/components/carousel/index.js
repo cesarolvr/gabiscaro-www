@@ -9,14 +9,19 @@ import "./index.scss";
 
 import isClient from "@utils/isClient";
 
-const Carousel = ({ inverted = false, onMount = (f) => f }) => {
+const Carousel = ({ currentProjectId = null, onMount = (f) => f }) => {
+  const slides = getHomeProjects();
+
+  const currentIndex = slides.findIndex((s) => s.id === currentProjectId);
+  const initialSlide = currentIndex >= 0 ? (currentIndex + 1) % slides.length : 0;
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    
+    initialSlide,
     arrows: true,
     responsive: [
       {
@@ -45,11 +50,7 @@ const Carousel = ({ inverted = false, onMount = (f) => f }) => {
     };
   }, []);
 
-  const slides = getHomeProjects();
-
-  const orderedSlides = inverted
-    ? [...slides].reverse()
-    : slides;
+  const orderedSlides = slides;
 
   return (
     <LoaderContext.Consumer>

@@ -187,7 +187,7 @@ const Blueberry = () => {
       </div>
 
       {/* ── Cross-navigation ── */}
-      <Carousel inverted />
+      <Carousel currentProjectId="blueberry-design-system" />
 
       <Contact />
     </div>

@@ -118,7 +118,7 @@ const RamenGo = () => {
       </section>
 
       {/* ── Cross-navigation ── */}
-      <Carousel />
+      <Carousel currentProjectId="ramengo" />
 
       <Contact />
     </div>
