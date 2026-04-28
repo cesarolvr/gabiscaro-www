@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classnames from "classnames";
 
-import LogoMaster from "@components/logoMaster";
 import CSDA from "@components/CSDA";
 
 export const LoaderContext = React.createContext(false);
