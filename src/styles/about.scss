@@ -35,6 +35,8 @@
   // Global `animation.scss` uses `display: inline-block` on `[data-scroll]` at
   // large breakpoints — restore block layout so the skills/experience grid works.
   [data-scroll] {
+    overflow: hidden;
+
     @media (min-width: 1200px) {
       display: block;
       width: 100%;
@@ -42,12 +44,14 @@
     }
   }
 
-  // Slight delay after Locomotive adds `is-inview` before the reveal runs
+  // Line-by-line: each `[data-scroll]` gets `is-inview` from Locomotive; stagger
+  // so lines do not all fire the slide-up at once.
   [data-scroll].is-inview .target {
-    animation-delay: 0.65s;
+    animation-delay: calc(0.45s + var(--reveal-stagger, 0) * 0.065s);
   }
 
-  .about-hero-reveal[data-scroll] {
+  // Keep hero floating elements from being clipped by the reveal mask.
+  .about-hero-reveal [data-scroll] {
     overflow: visible;
   }
 
@@ -108,10 +112,18 @@
     }
   }
 
-  .about-intro {
+  .about-intro-line {
     font-size: 24px;
     line-height: 48px;
-    margin: 0;
+    margin: 0 0 0.85em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .target {
+      display: block;
+    }
 
     span {
       color: #fd4d40;
@@ -128,6 +140,10 @@
     font-size: 32px;
     font-weight: 800;
     text-transform: uppercase;
+
+    .target {
+      display: block;
+    }
   }
 
   .about-love p {
@@ -135,7 +151,11 @@
     font-size: 24px;
     line-height: 48px;
 
-    span {
+    .target {
+      display: block;
+    }
+
+    .about-love-highlight {
       color: #fd4d40;
     }
   }
@@ -191,12 +211,20 @@
   .skills .list .item {
     font-size: 24px;
     line-height: 56px;
+
+    .target {
+      display: block;
+    }
   }
 
   .experience .list {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .experience-resume {
+    list-style: none;
   }
 
   .experience-group {
@@ -259,7 +287,7 @@
       height: 220px;
     }
 
-    .about-intro,
+    .about-intro-line,
     .about-love p {
       font-size: 18px;
       line-height: 32px;

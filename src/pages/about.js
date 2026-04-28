@@ -25,6 +25,22 @@ const SKILLS_RIGHT = [
   "Design System",
 ];
 
+const INTRO_LINES = [
+  <>
+    Hello, I&apos;m <span>Gabriela Biscáro</span>, a Product Designer and passionate
+    Illustrator based in São Paulo, Brazil.
+  </>,
+  <>
+    Currently I&apos;m working at Mercado Livre, one of the biggest companies in
+    Latin America, where I have an opportunity to explore a lot of UX processes to
+    improve the usability for our users.
+  </>,
+  <>
+    I&apos;m very efficient in everything I do and I take care of the smallest
+    details in each delivery.
+  </>,
+];
+
 const EXPERIENCES = [
   {
     company: "Mercado Livre",
@@ -72,95 +88,118 @@ const About = () => {
             <div className="about-hero-deco -top-left" />
             <div className="about-hero-deco -top-center" />
             <div className="about-hero-content">
-              <div className="about-hero-reveal" data-scroll>
-                <div className="target">
-                  <div className="about-profile">
-                    <StaticImage
-                      className="profile-image"
-                      src="../images/gabiscaro.png"
-                      alt=""
-                    />
+              <div className="about-hero-reveal">
+                <div data-scroll style={{ "--reveal-stagger": 0 }}>
+                  <div className="target">
+                    <div className="about-profile">
+                      <StaticImage
+                        className="profile-image"
+                        src="../images/gabiscaro.png"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                  <p className="about-intro">
-                    Hello, I&apos;m <span>Gabriela Biscáro</span>, a Product Designer
-                    and passionate Illustrator based in São Paulo, Brazil. Currently
-                    I&apos;m working at Mercado Livre, one of the biggest companies
-                    in Latin America, where I have an opportunity to explore a lot of
-                    UX processes to improve the usability for our users. I&apos;m very
-                    efficient in everything I do and I take care of the smallest
-                    details in each delivery.
-                  </p>
                 </div>
+                {INTRO_LINES.map((line, i) => (
+                  <p
+                    className="about-intro-line"
+                    key={i}
+                    data-scroll
+                    style={{ "--reveal-stagger": i + 1 }}
+                  >
+                    <span className="target">{line}</span>
+                  </p>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
         <section className="about-love">
-          <div className="container" data-scroll>
-            <div className="target">
-              <h2>SOME THINGS I LOVE:</h2>
-              <p>
+          <div className="container about-love-reveal">
+            <h2 data-scroll style={{ "--reveal-stagger": 0 }}>
+              <span className="target">SOME THINGS I LOVE:</span>
+            </h2>
+            <p data-scroll style={{ "--reveal-stagger": 1 }}>
+              <span className="target">
                 The color blue, but also red; Try and cook different types of vegan
                 food; Watch cooking competition shows; K-POP music videos; Bus
-                commute; Watch &amp; read My Brilliant Friend; <span>My dog</span>{" "}
+                commute; Watch &amp; read My Brilliant Friend;{" "}
+                <span className="about-love-highlight">My dog</span>{" "}
                 (Batatinha, or Little Potato); Hear the words I Love You; Find new
                 things to love {"<3"}
-              </p>
-            </div>
+              </span>
+            </p>
           </div>
         </section>
 
         <section className="skills">
           <div className="container">
-            <div className="title" data-scroll>
+            <div className="title" data-scroll style={{ "--reveal-stagger": 0 }}>
               <div className="target">SKILLS</div>
             </div>
-            <div className="list-wrapper" data-scroll>
-              <div className="target">
-                <div className="list">
-                  <div className="column">
-                    {SKILLS_LEFT.map((skill) => (
-                      <div className="item" key={skill}>
-                        {skill}
-                      </div>
-                    ))}
+            <div className="list">
+              <div className="column">
+                {SKILLS_LEFT.map((skill, i) => (
+                  <div
+                    className="item"
+                    key={skill}
+                    data-scroll
+                    style={{ "--reveal-stagger": i * 2 }}
+                  >
+                    <div className="target">{skill}</div>
                   </div>
-                  <div className="column">
-                    {SKILLS_RIGHT.map((skill) => (
-                      <div className="item" key={skill}>
-                        {skill}
-                      </div>
-                    ))}
+                ))}
+              </div>
+              <div className="column">
+                {SKILLS_RIGHT.map((skill, i) => (
+                  <div
+                    className="item"
+                    key={skill}
+                    data-scroll
+                    style={{ "--reveal-stagger": i * 2 + 1 }}
+                  >
+                    <div className="target">{skill}</div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
         <section className="experience">
           <div className="container">
-            <div className="title" data-scroll>
+            <div className="title" data-scroll style={{ "--reveal-stagger": 0 }}>
               <div className="target">EXPERIENCE</div>
             </div>
-            <div className="experience-body" data-scroll>
-              <div className="target">
-                <ul className="list">
-                  {EXPERIENCES.map((group) => (
-                    <li className="experience-group" key={group.company}>
-                      <p className="subtitle">{group.company}</p>
-                      {group.rows.map((row) => (
-                        <div className="item" key={`${group.company}-${row.role}`}>
-                          <p className="company">{row.role}</p>
-                          <div className="icon">
-                            <IconArrow color={row.color} />
-                          </div>
-                          <p className="duration">{row.period}</p>
+            <ul className="list experience-list">
+              {EXPERIENCES.map((group, groupIndex) => (
+                <li
+                  className="experience-group"
+                  key={group.company}
+                  data-scroll
+                  style={{ "--reveal-stagger": groupIndex }}
+                >
+                  <div className="target">
+                    <p className="subtitle">{group.company}</p>
+                    {group.rows.map((row) => (
+                      <div className="item" key={`${group.company}-${row.role}`}>
+                        <p className="company">{row.role}</p>
+                        <div className="icon">
+                          <IconArrow color={row.color} />
                         </div>
-                      ))}
-                      <hr className="line" />
-                    </li>
-                  ))}
+                        <p className="duration">{row.period}</p>
+                      </div>
+                    ))}
+                    <hr className="line" />
+                  </div>
+                </li>
+              ))}
+              <li
+                className="experience-resume"
+                data-scroll
+                style={{ "--reveal-stagger": EXPERIENCES.length }}
+              >
+                <div className="target">
                   <a
                     href="resume-gabriela-biscaro.pdf"
                     className="myprofile"
@@ -185,9 +224,9 @@ const About = () => {
                     </svg>
                     View my resume
                   </a>
-                </ul>
-              </div>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
         <Contact />
