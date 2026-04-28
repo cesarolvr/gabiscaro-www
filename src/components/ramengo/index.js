@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import ramengoHero from "@images/v2/shared/banner-ramengo.png";
+import ramengoHero from "@images/ramengo/hero.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import STYLEGUIDE from "@images/ramengo/styleguide.png";
 import MOBILE_COMBINED from "@images/ramengo/mobile-combined.png";

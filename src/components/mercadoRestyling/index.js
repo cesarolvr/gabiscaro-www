@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import HERO_MOCKUP from "@images/v2/shared/banner-restyling.png";
+import HERO_MOCKUP from "@images/v2/restyling/hero.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import BEFORE_COMBINED from "@images/v2/restyling/before-combined.png";
 import BENCHMARK_IMG from "@images/v2/restyling/benchmark.png";

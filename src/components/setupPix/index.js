@@ -7,7 +7,7 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case-v2.scss";
 
 // Shared assets
-import HERO_MOCKUP from "@images/v2/shared/banner-setup-pix.png";
+import HERO_MOCKUP from "@images/v2/setup-pix/hero.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 
 import BEFORE_COMBINED from "@images/v2/setup-pix/before-combined.png";

@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import HERO_MOCKUP from "@images/v2/shared/banner-blueberry.png";
+import HERO_MOCKUP from "@images/v2/blueberry/hero.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import BEFORE_IMG_1 from "@images/v2/blueberry/before-1.png";
 import AFTER_IMG_1 from "@images/v2/blueberry/after-1.png";
