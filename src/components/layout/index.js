@@ -22,7 +22,6 @@ const Layout = ({ children, path }) => {
   const page = {
     "/": "-home",
     "/about/": "-about",
-    "/illustrations/": "-illustrations",
   };
 
   return (
