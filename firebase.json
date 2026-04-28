@@ -1,7 +1,11 @@
 {
   "hosting": {
+    "site": "gabiscaro-121a2",
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "releaseLimit": 3,
     "headers": [
       {
         "source": "**/*",

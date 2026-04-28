@@ -7,37 +7,12 @@ import useScroll from "@hooks/useScroll";
 import "@styles/case-v2.scss";
 
 // Shared assets
-import HERO_MOCKUP from "@images/v2/shared/card-setup-pix.png"; // → replace with pix-hero-mockup.png
+import HERO_MOCKUP from "@images/v2/shared/banner-setup-pix.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 
-// Before screens
-import BEFORE_1 from "@images/v2/setup-pix/before-1.png"; // Setup Pix
-import BEFORE_2 from "@images/v2/setup-pix/before-2.png"; // Loading
-import BEFORE_3 from "@images/v2/setup-pix/before-3.png"; // Final Status
-import BEFORE_4 from "@images/v2/setup-pix/before-4.png"; // Feedback Screen
-
-// After screens
-import AFTER_1 from "@images/v2/setup-pix/after-1.png"; // Setup Pix
-import AFTER_2 from "@images/v2/setup-pix/after-2.png"; // Loading
-import AFTER_3 from "@images/v2/setup-pix/after-3.png"; // Final Status
-import AFTER_4 from "@images/v2/setup-pix/after-4.png"; // Feedback Screen
-
-// Key status section
-import KEY_STATUS_PHONE from "@images/v2/setup-pix/key-status-phone.png";
-
-const PIX_BEFORE_SCREENS = [
-  { caption: "Setup Pix", src: BEFORE_1 },
-  { caption: "Loading", src: BEFORE_2 },
-  { caption: "Final Status", src: BEFORE_3 },
-  { caption: "Feedback Screen", src: BEFORE_4 },
-];
-
-const PIX_AFTER_SCREENS = [
-  { caption: "Setup Pix", src: AFTER_1 },
-  { caption: "Loading", src: AFTER_2 },
-  { caption: "Final Status", src: AFTER_3 },
-  { caption: "Feedback Screen", src: AFTER_4 },
-];
+import BEFORE_COMBINED from "@images/v2/setup-pix/before-combined.png";
+import AFTER_COMBINED from "@images/v2/setup-pix/after-combined.png";
+import KEY_STATUS_PHONE from "@images/v2/setup-pix/status.png";
 
 const PIX_KEY_STATUSES = [
   {
@@ -162,18 +137,11 @@ const SetupPix = () => {
         <p className="casev2-section-label">The experience before</p>
       </div>
       <section className="casev2-strip -white">
-        <div className="casev2-strip-pad">
-          <div className="casev2-screens">
-            {PIX_BEFORE_SCREENS.map((s) => (
-              <div className="casev2-screen-col" key={s.caption + "-before"}>
-                <p className="casev2-screen-caption">{s.caption}</p>
-                <div className="casev2-screen">
-                  <img src={s.src} alt={s.caption} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img
+          src={BEFORE_COMBINED}
+          alt="The experience before — Pix setup screens"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       <section className="casev2-strip">
@@ -213,18 +181,11 @@ const SetupPix = () => {
         <p className="casev2-section-label">The experience now</p>
       </div>
       <section className="casev2-strip -light-cyan">
-        <div className="casev2-strip-pad">
-          <div className="casev2-screens">
-            {PIX_AFTER_SCREENS.map((s) => (
-              <div className="casev2-screen-col" key={s.caption + "-after"}>
-                <p className="casev2-screen-caption">{s.caption}</p>
-                <div className="casev2-screen">
-                  <img src={s.src} alt={s.caption} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img
+          src={AFTER_COMBINED}
+          alt="The experience now — redesigned Pix setup screens"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
       <section className="casev2-strip">
         <div className="casev2-strip-pad">

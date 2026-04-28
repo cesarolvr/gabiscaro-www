@@ -6,13 +6,11 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import HERO_MOCKUP from "@images/v2/shared/card-blueberry.png";
+import HERO_MOCKUP from "@images/v2/shared/banner-blueberry.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import BEFORE_IMG_1 from "@images/v2/blueberry/before-1.png";
 import AFTER_IMG_1 from "@images/v2/blueberry/after-1.png";
-import APP_SCREEN_1 from "@images/v2/blueberry/app-screen-1.png";
-import APP_SCREEN_2 from "@images/v2/blueberry/app-screen-2.png";
-import APP_SCREEN_3 from "@images/v2/blueberry/app-screen-3.png";
+import DESIGN_COMPONENTS from "@images/v2/blueberry/design-components.png";
 
 const Blueberry = () => {
   useScroll();
@@ -163,13 +161,11 @@ const Blueberry = () => {
         </p>
       </div>
       <section className="casev2-strip -light-blue">
-        <div className="casev2-strip-pad">
-          <div className="casev2-gallery -cols-3">
-            <img src={APP_SCREEN_1} alt="App screen — 01" />
-            <img src={APP_SCREEN_2} alt="App screen — 02" />
-            <img src={APP_SCREEN_3} alt="App screen — 03" />
-          </div>
-        </div>
+        <img
+          src={DESIGN_COMPONENTS}
+          alt="Design components in action"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       {/* ── Next steps ── */}

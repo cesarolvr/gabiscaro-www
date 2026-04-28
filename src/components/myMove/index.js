@@ -6,7 +6,7 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import HERO_MOCKUP from "@images/v2/shared/card-mymove.png";
+import HERO_MOCKUP from "@images/v2/shared/banner-mymove.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 import mmProcessCombined from "@images/v2/mymove/process-combined.png";
 import ILLUSTRATIONS_FINAL from "@images/v2/mymove/illustrations-final.png";

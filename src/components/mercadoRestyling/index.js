@@ -6,73 +6,12 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import HERO_MOCKUP from "@images/v2/shared/card-restyling.png";
+import HERO_MOCKUP from "@images/v2/shared/banner-restyling.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
-import resBefore1 from "@images/v2/restyling/before-1.png";
-import resBefore2 from "@images/v2/restyling/before-2.png";
-import resBefore3 from "@images/v2/restyling/before-3.png";
-import resBefore4 from "@images/v2/restyling/before-4.png";
-import resBefore5 from "@images/v2/restyling/before-5.png";
+import BEFORE_COMBINED from "@images/v2/restyling/before-combined.png";
 import BENCHMARK_IMG from "@images/v2/restyling/benchmark.png";
-import resAfter1 from "@images/v2/restyling/after-1.png";
-import resAfter2 from "@images/v2/restyling/after-2.png";
-import resAfter3 from "@images/v2/restyling/after-3.png";
-import resAfter4 from "@images/v2/restyling/after-4.png";
-import resAfter5 from "@images/v2/restyling/after-5.png";
-import storeBefore1 from "@images/v2/restyling/store-before-1.png";
-import storeBefore2 from "@images/v2/restyling/store-before-2.png";
-import storeBefore3 from "@images/v2/restyling/store-before-3.png";
-import storeBefore4 from "@images/v2/restyling/store-before-4.png";
-import storeBefore5 from "@images/v2/restyling/store-before-5.png";
-import storeBefore6 from "@images/v2/restyling/store-before-6.png";
-import storeBefore7 from "@images/v2/restyling/store-before-7.png";
-import storeBefore8 from "@images/v2/restyling/store-before-8.png";
-import storeAfter1 from "@images/v2/restyling/store-after-1.png";
-import storeAfter2 from "@images/v2/restyling/store-after-2.png";
-import storeAfter3 from "@images/v2/restyling/store-after-3.png";
-import storeAfter4 from "@images/v2/restyling/store-after-4.png";
-import storeAfter5 from "@images/v2/restyling/store-after-5.png";
-import storeAfter6 from "@images/v2/restyling/store-after-6.png";
-import storeAfter7 from "@images/v2/restyling/store-after-7.png";
-import storeAfter8 from "@images/v2/restyling/store-after-8.png";
-
-const BEFORE_SCREENS = [
-  { src: resBefore1, label: "Welcome" },
-  { src: resBefore2, label: "Credits" },
-  { src: resBefore3, label: "Assets" },
-  { src: resBefore4, label: "Pix" },
-  { src: resBefore5, label: "Sellers" },
-];
-
-const AFTER_SCREENS = [
-  { src: resAfter1, label: "Welcome (Android)" },
-  { src: resAfter2, label: "Credits (Android)" },
-  { src: resAfter3, label: "Intro Pix" },
-  { src: resAfter4, label: "Conta Remunerada" },
-  { src: resAfter5, label: "Onboarding" },
-];
-
-const STORE_BEFORE = [
-  storeBefore1,
-  storeBefore2,
-  storeBefore3,
-  storeBefore4,
-  storeBefore5,
-  storeBefore6,
-  storeBefore7,
-  storeBefore8,
-];
-
-const STORE_AFTER = [
-  storeAfter1,
-  storeAfter2,
-  storeAfter3,
-  storeAfter4,
-  storeAfter5,
-  storeAfter6,
-  storeAfter7,
-  storeAfter8,
-];
+import AFTER_COMBINED from "@images/v2/restyling/after-combined.png";
+import BONUS_APP_STORES from "@images/v2/restyling/bonus-app-stores.png";
 
 const MercadoRestyling = () => {
   useScroll();
@@ -155,17 +94,11 @@ const MercadoRestyling = () => {
         <p className="casev2-section-label">The experience before</p>
       </div>
       <section className="casev2-strip -gray">
-        <div className="casev2-strip-pad">
-          <div className="casev2-screens">
-            {BEFORE_SCREENS.map((s) => (
-              <div className="casev2-screen-col" key={s.label}>
-                <div className="casev2-screen">
-                  <img src={s.src} alt={s.label} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img
+          src={BEFORE_COMBINED}
+          alt="The experience before — Mercado Pago screens"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       <section className="casev2-strip">
@@ -208,22 +141,12 @@ const MercadoRestyling = () => {
           identify possible opportunities.
         </p>
       </div>
-      <section
-        className="casev2-strip -dark-gray"
-        style={{ height: "670px;", overflow: "hidden", padding: "70px 0 0 0" }}
-      >
-        <div
-          className="casev2-strip-pad"
-          style={{ height: "100%", padding: 0 }}
-        >
-          <div className="casev2-full-img" style={{ position: "relative" }}>
-            <img
-              src={BENCHMARK_IMG}
-              alt="Journey benchmark"
-              style={{ height: "100%", width: "auto" }}
-            />
-          </div>
-        </div>
+      <section className="casev2-strip -dark-gray">
+        <img
+          src={BENCHMARK_IMG}
+          alt="Journey benchmark"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       {/* ── Conclusions ── */}
@@ -254,17 +177,11 @@ const MercadoRestyling = () => {
         <p className="casev2-section-label">The experience now</p>
       </div>
       <section className="casev2-strip -light-cyan">
-        <div className="casev2-strip-pad">
-          <div className="casev2-screens">
-            {AFTER_SCREENS.map((s) => (
-              <div className="casev2-screen-col" key={s.label}>
-                <div className="casev2-screen">
-                  <img src={s.src} alt={s.label} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img
+          src={AFTER_COMBINED}
+          alt="The experience now — redesigned Mercado Pago screens"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       <section className="casev2-strip">
@@ -311,38 +228,11 @@ const MercadoRestyling = () => {
         </p>
       </div>
       <section className="casev2-strip -gray">
-        <div className="casev2-strip-pad">
-          <p
-            className="casev2-text"
-            style={{ fontWeight: 600, marginBottom: 16 }}
-          >
-            Before
-          </p>
-          <div className="casev2-gallery -cols-8" style={{ marginBottom: 32 }}>
-            {STORE_BEFORE.map((src, i) => (
-              <img
-                key={`store-before-${i}`}
-                src={src}
-                alt={`App store before — slide ${i + 1}`}
-              />
-            ))}
-          </div>
-          <p
-            className="casev2-text"
-            style={{ fontWeight: 600, marginBottom: 16 }}
-          >
-            After
-          </p>
-          <div className="casev2-gallery -cols-8">
-            {STORE_AFTER.map((src, i) => (
-              <img
-                key={`store-after-${i}`}
-                src={src}
-                alt={`App store after — slide ${i + 1}`}
-              />
-            ))}
-          </div>
-        </div>
+        <img
+          src={BONUS_APP_STORES}
+          alt="Bonus: App Stores — before and after"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       {/* ── Key improvements ── */}

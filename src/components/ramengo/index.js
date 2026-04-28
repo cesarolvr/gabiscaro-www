@@ -6,14 +6,10 @@ import useScroll from "@hooks/useScroll";
 
 import "@styles/case-v2.scss";
 
-import ramengoHero from "@images/v2/shared/card-ramengo.png";
+import ramengoHero from "@images/v2/shared/banner-ramengo.png";
 import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
-import image02 from "@images/ramengo/02.png";
-import image03 from "@images/ramengo/03.png";
-import image04 from "@images/ramengo/04.png";
-import image05 from "@images/ramengo/05.png";
-import image06 from "@images/ramengo/06.png";
-import image07 from "@images/ramengo/07.png";
+import STYLEGUIDE from "@images/ramengo/styleguide.png";
+import MOBILE_COMBINED from "@images/ramengo/mobile-combined.png";
 import ramengoVideo from "@videos/ramengo-1.mp4";
 
 const RamenGo = () => {
@@ -73,13 +69,12 @@ const RamenGo = () => {
       </div>
 
       {/* ── Styleguide & Colors ── */}
-      <section className="casev2-strip" style={{ background: "#4ecdc4", padding: "150px 0px" }}>
-        <div className="casev2-strip-pad" style={{ maxWidth: 1400 }}>
-          <div className="casev2-gallery -cols-2">
-            <img src={image02} alt="Styleguide" />
-            <img src={image03} alt="Color palette" />
-          </div>
-        </div>
+      <section className="casev2-strip" style={{ background: "#4ecdc4" }}>
+        <img
+          src={STYLEGUIDE}
+          alt="RamenGo — styleguide and color palette"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       {/* ── Mobile Experience ── */}
@@ -90,15 +85,12 @@ const RamenGo = () => {
           check it out the mobile experience:
         </p>
       </div>
-      <section className="casev2-strip" style={{ background: "#400039", padding: "150px 0px" }}>
-        <div className="casev2-strip-pad" style={{ maxWidth: 1400 }}>
-          <div className="casev2-gallery -cols-4">
-            <img src={image04} alt="Mobile screen 1" />
-            <img src={image05} alt="Mobile screen 2" />
-            <img src={image06} alt="Mobile screen 3" />
-            <img src={image07} alt="Mobile screen 4" />
-          </div>
-        </div>
+      <section className="casev2-strip" style={{ background: "#400039" }}>
+        <img
+          src={MOBILE_COMBINED}
+          alt="RamenGo — mobile experience screens"
+          style={{ width: "100vw", display: "block" }}
+        />
       </section>
 
       {/* ── Desktop prototype video ── */}
