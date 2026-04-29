@@ -17,13 +17,7 @@ const Header = ({ className = "" }) => {
   const isWork = isHome || location?.pathname?.startsWith("/projects");
 
   const goTo = (path, setIsLoading) => {
-    setIsLoading(true);
-    setTimeout(() => {
-      navigate(path);
-    }, 600);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    navigate(path);
   };
 
   return (

@@ -8,6 +8,7 @@ import Loader from "@components/loader";
 import "@styles/about.scss";
 
 import useScroll from "../hooks/useScroll";
+import getVariation from "@utils/getVariation";
 
 const SKILLS_LEFT = [
   "Art Direction",
@@ -71,9 +72,11 @@ const EXPERIENCES = [
 const About = () => {
   const [isOpened, setIsOpened] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
+    const variation = getVariation(3000, 3600, 10);
+    const id = window.setTimeout(() => {
       setIsOpened(false);
-    }, 3000);
+    }, variation);
+    return () => window.clearTimeout(id);
   }, []);
 
   useScroll();
@@ -85,11 +88,31 @@ const About = () => {
       <main className="about">
         <section className="about-hero">
           <div className="container">
-            <div className="about-hero-deco -top-left" />
-            <div className="about-hero-deco -top-center" />
+            <div
+              className="about-hero-deco-wrap -top-left"
+              data-scroll
+              style={{ "--reveal-stagger": 0 }}
+            >
+              <div className="target">
+                <div className="about-hero-deco -top-left" />
+              </div>
+            </div>
+            <div
+              className="about-hero-deco-wrap -top-center"
+              data-scroll
+              style={{ "--reveal-stagger": 1 }}
+            >
+              <div className="target">
+                <div className="about-hero-deco -top-center" />
+              </div>
+            </div>
             <div className="about-hero-content">
               <div className="about-hero-reveal">
-                <div data-scroll style={{ "--reveal-stagger": 0 }}>
+                <div
+                  className="about-profile-reveal"
+                  data-scroll
+                  style={{ "--reveal-stagger": 0 }}
+                >
                   <div className="target">
                     <div className="about-profile">
                       <StaticImage
@@ -107,7 +130,7 @@ const About = () => {
                     data-scroll
                     style={{ "--reveal-stagger": i + 1 }}
                   >
-                    <span className="target">{line}</span>
+                    <div className="target">{line}</div>
                   </p>
                 ))}
               </div>

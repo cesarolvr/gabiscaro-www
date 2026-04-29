@@ -28,6 +28,28 @@
   }
 }
 
+@keyframes about-profile-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes about-hero-deco-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .about {
   background: #faf7ef;
   color: #400039;
@@ -47,12 +69,34 @@
   // Line-by-line: each `[data-scroll]` gets `is-inview` from Locomotive; stagger
   // so lines do not all fire the slide-up at once.
   [data-scroll].is-inview .target {
-    animation-delay: calc(0.45s + var(--reveal-stagger, 0) * 0.065s);
+    animation-delay: calc(var(--reveal-stagger, 0) * 0.065s);
   }
 
-  // Keep hero floating elements from being clipped by the reveal mask.
-  .about-hero-reveal [data-scroll] {
+  // Decorative hero flowers: same scroll trigger; don’t clip overflow.
+  .about-hero-deco-wrap[data-scroll] {
     overflow: visible;
+  }
+
+  // Keep only the floating profile block from being clipped by the reveal mask.
+  .about-profile-reveal[data-scroll] {
+    overflow: visible;
+  }
+
+  // Profile (photo + Gatsby image): smooth pop-in instead of global slide-up on `.target`.
+  .about-profile-reveal[data-scroll].is-inview .target {
+    display: block;
+    animation: about-profile-pop 0.72s cubic-bezier(0.34, 1.15, 0.64, 1) both;
+    animation-delay: calc(var(--reveal-stagger, 0) * 0.065s);
+  }
+
+  // Hero deco: scale + opacity in place (no slide-up).
+  .about-hero-deco-wrap[data-scroll].is-inview .target {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    animation: about-hero-deco-pop 0.72s cubic-bezier(0.34, 1.15, 0.64, 1) both;
+    animation-delay: calc(var(--reveal-stagger, 0) * 0.065s);
   }
 
   .container {
@@ -74,26 +118,37 @@
     position: relative;
   }
 
-  .about-hero-deco {
+  .about-hero-deco-wrap {
     position: absolute;
     z-index: 1;
   }
 
-  .about-hero-deco.-top-left {
+  .about-hero-deco-wrap.-top-left {
     width: 344px;
     height: 344px;
     left: -15%;
     top: -30%;
+  }
+
+  .about-hero-deco-wrap.-top-center {
+    width: 122px;
+    height: 122px;
+    left: 40%;
+    top: 240px;
+  }
+
+  .about-hero-deco {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-hero-deco.-top-left {
     background: url("../images/about/deco-flower-red.svg")
       center / contain no-repeat;
     animation: about-float-deco-left 5s ease-in-out infinite;
   }
 
   .about-hero-deco.-top-center {
-    width: 122px;
-    height: 122px;
-    left: 40%;
-    top: 240px;
     background: url("../images/about/deco-flower-pink.svg")
       center / contain no-repeat;
     animation: about-float-deco-center 6s ease-in-out infinite 0.5s;

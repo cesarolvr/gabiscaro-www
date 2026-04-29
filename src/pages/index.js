@@ -120,21 +120,31 @@ const Home = () => {
                         return;
                       }
 
-                      setIsLoading(true);
-                      setTimeout(() => {
-                        navigate(project.legacyRoute || project.newRoute);
-                      }, 600);
-                      setTimeout(() => {
-                        setIsLoading(false);
-                      }, 1000);
+                      navigate(project.legacyRoute || project.newRoute);
                     }}
                   >
                     <div className={`home-card-media -${project.cardStyle}`}>
                       <img src={project.source.imageUrl} alt="" />
                     </div>
                     <div className={`home-card-content -${project.cardStyle}`}>
-                      <p className="home-card-title">{project.title}</p>
-                      <p className="home-card-subtitle">{project.subtitle}</p>
+                      <p
+                        className="home-card-title"
+                        style={{
+                          backgroundColor: project.cardTheme.bg,
+                          borderRadius: "10px",
+                        }}
+                      >
+                        {project.title}
+                      </p>
+                      <p
+                        className="home-card-subtitle"
+                        style={{
+                          backgroundColor: project.cardTheme.bg,
+                          borderRadius: "10px",
+                        }}
+                      >
+                        {project.subtitle}
+                      </p>
                       <div className="home-card-tags">
                         {project.tags.map((tag) => (
                           <span

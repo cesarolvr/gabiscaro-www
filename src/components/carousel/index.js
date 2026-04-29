@@ -13,7 +13,8 @@ const Carousel = ({ currentProjectId = null, onMount = (f) => f }) => {
   const slides = getHomeProjects();
 
   const currentIndex = slides.findIndex((s) => s.id === currentProjectId);
-  const initialSlide = currentIndex >= 0 ? (currentIndex + 1) % slides.length : 0;
+  const initialSlide =
+    currentIndex >= 0 ? (currentIndex + 1) % slides.length : 0;
 
   const settings = {
     dots: false,
@@ -61,16 +62,13 @@ const Carousel = ({ currentProjectId = null, onMount = (f) => f }) => {
               key={slide.id}
               className="item"
               onClick={() => {
-                setIsLoading(true);
-                setTimeout(() => {
-                  navigate(slide.newRoute);
-                }, 600);
-                setTimeout(() => {
-                  setIsLoading(false);
-                }, 1000);
+                navigate(slide.newRoute);
               }}
             >
-              <div className="item-bg" style={{ background: slide.cardTheme.bg }} />
+              <div
+                className="item-bg"
+                style={{ background: slide.cardTheme.bg }}
+              />
               <div className="holder">
                 <div className="tags">
                   {slide.tags.map((tag) => (

@@ -13,15 +13,20 @@
   justify-content: center;
 
   @media (max-width: 768px) {
-    height: 420px;
+    height: 220px;
   }
 }
 
 .casev2-hero-mockup {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   pointer-events: none;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    object-fit: contain;
+  }
 }
 
 // ─── Shared containers ───────────────────────────────────────────────────────
@@ -597,9 +602,11 @@
   height: 115%;
   width: auto;
   max-width: 65%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: bottom right;
   pointer-events: none;
+  
+  
 }
 
 .casev2-next-content {
