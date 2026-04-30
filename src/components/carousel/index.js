@@ -91,7 +91,7 @@ const Carousel = ({ currentProjectId = null, onMount = (f) => f }) => {
               <div className="holder">
                 <img
                   className={`image -${slide.id}`}
-                  src={slide.source.imageUrl}
+                  src={slide.source.carouselImageUrl || slide.source.imageUrl}
                   alt={slide.title}
                 />
               </div>

@@ -1,7 +1,8 @@
 import cardSetupPix from "../images/v2/shared/card-setup-pix.png";
 import cardBlueberry from "../images/v2/shared/card-blueberry.png";
 import cardRestyling from "../images/v2/shared/card-restyling.png";
-import cardRamengo from "../images/v2/shared/card-ramengo.png";
+import cardRamengoHome from "../images/v2/shared/card-ramengo-home.png";
+import cardRamengoBanner from "../images/v2/shared/card-ramengo-banner.png";
 import cardMyMove from "../images/v2/shared/card-mymove.png";
 
 const portfolioProjects = [
@@ -94,7 +95,8 @@ const portfolioProjects = [
     source: {
       illustrationKey: "ramengo",
       thumbKey: "ramengo",
-      imageUrl: cardRamengo,
+      imageUrl: cardRamengoHome,
+      carouselImageUrl: cardRamengoBanner,
     },
   },
   {

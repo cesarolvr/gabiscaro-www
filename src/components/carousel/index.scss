@@ -48,7 +48,7 @@
   }
 
   .slick-arrow {
-    z-index: 20;
+    z-index: 200;
     background: transparent;
     height: 100%;
     width: 20vw;
@@ -89,8 +89,26 @@
       height: 50vh;
     }
 
-    cursor: pointer;
+    // Ring with yellow stroke (#FFDE60); on hover, match header .link (fill + dark stroke)
+    cursor: url("data:image/svg+xml;utf8, <svg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='14' cy='14' r='12' fill='none' stroke='%23FFDE60' stroke-width='2'/%></svg>")
+        32 32,
+      pointer;
     position: relative;
+    // Pivot hover scale toward the right (mockup) so it reads as “lifting” from the image
+    transform: translateY(0) scale(1);
+    transform-origin: 72% 55%;
+    transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
+
+    @media (max-width: 767px) {
+      transform-origin: 55% 88%;
+    }
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      cursor: url("data:image/svg+xml;utf8, <svg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='14' cy='14' r='13' fill='%23FFDE60' stroke='%23400039' stroke-width='2'/></svg>")
+          32 32,
+        pointer;
+    }
   }
 
   // background layer — sits inside .item so react-slick's child clone
@@ -140,7 +158,6 @@
     max-width: 500px;
 
     @media (min-width: 768px) {
-      padding-left: 80px;
       margin-bottom: 20px;
       margin-top: -30px;
     }
@@ -171,13 +188,7 @@
     text-transform: none;
     margin: 0;
     max-width: 500px;
-    padding-left: 20px;
-
-    @media (min-width: 768px) {
-      font-size: 54px;
-      line-height: 3rem;
-      padding-left: 80px;
-    }
+    padding-left:20px;
 
     @media (min-width: 1100px) {
       font-size: 64px;
@@ -185,7 +196,7 @@
     }
   }
 
-  // device mockup — centered and scaled up
+  // device mockup — centered and scaled up (hover matches home cards)
   .image {
     position: absolute;
     display: block;
@@ -197,14 +208,16 @@
     flex-shrink: 0;
     overflow: visible;
     margin-left: 100px;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform 0.45s ease;
 
-   
-    
     @media (min-width: 768px) {
       height: 100%;
       bottom: auto;
       right: 0;
       margin-left: 0;
+      transform-origin: center center;
     }
 
     &.-ramengo {
@@ -246,5 +259,11 @@
         margin-left: 0;
       }
     }
+  }
+
+  // Must be `.item:hover .image` (not `.item:hover &` inside `.image` — that compiled to
+  // `.item:hover .carouseldefault .image`, which never matches the DOM)
+  .item:hover .image {
+    transform: scale(1.04);
   }
 }
