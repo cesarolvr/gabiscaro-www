@@ -234,10 +234,11 @@ a {
   &.-setup-pix {
     img {
       top: auto;
-      bottom: 0%;
-      right: 0%;
+      bottom: -15%;
+      right: 5%;
       left: auto;
       height: 100%;
+      transform: scale(1.1);
     }
   }
 
