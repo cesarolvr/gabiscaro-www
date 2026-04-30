@@ -139,9 +139,9 @@ const MyMove = () => {
           surfaces, each adapting to the context while maintaining consistency.
         </p>
       </div>
-      <section className="casev2-strip" style={{ background: "#F992D3" }}>
+      <section className="casev2-strip" style={{ background: "#F992D3", paddingBottom: "0px" }}>
         <div
-          style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 0 64px" }}
+          style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 0 0px" }}
         >
           <img
             src={APPLICATION_IN_USE}

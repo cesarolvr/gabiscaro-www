@@ -123,7 +123,7 @@ const Home = () => {
                       navigate(project.legacyRoute || project.newRoute);
                     }}
                   >
-                    <div className={`home-card-media -${project.cardStyle}`}>
+                    <div className={`home-card-media -${project.cardStyle} -${project.id}`}>
                       <img src={project.source.imageUrl} alt="" />
                     </div>
                     <div className={`home-card-content -${project.cardStyle}`}>

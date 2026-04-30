@@ -12,37 +12,7 @@ import LINHA_DIVISORIA from "@images/v2/shared/linha-divisoria.svg";
 
 import BEFORE_COMBINED from "@images/v2/setup-pix/before-combined.png";
 import AFTER_COMBINED from "@images/v2/setup-pix/after-combined.png";
-import KEY_STATUS_PHONE from "@images/v2/setup-pix/status.png";
-
-const PIX_KEY_STATUSES = [
-  {
-    value: "222.234.567-98",
-    status: "Cadastrada com sucesso",
-    state: "success",
-  },
-  {
-    value: "(11) 99540-9315",
-    status: "Pendente de reivindicação",
-    state: "warning",
-    action: "Iniciar",
-  },
-  {
-    value: "222.234.567-98",
-    status: "Pendente de portabilidade",
-    state: "warning",
-    action: "Iniciar",
-  },
-  {
-    value: "test@mail.com.br",
-    status: "Erro de cadastro",
-    state: "error",
-  },
-  {
-    value: "X9sjchdks-gbskd.comsh",
-    status: "Indisponível",
-    state: "error",
-  },
-];
+import KEY_STATUS_COMBINED from "@images/v2/setup-pix/key-status-combined.png";
 
 const SetupPix = () => {
   useScroll();
@@ -217,38 +187,15 @@ const SetupPix = () => {
         </div>
       </section>
 
-      {/* ── Some key status ── */}
-      <section className="casev2-key-status-strip">
-        <div className="casev2-key-status-inner">
-          <div className="casev2-key-status-phone">
-            <img
-              src={KEY_STATUS_PHONE}
-              alt="Pix key registration status screen"
-            />
-          </div>
-          <div className="casev2-key-status-content">
-            <p className="casev2-section-label">Some key status</p>
-            <div className="casev2-key-list">
-              {PIX_KEY_STATUSES.map((item, i) => (
-                <div className="casev2-key-card" key={i}>
-                  <span className={`casev2-key-icon -${item.state}`}>
-                    {item.state === "success"
-                      ? "✓"
-                      : item.state === "warning"
-                      ? "!"
-                      : "−"}
-                  </span>
-                  <div className="casev2-key-info">
-                    <p className="casev2-key-value">{item.value}</p>
-                    <p className="casev2-key-desc">{item.status}</p>
-                  </div>
-                  {item.action && (
-                    <span className="casev2-key-action">{item.action}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* ── Some key status (static export on cyan strip) ── */}
+      <section
+        className={`casev2-key-status-strip`} style={{ paddingBottom: "0px" }} aria-label="Some key status">
+        
+        <div className="casev2-key-status-full" style={{ paddingBottom: "0px" }}>
+          <img
+            src={KEY_STATUS_COMBINED}
+            alt="Pix key registration status — list of key states in the app and expanded status cards"
+          />
         </div>
       </section>
 

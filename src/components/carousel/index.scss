@@ -197,11 +197,54 @@
     flex-shrink: 0;
     overflow: visible;
     margin-left: 100px;
+
+   
     
     @media (min-width: 768px) {
       height: 100%;
       bottom: auto;
       right: 0;
+      margin-left: 0;
+    }
+
+    &.-ramengo {
+      @media (min-width: 768px) {
+        width: 100%;
+        height: 100%;
+        bottom: auto;
+        right: 0;
+        margin-left: 0;
+      }
+    }
+
+    &.-my-move-illustrations {
+      @media (min-width: 768px) {
+        width: 60%;
+        height: 100%;
+        bottom: auto;
+        right: 0;
+        margin-left: 0;
+      }
+    }
+
+    &.-mercado-pago-restyling {
+      @media (min-width: 768px) {
+        width: 50%;
+        height: 100%;
+        bottom: auto;
+        right: 0;
+        margin-left: 0;
+      }
+    }
+
+    &.-setup-pix {
+      @media (min-width: 768px) {
+        width: 100%;
+        height: 100%;
+        bottom: auto;
+        right: 10%;
+        margin-left: 0;
+      }
     }
   }
 }

@@ -45,7 +45,7 @@ a {
   line-height: 1.4;
   margin-bottom: 20px;
   position: relative;
-  z-index: 2;
+  z-index: 21;
 }
 
 .home-intro-title {
@@ -56,7 +56,7 @@ a {
   max-width: 668px;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 21;
 }
 
 .home-intro-backdrop {
@@ -109,23 +109,23 @@ a {
 
 .home-intro-deco.-group-62 {
   right: 72px;
-  top: 30%;
+  top: 25%;
   width: 258px;
   z-index: 20;
   animation: float-a 5s ease-in-out infinite;
 }
 
 .home-intro-deco.-vector {
-  right: -5%;
-  top: 20%;
+  right: -8%;
+  top: 15%;
   transform: scaleX(-1);
   width: 175px;
   animation: float-b 6.5s ease-in-out infinite;
 }
 
 .home-intro-deco.-group-61 {
-  left: 10%;
-  bottom: 10%;
+  left: 5%;
+  bottom: 2%;
   width: 288px;
   z-index: 20;
   animation: float-c 7s ease-in-out infinite 1s;
@@ -164,6 +164,7 @@ a {
     pointer;
   transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
   z-index: 2;
+
 
   &:hover {
     transform: translateY(-8px) scale(1.02);
@@ -216,101 +217,89 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
   pointer-events: none;
+  width: 100%;
+  height: 100%;
 
   img {
     max-width: 100%;
+    position: absolute;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
     transform-origin: center bottom;
   }
 
-  &.-small {
-    position: relative;
-    padding: 0;
 
+  &.-setup-pix {
     img {
-      max-width: none;
-      max-height: none;
-      overflow: hidden;
-      border-radius: 16px;
-      width: 100%;
+      top: auto;
+      bottom: 0%;
+      right: 0%;
+      left: auto;
       height: 100%;
-      object-fit: cover;
-      transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
-      transform-origin: center center;
+    }
+  }
+
+  &.-blueberry-design-system {
+    img {
+      top: auto;
+      right: 0%;
+      left: auto;
+      bottom: 0%;
+      height: 90%;
+    }
+  }
+
+  &.-mercado-pago-restyling {
+    img {
+      height: 60%;
+      width: 100%;
+      border-radius: 32px;
+      top: 0;
+      bottom: auto;
+    }
+  }
+
+  &.-ramengo {
+    img {
+      height: 60%;
+      width: 100%;
+      border-radius: 32px;
+      top: 0;
+      bottom: auto;
+    }
+  }
+
+  &.-my-move-illustrations {
+    img {
+      top: auto;
+      bottom: 3%;
+      right: -1%;
+      left: auto;
+      height: 90%;
     }
   }
 }
 
-.home-card.-setup .home-card-media {
-  right: -5%;
-  left: auto;
-  bottom: -5%;
-
-  img {
-    transform: scale(1);
-  }
-}
-
 .home-card.-setup:hover .home-card-media img {
-  transform: scale(1.16);
-}
-
-.home-card.-blueberry .home-card-media {
-  right: 0%;
-  left: auto;
-  bottom: -5%;
-
-  img {
-    transform: scale(1.2);
-  }
+  transform: scale(1.1);
 }
 
 .home-card.-blueberry:hover .home-card-media img {
-  transform: scale(1.38);
-}
-
-.home-card.-mercado .home-card-media {
-  top: 0;
-  bottom: auto;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 32px;
-
-  img {
-    transform: scale(1.1);
-  }
+  transform: scale(1.1);
 }
 
 .home-card.-mercado:hover .home-card-media img {
-  transform: scale(1.18);
-}
-
-.home-card.-ramengo .home-card-media {
-  border-radius: 32px;
+  transform: scale(1.1);
 }
 
 .home-card.-ramengo:hover .home-card-media img {
-  transform: scale(1.06);
-}
-
-.home-card.-mymove .home-card-media {
-  right: 0%;
-  left: auto;
-  bottom: -10%;
-  overflow: hidden;
-  border-radius: 32px;
-
-  img {
-    transform: scale(1.1);
-  }
+  transform: scale(1.1);
 }
 
 .home-card.-mymove:hover .home-card-media img {
-  transform: scale(1.18);
+  transform: scale(1.1);
 }
 
 .home-card-content {
@@ -320,7 +309,7 @@ a {
 
   &.-small {
     max-width: 100%;
-    padding: 16px;
+    padding: 16px 0px 0;
   }
 }
 
