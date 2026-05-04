@@ -21,7 +21,7 @@ const Loader = ({ isOpened = false }) => {
   return (
     <div
       className={classnames("loader", {
-        ["-opened"]: isOpened,
+        ["-opened"]: true,
       })}
     >
       <div className="figure">
