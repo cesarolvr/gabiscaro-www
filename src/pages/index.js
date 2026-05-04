@@ -19,9 +19,14 @@ import introGroup62 from "../images/v2/home/intro-group62.svg";
 import introVector from "../images/v2/home/intro-vector.png";
 import introGroup61 from "../images/v2/home/intro-group61.svg";
 import introTopete from "../images/v2/home/intro-topete.svg";
+import cardSetupPixMobile from "../images/v2/shared/card-setup-pix-mobile.png";
+
+const MOBILE_HOME_MQ = "(max-width: 768px)";
+const DESKTOP_HOME_MQ = "(min-width: 769px)";
 
 const Home = () => {
   const [isOpened, setIsOpened] = useState(true);
+  const [isMobileHome, setIsMobileHome] = useState(false);
   const homeProjects = getHomeProjects().slice(0, 5);
   const backdropRef = useRef(null);
 
@@ -43,6 +48,14 @@ const Home = () => {
     setTimeout(() => {
       setIsOpened(false);
     }, variation);
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_HOME_MQ);
+    const sync = () => setIsMobileHome(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
   }, []);
 
   useScroll();
@@ -103,7 +116,8 @@ const Home = () => {
               </div>
               {homeProjects.map((project) => {
                 const isPlanned = project.implementationStatus === "planned";
-                const cardClassName = `home-card -${project.homeLayout} -${project.cardStyle}`;
+                const cardSize = isMobileHome ? "small" : project.cardStyle;
+                const cardClassName = `home-card -${project.homeLayout} -${cardSize}`;
                 const style = {
                   backgroundColor: project.cardTheme.bg,
                   color: project.cardTheme.fg,
@@ -123,10 +137,24 @@ const Home = () => {
                       navigate(project.legacyRoute || project.newRoute);
                     }}
                   >
-                    <div className={`home-card-media -${project.cardStyle} -${project.id}`}>
-                      <img src={project.source.imageUrl} alt="" />
+                    <div className={`home-card-media -${cardSize} -${project.id}`}>
+                      {project.id === "setup-pix" ? (
+                        <picture>
+                          <source
+                            media={DESKTOP_HOME_MQ}
+                            srcSet={project.source.imageUrl}
+                          />
+                          <source
+                            media={MOBILE_HOME_MQ}
+                            srcSet={cardSetupPixMobile}
+                          />
+                          <img src={project.source.imageUrl} alt="" />
+                        </picture>
+                      ) : (
+                        <img src={project.source.imageUrl} alt="" />
+                      )}
                     </div>
-                    <div className={`home-card-content -${project.cardStyle}`}>
+                    <div className={`home-card-content -${cardSize}`}>
                       <p
                         className="home-card-title"
                         style={{

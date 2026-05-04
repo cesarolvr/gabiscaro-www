@@ -9,6 +9,9 @@ import "./index.scss";
 
 import isClient from "@utils/isClient";
 
+const DESKTOP_CAROUSEL_MQ = "(min-width: 769px)";
+const MOBILE_CAROUSEL_MQ = "(max-width: 768px)";
+
 const Carousel = ({ currentProjectId = null, onMount = (f) => f }) => {
   const slides = getHomeProjects();
 
@@ -57,46 +60,70 @@ const Carousel = ({ currentProjectId = null, onMount = (f) => f }) => {
     <LoaderContext.Consumer>
       {({ setIsLoading }) => (
         <Slider {...settings} className="carouseldefault">
-          {orderedSlides.map((slide) => (
-            <div
-              key={slide.id}
-              className="item"
-              onClick={() => {
-                navigate(slide.newRoute);
-              }}
-            >
+          {orderedSlides.map((slide) => {
+            const desktopCarouselSrc =
+              slide.source.carouselImageUrl || slide.source.imageUrl;
+            const mobileCarouselSrc = slide.source.carouselImageUrlMobile;
+
+            return (
               <div
-                className="item-bg"
-                style={{ background: slide.cardTheme.bg }}
-              />
-              <div className="holder">
-                <div className="tags">
-                  {slide.tags.map((tag) => (
-                    <span
-                      className="tag"
-                      key={`${slide.id}-${tag}`}
-                      style={{
-                        color: slide.cardTheme.fg,
-                        borderColor: slide.cardTheme.border,
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <p className="title" style={{ color: slide.cardTheme.fg }}>
-                  {slide.title}
-                </p>
-              </div>
-              <div className="holder">
-                <img
-                  className={`image -${slide.id}`}
-                  src={slide.source.carouselImageUrl || slide.source.imageUrl}
-                  alt={slide.title}
+                key={slide.id}
+                className="item"
+                onClick={() => {
+                  navigate(slide.newRoute);
+                }}
+              >
+                <div
+                  className="item-bg"
+                  style={{ background: slide.cardTheme.bg }}
                 />
+                <div className="holder">
+                  <div className="tags">
+                    {slide.tags.map((tag) => (
+                      <span
+                        className="tag"
+                        key={`${slide.id}-${tag}`}
+                        style={{
+                          color: slide.cardTheme.fg,
+                          borderColor: slide.cardTheme.border,
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="title" style={{ color: slide.cardTheme.fg }}>
+                    {slide.title}
+                  </p>
+                </div>
+                <div className="holder">
+                  {mobileCarouselSrc ? (
+                    <picture>
+                      <source
+                        media={DESKTOP_CAROUSEL_MQ}
+                        srcSet={desktopCarouselSrc}
+                      />
+                      <source
+                        media={MOBILE_CAROUSEL_MQ}
+                        srcSet={mobileCarouselSrc}
+                      />
+                      <img
+                        className={`image -${slide.id}`}
+                        src={desktopCarouselSrc}
+                        alt={slide.title}
+                      />
+                    </picture>
+                  ) : (
+                    <img
+                      className={`image -${slide.id}`}
+                      src={desktopCarouselSrc}
+                      alt={slide.title}
+                    />
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </Slider>
       )}
     </LoaderContext.Consumer>

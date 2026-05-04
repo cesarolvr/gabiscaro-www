@@ -27,7 +27,7 @@ const Header = ({ className = "" }) => {
           <Helmet>
             <meta charSet="utf-8" />
             <title>Gabiscaro | Designer and illustrator</title>
-            <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
+            <link rel="icon" type="image/svg+xml" href={favicon} sizes="any" />
           </Helmet>
           <div className="pill-bg" />
           <div className="logo" onClick={() => goTo("/", setIsLoading)}>

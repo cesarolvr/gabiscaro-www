@@ -5,6 +5,12 @@ import cardRamengoHome from "../images/v2/shared/card-ramengo-home.png";
 import cardRamengoBanner from "../images/v2/shared/card-ramengo-banner.png";
 import cardMyMove from "../images/v2/shared/card-mymove.png";
 
+import carouselMobileSetupPix from "../images/v2/banners-mobile/setup-pix.png";
+import carouselMobileBlueberry from "../images/v2/banners-mobile/blueberry.png";
+import carouselMobileMercado from "../images/v2/banners-mobile/mercado-pago-restyling.png";
+import carouselMobileRamengo from "../images/v2/banners-mobile/ramengo.png";
+import carouselMobileMyMove from "../images/v2/banners-mobile/mymove.png";
+
 const portfolioProjects = [
   {
     id: "setup-pix",
@@ -27,6 +33,7 @@ const portfolioProjects = [
       illustrationKey: "iq",
       thumbKey: "iq",
       imageUrl: cardSetupPix,
+      carouselImageUrlMobile: carouselMobileSetupPix,
     },
   },
   {
@@ -50,6 +57,7 @@ const portfolioProjects = [
       illustrationKey: "blueberry",
       thumbKey: "blueberry",
       imageUrl: cardBlueberry,
+      carouselImageUrlMobile: carouselMobileBlueberry,
     },
   },
   {
@@ -73,6 +81,7 @@ const portfolioProjects = [
       illustrationKey: null,
       thumbKey: null,
       imageUrl: cardRestyling,
+      carouselImageUrlMobile: carouselMobileMercado,
     },
   },
   {
@@ -97,6 +106,7 @@ const portfolioProjects = [
       thumbKey: "ramengo",
       imageUrl: cardRamengoHome,
       carouselImageUrl: cardRamengoBanner,
+      carouselImageUrlMobile: carouselMobileRamengo,
     },
   },
   {
@@ -120,6 +130,7 @@ const portfolioProjects = [
       illustrationKey: null,
       thumbKey: null,
       imageUrl: cardMyMove,
+      carouselImageUrlMobile: carouselMobileMyMove,
     },
   },
 ];
