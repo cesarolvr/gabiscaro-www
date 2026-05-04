@@ -1,28 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Router } from "@reach/router";
 
 import SetupPix from "@components/setupPix";
-import Header from "@components/Header";
-import Loader from "@components/loader";
+import SetupPixGate from "@components/setupPixGate";
 
-const Projects = () => {
-  const [isOpened, setIsOpened] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsOpened(false);
-    }, 3000);
-  }, []);
-
-  return (
-    <div className="scroll-content">
-      <Loader isOpened={isOpened} />
-      <Header />
-      <Router basepath="/projects">
-        <SetupPix path="/setup-pix" />
-      </Router>
-    </div>
-  );
-};
+const Projects = () => (
+  <SetupPixGate>
+    <Router basepath="/projects">
+      <SetupPix path="/setup-pix" />
+    </Router>
+  </SetupPixGate>
+);
 
 export default Projects;
