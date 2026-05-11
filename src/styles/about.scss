@@ -377,7 +377,7 @@
 
     .experience .item {
       grid-template-columns: minmax(0, 1fr);
-      row-gap: 8px;
+      row-gap: 2px;
       margin-bottom: 18px;
     }
 
@@ -385,12 +385,14 @@
     .experience .duration {
       font-size: 18px;
       line-height: 26px;
+      padding-left: 20px;
     }
 
     .experience .icon {
       width: 40px;
       transform: rotate(90deg);
       transform-origin: left center;
+      margin-left: 5px;
     }
 
     .myprofile {
