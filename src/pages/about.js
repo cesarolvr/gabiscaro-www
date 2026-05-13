@@ -197,7 +197,7 @@ const About = () => {
             <ul className="list experience-list">
               {EXPERIENCES.map((group, groupIndex) => (
                 <li
-                  className="experience-group"
+                  className="experience-group experience-list-item"
                   key={group.company}
                   data-scroll
                   style={{ "--reveal-stagger": groupIndex }}
